@@ -38,7 +38,7 @@ namespace IGadiYami.Services
         }
         public void SeedDatabase()
         {
-            // Carrot & Carrot Disease
+            // Carrot & Carrot Diseases
             if (_dbConnection.Table<Carrot>().Count() == 0)
             {
                 Carrot carrot = new Carrot()
@@ -80,7 +80,8 @@ namespace IGadiYami.Services
                 _dbConnection.InsertAll(carrotDiseases);
             }
 
-            // Onion & Onion Disease
+
+            // Onion & Onion Diseases
             if (_dbConnection.Table<Onion>().Count() == 0)
             {
                 Onion onion = new Onion()
@@ -129,7 +130,8 @@ namespace IGadiYami.Services
                 _dbConnection.InsertAll(onionDiseases);
             }
 
-            // Potato & Potato Disease
+
+            // Potato & Potato Diseases
             if (_dbConnection.Table<Potato>().Count() == 0)
             {
                 Potato potato = new Potato()
@@ -183,6 +185,56 @@ namespace IGadiYami.Services
                     }
                 };
                 _dbConnection.InsertAll(potatoDiseases);
+            }
+
+
+            // Tomato & Tomato Diseases
+            if (_dbConnection.Table<Tomato>().Count() == 0) 
+            {
+                Tomato tomato = new Tomato()
+                {
+                    Name = "Tomato",
+                    SoilType = "Tomatoes grow best in sandy loam or loamy soil because it drains well but keeps moisture and\r\nnutrients. Adding compost or aged manure to the soil helps tomatoes grow healthy by giving them\r\nimportant nutrients and making the soil better. Avoid heavy clay soils because they hold too much\r\nwater, which can be bad for tomato roots. Test your soil regularly and add things to make it better\r\n\r\nfor growing tomatoes.",
+                    WaterIntake = "Garden tomatoes typically require 1-2 inches of water a week. Tomato plants grown in containers need more water than garden tomatoes.",
+                    SoilPrep = "Loosen the soil and remove any weeds. If the soil is poor, add compost or aged\r\nmanure to enrich it.",
+                    TimeToPlant = "Tomatoes thrive in warm weather, requiring temperatures consistently above 10°C for optimal\r\ngrowth. Nighttime temperatures of 13°C or higher are necessary for fruit setting. Plant tomatoes\r\nwhen the soil temperature reaches around 16°C, ensuring it's warm enough by checking if you can\r\nkeep your finger in the soil for a full minute without discomfort. Avoid planting too early to prevent\r\ndamage from late frosts, selecting varieties with days-to-maturity shorter than the days until the\r\nexpected first frost. Additionally, while tomatoes enjoy sunlight, they struggle to set fruit when\r\ntemperatures exceed 29°C, and maintaining a humidity level between 65% to 85% fosters optimal\r\n\r\ngrowth."
+                };
+                _dbConnection.Insert(tomato);
+            }
+            if (_dbConnection.Table<TomatoDisease>().Count() == 0)
+            {
+                List<TomatoDisease> tomatoDiseases = new List<TomatoDisease>()
+                {
+                    new TomatoDisease()
+                    {
+                        DiseaseName = "Anthracnose",
+                        DiseaseDescription = "",
+                        DiseaseCauses = "Caused by several species of the fungus Colletotrichum. Ripe and overripe fruit are especially susceptible but the pathogen can infect green fruit with symptoms not developing until fruit begin to ripen. ",
+                        DiseaseControlMessures = "To stop anthracnose in tomatoes, keep the area clean by removing infected plants and\r\nrotating crops each year. Choose resistant tomato types and water plants carefully to keep\r\nthe leaves dry. Apply mulch, consider using fungicides if needed, and regularly check for\r\n\r\nsigns of the disease."
+                    },
+                    new TomatoDisease()
+                    {
+                        DiseaseName = "Blossom End Rot",
+                        DiseaseDescription = "",
+                        DiseaseCauses = "Low calcium levels in the soil.\r\nSoil that is over- or underwatered.\r\nWide fluctuations in soil moisture.\r\nInconsistent watering.\r\nLow soil pH.\r\nExcessive nitrogen.",
+                        DiseaseControlMessures = "To prevent blossom end rot in tomatoes, maintain consistent watering to avoid fluctuations\r\nin soil moisture. Ensure proper calcium levels in the soil through soil amendments or\r\nfertilizers containing calcium. Mulch around tomato plants to regulate soil temperature and\r\nmoisture, and avoid excessive nitrogen fertilization, which can interfere with calcium\r\n\r\nuptake."
+                    },
+                    new TomatoDisease()
+                    {
+                        DiseaseName = "Early blight",
+                        DiseaseDescription = "",
+                        DiseaseCauses = "Early blight is caused by the fugus Alternaria linariae and occurs anytime during growing seaso, the pathogen is favoured by high humidity and temperatures above 24 degrees celsius.",
+                        DiseaseControlMessures = "To keep early blight away from tomatoes, use resistant varieties and rotate crops. Keep the\r\narea clean by removing infected leaves and debris, and space plants apart while mulching\r\nthe soil. Water at the base, prune for air flow, and consider using sprays if needed, while\r\n\r\nalways keeping an eye out for signs of the disease."
+                    },
+                    new TomatoDisease()
+                    {
+                        DiseaseName = "Late blight",
+                        DiseaseDescription = "",
+                        DiseaseCauses = "Caused by the oomycete pathogen Phytophthora infestans, the pathogen prefers wet conditions with humid temperatures that span over 3-5 days",
+                        DiseaseControlMessures = "If you notice any signs of late blight (brown, gray, or purplish spots on leaves or stems),\r\npromptly remove and destroy the affected leaves. Late blight becomes more resistant to\r\n\r\ntreatment as it progresses, so early intervention is crucial."
+                    },
+                };
+                _dbConnection.InsertAll(tomatoDiseases);
             }
         }
     }
