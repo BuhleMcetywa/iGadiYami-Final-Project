@@ -43,7 +43,10 @@ namespace IGadiYami
         }
         public static MauiAppBuilder RegisterViews(this MauiAppBuilder mauiAppBuilder)
         {
-            mauiAppBuilder.Services.AddSingleton<TestPage>();
+            //mauiAppBuilder.Services.AddSingleton<TestPage>();
+            mauiAppBuilder.Services.AddSingleton<LoginPage>();
+            mauiAppBuilder.Services.AddSingleton<SignupPage>();
+            mauiAppBuilder.Services.AddSingleton<StartPage>();
             return mauiAppBuilder;
         }
     }
