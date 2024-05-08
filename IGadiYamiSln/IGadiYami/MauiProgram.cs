@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using IGadiYami.Configuration;
+using IGadiYami.Services;
+using Microsoft.Extensions.Logging;
 
 namespace IGadiYami
 {
@@ -18,8 +20,19 @@ namespace IGadiYami
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
+            builder.RegisterServices();
+               //.RegisterViewModels()
+               //.RegisterViews();
 
             return builder.Build();
         }
+        // Registering Views/Models/ViewModels
+        public static MauiAppBuilder RegisterServices(this MauiAppBuilder mauiAppBuilder)
+        {
+            mauiAppBuilder.Services.AddTransient<IPlantDatabase, PlantDatabase>();
+            mauiAppBuilder.Services.AddTransient<ISettings, Settings>();
+            return mauiAppBuilder;
+        }
+
     }
 }
