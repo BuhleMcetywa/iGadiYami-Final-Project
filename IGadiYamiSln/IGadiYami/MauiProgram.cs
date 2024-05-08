@@ -1,5 +1,6 @@
 ﻿using IGadiYami.Configuration;
 using IGadiYami.Services;
+using IGadiYami.Views;
 using IGadiYami.ViewModels;
 using Microsoft.Extensions.Logging;
 
@@ -37,6 +38,11 @@ namespace IGadiYami
         public static MauiAppBuilder RegisterViewModels(this MauiAppBuilder mauiAppBuilder)
         {
             mauiAppBuilder.Services.AddSingleton<TestViewModel>();
+            return mauiAppBuilder;
+        }
+        public static MauiAppBuilder RegisterViews(this MauiAppBuilder mauiAppBuilder)
+        {
+            mauiAppBuilder.Services.AddSingleton<TestPage>();
             return mauiAppBuilder;
         }
 
