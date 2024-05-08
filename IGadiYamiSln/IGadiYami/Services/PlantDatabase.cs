@@ -287,5 +287,8 @@ namespace IGadiYami.Services
                 _dbConnection.InsertAll(spinachDiseases);
             }
         }
+
+
+        // Methods to use Data
     }
 }
