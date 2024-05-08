@@ -23,11 +23,12 @@ namespace IGadiYami
     		builder.Logging.AddDebug();
 #endif
             builder.RegisterServices()
-               .RegisterViewModels();
-               //.RegisterViews();
+               .RegisterViewModels()
+               .RegisterViews();
 
             return builder.Build();
         }
+
         // Registering Views/Models/ViewModels
         public static MauiAppBuilder RegisterServices(this MauiAppBuilder mauiAppBuilder)
         {
