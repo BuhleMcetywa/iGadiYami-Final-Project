@@ -128,6 +128,62 @@ namespace IGadiYami.Services
                 };
                 _dbConnection.InsertAll(onionDiseases);
             }
+
+            // Potato & Potato Disease
+            if (_dbConnection.Table<Potato>().Count() == 0)
+            {
+                Potato potato = new Potato()
+                {
+                    Name = "Potato",
+                    SoilType = "For potatoes, having space to grow underground is crucial, and loam provides that room  while also being light enough for tubers to expand comfortably. So, loamy soil is like a cozy  home for potatoes, keeping them well-nourished, hydrated, and supported as they grow.",
+                    WaterIntake = "Keep potato plants consistently moist by watering deeply, avoiding overhead watering, and  adjusting frequency based on weather and growth stages. Adjust your watering schedule  based on the growth stage of your potato plants. They need more water during tuber  formation and bulking stages, which typically occur about 3 to 4 weeks after planting. \r\n",
+                    SoilPrep = " For potatoes, aim for a soil pH between 5.0 and 6.0, as this range provides optimal conditions for growth and nutrient uptake. Testing the soil pH before planting can help determine if any adjustments are necessary. Adding lime can raise pH if it's too low, while sulfur or elemental sulfur can lower it if it's too high. \r\n",
+                    TimeToPlant = "The perfect planting window is typically between mid-August and mid-September. This  special time is called the potato planting season. It's when the soil is warm and cozy,  creating the ideal conditions for your potatoes to grow big and tasty! So, mark your calendar  and get ready to plant your potatoes for a bountiful harvest. \r\n"
+                };
+                _dbConnection.Insert(potato);
+            }
+            if (_dbConnection.Table<PotatoDisease>().Count() == 0)
+            {
+                List<PotatoDisease> potatoDiseases = new List<PotatoDisease>()
+                {
+                    new PotatoDisease()
+                    {
+                        DiseaseName = "Bacterial soft rot",
+                        DiseaseDescription = "",
+                        DiseaseCauses = "Bacterial soft rot is caused by various types of bacteria, with Erwinia carotovora being a common culprit. These bacteria can infect potatoes both in the ground and after harvest.",
+                        DiseaseControlMessures = "To prevent bacterial soft rot in potatoes, start with disease-free seed potatoes and rotate crops with non-host plants. Keep fields clean by removing infected plants and debris, and avoid planting in areas with a history of the disease. Proper irrigation, soil drainage, and careful handling during harvest and storage are crucial, while considering chemical treatments and biological controls as additional options to manage the disease effectively.\r\n"
+                    },
+                    new PotatoDisease()
+                    {
+                        DiseaseName = "Blackleg disease",
+                        DiseaseDescription = "",
+                        DiseaseCauses = "Blackleg disease in potatoes is caused by pectolytic bacteria, specifically those in the genera Pectobacterium and Dickeya (formerly known as Erwinia)",
+                        DiseaseControlMessures = "To prevent blackleg disease in potatoes, start with healthy seed potatoes and rotate crops with different plants each year. Keep fields clean, avoid overwatering, and choose resistant potato varieties when possible to minimize the risk of disease.\r\n"
+                    },
+                    new PotatoDisease()
+                    {
+                        DiseaseName = "Early blight",
+                        DiseaseDescription = "",
+                        DiseaseCauses = "Alternaria solani is the primary culprit behind early blight.  Early blight doesn’t require excessive moisture it can even persist during drought periods.\r\nThe fungus tends to attack weakened plants, especially those with insect damage or reduced vitality due to other factors.\r\nShaded and older leaves are more susceptible to infection than young, vigorous ones.",
+                        DiseaseControlMessures = "To control early blight in potatoes, start by choosing potato varieties that resist the disease and rotate crops with different plants each season. Keep the potato patch clean by removing any infected leaves or debris, and water the plants at ground level to avoid splashing spores. If needed, apply natural or chemical fungicides according to instructions to further protect the plants from early blight.\r\n"
+                    },
+                    new PotatoDisease()
+                    {
+                        DiseaseName = "Late Blight",
+                        DiseaseDescription = "",
+                        DiseaseCauses = "Late blight in potatoes is caused by the airborne spores of the Phytophthora infestans fungus. This disease manifests as irregular dark lesions on the stems and leaves of potato plants and spreads quickly. Late blight is a sporadic disease and is more likely to develop in cool, wet conditions.",
+                        DiseaseControlMessures = "To stop late blight in potatoes, pick resistant varieties and rotate crops yearly. Keep the potato area clean, removing any infected leaves promptly. Use fungicides during humid weather and water plants early in the day at the base to keep the foliage dry.\r\n"
+                    },
+                    new PotatoDisease()
+                    {
+                        DiseaseName = "Powdery scab disease",
+                        DiseaseDescription = "",
+                        DiseaseCauses = "The disease is caused by Spongospora subterranea and can lead to significant yield losses.\r\n\r\n",
+                        DiseaseControlMessures = "To control powdery scab in potatoes, begin with disease-free seed potatoes, rotate crops, and maintain good field hygiene. Additionally, ensure proper soil drainage, monitor for early signs of the disease, and consider using resistant potato varieties if available.\r\n"
+                    }
+                };
+                _dbConnection.InsertAll(potatoDiseases);
+            }
         }
     }
 }
