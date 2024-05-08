@@ -79,6 +79,55 @@ namespace IGadiYami.Services
                 };
                 _dbConnection.InsertAll(carrotDiseases);
             }
+
+            // Onion & Onion Disease
+            if (_dbConnection.Table<Onion>().Count() == 0)
+            {
+                Onion onion = new Onion()
+                {
+                    Name = "Onion",
+                    SoilType = "Fine textured soil with sand & add nitrogen fertiliser.",
+                    WaterIntake = "•\tOnions require consistent watering. Aim for at least 1 inch of water per week (including rain). Overwatering can lead to disease and bulb rot.",
+                    SoilPrep = "•\tMix aged manure or compost into the soil in the fall or early spring to improve texture. •\tOnion grows best in an area that has full sun, loose, well-drained, fertile, sandy-loam to silt-loam soil with plenty of organic matter.",
+                    TimeToPlant = "•\tIn spring, plant onion sets outdoors as soon as the ground can be worked, usually in late March or April, when temperatures are no longer likely to dip below 28°F (-2°C). •\tStart onion seeds indoors about 6 weeks before transplanting to the ground (once the soil is at least 50°F)."
+                };
+                _dbConnection.Insert(onion);
+            }
+            if (_dbConnection.Table<OnionDisease>().Count() == 0)
+            {
+                List<OnionDisease> onionDiseases = new List<OnionDisease>()
+                {
+                    new OnionDisease()
+                    {
+                        DiseaseName = "Botrytis Blight",
+                        DiseaseDescription = "",
+                        DiseaseCauses = "caused by Botrytis squamosa, this pathogen favours cool, moist conditions and the infection starts with elongated white spots",
+                        DiseaseControlMessures = "destroy onion or debris cull piles to reduces sources of inoculum, optimize plant row orientation and spacing to enhance air movement, reduce leaf wetness, implent a preventative fungicide spray program to manage the disease."
+                    },
+                    new OnionDisease()
+                    {
+                        DiseaseName = "Botrytis neck rot",
+                        DiseaseDescription = "",
+                        DiseaseCauses = "disease is caused by prolonged exposure to wet conditions, spreads most rapidly during moderate temperatures with high humidity, rainfall or overhead irrigation. Storing uncured onions at temperatures and humidity that are too high can promote disease development and spread.",
+                        DiseaseControlMessures = "Adjust plant spacing and row orientation to obtain the best air movement through the plants, avoid injury to the onion neck and damage to the bulbs especially during harvest. Field applications of fungicides prior to harvest may reduce severity."
+                    },
+                    new OnionDisease()
+                    {
+                        DiseaseName = "Downy mildew",
+                        DiseaseDescription = "",
+                        DiseaseCauses = "Caused by the fungal disease Peronspora destructor that thrives in cool, humid conditions. Appears as pale green or yellow patches on the leaves which later turn brown",
+                        DiseaseControlMessures = "Ensure good airflow, proper spacing between crops and fungicide treatments."
+                    },
+                    new OnionDisease()
+                    {
+                        DiseaseName = "Purple blotch",
+                        DiseaseDescription = "",
+                        DiseaseCauses = "Caused by the fungus Alternarria porria, pathogen thrives in warm, moist conditions.",
+                        DiseaseControlMessures = "Applying a broad spectrum protective fungicides before infection can provide good protection, crop rotation is recommended after an outbreak, try to minimize leaf wetness by using  surface irrigation instead of sprinkler irrigation, ensure good field drainage and maintain correct plant spacing."
+                    }
+                };
+                _dbConnection.InsertAll(onionDiseases);
+            }
         }
     }
 }
