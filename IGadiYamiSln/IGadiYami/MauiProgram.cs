@@ -46,6 +46,5 @@ namespace IGadiYami
             mauiAppBuilder.Services.AddSingleton<TestPage>();
             return mauiAppBuilder;
         }
-
     }
 }
