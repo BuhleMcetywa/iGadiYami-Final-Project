@@ -236,6 +236,56 @@ namespace IGadiYami.Services
                 };
                 _dbConnection.InsertAll(tomatoDiseases);
             }
+
+
+            // Spinach & Spinach Dieases
+            if (_dbConnection.Table<Spinach>().Count() == 0)
+            {
+                Spinach spinach = new Spinach()
+                {
+                    Name = "Spinach",
+                    SoilType = "Spinach thrives best in loamy soil, which strikes a balance between drainage and moisture  retention. It provides a cozy home for spinach roots, allowing them to absorb nutrients  effectively. ",
+                    WaterIntake = "Keep your spinach soil consistently moist, but not soggy, by watering deeply and regularly,  especially during dry periods. Avoid watering overhead to prevent wetting the leaves, which  can lead to disease. Adjust your watering schedule based on the growth stage of your  spinach. For example, during the growing stage, they may need more water. ",
+                    SoilPrep = "In general, spinach needs around 1 to 1 1/2 inches of water per week. Spinach prefers well-drained, fertile soil. Mix in compost or well-rotted manure to enrich  the soil. Loosen the soil to a depth of 15-20 cm. ",
+                    TimeToPlant = "Spinach grows best in cool weather, so it is perfect for planting in spring or fall. In spring, sow seeds  when the ground warms up to about 4°C. For fall planting, sow when the soil is 21°C or cooler.  Some gardeners can even grow spinach in winter by protecting it with a cold frame or mulch. When  spring comes and the soil reaches about 4°C. "
+                };
+                _dbConnection.Insert(spinach);
+            }
+            if (_dbConnection.Table<SpinachDisease>().Count() == 0)
+            {
+                List<SpinachDisease> spinachDiseases = new List<SpinachDisease>()
+                {
+                    new SpinachDisease()
+                    {
+                        DiseaseName = "Fusarium wilt",
+                        DiseaseDescription = "",
+                        DiseaseCauses = "Caused by a soil-borne fungal disease, noticeable by wilting, yellowing and stunting of plants",
+                        DiseaseControlMessures = "Use disease-resistant spinach varieties, practice crop rotation."
+                    },
+                    new SpinachDisease()
+                    {
+                        DiseaseName = "Downy Mildew",
+                        DiseaseDescription = "",
+                        DiseaseCauses = "fungal diseases caused by Peronospora finosa can be identidied by yellow or pale green spots on the upper surface of the leaves and a grayish-purple growth on the undersides",
+                        DiseaseControlMessures = "avoid overhead watering of crops, provide adequate spacing between plants for good air circulation."
+                    },
+                    new SpinachDisease()
+                    {
+                        DiseaseName = "White Rust",
+                        DiseaseDescription = "",
+                        DiseaseCauses = "A fungal disease, cuases raised, white pustules on the undersides of leaves and can lead to severe defoliation",
+                        DiseaseControlMessures = "Practice crop rotation, remove infected plants to prevent the spread of white rust."
+                    },
+                    new SpinachDisease()
+                    {
+                        DiseaseName = "Anthracnose",
+                        DiseaseDescription = "",
+                        DiseaseCauses = "A fungal disease that affect spinach leaves and stems, causes dark, eater soaked lesions that turn tan or gray",
+                        DiseaseControlMessures = "Avoid overcrowding, ensure good drainage in your growing area."
+                    }
+                };
+                _dbConnection.InsertAll(spinachDiseases);
+            }
         }
     }
 }
