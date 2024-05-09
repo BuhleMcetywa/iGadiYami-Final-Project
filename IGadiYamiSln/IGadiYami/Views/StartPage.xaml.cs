@@ -13,6 +13,4 @@ public partial class StartPage : ContentPage
 	{
         Navigation.PushAsync(new SignupPage(new SignUpPageViewModel()));
     }
-
-
 }

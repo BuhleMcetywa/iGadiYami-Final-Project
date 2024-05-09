@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Devices.SerialCommunication;
 
 namespace IGadiYami.Services
 {
@@ -290,5 +291,68 @@ namespace IGadiYami.Services
 
 
         // Methods to use Data
+        // Carrot Methods
+        public Carrot GetCarrotInformation()
+        {
+            Carrot carrot = _dbConnection.Table<Carrot>().FirstOrDefault();
+            return carrot;
+        }
+        public CarrotDisease GetCarrotDiseaseByName(string diseaseName)
+        {
+            CarrotDisease carrotDisease = _dbConnection.Table<CarrotDisease>().FirstOrDefault(d => d.DiseaseName == diseaseName);
+            return carrotDisease;
+        }
+
+
+        // Onion Methods
+        public Onion GetOnionInformation()
+        {
+            Onion onion = _dbConnection.Table<Onion>().FirstOrDefault();
+            return onion;
+        }
+        public OnionDisease GetOnionDiseaseByName(string diseaseName)
+        {
+            OnionDisease onionDisease = _dbConnection.Table<OnionDisease>().FirstOrDefault(d => d.DiseaseName == diseaseName);
+            return onionDisease;
+        }
+
+
+        // Potato Methods
+        public Potato GetPotatoInformation()
+        {
+            Potato potato = _dbConnection.Table<Potato>().FirstOrDefault();
+            return potato;
+        }
+        public PotatoDisease GetPotatoDiseaseByName(string diseaseName)
+        {
+            PotatoDisease potatoDisease = _dbConnection.Table<PotatoDisease>().FirstOrDefault(d => d.DiseaseName == diseaseName);
+            return potatoDisease;
+        }
+
+
+        // Spinach Methods
+        public Spinach GetSpinachInformation()
+        {
+            Spinach spinach = _dbConnection.Table<Spinach>().FirstOrDefault();
+            return spinach;
+        }
+        public SpinachDisease GetSpinachDiseaseByName(string diseaseName)
+        {
+            SpinachDisease spinachDisease = _dbConnection.Table<SpinachDisease>().FirstOrDefault(d => d.DiseaseName == diseaseName);
+            return spinachDisease;
+        }
+
+
+        // Tomato Methods
+        public Tomato GetTomatoInformation()
+        {
+            Tomato tomato = _dbConnection.Table<Tomato>().FirstOrDefault();
+            return tomato;
+        }
+        public TomatoDisease GetTomatoDiseaseByName(string diseaseName)
+        {
+            TomatoDisease tomatoDisease = _dbConnection.Table<TomatoDisease>().FirstOrDefault(d => d.DiseaseName == diseaseName);
+            return tomatoDisease;
+        }
     }
 }
