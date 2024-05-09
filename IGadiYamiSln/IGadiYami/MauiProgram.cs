@@ -47,6 +47,7 @@ namespace IGadiYami
             mauiAppBuilder.Services.AddSingleton<LoginPage>();
             mauiAppBuilder.Services.AddSingleton<SignupPage>();
             mauiAppBuilder.Services.AddSingleton<StartPage>();
+            mauiAppBuilder.Services.AddSingleton<CameraPage>();
             return mauiAppBuilder;
         }
     }
