@@ -1,4 +1,7 @@
-﻿namespace IGadiYami
+﻿using IGadiYami.Views;
+
+
+namespace IGadiYami
 {
     public partial class App : Application
     {
@@ -6,7 +9,7 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new StartPage(new ViewModels.StartUpPageViewModel());
         }
     }
 }
