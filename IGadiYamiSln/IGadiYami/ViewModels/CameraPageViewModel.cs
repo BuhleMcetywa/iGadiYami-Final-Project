@@ -16,7 +16,7 @@ namespace IGadiYami.ViewModels
         [RelayCommand]
         public async void TakePhoto()
         {
-            if (MediaPicker.Default.IsCaptureSupported)
+            if (MediaPicker.Default.IsCaptureSupported)  
             {
                 FileResult photo = await MediaPicker.Default.CapturePhotoAsync();
 
