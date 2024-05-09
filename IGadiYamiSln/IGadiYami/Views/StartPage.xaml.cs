@@ -9,4 +9,10 @@ public partial class StartPage : ContentPage
 		InitializeComponent();
 		BindingContext = vm;
 	}
+	private void GetStarted_Clicked(object sender, EventArgs e)
+	{
+        Navigation.PushAsync(new SignupPage(new SignUpPageViewModel()));
+    }
+
+
 }

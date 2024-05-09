@@ -9,4 +9,5 @@ namespace IGadiYami.ViewModels
     public class StartUpPageViewModel
     {
     }
+  
 }

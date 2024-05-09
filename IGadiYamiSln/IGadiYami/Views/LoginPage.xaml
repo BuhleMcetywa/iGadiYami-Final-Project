@@ -2,11 +2,45 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="IGadiYami.Views.LoginPage"
-             Title="LoginPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             Title="LoginPage"        
+             BackgroundColor="#FFFFFF">
+
+
+
+    <VerticalStackLayout Padding="0,100,0,30">
+
+        <Image Source="igadiimage.png"   HeightRequest="200" WidthRequest="200" />
+        <Label  />
+        <StackLayout Padding="10" Spacing="1" >
+
+            <Frame CornerRadius="10" WidthRequest="330" HeightRequest="60" Padding="5" Margin="10" BackgroundColor="#006838">
+                <Entry FontFamily="mont" FontSize="15" Placeholder="Email Address" FontAttributes="Bold" PlaceholderColor="#F9FFE0"/>
+            </Frame>
+
+            <Frame CornerRadius="10"  WidthRequest="330"  Padding="8" HeightRequest="60" Margin="10" BackgroundColor="#006838" >
+                <Entry FontFamily="mont"  FontSize="15" FontAttributes="Bold" Placeholder="Surname" PlaceholderColor="#F9FFE0"/>
+            </Frame>
+            <Button 
+            Text="Login" 
+            FontFamily="mont"
+            FontSize="15" 
+            FontAttributes="Bold" 
+            BackgroundColor="#006838" 
+            TextColor="#F9FFE0"
+            CornerRadius="90" 
+            WidthRequest="200" 
+            HeightRequest="50"
+            Margin="0,30,0,0"  />
+
+            <Label Padding="0,180,0,0" 
+      Text="Forgot Your Password?"
+           FontAttributes="Bold"
+        FontFamily="mont"
+          VerticalOptions="End" 
+          HorizontalOptions="Center"
+          TextColor="#006838"/>
+        </StackLayout>
+
+
     </VerticalStackLayout>
 </ContentPage>
