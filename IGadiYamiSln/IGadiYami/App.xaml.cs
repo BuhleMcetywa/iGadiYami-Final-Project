@@ -8,8 +8,8 @@ namespace IGadiYami
         public App()
         {
             InitializeComponent();
-
-            MainPage = new StartPage(new ViewModels.StartUpPageViewModel());
+            MainPage = new AppShell();
+            //MainPage = new StartPage(new ViewModels.StartUpPageViewModel());
         }
     }
 }

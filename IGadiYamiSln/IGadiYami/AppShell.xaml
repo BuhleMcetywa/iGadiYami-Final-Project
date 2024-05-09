@@ -3,13 +3,35 @@
     x:Class="IGadiYami.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:IGadiYami"
+    xmlns:local="clr-namespace:IGadiYami.Views"
     Shell.FlyoutBehavior="Disabled"
     Title="IGadiYami">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="StarPage" />
+    <!-- <ShellContent
+    Title="Home"
+    ContentTemplate="{DataTemplate local:CameraPage}"
+    Route="MainPage" /> -->
+
+    <TabBar>
+        <ShellContent
+    Title="Home"
+    ContentTemplate="{DataTemplate local:LoginPage}"
+    Route="MainPage" />
+        
+        <ShellContent
+    Title="Home"
+    ContentTemplate="{DataTemplate local:SignupPage}"
+    Route="MainPage" />
+        
+        <ShellContent
+    Title="Home"
+    ContentTemplate="{DataTemplate local:StartPage}"
+    Route="MainPage" />
+        
+        <ShellContent
+    Title="Home"
+    ContentTemplate="{DataTemplate local:CameraPage}"
+    Route="MainPage" />
+    </TabBar>
 
 </Shell>

@@ -1,4 +1,6 @@
-﻿namespace IGadiYami
+﻿using IGadiYami.Views;
+
+namespace IGadiYami
 {
     public partial class AppShell : Shell
     {
