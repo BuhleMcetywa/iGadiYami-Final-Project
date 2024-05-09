@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IGadiYami.ViewModels
 {
-    public class LoginPageViewModel
+    public class LoginPageViewModel : BaseViewModel
     {
     }
 }

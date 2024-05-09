@@ -3,6 +3,7 @@ using IGadiYami.Services;
 using IGadiYami.Views;
 using IGadiYami.ViewModels;
 using Microsoft.Extensions.Logging;
+using Camera.MAUI;
 
 namespace IGadiYami
 {
@@ -13,6 +14,7 @@ namespace IGadiYami
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseMauiCameraView()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
