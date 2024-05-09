@@ -7,31 +7,31 @@
     Shell.FlyoutBehavior="Disabled"
     Title="IGadiYami">
 
-    <!-- <ShellContent
-    Title="Home"
-    ContentTemplate="{DataTemplate local:CameraPage}"
-    Route="MainPage" /> -->
-
-    <TabBar>
-        <ShellContent
-    Title="Home"
-    ContentTemplate="{DataTemplate local:LoginPage}"
-    Route="MainPage" />
-        
-        <ShellContent
-    Title="Home"
-    ContentTemplate="{DataTemplate local:SignupPage}"
-    Route="MainPage" />
-        
-        <ShellContent
+    <ShellContent
     Title="Home"
     ContentTemplate="{DataTemplate local:StartPage}"
     Route="MainPage" />
-        
-        <ShellContent
-    Title="Home"
-    ContentTemplate="{DataTemplate local:CameraPage}"
-    Route="MainPage" />
-    </TabBar>
+
+    <!-- <TabBar>
+    <ShellContent
+Title="Home"
+ContentTemplate="{DataTemplate local:LoginPage}"
+Route="MainPage" />
+    
+    <ShellContent
+Title="Home"
+ContentTemplate="{DataTemplate local:SignupPage}"
+Route="MainPage" />
+    
+    <ShellContent
+Title="Home"
+ContentTemplate="{DataTemplate local:StartPage}"
+Route="MainPage" />
+    
+    <ShellContent
+Title="Home"
+ContentTemplate="{DataTemplate local:CameraPage}"
+Route="MainPage" />
+</TabBar> -->
 
 </Shell>

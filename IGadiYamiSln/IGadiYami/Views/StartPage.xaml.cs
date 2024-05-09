@@ -1,16 +1,15 @@
 using IGadiYami.ViewModels;
 
-namespace IGadiYami.Views;
-
-public partial class StartPage : ContentPage
+namespace IGadiYami.Views
 {
-	public StartPage(StartUpPageViewModel vm)
-	{
-		InitializeComponent();
-		BindingContext = vm;
-	}
-	private void GetStarted_Clicked(object sender, EventArgs e)
-	{
-        Navigation.PushAsync(new SignupPage(new SignUpPageViewModel()));
+    public partial class StartPage : ContentPage
+    {
+        StartUpPageViewModel _viewModel;
+        public StartPage(StartUpPageViewModel vm)
+        {
+            _viewModel = vm;
+            InitializeComponent();
+            BindingContext = _viewModel;
+        }
     }
 }
