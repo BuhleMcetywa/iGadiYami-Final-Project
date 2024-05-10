@@ -10,5 +10,16 @@ public partial class CameraPage : ContentPage
         _viewModel = vm;
         InitializeComponent();
 		BindingContext = _viewModel;
-	}
+
+        _viewModel.SetCameraView(cameraView);
+        cameraView.Loaded += _viewModel.cameraView_CamerasLoaded;
+
+    }
+
+    protected async override void OnAppearing()
+    {
+        base.OnAppearing();
+        await cameraView.StartCameraAsync();
+
+    }
 }

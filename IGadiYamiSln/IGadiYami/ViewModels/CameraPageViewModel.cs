@@ -12,5 +12,34 @@ namespace IGadiYami.ViewModels
 {
     public partial class CameraPageViewModel : BaseViewModel
     {
+        private string _photo;
+        public string Photo
+        {
+            get { return _photo; }
+            set { _photo = value; }
+        }
+
+        CameraView _cameraView;
+
+        public void SetCameraView(CameraView cameraView)
+        {
+            _cameraView = cameraView;
+        }
+
+        public void cameraView_CamerasLoaded(object sender, EventArgs e)
+        {
+             _cameraView.Camera = _cameraView.Cameras.First();
+            MainThread.BeginInvokeOnMainThread(async () =>
+            {
+                 await _cameraView.StopCameraAsync(); 
+                 await _cameraView.StartCameraAsync(); 
+            });
+        }
+
+        [RelayCommand]
+        public void TakePhoto()
+        {
+            // Photo = _cameraView.GetSnapSot(Camera.MAUI.ImageFormat.PNG)
+        }
     }
 }
