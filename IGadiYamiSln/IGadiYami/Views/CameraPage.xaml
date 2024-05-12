@@ -2,9 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:cv="clr-namespace:Camera.MAUI;assembly=Camera.MAUI"
+             xmlns:cameraviewmodel="clr-namespace:IGadiYami.ViewModels"
              x:Class="IGadiYami.Views.CameraPage"
              Title="CameraPage">
-    <VerticalStackLayout Spacing="25" Padding="30, 0" VerticalOptions="Fill" HorizontalOptions="Fill">
+    <VerticalStackLayout Spacing="25" Padding="30, 0" VerticalOptions="Fill" HorizontalOptions="Fill" x:DataType="cameraviewmodel:CameraPageViewModel">
         <Label 
             Text="Welcome to .NET MAUI!"
             VerticalOptions="Center" 

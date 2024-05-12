@@ -12,8 +12,8 @@ namespace IGadiYami.ViewModels
 {
     public partial class CameraPageViewModel : BaseViewModel
     {
-        private string _photo;
-        public string Photo
+        private ImageSource _photo;
+        public ImageSource Photo
         {
             get { return _photo; }
             set { _photo = value; }
@@ -39,7 +39,7 @@ namespace IGadiYami.ViewModels
         [RelayCommand]
         public void TakePhoto()
         {
-            // Photo = _cameraView.GetSnapSot(Camera.MAUI.ImageFormat.PNG)
+             Photo = _cameraView.GetSnapShot(Camera.MAUI.ImageFormat.PNG);
         }
     }
 }
