@@ -16,7 +16,11 @@ namespace IGadiYami.ViewModels
         public ImageSource Photo
         {
             get { return _photo; }
-            set { _photo = value; }
+            set 
+            { 
+                _photo = value;
+                OnPropertyChanged(nameof(Photo));
+            }
         }
 
         CameraView _cameraView;
@@ -39,7 +43,7 @@ namespace IGadiYami.ViewModels
         [RelayCommand]
         public void TakePhoto()
         {
-             Photo = _cameraView.GetSnapShot(Camera.MAUI.ImageFormat.PNG);
+            Photo = _cameraView.GetSnapShot(Camera.MAUI.ImageFormat.PNG);
         }
     }
 }

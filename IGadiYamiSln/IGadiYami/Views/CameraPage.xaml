@@ -12,7 +12,6 @@
             HorizontalOptions="Center" />
 
         <cv:CameraView x:Name="cameraView" WidthRequest="300" HeightRequest="300" />
-        <!-- CamerasLoaded="cameraView_CamerasLoaded"  -->
         <Button Text="Test button" Command="{Binding TakePhotoCommand}" />
         <Image Source="{Binding Photo}" HeightRequest="200" WidthRequest="200" />
         
