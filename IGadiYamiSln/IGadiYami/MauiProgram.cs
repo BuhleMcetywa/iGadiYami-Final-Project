@@ -36,7 +36,7 @@ namespace IGadiYami
         {
             mauiAppBuilder.Services.AddTransient<IPlantDatabase, PlantDatabase>();
             mauiAppBuilder.Services.AddTransient<ISettings, Settings>();
-            mauiAppBuilder.Services.AddTransient<IProfileDatabase, ProfileDatabase>();
+            //mauiAppBuilder.Services.AddTransient<IProfileDatabase, ProfileDatabase>();
             return mauiAppBuilder;
         }
         public static MauiAppBuilder RegisterViewModels(this MauiAppBuilder mauiAppBuilder)
@@ -46,7 +46,7 @@ namespace IGadiYami
             mauiAppBuilder.Services.AddSingleton<LoginPageViewModel>();
             mauiAppBuilder.Services.AddSingleton<SignUpPageViewModel>();
             mauiAppBuilder.Services.AddSingleton<StartUpPageViewModel>();
-            mauiAppBuilder.Services.AddSingleton<ProfilePageViewModel>();
+            //mauiAppBuilder.Services.AddSingleton<ProfilePageViewModel>();
             return mauiAppBuilder;
         }
         public static MauiAppBuilder RegisterViews(this MauiAppBuilder mauiAppBuilder)
@@ -56,7 +56,7 @@ namespace IGadiYami
             mauiAppBuilder.Services.AddSingleton<SignupPage>();
             mauiAppBuilder.Services.AddSingleton<StartPage>();
             mauiAppBuilder.Services.AddSingleton<CameraPage>();
-            mauiAppBuilder.Services.AddSingleton<ProfilePage>();
+            //mauiAppBuilder.Services.AddSingleton<ProfilePage>();
             return mauiAppBuilder;
         }
     }
