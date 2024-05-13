@@ -1,4 +1,5 @@
-﻿using IGadiYami.Views;
+﻿using CommunityToolkit.Mvvm.Input;
+using IGadiYami.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,11 +8,12 @@ using System.Threading.Tasks;
 
 namespace IGadiYami.ViewModels
 {
-    public class SignUpPageViewModel : BaseViewModel
+    public partial class SignUpPageViewModel : BaseViewModel
     {
-        private void SignUp_Clicked(object sender, EventArgs e)
+        [RelayCommand]
+        public void HaveAccount()
         {
-            //Navigation.PushAsync(new LoginPage(new LoginPageViewModel()));
+            App.Current.MainPage.Navigation.PushAsync(new LoginPage(new LoginPageViewModel()));
         }
     }
 }

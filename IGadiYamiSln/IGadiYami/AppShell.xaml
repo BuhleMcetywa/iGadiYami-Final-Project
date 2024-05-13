@@ -8,8 +8,7 @@
     Title="IGadiYami">
 
     <ShellContent
-    Title="Home"
-    ContentTemplate="{DataTemplate local:CameraPage}"
+    ContentTemplate="{DataTemplate local:StartPage}"
     Route="MainPage" />
 
     <!-- <TabBar>

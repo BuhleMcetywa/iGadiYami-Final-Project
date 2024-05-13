@@ -4,13 +4,11 @@ namespace IGadiYami.Views;
 
 public partial class SignupPage : ContentPage
 {
+	SignUpPageViewModel _viewModel;
 	public SignupPage(SignUpPageViewModel vm)
 	{
+		_viewModel = vm;
 		InitializeComponent();
-		BindingContext = vm;
+		BindingContext = _viewModel;
 	}
-	private void SignUp_Clicked(object sender, EventArgs e)
-	{
-        Navigation.PushAsync(new LoginPage(new LoginPageViewModel()));
-    }
 }
