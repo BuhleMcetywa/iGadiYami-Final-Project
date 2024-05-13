@@ -10,27 +10,4 @@
     <ShellContent
     ContentTemplate="{DataTemplate local:StartPage}"
     Route="MainPage" />
-
-    <!-- <TabBar>
-    <ShellContent
-Title="Home"
-ContentTemplate="{DataTemplate local:LoginPage}"
-Route="MainPage" />
-    
-    <ShellContent
-Title="Home"
-ContentTemplate="{DataTemplate local:SignupPage}"
-Route="MainPage" />
-    
-    <ShellContent
-Title="Home"
-ContentTemplate="{DataTemplate local:StartPage}"
-Route="MainPage" />
-    
-    <ShellContent
-Title="Home"
-ContentTemplate="{DataTemplate local:CameraPage}"
-Route="MainPage" />
-</TabBar> -->
-
 </Shell>

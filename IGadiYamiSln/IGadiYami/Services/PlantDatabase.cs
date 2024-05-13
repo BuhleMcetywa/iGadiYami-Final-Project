@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace IGadiYami.Services
 {
-    internal class PlantDatabase : IPlantDatabase
+    public class PlantDatabase : IPlantDatabase
     {
         private SQLiteConnection _dbConnection;
         public PlantDatabase()
