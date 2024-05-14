@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace IGadiYami.Interface
 {
-    public partial interface IService
+    public interface IService
     {
         void Save(UserDetails signup);
     }
