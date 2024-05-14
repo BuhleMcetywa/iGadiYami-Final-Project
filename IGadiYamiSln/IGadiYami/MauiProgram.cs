@@ -4,6 +4,7 @@ using IGadiYami.Views;
 using IGadiYami.ViewModels;
 using Microsoft.Extensions.Logging;
 using Camera.MAUI;
+using IGadiYami.Interface;
 
 namespace IGadiYami
 {
@@ -36,6 +37,8 @@ namespace IGadiYami
         {
             mauiAppBuilder.Services.AddTransient<IPlantDatabase, PlantDatabase>();
             mauiAppBuilder.Services.AddTransient<ISettings, Settings>();
+            mauiAppBuilder.Services.AddTransient<IService, Service>();
+            mauiAppBuilder.Services.AddTransient<IAlertDialogService, DefaultMauiAlertDialogService>();
             return mauiAppBuilder;
         }
         public static MauiAppBuilder RegisterViewModels(this MauiAppBuilder mauiAppBuilder)

@@ -10,6 +10,7 @@ namespace IGadiYami.ViewModels
 {
     public partial class SignUpPageViewModel : BaseViewModel
     {
+
         [RelayCommand]
         public void HaveAccount()
         {
