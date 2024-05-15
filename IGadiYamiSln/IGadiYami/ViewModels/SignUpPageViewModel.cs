@@ -1,6 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.Input;
 using IGadiYami.Interface;
+using IGadiYami.Models.UserData;
 using IGadiYami.Models.UserInput;
+using IGadiYami.Services;
 using IGadiYami.Views;
 using System;
 using System.Collections.Generic;
@@ -13,6 +15,7 @@ namespace IGadiYami.ViewModels
     public partial class SignUpPageViewModel : BaseViewModel
     {
         private IService _service;
+        private UserDatabase _userDatabase;
 
         private string _name;
 
@@ -152,7 +155,12 @@ namespace IGadiYami.ViewModels
                 _service.Save(signup);
             }
         }
-
+        public void CreateUser()
+        {
+            // Add User to database
+            //string name = 
+            //_userDatabase.CreateUser();
+        }
 
         [RelayCommand]
         public void HaveAccount()
