@@ -83,5 +83,10 @@ namespace IGadiYami.Services
         {
            return _dbConnection.Table<UserData>().FirstOrDefault(u => u.UserID == Id);
         }
+        public string GetUserByEmail(string email)
+        {
+            var user = _dbConnection.Table<UserData>().FirstOrDefault(u => u.UserEmail == email);
+            return user?.UserEmail;
+        }
     }
 }
