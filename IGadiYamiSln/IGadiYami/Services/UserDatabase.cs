@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using IGadiYami.Models;
 using IGadiYami.Models.UserData;
+// using Windows.System;
 
 namespace IGadiYami.Services
 {
@@ -35,14 +36,14 @@ namespace IGadiYami.Services
                     UserSurname = "Test Surname",
                     UserEmail = "Test@gmail.com",
                     UserPassword = "Test Password",
-                    UserPhoneNumber = "1234567890"
+                    // UserPhoneNumber = "1234567890"
                 };
                 _dbConnection.Insert(userData);
             }
         }
 
         // Methods
-        public void CreateUser(string userName, string userSurname, string userEmail, string userPassword, string userPhoneNumber)
+        public void CreateUser(string userName, string userSurname, string userEmail, string userPassword)
         {
             UserData user = new UserData()
             {
@@ -50,7 +51,7 @@ namespace IGadiYami.Services
                 UserSurname = userSurname,
                 UserEmail = userEmail,
                 UserPassword = userPassword,
-                UserPhoneNumber = userPhoneNumber
+                // UserPhoneNumber = userPhoneNumber
             };
             _dbConnection.Insert(user);
         }
@@ -64,7 +65,7 @@ namespace IGadiYami.Services
                 userToUpdate.UserSurname = userSurname;
                 userToUpdate.UserEmail = userEmail;
                 userToUpdate.UserPassword = userPassword;
-                userToUpdate.UserPhoneNumber = userPhoneNumber;
+                // userToUpdate.UserPhoneNumber = userPhoneNumber;
 
                 _dbConnection.Update(userToUpdate);
             }
@@ -77,6 +78,10 @@ namespace IGadiYami.Services
             {
                 _dbConnection.Delete<UserData>(userId);
             }
+        }
+        public UserData GetUserById(int Id)
+        {
+           return _dbConnection.Table<UserData>().FirstOrDefault(u => u.UserID == Id);
         }
     }
 }

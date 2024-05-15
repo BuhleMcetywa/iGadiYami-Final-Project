@@ -130,6 +130,40 @@ namespace IGadiYami.ViewModels
             }
         }
 
+        // Entry Component Properties
+        private string _username;
+        public string UserName
+        {
+            get { return _username; }
+            set { _username = value; OnPropertyChanged(); }
+        }
+        private string _usersurname;
+        public string UserSurname
+        {
+            get { return _usersurname; }
+            set { _usersurname = value; OnPropertyChanged(); }
+        }
+        private string _useremail;
+        public string UserEmail
+        {
+            get { return _useremail; }
+            set { _useremail = value; OnPropertyChanged(); }
+        }
+        // private string _userphonenumber;
+        /* public string UserPhoneNumber
+        {
+            get { return _userphonenumber; }
+            set { _userphonenumber = value; }
+        } */
+        private string _userpassword;
+        public string UserPassword
+        {
+            get { return _userpassword; }
+            set { _userpassword = value; OnPropertyChanged(); }
+        }
+
+
+
         public SignUpPageViewModel(IService Service)
         {
             _service = Service;
@@ -137,6 +171,7 @@ namespace IGadiYami.ViewModels
         public SignUpPageViewModel()
         {
            // _service = Service;
+           _userDatabase = new UserDatabase();
         }
 
         [RelayCommand]
@@ -155,16 +190,40 @@ namespace IGadiYami.ViewModels
                 _service.Save(signup);
             }
         }
+
+        [RelayCommand]
         public void CreateUser()
         {
             // Add User to database
-            //string name = 
-            //_userDatabase.CreateUser();
+            string name = UserName;
+            string surname = UserSurname;
+            string email = UserEmail;
+            string password = UserPassword;
+            _userDatabase.CreateUser(name, surname, email, password);
+            UserName = "";
+            UserSurname = "";
+            UserEmail = "";
+            UserPassword = "";
+        }
+
+        [RelayCommand]
+        public void LoadUser()
+        {
+            // Loading user based on id
+            UserData user = _userDatabase.GetUserById(2);
+            if (user != null)
+            {              
+                UserName = user.UserName;
+                UserSurname = user.UserSurname;
+                UserEmail = user.UserEmail;
+                UserPassword = user.UserPassword;
+            }
         }
 
         [RelayCommand]
         public void HaveAccount()
         {
+            // Navigation
             App.Current.MainPage.Navigation.PushAsync(new LoginPage(new LoginPageViewModel()));
         }
     }
