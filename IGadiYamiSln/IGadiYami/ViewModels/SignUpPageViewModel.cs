@@ -192,7 +192,7 @@ namespace IGadiYami.ViewModels
         }
 
         [RelayCommand]
-        public void CreateUser()
+        public async void CreateUserAsync()
         {
             // Add User to database
             string name = UserName;
@@ -204,6 +204,7 @@ namespace IGadiYami.ViewModels
             UserSurname = "";
             UserEmail = "";
             UserPassword = "";
+            await App.Current.MainPage.Navigation.PushAsync(new StartGardeningPage(new StartGardeningPageViewModel()));
         }
 
         [RelayCommand]
@@ -221,10 +222,10 @@ namespace IGadiYami.ViewModels
         }
 
         [RelayCommand]
-        public void HaveAccount()
+        public async void HaveAccount()
         {
             // Navigation
-            App.Current.MainPage.Navigation.PushAsync(new LoginPage(new LoginPageViewModel()));
+            await App.Current.MainPage.Navigation.PushAsync(new LoginPage(new LoginPageViewModel()));
         }
     }
 }

@@ -32,19 +32,19 @@ namespace IGadiYami.ViewModels
 		}
 
 		[RelayCommand]
-		public void Login()
+		public async void Login()
 		{
 			string email = UserEmailLogin;
 			string password = UserpasswordLogin;
 
-			if (email == _userDatabase.GetUserByEmail(email))
+			if (_userDatabase.VerifyUserPassword(email, password))
 			{
                 // Navigation
-                App.Current.MainPage.Navigation.PushAsync(new CameraPage(new CameraPageViewModel()));
+                await App.Current.MainPage.Navigation.PushAsync(new StartGardeningPage(new StartGardeningPageViewModel()));
             } 
 			else
 			{
-				App.Current.MainPage.DisplayAlert("Error", "User not found, create a account", "ok");
+				App.Current.MainPage.DisplayAlert("Error", "User not found, create a account", "Ok");
 			}
 		}
     }

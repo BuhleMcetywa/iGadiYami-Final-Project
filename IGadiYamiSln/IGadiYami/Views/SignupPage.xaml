@@ -41,7 +41,7 @@
                 <Entry FontFamily="mont" FontSize="15" Placeholder="Confirm Password" PlaceholderColor="#A6A6A6"/>
             </Frame>
 
-                <Button  CornerRadius="40" Command="{Binding CreateUserCommand}" Text="SIGN UP" FontAttributes="Bold" FontFamily="mont" BackgroundColor="#F9FFE0" TextColor="#006838" WidthRequest="200" HeightRequest="50" Margin="0,30,0,0" />
+                <Button  CornerRadius="40" Command="{Binding CreateUserAsyncCommand}" Text="SIGN UP" FontAttributes="Bold" FontFamily="mont" BackgroundColor="#F9FFE0" TextColor="#006838" WidthRequest="200" HeightRequest="50" Margin="0,30,0,0" />
             </StackLayout>
 
 

@@ -18,9 +18,9 @@ namespace IGadiYami.ViewModels
         //}
 
         [RelayCommand]
-        public static async void GetStarted()
+        public async void GetStarted()
         {
-            App.Current.MainPage.Navigation.PushAsync(new SignupPage(new SignUpPageViewModel()));
+            await App.Current.MainPage.Navigation.PushAsync(new SignupPage(new SignUpPageViewModel()));
         }
     }
   

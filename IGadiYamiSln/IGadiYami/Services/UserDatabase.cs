@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using IGadiYami.Models;
 using IGadiYami.Models.UserData;
 using Microsoft.Data.Sqlite;
+using System.Security.Cryptography;
 // using Windows.System;
 
 namespace IGadiYami.Services
@@ -29,7 +30,6 @@ namespace IGadiYami.Services
         }
         public void SeedDatabase()
         {
-
             if (_dbConnection.Table<UserData>().Count() == 0)
             {
                 UserData userData = new UserData()
@@ -37,10 +37,10 @@ namespace IGadiYami.Services
                     UserName = "Test Name",
                     UserSurname = "Test Surname",
                     UserEmail = "Test@gmail.com",
-                    UserPassword = "Test Password",
+                    UserPassword = "userPassword",
                     // UserPhoneNumber = "1234567890"
                 };
-                
+
                 _dbConnection.Insert(userData);
             }
         }
@@ -84,12 +84,22 @@ namespace IGadiYami.Services
         }
         public UserData GetUserById(int Id)
         {
-           return _dbConnection.Table<UserData>().FirstOrDefault(u => u.UserID == Id);
+            return _dbConnection.Table<UserData>().FirstOrDefault(u => u.UserID == Id);
         }
-        public string GetUserByEmail(string email)
+        
+        public bool VerifyUserPassword(string userEmail, string userPassword)
         {
-            var user = _dbConnection.Table<UserData>().FirstOrDefault(u => u.UserEmail == email);
-            return user?.UserEmail;
+            var user = _dbConnection.Table<UserData>().FirstOrDefault(u => u.UserEmail == userEmail);
+
+            if (user != null)
+            {
+                user.UserEmail = userEmail;
+                user.UserPassword = userPassword;
+            } else
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

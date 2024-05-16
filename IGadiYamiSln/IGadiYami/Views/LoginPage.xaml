@@ -16,7 +16,7 @@
             </Frame>
 
             <Frame CornerRadius="10"  WidthRequest="330"  Padding="8" HeightRequest="60" Margin="10" BackgroundColor="#006838" >
-                <Entry FontFamily="mont" Text="{Binding UserpasswordLogin}" FontSize="15" FontAttributes="Bold" Placeholder="Surname" PlaceholderColor="#F9FFE0"/>
+                <Entry FontFamily="mont" Text="{Binding UserpasswordLogin}" FontSize="15" FontAttributes="Bold" Placeholder="Password" PlaceholderColor="#F9FFE0"/>
             </Frame>
             <Button 
             Text="Login" 
