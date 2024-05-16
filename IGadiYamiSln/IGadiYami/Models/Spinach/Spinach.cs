@@ -18,7 +18,11 @@ namespace IGadiYami.Models.Spinach
         public string SoilPrep { get; set; }
         public string TimeToPlant { get; set; }
 
-        [ForeignKey(typeof(SpinachDisease))]
+		public string CommonDiseases { get; set; }
+
+		public string HowToPlant { get; set; }
+
+		[ForeignKey(typeof(SpinachDisease))]
         public int DiseaseID { get; set; }
     }
 }

@@ -18,7 +18,11 @@ namespace IGadiYami.Models.Tomato
         public string SoilPrep { get; set; }
         public string TimeToPlant { get; set; }
 
-        [ForeignKey(typeof(TomatoDisease))]
+		public string CommonDiseases { get; set; }
+
+		public string HowToPlant { get; set; }
+
+		[ForeignKey(typeof(TomatoDisease))]
         public int DiseaseID { get; set; }
     }
 }

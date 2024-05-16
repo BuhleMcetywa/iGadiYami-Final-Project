@@ -18,7 +18,11 @@ namespace IGadiYami.Models.Onion
         public string SoilPrep { get; set; }
         public string TimeToPlant { get; set; }
 
-        [ForeignKey(typeof(OnionDisease))]
+		public string CommonDiseases { get; set; }
+
+		public string HowToPlant { get; set; }
+
+		[ForeignKey(typeof(OnionDisease))]
         public int DiseaseID { get; set; }
     }
 }

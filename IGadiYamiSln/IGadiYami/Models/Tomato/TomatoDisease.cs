@@ -14,6 +14,6 @@ namespace IGadiYami.Models.Tomato
         public string DiseaseName { get; set; }
         public string DiseaseDescription { get; set; }
         public string DiseaseCauses { get; set; }
-        public string DiseaseControlMessures { get; set; }
+        public string DiseaseControlMeasures { get; set; }
     }
 }

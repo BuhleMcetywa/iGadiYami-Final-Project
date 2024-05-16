@@ -18,7 +18,11 @@ namespace IGadiYami.Models.Potato
         public string SoilPrep { get; set; }
         public string TimeToPlant { get; set; }
 
-        [ForeignKey(typeof(PotatoDisease))]
+		public string CommonDiseases { get; set; }
+
+		public string HowToPlant { get; set; }
+
+		[ForeignKey(typeof(PotatoDisease))]
         public int DiseaseID { get; set; }
     }
 }

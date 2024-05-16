@@ -17,6 +17,9 @@ namespace IGadiYami.Models.Carrot
         public string WaterIntake { get; set; }
         public string SoilPrep { get; set; }
         public string TimeToPlant { get; set; }
+        public string CommonDiseases { get; set; }
+
+        public string HowToPlant { get; set; }
 
         [ForeignKey(typeof(CarrotDisease))]
         public int DiseaseID { get; set; }

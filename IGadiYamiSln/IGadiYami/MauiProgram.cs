@@ -47,6 +47,7 @@ namespace IGadiYami
             mauiAppBuilder.Services.AddSingleton<LoginPageViewModel>();
             mauiAppBuilder.Services.AddSingleton<SignUpPageViewModel>();
             mauiAppBuilder.Services.AddSingleton<StartUpPageViewModel>();
+            mauiAppBuilder.Services.AddSingleton<TomatoViewModel>();
             return mauiAppBuilder;
         }
         public static MauiAppBuilder RegisterViews(this MauiAppBuilder mauiAppBuilder)
