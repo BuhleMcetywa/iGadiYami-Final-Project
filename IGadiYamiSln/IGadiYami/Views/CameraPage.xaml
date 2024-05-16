@@ -14,7 +14,7 @@
         <cv:CameraView x:Name="cameraView" WidthRequest="370" HeightRequest="450"/>
         <Button Text="Test button" Command="{Binding TakePhotoCommand}" />
         <!-- <Image Source="{Binding Photo}" HeightRequest="200" WidthRequest="200" /> -->
-        <Label Text="Disease Description Here" HorizontalOptions="Center"/>
+        <Label Text="{Binding DetectionResponse}" HorizontalOptions="Center"/>
 
     </VerticalStackLayout>
 </ContentPage>

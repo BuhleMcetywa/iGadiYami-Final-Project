@@ -39,6 +39,7 @@ namespace IGadiYami
             mauiAppBuilder.Services.AddTransient<ISettings, Settings>();
             mauiAppBuilder.Services.AddTransient<IService, Service>();
             mauiAppBuilder.Services.AddTransient<IAlertDialogService, DefaultMauiAlertDialogService>();
+            mauiAppBuilder.Services.AddTransient<IUserDatabase, UserDatabase>();
             return mauiAppBuilder;
         }
         public static MauiAppBuilder RegisterViewModels(this MauiAppBuilder mauiAppBuilder)
