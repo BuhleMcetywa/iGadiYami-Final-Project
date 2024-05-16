@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using IGadiYami.Views;
 using System.Windows.Input;
 using CommunityToolkit.Mvvm.Input;
+using Xam.Plugins.OnDeviceCustomVision;
 
 namespace IGadiYami.ViewModels
 {
@@ -22,6 +23,16 @@ namespace IGadiYami.ViewModels
                 OnPropertyChanged(nameof(Photo));
             }
         }
+        private string _detectionresponse;
+        public string DetectionResponse
+        {
+            get { return _detectionresponse; }
+            set { _detectionresponse = value;
+
+                OnPropertyChanged();
+            }
+        }
+
 
         CameraView _cameraView;
 
@@ -44,6 +55,22 @@ namespace IGadiYami.ViewModels
         public void TakePhoto()
         {
             Photo = _cameraView.GetSnapShot(Camera.MAUI.ImageFormat.PNG);
+           // Photo = _cameraView.TakePhotoAsync();
+           DisplayResponse();
+        }
+
+        [RelayCommand]
+        public async void DisplayResponse()
+        {
+            Stream stream = await _cameraView.TakePhotoAsync();
+
+            MemoryStream ms = new MemoryStream();
+            await stream.CopyToAsync(ms);
+            ms.Position = 0;
+
+            var classifications = await CrossImageClassifier.Current.ClassifyImage(ms);
+            var highestProbabilityTag = classifications.OrderByDescending(c => c.Probability).First();
+            DetectionResponse = highestProbabilityTag.Tag;
         }
     }
 }
