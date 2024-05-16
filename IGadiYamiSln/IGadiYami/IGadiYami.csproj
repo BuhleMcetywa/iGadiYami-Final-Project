@@ -59,17 +59,24 @@
 	<ItemGroup>
 	  <None Remove="Platforms\Android\Assets\labels.txt" />
 	  <None Remove="Platforms\Android\Assets\model.pb" />
+	  <None Remove="Resources\Images\carrot.jpg" />
+	  <None Remove="Resources\Images\onions.jpg" />
+	  <None Remove="Resources\Images\potatoes.jpg" />
+	  <None Remove="Resources\Images\spinach.jpg" />
+	  <None Remove="Resources\Images\tomatoes.jpg" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Camera.MAUI" Version="1.5.1" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+		<PackageReference Include="Microsoft.Data.Sqlite.Core" Version="8.0.5" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 		<PackageReference Include="SQLite" Version="3.13.0" />
 		<PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
 		<PackageReference Include="SQLiteNetExtensions" Version="2.1.0" />
+		<PackageReference Include="SQLitePCLRaw.bundle_e_sqlcipher" Version="2.1.8" />
 		<PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.8" />
 		<PackageReference Include="Xam.Plugins.OnDeviceCustomVision" Version="2.2.2" />
 	</ItemGroup>
@@ -82,6 +89,9 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="Views\CameraPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\StartGardeningPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

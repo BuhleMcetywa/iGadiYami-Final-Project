@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using IGadiYami.Models;
 using IGadiYami.Models.UserData;
+using Microsoft.Data.Sqlite;
 // using Windows.System;
 
 namespace IGadiYami.Services
@@ -28,6 +29,7 @@ namespace IGadiYami.Services
         }
         public void SeedDatabase()
         {
+
             if (_dbConnection.Table<UserData>().Count() == 0)
             {
                 UserData userData = new UserData()
@@ -38,6 +40,7 @@ namespace IGadiYami.Services
                     UserPassword = "Test Password",
                     // UserPhoneNumber = "1234567890"
                 };
+                
                 _dbConnection.Insert(userData);
             }
         }

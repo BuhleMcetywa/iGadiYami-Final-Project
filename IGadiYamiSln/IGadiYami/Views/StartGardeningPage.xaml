@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IGadiYami.Views.StartGardeningPage"
+             xmlns:vm="clr-namespace:IGadiYami.ViewModels"
+             Title="StartGardeningPage">
+    
+    <Grid>
+        <!-- Background image -->
+        <Image Source="background" Aspect="AspectFill" />
+
+        <ListView ItemsSource="{Binding StartGardeningMenus}" HasUnevenRows="True" SelectionMode="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="170" />
+                                <RowDefinition Height="85" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="20" />
+                                <ColumnDefinition Width="130" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Border-like Frame that spans all columns -->
+                            <Frame Padding="0" BackgroundColor="Transparent" Margin="3,50,0,-35"  Grid.ColumnSpan="3"  WidthRequest="380" HeightRequest="246" CornerRadius="21">
+                                <Image Source="{Binding Image}" Aspect="AspectFill"></Image>
+
+                            </Frame>
+                            <Label Margin=" 0, 10, 0, 0" Grid.Column="1" TextColor="AntiqueWhite"  FontFamily="Canva Sans" Grid.Row="0" VerticalOptions="EndAndExpand" Text="{Binding Name}" FontAttributes="Bold" FontSize="23"/>
+
+                            <Label Margin=" 0,0, 0, 0" Grid.Column="1" FontSize="12" Grid.ColumnSpan="1" WidthRequest="140" HeightRequest="80" TextColor="AntiqueWhite" Grid.Row="1"  Text="{Binding Description}" />
+
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</ContentPage>
