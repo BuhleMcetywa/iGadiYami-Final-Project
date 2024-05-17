@@ -5,7 +5,6 @@ using IGadiYami.ViewModels;
 using Microsoft.Extensions.Logging;
 using Camera.MAUI;
 using IGadiYami.Interface;
-using IGadiYami.Models.Carrot;
 using IGadiYami.ViewModels.PlantPageViewModels;
 using IGadiYami.Views.Plant_Views;
 using IGadiYami.Views.PlantViews;

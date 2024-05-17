@@ -65,7 +65,7 @@
                     </Frame>
 
                 </StackLayout>
-                <Button Clicked="Login_Clicked" CornerRadius="40" Text="Log In" Grid.Row="6" FontAttributes="Bold" FontFamily="mont" BackgroundColor="#006838" TextColor="White" WidthRequest="200" HeightRequest="55" Margin="0,0,0,50"  />
+                <Button Command="{Binding LoginClickCommand}" CornerRadius="40" Text="Log In" Grid.Row="6" FontAttributes="Bold" FontFamily="mont" BackgroundColor="#006838" TextColor="White" WidthRequest="200" HeightRequest="55" Margin="0,0,0,50"  />
 
                 <Button Grid.Row="7" BackgroundColor="Transparent" Margin="0,10,0,0"
                 Text="Forgot Your Password?"
