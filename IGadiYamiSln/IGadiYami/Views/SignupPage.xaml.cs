@@ -11,4 +11,14 @@ public partial class SignupPage : ContentPage
 		InitializeComponent();
 		BindingContext = _viewModel;
 	}
+   
+
+    void OnGoogleGestureRecognizerTapped(object sender, TappedEventArgs args)
+    {
+        // Handle the tap
+    }
+    void OnMicrosoftGestureRecognizerTapped(object sender, TappedEventArgs args)
+    {
+        // Handle the tap
+    }
 }
