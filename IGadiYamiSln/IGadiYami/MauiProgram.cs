@@ -5,6 +5,10 @@ using IGadiYami.ViewModels;
 using Microsoft.Extensions.Logging;
 using Camera.MAUI;
 using IGadiYami.Interface;
+using IGadiYami.Models.Carrot;
+using IGadiYami.ViewModels.PlantPageViewModels;
+using IGadiYami.Views.Plant_Views;
+using IGadiYami.Views.PlantViews;
 
 namespace IGadiYami
 {
@@ -50,6 +54,11 @@ namespace IGadiYami
             mauiAppBuilder.Services.AddSingleton<StartUpPageViewModel>();
             mauiAppBuilder.Services.AddSingleton<TomatoViewModel>();
             mauiAppBuilder.Services.AddSingleton<StartGardeningPageViewModel>();
+            mauiAppBuilder.Services.AddSingleton<OnionPageViewModel>();
+            mauiAppBuilder.Services.AddSingleton<CarrotPageViewModel>();
+            mauiAppBuilder.Services.AddSingleton<SpinachPageViewModel>();
+            mauiAppBuilder.Services.AddSingleton<TomatoPageViewModel>();
+            mauiAppBuilder.Services.AddSingleton<PotatoPageViewModel>();
             return mauiAppBuilder;
         }
         public static MauiAppBuilder RegisterViews(this MauiAppBuilder mauiAppBuilder)
@@ -59,6 +68,11 @@ namespace IGadiYami
             mauiAppBuilder.Services.AddSingleton<StartPage>();
             mauiAppBuilder.Services.AddSingleton<CameraPage>();
             mauiAppBuilder.Services.AddSingleton<StartGardeningPage>();
+            mauiAppBuilder.Services.AddSingleton<CarrotPage>();
+            mauiAppBuilder.Services.AddSingleton<OnionPage>();
+            mauiAppBuilder.Services.AddSingleton<TomatoPage>();
+            mauiAppBuilder.Services.AddSingleton<SpinachPage>();
+            mauiAppBuilder.Services.AddSingleton<PotatoPage>();
             return mauiAppBuilder;
         }
     }
