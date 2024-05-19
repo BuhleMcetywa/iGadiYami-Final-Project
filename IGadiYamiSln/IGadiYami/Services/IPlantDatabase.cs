@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IGadiYami.Models.Diseases;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,7 @@ namespace IGadiYami.Services
 {
     public interface IPlantDatabase
     {
-    }
+		List<Disease> GetDiseasesForVegetable(int vegTypeID);
+
+	}
 }

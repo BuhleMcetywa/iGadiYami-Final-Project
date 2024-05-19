@@ -2,20 +2,11 @@
 using IGadiYami.Models.Vegetable;
 using IGadiYami.Models.Vegetable_Disease;
 using IGadiYami.Models.Vegetable_Type;
-using Microsoft.Maui.ApplicationModel;
 using SQLite;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics.Metrics;
-using System.Linq;
-using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace IGadiYami.Services
 {
-    public class PlantDatabase : IPlantDatabase
+	public class PlantDatabase : IPlantDatabase
     {
         private SQLiteConnection _dbConnection;
         public PlantDatabase()
@@ -371,5 +362,25 @@ namespace IGadiYami.Services
 
 		// Methods to use Data(Still need to do this)
 
+		public List<Disease> GetDiseasesForVegetable(int vegTypeID)
+		{
+			// Get all VegetableDisease instances for the specified vegetable
+			var vegDiseases = _dbConnection.Table<VegetableDisease>().Where(vd => vd.VegTypeID == vegTypeID).ToList();
+
+			// Get all Disease instances for the diseases associated with the specified vegetable
+			var diseases = new List<Disease>();
+			foreach (var vegDisease in vegDiseases)
+			{
+				var disease = _dbConnection.Table<Disease>().FirstOrDefault(d => d.DiseaseID == vegDisease.DiseaseID);
+				if (disease != null)
+				{
+					diseases.Add(disease);
+				}
+			}
+
+			return diseases;
+
+
+		}
 	}
 }
