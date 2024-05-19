@@ -22,5 +22,7 @@ namespace IGadiYami.Models.Vegetable
         public string SoilPrep { get; set; }
         public string TimeToPlant { get; set; }
         public string HowToPlant { get; set; }
+
+        public string Image { get; set; }
     }
 }

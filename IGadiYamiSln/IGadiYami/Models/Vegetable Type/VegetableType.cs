@@ -12,10 +12,9 @@ namespace IGadiYami.Models.Vegetable_Type
         [PrimaryKey, AutoIncrement]
         public int VegTypeID { get; set; }
         public string Description { get; set; }
-        public string Carrot { get; set; }
-        public string Tomato { get; set; }
-        public string Onion { get; set; }
-        public string Potato { get; set; }
-        public string Spinach { get; set; }
+        
+        public string VegTypeName { get; set; }
+
+        public string Image { get; set; }
     }
 }
