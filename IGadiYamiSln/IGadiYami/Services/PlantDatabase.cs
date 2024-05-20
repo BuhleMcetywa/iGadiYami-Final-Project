@@ -1,6 +1,9 @@
-﻿using IGadiYami.Models;
+﻿//using Android.Content.Res;
+//using Android.Telecom;
+using IGadiYami.Models;
 
 using SQLite;
+using static Android.InputMethodServices.Keyboard;
 
 namespace IGadiYami.Services
 {
@@ -150,10 +153,10 @@ namespace IGadiYami.Services
 				Disease disease = new Disease()
                 {
 					DiseaseID = 1,
-					DiseaseName = "Bacterial Spot",
+					DiseaseName = "Carrot Rust Fly",
 					DiseaseDescription = "",
-					DiseaseCauses = "",
-					DiseaseControlMeasures = "",
+					DiseaseCauses = "The larvae of the carrot rust fly tunnel into the roots, causing damage and making the carrots unmarketable",
+					DiseaseControlMeasures = "To control this pest, you can use floating row covers to prevent adult flies from laying eggs on the plants or consider using appropriate insecticides.",
 					
 				};
 				_dbConnection.Insert(disease);
@@ -161,10 +164,10 @@ namespace IGadiYami.Services
 				disease = new Disease()
                 {
 					DiseaseID = 2,
-					DiseaseName = "Bacterial Spot",
+					DiseaseName = "Alternaria Leaf Blight",
 					DiseaseDescription = "",
-					DiseaseCauses = "",
-					DiseaseControlMeasures = "",
+					DiseaseCauses = "This fungal disease affects the leaves and stems of carrot plants. It causes dark, sunken lesions on the leaves and can lead to defoliation if left untreated.",
+					DiseaseControlMeasures = "Crop rotation, proper sanitation, and the use of fungicides labeled for carrot diseases can help manage Alternaria leaf blight.",
 					
 				};
 				_dbConnection.Insert(disease);
@@ -172,10 +175,10 @@ namespace IGadiYami.Services
 				disease = new Disease()
                 {
 					DiseaseID = 3,
-					DiseaseName = "Bacterial Spot",
+					DiseaseName = "Root Knot Nematodes",
 					DiseaseDescription = "",
-					DiseaseCauses = "",
-					DiseaseControlMeasures = "",
+					DiseaseCauses = "These microscopic worm-like organisms can cause galls or knots to form on the roots of carrot plants. Infected plants may show stunted growth and have reduced yields.",
+					DiseaseControlMeasures = "Crop rotation, soil solarization, and the use of resistant carrot varieties are effective management strategies for root knot nematodes.",
 					
 				};
 				_dbConnection.Insert(disease);
@@ -183,10 +186,10 @@ namespace IGadiYami.Services
 				disease = new Disease()
                 {
 					DiseaseID = 4,
-					DiseaseName = "Bacterial Spot",
+					DiseaseName = "Bacterial soft rot",
 					DiseaseDescription = "",
-					DiseaseCauses = "",
-					DiseaseControlMeasures = "",
+					DiseaseCauses = "\"Bacterial soft rot is caused by various types of bacteria, with Erwinia carotovora being a common culprit. These bacteria can infect potatoes both in the ground and after harvest.\r\n   - The disease typically enters through wounds, such as lenticels, growth cracks, or any other injuries on the tubers¹³.\r\n   - Factors that favor bacterial soft rot include:\r\n     - Immature Tubers:Soft rot is more likely in immature tubers.\r\n     - Adverse Temperatures: Pulp temperatures above 21°C at harvest promote soft rot.\r\n     - Mechanical Damage: Bruising or cuts from digging forks provide entry points for bacteria.\r\n     - Free Water:Water on tuber surfaces encourages bacterial growth.\r\n\"",
+					DiseaseControlMeasures = "\"To prevent bacterial soft rot in potatoes, start with disease-free seed potatoes and rotate crops with non-host plants. Keep fields clean by removing infected plants and debris, and avoid planting in areas with a history of the disease. Proper irrigation, soil drainage, and careful handling during harvest and storage are crucial, while considering chemical treatments and biological controls as additional options to manage the disease effectively.\r\n\"",
 
 				};
 				_dbConnection.Insert(disease);
@@ -194,10 +197,10 @@ namespace IGadiYami.Services
 				disease = new Disease()
                 {
 					DiseaseID = 5,
-					DiseaseName = "Bacterial Spot",
+					DiseaseName = "Blackleg Disease",
 					DiseaseDescription = "",
-					DiseaseCauses = "",
-					DiseaseControlMeasures = "",
+					DiseaseCauses = "Blackleg disease in potatoes is caused by pectolytic bacteria, specifically those in the genera Pectobacterium and Dickeya (formerly known as Erwinia)",
+					DiseaseControlMeasures = "\"To prevent blackleg disease in potatoes, start with healthy seed potatoes and rotate crops with different plants each year. Keep fields clean, avoid overwatering, and choose resistant potato varieties when possible to minimize the risk of disease.\r\n\"",
 
 				};
 				_dbConnection.Insert(disease);
@@ -205,10 +208,10 @@ namespace IGadiYami.Services
 				disease = new Disease()
                 {
 					DiseaseID = 6,
-					DiseaseName = "Bacterial Spot",
+					DiseaseName = "Late Blight(Tomato)",
 					DiseaseDescription = "",
-					DiseaseCauses = "",
-					DiseaseControlMeasures = "",
+					DiseaseCauses = "Late blight in potatoes is caused by the airborne spores of the Phytophthora infestans fungus. This disease manifests as irregular dark lesions on the stems and leaves of potato plants and spreads quickly. Late blight is a sporadic disease and is more likely to develop in cool, wet conditions.",
+					DiseaseControlMeasures = "\"To stop late blight in potatoes, pick resistant varieties and rotate crops yearly. Keep the potato area clean, removing any infected leaves promptly. Use fungicides during humid weather and water plants early in the day at the base to keep the foliage dry.\r\n\"",
 
 				};
 				_dbConnection.Insert(disease);
@@ -216,10 +219,10 @@ namespace IGadiYami.Services
 				disease = new Disease()
                 {
 					DiseaseID = 7,
-					DiseaseName = "Bacterial Spot",
+					DiseaseName = "Early blight(Potato)",
 					DiseaseDescription = "",
-					DiseaseCauses = "",
-					DiseaseControlMeasures = "",
+					DiseaseCauses = "\"Alternaria solani is the primary culprit behind early blight.  Early blight doesn’t require excessive moisture it can even persist during drought periods.\r\nThe fungus tends to attack weakened plants, especially those with insect damage or reduced vitality due to other factors.\r\nShaded and older leaves are more susceptible to infection than young, vigorous ones.\"",
+					DiseaseControlMeasures = "\"To control early blight in potatoes, start by choosing potato varieties that resist the disease and rotate crops with different plants each season. Keep the potato patch clean by removing any infected leaves or debris, and water the plants at ground level to avoid splashing spores. If needed, apply natural or chemical fungicides according to instructions to further protect the plants from early blight.\r\n\"",
 
 				};
 				_dbConnection.Insert(disease);
@@ -227,9 +230,9 @@ namespace IGadiYami.Services
 				disease = new Disease()
                 {
 					DiseaseID = 8,
-					DiseaseName = "Bacterial Spot",
+					DiseaseName = "Powdery scab disease",
 					DiseaseDescription = "",
-					DiseaseCauses = "",
+					DiseaseCauses = "\"The disease is caused by Spongospora subterranea and can lead to significant yield losses.\r\n\r\n\"",
 					DiseaseControlMeasures = "",
 
 				};
@@ -238,10 +241,10 @@ namespace IGadiYami.Services
 				disease = new Disease()
 				{
 					DiseaseID = 9,
-					DiseaseName = "Bacterial Spot",
+					DiseaseName = "Anthracnose",
 					DiseaseDescription = "",
-					DiseaseCauses = "",
-					DiseaseControlMeasures = "",
+					DiseaseCauses = "A fungal disease that affect spinach leaves and stems, causes dark, eater soaked lesions that turn tan or gray",
+					DiseaseControlMeasures = "Avoid overcrowding, ensure good drainage in your growing area.",
 				};
 
 					_dbConnection.Insert(disease);
@@ -249,10 +252,10 @@ namespace IGadiYami.Services
 				disease = new Disease()
 				{
 					DiseaseID = 10,
-					DiseaseName = "Bacterial Spot",
+					DiseaseName = "Downy Mildew",
 					DiseaseDescription = "",
-					DiseaseCauses = "",
-					DiseaseControlMeasures = "",
+					DiseaseCauses = "fungal diseases caused by Peronospora finosa can be identidied by yellow or pale green spots on the upper surface of the leaves and a grayish-purple growth on the undersides",
+					DiseaseControlMeasures = "avoid overhead watering of crops, provide adequate spacing between plants for good air circulation.",
 
 				};
 				_dbConnection.Insert(disease);
@@ -260,10 +263,10 @@ namespace IGadiYami.Services
 				disease = new Disease()
 				{
 					DiseaseID = 11,
-					DiseaseName = "Bacterial Spot",
+					DiseaseName = "White Rust",
 					DiseaseDescription = "",
-					DiseaseCauses = "",
-					DiseaseControlMeasures = "",
+					DiseaseCauses = "A fungal disease, cuases raised, white pustules on the undersides of leaves and can lead to severe defoliation",
+					DiseaseControlMeasures = "practice crop rotation, remove infected plants to prevent the spread of white rust.",
 				
 				};
 				_dbConnection.Insert(disease);
@@ -271,10 +274,10 @@ namespace IGadiYami.Services
 				disease = new Disease()
 				{
 					DiseaseID = 12,
-					DiseaseName = "Bacterial Spot",
+					DiseaseName = "Fusarium Wilt",
 					DiseaseDescription = "",
-					DiseaseCauses = "",
-					DiseaseControlMeasures = "",
+					DiseaseCauses = "Caused by a soil-borne fungal disease, noticeable by wilting, yellowing and stunting of plants",
+					DiseaseControlMeasures = "use disease-resistant spinach varieties, practice crop rotation.",
 
 				};
 				_dbConnection.Insert(disease);
@@ -282,10 +285,56 @@ namespace IGadiYami.Services
 				disease = new Disease()
 				{
 					DiseaseID = 13,
-					DiseaseName = "Bacterial Spot",
+					DiseaseName = "Botrytis Blight",
 					DiseaseDescription = "",
-					DiseaseCauses = "",
-					DiseaseControlMeasures = "",
+					DiseaseCauses = "caused by Botrytis squamosa, this pathogen favours cool, moist conditions and the infection starts with elongated white spots",
+					DiseaseControlMeasures = "destroy onion or debris cull piles to reduces sources of inoculum, optimize plant row orientation and spacing to enhance air movement, reduce leaf wetness, implent a preventative fungicide spray program to manage the disease.",
+
+				};
+				_dbConnection.Insert(disease);
+
+				disease = new Disease()
+				{
+					DiseaseID = 14,
+					DiseaseName= "Botrytis neck rot",
+					DiseaseCauses = "disease is caused by prolonged exposure to wet conditions, spreads most rapidly during moderate temperatures with high humidity, rainfall or overhead irrigation. Storing uncured onions at temperatures and humidity that are too high can promote disease development and spread.",
+					DiseaseControlMeasures = "Adjust plant spacing and row orientation to obtain the best air movement through the plants, avoid injury to the onion neck and damage to the bulbs especially during harvest. Field applications of fungicides prior to harvest may reduce severity.",
+				};
+				_dbConnection.Insert(disease);
+
+				disease = new Disease()
+				{
+					DiseaseID = 15,
+					DiseaseName = "Downy Mildew",
+					DiseaseCauses = "Caused by the fungal disease Peronspora destructor that thrives in cool, humid conditions. Appears as pale green or yellow patches on the leaves which later turn brown",
+					DiseaseControlMeasures = "Ensure good airflow, proper spacing between crops and fungicide treatments.",
+				};
+				_dbConnection.Insert(disease);
+
+				disease = new Disease()
+				{
+					DiseaseID = 16,
+					DiseaseName = "Purple blotch",
+					DiseaseCauses = "Caused by the fungus Alternarria porria, pathogen thrives in warm, moist conditions.",
+					DiseaseControlMeasures = "Applying a broad spectrum protective fungicides before infection can provide good protection, crop rotation is recommended after an outbreak, try to minimize leaf wetness by using  surface irrigation instead of sprinkler irrigation, ensure good field drainage and maintain correct plant spacing."
+				};
+				_dbConnection.Insert(disease);
+
+				disease = new Disease()
+				{
+					DiseaseID = 17,
+					DiseaseName = "Anthracnose",
+					DiseaseCauses= "Caused by several species of the fungus Colletotrichum. Ripe and overripe fruit are especially susceptible but the pathogen can infect green fruit with symptoms not developing until fruit begin to ripen. ",
+					DiseaseControlMeasures = "\"To stop anthracnose in tomatoes, keep the area clean by removing infected plants and\r\nrotating crops each year. Choose resistant tomato types and water plants carefully to keep\r\nthe leaves dry. Apply mulch, consider using fungicides if needed, and regularly check for\r\n\r\nsigns of the disease.\""
+				};
+				_dbConnection.Insert(disease);
+
+				disease = new Disease()
+				{
+					DiseaseID = 18,
+					DiseaseName = "Blosom End Rot",
+					DiseaseCauses = "\nLow calcium levels in the soil.\r\nSoil that is over- or underwatered.\r\nWide fluctuations in soil moisture.\r\nInconsistent watering.\r\nLow soil pH.\r\nExcessive nitrogen.\n",
+					DiseaseControlMeasures = "\"To prevent blossom end rot in tomatoes, maintain consistent watering to avoid fluctuations\r\nin soil moisture. Ensure proper calcium levels in the soil through soil amendments or\r\nfertilizers containing calcium. Mulch around tomato plants to regulate soil temperature and\r\nmoisture, and avoid excessive nitrogen fertilization, which can interfere with calcium\r\n\r\nuptake.\""
 
 				};
 				_dbConnection.Insert(disease);
