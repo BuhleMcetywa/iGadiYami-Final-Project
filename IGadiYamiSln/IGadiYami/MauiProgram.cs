@@ -9,6 +9,7 @@ using CommunityToolkit.Maui;
 using IGadiYami.ViewModels.PlantPageViewModels;
 using IGadiYami.Views.Plant_Views;
 using IGadiYami.Views.PlantViews;
+using IGadiYami.ViewModels.ChatbotViewModels;
 
 
 namespace IGadiYami
@@ -26,10 +27,10 @@ namespace IGadiYami
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-                });
+                }); 
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
             builder.RegisterServices()
                .RegisterViewModels()
@@ -41,6 +42,7 @@ namespace IGadiYami
         // Registering Views/Models/ViewModels
         public static MauiAppBuilder RegisterServices(this MauiAppBuilder mauiAppBuilder)
         {
+            mauiAppBuilder.Services.AddTransient<IAiAssistant, IgadiYamiAiAssistant>();
             mauiAppBuilder.Services.AddTransient<IPlantDatabase, PlantDatabase>();
             mauiAppBuilder.Services.AddTransient<ISettings, Settings>();
             mauiAppBuilder.Services.AddTransient<IService, Service>();
@@ -50,6 +52,8 @@ namespace IGadiYami
         }
         public static MauiAppBuilder RegisterViewModels(this MauiAppBuilder mauiAppBuilder)
         {
+            mauiAppBuilder.Services.AddSingleton<IgadiYamiQuestionViewModel>();
+            mauiAppBuilder.Services.AddSingleton<IgadiYamiAnswerViewModel>();
             mauiAppBuilder.Services.AddSingleton<CameraPageViewModel>();
             mauiAppBuilder.Services.AddSingleton<LoginPageViewModel>();
             mauiAppBuilder.Services.AddSingleton<SignUpPageViewModel>();
@@ -65,6 +69,8 @@ namespace IGadiYami
         }
         public static MauiAppBuilder RegisterViews(this MauiAppBuilder mauiAppBuilder)
         {
+            mauiAppBuilder.Services.AddSingleton<IgadiYamiQuestionPage>();
+            mauiAppBuilder.Services.AddSingleton<IgadiYamiAnswerPage>();
             mauiAppBuilder.Services.AddSingleton<LoginPage>();
             mauiAppBuilder.Services.AddSingleton<SignupPage>();
             mauiAppBuilder.Services.AddSingleton<StartPage>();
