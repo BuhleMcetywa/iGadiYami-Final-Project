@@ -362,6 +362,12 @@ namespace IGadiYami.Services
 
 		// Methods to use Data(Still need to do this)
 
+		public Disease GetDiseaseByTag(string tag)
+		{
+			var disease = _dbConnection.Table<Disease>().Where(vd => vd.TagDescription == tag).FirstOrDefault();
+			return disease; 
+		}
+
 		public List<Disease> GetDiseasesForVegetable(int vegTypeID)
 		{
 			// Get all VegetableDisease instances for the specified vegetable

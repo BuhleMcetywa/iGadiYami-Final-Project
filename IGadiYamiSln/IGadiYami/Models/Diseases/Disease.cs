@@ -15,5 +15,7 @@ namespace IGadiYami.Models.Diseases
         public string DiseaseDescription { get; set; }
         public string DiseaseCauses { get; set; }
         public string DiseaseControlMeasures { get; set; }
-    }
+		public string TagDescription { get; set; }
+
+	}
 }
