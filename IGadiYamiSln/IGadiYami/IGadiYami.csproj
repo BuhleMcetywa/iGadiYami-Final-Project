@@ -65,6 +65,7 @@
 	  <None Remove="Resources\Images\onions.jpg" />
 	  <None Remove="Resources\Images\potatoes.jpg" />
 	  <None Remove="Resources\Images\potatoes1.jpeg" />
+	  <None Remove="Resources\Images\sendicon.png" />
 	  <None Remove="Resources\Images\spinach.jpg" />
 	  <None Remove="Resources\Images\spinach1.jpeg" />
 	  <None Remove="Resources\Images\tomato1.jpg" />

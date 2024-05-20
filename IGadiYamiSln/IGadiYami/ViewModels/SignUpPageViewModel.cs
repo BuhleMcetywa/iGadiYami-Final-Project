@@ -203,7 +203,8 @@ namespace IGadiYami.ViewModels
             UserSurname = "";
             UserEmail = "";
             UserPassword = "";
-            await App.Current.MainPage.Navigation.PushAsync(new StartGardeningPage(new StartGardeningPageViewModel()));
+            // await App.Current.MainPage.Navigation.PushAsync(new StartGardeningPage(new StartGardeningPageViewModel()));
+            await Shell.Current.GoToAsync("startgardening");
         }
 
         [RelayCommand]

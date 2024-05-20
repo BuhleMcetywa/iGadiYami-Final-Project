@@ -9,4 +9,10 @@ public partial class StartGardeningPage : ContentPage
 		InitializeComponent();
 		BindingContext = vm;
 	}
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+
+        ((StartGardeningPageViewModel)BindingContext).OnAppearing();
+    }
 }
