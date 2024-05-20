@@ -8,10 +8,9 @@ namespace IGadiYami.Configuration
 {
     public class Settings : ISettings
     {
-        // Custom Vision Details
-        public static string CustomVisionEndPoint => "https://igadiyamicusomvision.cognitiveservices.azure.com/";
-        public static string PredictionKey => "ea23dda48ae741fe95fdcff27c9bc7ed";
-        public static string ProjectId => "312aeef8-548d-4c7c-840c-01e05059f978";
-        public static string PublishedName => "Plant Disease Detection";
+        public string AzureSearchEndPoint { get => "https://loadsheddinglpsearch.search.windows.net"; }
+        public string AzureSearchKey { get => "zfpzkNyNzrvST2yOOG6k7RV0n9Xm56Gj8IpNEt2a6RAzSeDgl7rd"; }
+        public string AzureOpenAiEndPoint { get => "https://igadiyamiopenai.openai.azure.com/"; }
+        public string AzureOpenAiKey { get => "2befb13109774d6a841fd33c510dd29e"; }
     }
 }
