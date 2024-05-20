@@ -1,14 +1,17 @@
-﻿using IGadiYami.Models;
+﻿using CommunityToolkit.Mvvm.Input;
+using IGadiYami.Models;
+using IGadiYami.Services;
 using IGadiYami.ViewModels.PlantPageViewModels;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace IGadiYami.ViewModels
 {
-    public class StartGardeningPageViewModel : BaseViewModel
+    public partial class StartGardeningPageViewModel : BaseViewModel
     {
 		private List<StartGardeningMenu> _startGardeningMenus;
 
@@ -18,10 +21,44 @@ namespace IGadiYami.ViewModels
 			set { _startGardeningMenus = value; OnPropertyChanged(); }
 		}
 
-        public StartGardeningPageViewModel()
+
+        private PlantDatabase _plantdatabase;
+        private ObservableCollection<Vegetable> _vegetables;
+
+        public ObservableCollection<Vegetable> Vegetables
         {
-            StartGardeningMenuOptionCollections();
+            get { return _vegetables; }
+            set
+            {
+                _vegetables = value;
+                OnPropertyChanged();
+            }
         }
+
+        [RelayCommand]
+        public async Task VegetableSelected(Vegetable vegetables)
+        {
+            var navigationParameter = new Dictionary<string, object>
+           {
+                { "Vegetable", vegetables }
+           };
+            await Shell.Current.GoToAsync($"vegetable", navigationParameter);
+
+        }
+        public override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            Vegetables = new ObservableCollection<Vegetable>(_plantdatabase.GetAllVegetables());
+        }
+
+
+        public StartGardeningPageViewModel(PlantDatabase plantDatabase)
+        {
+            _plantdatabase = plantDatabase;
+            // StartGardeningMenuOptionCollections();
+        }
+
 
         void StartGardeningMenuOptionCollections()
         {

@@ -15,7 +15,7 @@ namespace IGadiYami.Models
         public int VegetableID { get; set; }
 
         [ForeignKey(typeof(VegetableType))]
-        public int VegTypeID { get; set; }
+        public string Description { get; set; }
         public string Name { get; set; }
         public string SoilType { get; set; }
         public string WaterIntake { get; set; }
