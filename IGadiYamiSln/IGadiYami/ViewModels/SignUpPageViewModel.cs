@@ -1,7 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.Input;
 using IGadiYami.Interface;
-using IGadiYami.Models.UserData;
-using IGadiYami.Models.UserInput;
+using IGadiYami.Models;
 using IGadiYami.Services;
 using IGadiYami.Views;
 using System;

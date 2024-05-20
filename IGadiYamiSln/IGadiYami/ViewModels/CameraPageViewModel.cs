@@ -8,11 +8,14 @@ using IGadiYami.Views;
 using System.Windows.Input;
 using CommunityToolkit.Mvvm.Input;
 using Xam.Plugins.OnDeviceCustomVision;
+using IGadiYami.Services;
 
 namespace IGadiYami.ViewModels
 {
     public partial class CameraPageViewModel : BaseViewModel
     {
+        private IPlantDatabase _plantDatabase;
+
         private ImageSource _photo;
         public ImageSource Photo
         {
@@ -35,6 +38,11 @@ namespace IGadiYami.ViewModels
 
 
         CameraView _cameraView;
+
+        public CameraPageViewModel(IPlantDatabase plantDatabase)
+        {
+            _plantDatabase = plantDatabase;
+        }
 
         public void SetCameraView(CameraView cameraView)
         {
@@ -71,6 +79,18 @@ namespace IGadiYami.ViewModels
             var classifications = await CrossImageClassifier.Current.ClassifyImage(ms);
             var highestProbabilityTag = classifications.OrderByDescending(c => c.Probability).First();
             DetectionResponse = highestProbabilityTag.Tag;
-        }
+
+            var namePosition = highestProbabilityTag.Tag.IndexOf("(");
+            var tagToSearch = highestProbabilityTag.Tag.Substring(0, namePosition - 1);
+
+            var disease =  _plantDatabase.GetDiseaseByTag(tagToSearch);
+
+            if (disease != null)
+            {
+                // DO STUFF WITH DISEASE
+
+            }
+
+		}
     }
 }

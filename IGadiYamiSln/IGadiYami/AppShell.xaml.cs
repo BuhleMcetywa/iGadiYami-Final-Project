@@ -14,5 +14,10 @@ namespace IGadiYami
             Routing.RegisterRoute("igadiyamiquestion", typeof(IgadiYamiQuestionPage));
             Routing.RegisterRoute("igadiyamianswer", typeof(IgadiYamiAnswerPage));
         }
+        private void RegisterRoutes()
+        {
+            Routing.RegisterRoute("allvegetable", typeof(TestAllVegetablePage));
+            Routing.RegisterRoute("vegetable", typeof(TestVegetablePage));
+        }
     }
 }

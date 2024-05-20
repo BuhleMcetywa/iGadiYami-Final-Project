@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IGadiYami.Models.Diseases
+namespace IGadiYami.Models
 {
     public class Disease
     {
@@ -15,5 +15,7 @@ namespace IGadiYami.Models.Diseases
         public string DiseaseDescription { get; set; }
         public string DiseaseCauses { get; set; }
         public string DiseaseControlMeasures { get; set; }
-    }
+		public string TagDescription { get; set; }
+
+	}
 }

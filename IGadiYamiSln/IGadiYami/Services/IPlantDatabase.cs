@@ -1,4 +1,4 @@
-﻿using IGadiYami.Models.Diseases;
+﻿using IGadiYami.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +9,7 @@ namespace IGadiYami.Services
 {
     public interface IPlantDatabase
     {
+		Disease GetDiseaseByTag(string tag);
 		List<Disease> GetDiseasesForVegetable(int vegTypeID);
 
 	}

@@ -1,7 +1,5 @@
-﻿using IGadiYami.Models.Diseases;
-using IGadiYami.Models.Vegetable;
-using IGadiYami.Models.Vegetable_Disease;
-using IGadiYami.Models.Vegetable_Type;
+﻿using IGadiYami.Models;
+
 using SQLite;
 
 namespace IGadiYami.Services
@@ -14,7 +12,7 @@ namespace IGadiYami.Services
             _dbConnection = new SQLiteConnection(GetDatabasePath());
             _dbConnection.CreateTable<Disease>();
             _dbConnection.CreateTable<VegetableDisease>();
-            _dbConnection.CreateTable<Vegetables>();
+            _dbConnection.CreateTable<Vegetable>();
             _dbConnection.CreateTable<VegetableType>();
             SeedDatabase();
         }
@@ -26,9 +24,9 @@ namespace IGadiYami.Services
         }
         public void SeedDatabase()
         {   //this table you use to access the specific vegetable you want to plant
-           if(_dbConnection.Table<Vegetables>().Count() == 0)
+           if(_dbConnection.Table<Vegetable>().Count() == 0)
             {
-                Vegetables vegetables = new Vegetables()
+                Vegetable vegetables = new Vegetable()
                 {
 					Name = "Tomato",
 					SoilType= "Tomatoes grow best within a soil pH range of 6.0 to 6.8. This acidity level provides an optimal\r\n\r\nenvironment for their growth and productivity.Tomatoes grow best in sandy loam or loamy soil because it drains well but keeps moisture and\r\nnutrients.",
@@ -41,7 +39,7 @@ namespace IGadiYami.Services
 				};
                 _dbConnection.Insert(vegetables);
 
-                vegetables = new Vegetables()
+                vegetables = new Vegetable()
                 {
 					Name = "Onion",
 					SoilType = "Onions will grow in almost any kind of soil, from sandy loams to heavy clay. If the soil is heavy, work in some compost or manure to help it retain moisture. Onions prefer a slightly acidic soil, and a pH of 5,5 to 6,5 is good.",
@@ -54,7 +52,7 @@ namespace IGadiYami.Services
 				};
                 _dbConnection.Insert(vegetables);
 
-                vegetables = new Vegetables()
+                vegetables = new Vegetable()
                 {
                     Name = "Potato",
                     SoilType = "For potatoes, aim for a soil pH between 5.0 and 6.0, as this range provides optimal conditions for growth and nutrient uptake.For potatoes, having space to grow underground is crucial, and loam provides that room  while also being light enough for tubers to expand comfortably. So, loamy soil is like a cozy  home for potatoes, keeping them well-nourished, hydrated, and supported as they grow. \r\n",
@@ -66,7 +64,7 @@ namespace IGadiYami.Services
                 };
                 _dbConnection.Insert(vegetables); 
 
-                vegetables = new Vegetables()
+                vegetables = new Vegetable()
                 {
 					Name = "Carrot",
 					SoilType = "Carrots prefer well-drained soil that is slightly acidic with a ph of 6-7",
@@ -79,7 +77,7 @@ namespace IGadiYami.Services
 
                 _dbConnection.Insert(vegetables);
 
-                vegetables = new Vegetables()
+                vegetables = new Vegetable()
                 {
                     Name = "Spinach",
                     SoilType = "Spinach generally prefers a slightly acidic to neutral soil pH ranging from 6.0 to 7.0. This pH range provides optimal conditions for nutrient uptake and overall plant health. However, spinach is adaptable and can tolerate a wider pH range, but extremes on either end (highly acidic or highly alkaline soils) may lead to nutrient deficiencies or toxicity, affecting plant growth and yield. Therefore, maintaining the soil pH within the recommended range is crucial for successful spinach cultivation.\r\nSpinach thrives best in loamy soil, which strikes a balance between drainage and moisture  retention. It provides a cozy home for spinach roots, allowing them to absorb nutrients  effectively. \r\nSandy soil drains quickly, preventing waterlogging, but it requires regular watering to keep  spinach hydrated. \r\n",
@@ -362,6 +360,12 @@ namespace IGadiYami.Services
 
 		// Methods to use Data(Still need to do this)
 
+		public Disease GetDiseaseByTag(string tag)
+		{
+			var disease = _dbConnection.Table<Disease>().Where(vd => vd.TagDescription == tag).FirstOrDefault();
+			return disease; 
+		}
+
 		public List<Disease> GetDiseasesForVegetable(int vegTypeID)
 		{
 			// Get all VegetableDisease instances for the specified vegetable
@@ -379,8 +383,10 @@ namespace IGadiYami.Services
 			}
 
 			return diseases;
-
-
 		}
-	}
+        public List<Vegetable> GetAllVegetables()
+        {
+            return _dbConnection.Table<Vegetable>().ToList();
+        }
+    }
 }
