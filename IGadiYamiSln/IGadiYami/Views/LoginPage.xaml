@@ -38,7 +38,7 @@
                             </Image.GestureRecognizers>
                         </Image>
                     </Frame>
-                    <Label Text="Sign up with Google"  Grid.Row="0"  HorizontalOptions="Center" Margin="5,0,0,0" VerticalOptions="Center" FontFamily="mont" FontSize="15" TextColor="White" FontAttributes="Bold" />
+                    <Label Text="Log In with Google"  Grid.Row="0"  HorizontalOptions="Center" Margin="5,0,0,0" VerticalOptions="Center" FontFamily="mont" FontSize="15" TextColor="White" FontAttributes="Bold" />
                 </Grid>
 
                 <Grid Grid.Row="3">

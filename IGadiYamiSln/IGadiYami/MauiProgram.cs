@@ -5,9 +5,10 @@ using IGadiYami.ViewModels;
 using Microsoft.Extensions.Logging;
 using Camera.MAUI;
 using IGadiYami.Interface;
+using CommunityToolkit.Maui;
 using IGadiYami.ViewModels.PlantPageViewModels;
-using IGadiYami.Views.Plant_Views;
-using IGadiYami.Views.PlantViews;
+using IGadiYami.ViewModels.ChatbotViewModels;
+using IGadiYami.ViewModels.Test;
 
 namespace IGadiYami
 {
@@ -19,14 +20,15 @@ namespace IGadiYami
             builder
                 .UseMauiApp<App>()
                 .UseMauiCameraView()
+                .UseMauiCommunityToolkit()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-                });
+                }); 
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
             builder.RegisterServices()
                .RegisterViewModels()
@@ -38,7 +40,9 @@ namespace IGadiYami
         // Registering Views/Models/ViewModels
         public static MauiAppBuilder RegisterServices(this MauiAppBuilder mauiAppBuilder)
         {
+            mauiAppBuilder.Services.AddTransient<IAiAssistant, IgadiYamiAiAssistant>();
             mauiAppBuilder.Services.AddTransient<IPlantDatabase, PlantDatabase>();
+            mauiAppBuilder.Services.AddTransient<PlantDatabase>();
             mauiAppBuilder.Services.AddTransient<ISettings, Settings>();
             mauiAppBuilder.Services.AddTransient<IService, Service>();
             mauiAppBuilder.Services.AddTransient<IAlertDialogService, DefaultMauiAlertDialogService>();
@@ -47,31 +51,29 @@ namespace IGadiYami
         }
         public static MauiAppBuilder RegisterViewModels(this MauiAppBuilder mauiAppBuilder)
         {
+            mauiAppBuilder.Services.AddSingleton<IgadiYamiQuestionViewModel>();
+            mauiAppBuilder.Services.AddSingleton<IgadiYamiAnswerViewModel>();
             mauiAppBuilder.Services.AddSingleton<CameraPageViewModel>();
             mauiAppBuilder.Services.AddSingleton<LoginPageViewModel>();
             mauiAppBuilder.Services.AddSingleton<SignUpPageViewModel>();
             mauiAppBuilder.Services.AddSingleton<StartUpPageViewModel>();
             mauiAppBuilder.Services.AddSingleton<TomatoViewModel>();
             mauiAppBuilder.Services.AddSingleton<StartGardeningPageViewModel>();
-            mauiAppBuilder.Services.AddSingleton<OnionPageViewModel>();
-            mauiAppBuilder.Services.AddSingleton<CarrotPageViewModel>();
-            mauiAppBuilder.Services.AddSingleton<SpinachPageViewModel>();
-            mauiAppBuilder.Services.AddSingleton<TomatoPageViewModel>();
-            mauiAppBuilder.Services.AddSingleton<PotatoPageViewModel>();
+            mauiAppBuilder.Services.AddSingleton<TestAllVegetablesViewModel>();
+            mauiAppBuilder.Services.AddSingleton<TestVegetablesViewModel>();
             return mauiAppBuilder;
         }
         public static MauiAppBuilder RegisterViews(this MauiAppBuilder mauiAppBuilder)
         {
+            mauiAppBuilder.Services.AddSingleton<IgadiYamiQuestionPage>();
+            mauiAppBuilder.Services.AddSingleton<IgadiYamiAnswerPage>();
             mauiAppBuilder.Services.AddSingleton<LoginPage>();
             mauiAppBuilder.Services.AddSingleton<SignupPage>();
             mauiAppBuilder.Services.AddSingleton<StartPage>();
             mauiAppBuilder.Services.AddSingleton<CameraPage>();
             mauiAppBuilder.Services.AddSingleton<StartGardeningPage>();
-            mauiAppBuilder.Services.AddSingleton<CarrotPage>();
-            mauiAppBuilder.Services.AddSingleton<OnionPage>();
-            mauiAppBuilder.Services.AddSingleton<TomatoPage>();
-            mauiAppBuilder.Services.AddSingleton<SpinachPage>();
-            mauiAppBuilder.Services.AddSingleton<PotatoPage>();
+            mauiAppBuilder.Services.AddSingleton<TestAllVegetablePage>();
+            mauiAppBuilder.Services.AddSingleton<TestVegetablePage>();
             return mauiAppBuilder;
         }
     }

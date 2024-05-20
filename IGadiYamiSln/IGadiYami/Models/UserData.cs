@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IGadiYami.Models.UserData
+namespace IGadiYami.Models
 {
     public class UserData
     {

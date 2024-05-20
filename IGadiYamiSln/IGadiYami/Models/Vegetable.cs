@@ -1,4 +1,4 @@
-﻿using IGadiYami.Models.Vegetable_Type;
+﻿using IGadiYami.Models;
 using SQLite;
 using SQLiteNetExtensions.Attributes;
 using System;
@@ -7,12 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IGadiYami.Models.Vegetable
+namespace IGadiYami.Models
 {
-    public class Vegetables
+    public class Vegetable
     {
         [PrimaryKey, AutoIncrement]
-        public string VegetableID { get; set; }
+        public int VegetableID { get; set; }
 
         [ForeignKey(typeof(VegetableType))]
         public int VegTypeID { get; set; }
