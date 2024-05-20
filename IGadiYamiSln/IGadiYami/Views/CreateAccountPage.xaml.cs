@@ -1,9 +1,12 @@
+using IGadiYami.ViewModels;
+
 namespace IGadiYami.Views;
 
 public partial class CreateAccountPage : ContentPage
 {
-	public CreateAccountPage()
+	public CreateAccountPage(CreateAccountViewModel vm)
 	{
 		InitializeComponent();
+		BindingContext = vm;
 	}
 }
