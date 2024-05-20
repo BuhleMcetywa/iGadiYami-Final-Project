@@ -8,7 +8,6 @@ using IGadiYami.Interface;
 using CommunityToolkit.Maui;
 using IGadiYami.ViewModels.PlantPageViewModels;
 using IGadiYami.ViewModels.ChatbotViewModels;
-using IGadiYami.ViewModels.Test;
 
 namespace IGadiYami
 {
@@ -59,8 +58,7 @@ namespace IGadiYami
             mauiAppBuilder.Services.AddSingleton<StartUpPageViewModel>();
             mauiAppBuilder.Services.AddSingleton<TomatoViewModel>();
             mauiAppBuilder.Services.AddSingleton<StartGardeningPageViewModel>();
-            mauiAppBuilder.Services.AddSingleton<TestAllVegetablesViewModel>();
-            mauiAppBuilder.Services.AddSingleton<TestVegetablesViewModel>();
+            mauiAppBuilder.Services.AddSingleton<VegetablePageViewModel>();
             return mauiAppBuilder;
         }
         public static MauiAppBuilder RegisterViews(this MauiAppBuilder mauiAppBuilder)
@@ -72,8 +70,7 @@ namespace IGadiYami
             mauiAppBuilder.Services.AddSingleton<StartPage>();
             mauiAppBuilder.Services.AddSingleton<CameraPage>();
             mauiAppBuilder.Services.AddSingleton<StartGardeningPage>();
-            mauiAppBuilder.Services.AddSingleton<TestAllVegetablePage>();
-            mauiAppBuilder.Services.AddSingleton<TestVegetablePage>();
+            mauiAppBuilder.Services.AddSingleton<VegetablePage>();
             return mauiAppBuilder;
         }
     }

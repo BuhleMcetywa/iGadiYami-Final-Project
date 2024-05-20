@@ -9,4 +9,10 @@ public partial class VegetablePage : ContentPage
 		InitializeComponent();
 		BindingContext = vm;
 	}
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+
+        ((VegetablePageViewModel)BindingContext).OnAppearing();
+    }
 }
