@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="IGadiYami.Views.VegetablePage"
              Title="VegetablePage">
+    
     <ScrollView Orientation="Vertical">
         <Grid >
             <Grid.RowDefinitions >
