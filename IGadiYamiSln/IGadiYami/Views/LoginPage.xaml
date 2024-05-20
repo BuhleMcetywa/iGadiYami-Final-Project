@@ -5,40 +5,77 @@
              xmlns:vm="clr-namespace:IGadiYami.ViewModels"
              BackgroundColor="#FFFFFF">
 
-    <VerticalStackLayout Padding="0,100,0,30" x:DataType="vm:LoginPageViewModel">
+    <ScrollView>
 
-        <Image Source="igadiimage.png"   HeightRequest="200" WidthRequest="200" />
-        <Label  />
-        <StackLayout Padding="10" Spacing="1" >
+        <VerticalStackLayout Padding="0,30,0,0">
+            <Grid>
 
-            <Frame CornerRadius="10" WidthRequest="330" HeightRequest="60" Padding="5" Margin="10" BackgroundColor="#006838">
-                <Entry FontFamily="mont" Text="{Binding UserEmailLogin}" FontSize="15" Placeholder="Email Address" FontAttributes="Bold" PlaceholderColor="#F9FFE0"/>
-            </Frame>
+                <Grid.RowDefinitions >
 
-            <Frame CornerRadius="10"  WidthRequest="330"  Padding="8" HeightRequest="60" Margin="10" BackgroundColor="#006838" >
-                <Entry FontFamily="mont" Text="{Binding UserpasswordLogin}" FontSize="15" FontAttributes="Bold" Placeholder="Password" PlaceholderColor="#F9FFE0"/>
-            </Frame>
-            <Button 
-            Text="Login" 
-            FontFamily="mont"
-            FontSize="15" 
-            FontAttributes="Bold" 
-            BackgroundColor="#006838" 
-            TextColor="#F9FFE0"
-            CornerRadius="90" 
-            WidthRequest="200" 
-            HeightRequest="50"
-            Margin="0,30,0,0" Command="{Binding LoginCommand}"/>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
 
-            <Label Padding="0,180,0,0" 
-      Text="Forgot Your Password?"
-           FontAttributes="Bold"
-        FontFamily="mont"
-          VerticalOptions="End" 
-          HorizontalOptions="Center"
-          TextColor="#006838"/>
-        </StackLayout>
+                </Grid.RowDefinitions>
+                <Label Margin="30,0,0,0" Text="Log In" FontAttributes="Bold" TextColor="#006838" FontSize="25" FontFamily="mont" Grid.Row="0" />
+                <BoxView Grid.Row="0" WidthRequest="300" HeightRequest="1" BackgroundColor="#006838" Margin="0,60,30,0" />
+
+                <Image Source="igadiimage.png" Grid.Row="1"  HeightRequest="180" WidthRequest="180" />
+
+                <Label  />
+
+                <Grid Grid.Row="2">
+                    <Frame CornerRadius="15" Grid.Row="0" IsClippedToBounds="True" WidthRequest="330" HeightRequest="60" Margin="10" BackgroundColor="#006838">
+                        <Image Source="google.png" Grid.Row="0" Margin="10,0,0,0" HeightRequest="25" WidthRequest="25" HorizontalOptions="Start" VerticalOptions="Center" >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer 
+                              NumberOfTapsRequired="1" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Frame>
+                    <Label Text="Sign up with Google"  Grid.Row="0"  HorizontalOptions="Center" Margin="5,0,0,0" VerticalOptions="Center" FontFamily="mont" FontSize="15" TextColor="White" FontAttributes="Bold" />
+                </Grid>
+
+                <Grid Grid.Row="3">
+                    <Frame CornerRadius="15" Grid.Row="0" IsClippedToBounds="True" WidthRequest="330" HeightRequest="60" Margin="10" BackgroundColor="#006838">
+                        <Image Source="microsoft.png" Grid.Row="0" Margin="10,0,0,0" HeightRequest="25" WidthRequest="25" HorizontalOptions="Start" VerticalOptions="Center" />
+                    </Frame>
+                    <Label Text="Log In with Microsoft"  Grid.Row="0"  HorizontalOptions="Center" Margin="5,0,0,0" VerticalOptions="Center" FontFamily="mont" FontSize="15" TextColor="White" FontAttributes="Bold" />
+                </Grid>
 
 
-    </VerticalStackLayout>
+                <BoxView HeightRequest="1" WidthRequest="130" Grid.Row="4" HorizontalOptions="Start" BackgroundColor="#006838" Margin="30,10,0,0" />
+                <BoxView HeightRequest="1" WidthRequest="130" Grid.Row="4" HorizontalOptions="End" BackgroundColor="#006838" Margin="0,10,30,0" />
+                <Label Text="or" Margin="0,10,0,0" HorizontalOptions="Center" FontAttributes="Bold" FontFamily="mont" TextColor="#006838" HorizontalTextAlignment="Center" FontSize="13" Grid.Row="4" />
+
+
+                <StackLayout Padding="10" Grid.Row="5" Spacing="1" >
+
+                    <Frame CornerRadius="10" WidthRequest="330" HeightRequest="60" Padding="5" Margin="10" BackgroundColor="#006838">
+                        <Button FontFamily="mont" Text="Login with Email Addresss" BackgroundColor="#006838" FontSize="15" FontAttributes="Bold" />
+                    </Frame>
+
+                    <Frame CornerRadius="10"  WidthRequest="330"  Padding="8" HeightRequest="60" Margin="10" BackgroundColor="#006838" >
+                        <Button FontFamily="mont" Text="Password" BackgroundColor="#006838" FontSize="15" FontAttributes="Bold" />
+                    </Frame>
+
+                </StackLayout>
+                <Button Command="{Binding LoginClickCommand}" CornerRadius="40" Text="Log In" Grid.Row="6" FontAttributes="Bold" FontFamily="mont" BackgroundColor="#006838" TextColor="White" WidthRequest="200" HeightRequest="55" Margin="0,0,0,50"  />
+
+                <Button Grid.Row="7" BackgroundColor="Transparent" Margin="0,10,0,0"
+                Text="Forgot Your Password?"
+                   FontAttributes="Bold"
+                 FontFamily="mont"
+                  VerticalOptions="End" 
+                    HorizontalOptions="Center"
+                      TextColor="#006838"/>
+
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

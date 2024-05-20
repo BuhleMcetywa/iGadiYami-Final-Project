@@ -1,8 +1,4 @@
-﻿using IGadiYami.Models.Carrot;
-using IGadiYami.Models.Onion;
-using IGadiYami.Models.Potato;
-using IGadiYami.Models.Spinach;
-using IGadiYami.Models.Tomato;
+﻿using IGadiYami.Models.Diseases;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,24 +9,7 @@ namespace IGadiYami.Services
 {
     public interface IPlantDatabase
     {
-        // Carrots
-        Carrot GetCarrotInformation();
-        CarrotDisease GetCarrotDiseaseByName(string name);
+		List<Disease> GetDiseasesForVegetable(int vegTypeID);
 
-        // Onions
-        Onion GetOnionInformation();
-        OnionDisease GetOnionDiseaseByName(string name);
-
-        // Potatoes
-        Potato GetPotatoInformation();
-        PotatoDisease GetPotatoDiseaseByName(string name);
-
-        // Spinachs
-        Spinach GetSpinachInformation();
-        SpinachDisease GetSpinachDiseaseByName(string name);
-
-        // Tomatoes
-        Tomato GetTomatoInformation();
-        TomatoDisease GetTomatoDiseaseByName(string name);
-    }
+	}
 }

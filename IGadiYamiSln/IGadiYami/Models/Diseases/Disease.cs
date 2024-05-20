@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IGadiYami.Models.Spinach
+namespace IGadiYami.Models.Diseases
 {
-    public class SpinachDisease
+    public class Disease
     {
         [PrimaryKey, AutoIncrement]
         public int DiseaseID { get; set; }
