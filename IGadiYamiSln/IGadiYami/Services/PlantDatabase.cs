@@ -31,12 +31,12 @@ namespace IGadiYami.Services
                 Vegetables vegetables = new Vegetables()
                 {
 					Name = "Tomato",
-					SoilType="",
-                    WaterIntake = "",
-                    SoilPrep = "",
-                    TimeToPlant = "",
-                    HowToPlant = "",
-                    Image="",
+					SoilType= "Tomatoes grow best within a soil pH range of 6.0 to 6.8. This acidity level provides an optimal\r\n\r\nenvironment for their growth and productivity.Tomatoes grow best in sandy loam or loamy soil because it drains well but keeps moisture and\r\nnutrients.",
+                    WaterIntake = "Water the plants thoroughly after planting to help them establish roots. Water regularly,\r\nkeeping the soil consistently moist but not waterlogged. Avoid overwatering, as it can\r\npromote the growth of fungal diseases. Water the base of the plants early in the day to\r\nallow foliage to dry before evening.",
+                    SoilPrep = "Tomatoes thrive in warm weather, requiring temperatures consistently above 10°C for optimal\\r\\ngrowth. Nighttime temperatures of 13°C or higher are necessary for fruit setting. Plant tomatoes\\r\\nwhen the soil temperature reaches around 16°C, ensuring it's warm enough by checking if you can\\r\\nkeep your finger in the soil for a full minute without discomfort. Avoid planting too early to prevent\\r\\ndamage from late frosts, selecting varieties with days-to-maturity shorter than the days until the\\r\\nexpected first frost. Additionally, while tomatoes enjoy sunlight, they struggle to set fruit when\\r\\ntemperatures exceed 29°C, and maintaining a humidity level between 65% to 85% fosters optimal\\r\\n\\r\\ngrowth.\",",
+                    TimeToPlant = "Tomatoes love warm weather, and in most of South Africa, are grown in summer.",
+                    HowToPlant = "Choose a Sunny Spot:\r\nPick a sunny spot in your garden with well-draining soil.\r\n2. Prepare the Soil:\r\nLoosen the soil and remove any weeds. If the soil is poor, add compost or aged\r\nmanure to enrich it.\r\n3. Spacing:\r\nSpace tomato plants about 18 to 36 inches apart to allow for proper growth and airflow.\r\n4. Planting:\r\nDig a hole slightly deeper than the root ball of your tomato plant. Place the plant in the\r\nhole, gently cover the roots with soil, and pat it down lightly.\r\n5. Support:\r\nIf you're planting indeterminate varieties (which grow tall), install stakes or cages to support\r\nthe plants as they grow.\r\n6. Pruning:\r\nOptionally, you can prune suckers (small shoots that grow between the main stem and\r\n\r\nbranches) to promote airflow and fruit production.\r\n7. Harvesting:\r\nHarvest ripe tomatoes when they have developed their full color and are firm to the touch.",
+                    Image="tomatoes_jpg",
 					
 				};
                 _dbConnection.Insert(vegetables);
@@ -44,12 +44,12 @@ namespace IGadiYami.Services
                 vegetables = new Vegetables()
                 {
 					Name = "Onion",
-					SoilType = "",
-					WaterIntake = "",
-					SoilPrep = "",
-					TimeToPlant = "",
-					HowToPlant = "",
-					Image = "",
+					SoilType = "Onions will grow in almost any kind of soil, from sandy loams to heavy clay. If the soil is heavy, work in some compost or manure to help it retain moisture. Onions prefer a slightly acidic soil, and a pH of 5,5 to 6,5 is good.",
+					WaterIntake = "Water the seedlings regularly: \r\n\r\nfirst week – twice a day\r\nsecond week – once a day\r\nthird week and on – three times a week.",
+					SoilPrep = "Work the soil deeply with a fork and apply a handful of recommended chemical fertiliser to every square metre of the soil surface. If using kraal manure or compost, apply about four handfuls to every square metre a few weeks before planting. Work the fertiliser, manure or compost into the soil with a fork. Rake flat and remove large clods and stones.",
+					TimeToPlant = "In South Africa, the best time to plant onions is typically during autumn or early winter, depending on your region. Aim for the period between April and March or July to October. However, with proper moisture and temperature management, you can grow onions year-round.",
+					HowToPlant = "Grow onions by direct seeding or from seedlings. Make furrows about 20cm to 30cm apart and transplant the seedlings 10cm apart in the furrows. This way, they shouldn’t need thinning. Dig a small hole for each seedling and place its roots downwards in the hole. Cover the seedlings with soil so that the tip of the neck just shows above the soil surface.",
+					Image = "onion_.jpg",
 
 				};
                 _dbConnection.Insert(vegetables);
@@ -57,24 +57,24 @@ namespace IGadiYami.Services
                 vegetables = new Vegetables()
                 {
                     Name = "Potato",
-                    SoilType = "",
-                    WaterIntake = "",
-                    SoilPrep = "",
-                    TimeToPlant = "",
-                    HowToPlant = "",
-                    Image = "",
+                    SoilType = "For potatoes, aim for a soil pH between 5.0 and 6.0, as this range provides optimal conditions for growth and nutrient uptake.For potatoes, having space to grow underground is crucial, and loam provides that room  while also being light enough for tubers to expand comfortably. So, loamy soil is like a cozy  home for potatoes, keeping them well-nourished, hydrated, and supported as they grow. \r\n",
+                    WaterIntake = "Potatoes require consistent moisture for healthy tuber development. Water the plants regularly, aiming to keep the soil evenly moist but not waterlogged. Provide deep watering once or twice a week, depending on weather conditions, to ensure proper hydration.",
+                    SoilPrep = " Potatoes prefer loose, well-drained soil with good fertility. Prepare the soil by removing weeds, breaking up clumps, and incorporating organic matter, such as compost or well-rotted manure, to improve its structure and nutrient content.",
+                    TimeToPlant = "The perfect planting window is typically between mid-August and mid-September. This  special time is called the potato planting season. It's when the soil is warm and cozy,  creating the ideal conditions for your potatoes to grow big and tasty! ",
+                    HowToPlant = "Step 1: Get Your Potatoes \r\nGet small, healthy potatoes that are not rotten or diseased. \r\nStep 2: Let Them Sprout \r\nLeave your potatoes in a cool, dry place until they grow little shoots, about 1 cm long. \r\nStep 3: Prep Your Soil  \r\nDig up your garden soil and mix in some compost or old animal manure to make it nice and rich. \r\nStep 4: Plant Your Potatoes  \r\nDig a shallow trench about as deep as your hand and place your sprouted potatoes in it, about a  hand's width apart. Cover them with soil. \r\nStep 5: Keep Mounding Soil  \r\nAs the potato plants grow, cover the base with soil to protect the sprouts. Keep doing this every few  weeks. \r\nStep 6: Water Them Regularly\r\nMake sure the soil is always moist, but not soaking wet. Water them when the soil feels dry. \r\nStep 7: Try Different Methods  \r\nIf you're short on space, you can try growing potatoes in a container or using a no-dig method. Just  make sure they have enough room to grow. \r\nStep 8: Harvest Your Potatoes \r\nAfter about 15-20 weeks (about 4 and a half months), your potatoes should be ready to harvest. Dig  them up carefully so you don't damage them. \r\n",
+                    Image = "potatoes_",
                 };
                 _dbConnection.Insert(vegetables); 
 
                 vegetables = new Vegetables()
                 {
 					Name = "Carrot",
-					SoilType = "",
+					SoilType = "Carrots prefer well-drained soil that is slightly acidic with a ph of 6-7",
 					WaterIntake = "",
-					SoilPrep = "",
-					TimeToPlant = "",
-					HowToPlant = "",
-					Image = "",
+					SoilPrep = " Make sure the soil is well-drained and amend with plenty of organic matter before planting",
+					TimeToPlant = "Carrots are a versatile vegetable and can be grown in a variety of climates, but they are especially well-suited to growing in warm climates. Carrots can be planted in early spring or late fall, depending on your climate. Spring is the best time to plant carrots in most parts of South Africa. Autumn planting may be possible in colder parts of the country, but is not recommended for most areas.",
+					HowToPlant = "To plant carrots:\r\n1. Choose a well-drained soil that is slightly acidic (6-7 pH).\r\n2. Dig a hole twice as wide and as deep as the root ball you plan to use, making sure the hole is lined with fresh soil before planting.\r\n3. Remove the carrot’s green taproot by slicing it just above the ground with a sharp knife. If the carrot has a long taproot, cut it into shorter pieces before planting.\r\n4. Place the carrot root ball (with any attached roots) into the prepared hole, making sure it is centered within the circle of dirt created by your gardening trowel. Water thoroughly and cover with fresh soil.",
+					Image = "carrots_.jpeg",
 				};
 
                 _dbConnection.Insert(vegetables);
@@ -82,18 +82,18 @@ namespace IGadiYami.Services
                 vegetables = new Vegetables()
                 {
                     Name = "Spinach",
-                    SoilType = "",
-                    WaterIntake = "",
-                    SoilPrep = "",
-                    TimeToPlant = "",
-                    HowToPlant = "",
-                    Image = "",
+                    SoilType = "Spinach generally prefers a slightly acidic to neutral soil pH ranging from 6.0 to 7.0. This pH range provides optimal conditions for nutrient uptake and overall plant health. However, spinach is adaptable and can tolerate a wider pH range, but extremes on either end (highly acidic or highly alkaline soils) may lead to nutrient deficiencies or toxicity, affecting plant growth and yield. Therefore, maintaining the soil pH within the recommended range is crucial for successful spinach cultivation.\r\nSpinach thrives best in loamy soil, which strikes a balance between drainage and moisture  retention. It provides a cozy home for spinach roots, allowing them to absorb nutrients  effectively. \r\nSandy soil drains quickly, preventing waterlogging, but it requires regular watering to keep  spinach hydrated. \r\n",
+                    WaterIntake = "Keep your spinach soil consistently moist, but not soggy, by watering deeply and regularly,  especially during dry periods. Avoid watering overhead to prevent wetting the leaves, which  can lead to disease. Adjust your watering schedule based on the growth stage of your  spinach. For example, during the growing stage, they may need more water. \r\n",
+                    SoilPrep = "Spinach prefers well-drained, fertile soil. Mix in compost or well-rotted manure to enrich  the soil. Loosen the soil to a depth of 15-20 cm. \r\n",
+                    TimeToPlant = "Spinach grows best in cool weather, so it is perfect for planting in spring or autumn. In spring, sow seeds  when the ground warms up to about 4°C.",
+                    HowToPlant = " Choose the Right Spinach Variety: \r\nSpinach varieties differ in their growth rates and flavors. \r\nBaby spinach: Grows quickly and is harvested young. \r\nSavoy spinach: Has crinkled leaves and is more cold-tolerant. \r\nFlat-leaf spinach: Has smooth leaves and is great for cooking. \r\nObtain spinach seeds from a reputable source or garden center. \r\n2. Light: \r\nPlant spinach where it will receive full sun to partial shade. It needs at least 3-4 hours of  direct sun daily. \r\n3. Prepare the Soil: \r\nSpinach prefers well-drained, fertile soil. Mix in compost or well-rotted manure to enrich  the soil. Loosen the soil to a depth of 15-20 cm. \r\n4. Planting: \r\nSow spinach seeds directly into the ground or containers. Plant seeds about 1 inch apart in  rows. Cover the seeds with a thin layer of soil (about 1/4 inch deep). Water gently to keep  the soil consistently moist. \r\n5. Growing Conditions: \r\nSpinach thrives in cool weather. Plant in early spring or late summer. Choose a sunny to  partially shaded spot. Keep the soil consistently moist but not waterlogged. \r\n6. Thinning: \r\nOnce the seedlings emerge, thin them out. Leave about 10-15 cm of space between each \r\nplant. Use thinned seedlings in salads or as microgreens. \r\n7. Successive Planting: \r\nTo enjoy spinach throughout the season, plant new seeds every 2-3 weeks. This ensures a  continuous harvest. \r\n",
+                    Image = "spinach_",
                 };
                 _dbConnection.Insert(vegetables);
 
            }
 
-		   //this table is for the selction of vegetables you can choose from
+		   //this table is for the selection of vegetables you can choose from
 
             if (_dbConnection.Table<VegetableType>().Count() == 0)
             {
