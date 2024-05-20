@@ -14,7 +14,7 @@ namespace IGadiYami
             Routing.RegisterRoute("igadiyamiquestion", typeof(IgadiYamiQuestionPage));
             Routing.RegisterRoute("igadiyamianswer", typeof(IgadiYamiAnswerPage));
             Routing.RegisterRoute("allvegetable", typeof(TestAllVegetablePage));
-            Routing.RegisterRoute("vegetable", typeof(TestVegetablePage));
+            Routing.RegisterRoute("vegetable", typeof(VegetablePage));
             Routing.RegisterRoute("startgardening", typeof(StartGardeningPage));
         }
     }

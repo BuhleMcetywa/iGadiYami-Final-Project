@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IGadiYami.ViewModels.Test
+namespace IGadiYami.ViewModels
 {
-    public class TestVegetablesViewModel : BaseViewModel
+    public partial class VegetablePageViewModel : BaseViewModel
     {
     }
 }
