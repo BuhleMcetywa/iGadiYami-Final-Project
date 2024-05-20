@@ -55,9 +55,14 @@
 
                 <Grid Grid.Row="3">
                     <Frame CornerRadius="30" Grid.Row="0" IsClippedToBounds="True" WidthRequest="330" HeightRequest="60" Margin="10" BackgroundColor="#006838">
-                        <Image Source="microsoft.png" Grid.Row="0" Margin="10,0,0,0" HeightRequest="25" WidthRequest="25" HorizontalOptions="Start" VerticalOptions="Center" />
+                        <Image Source="microsoft.png" Grid.Row="0" Margin="10,0,0,0" HeightRequest="25" WidthRequest="25" HorizontalOptions="Start" VerticalOptions="Center" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnMicrosoftGestureRecognizerTapped"
+                               NumberOfTapsRequired="1" />
+                        </Image.GestureRecognizers>
+                        </Image>
                     </Frame>
-                    <Label Text="Log In with Microsoft"  Grid.Row="0"  HorizontalOptions="Center" Margin="5,0,0,0" VerticalOptions="Center" FontFamily="mont" FontSize="15" TextColor="White" FontAttributes="Bold" />
+                    <Label Text="Sign up with Microsoft"  Grid.Row="0"  HorizontalOptions="Center" Margin="5,0,0,0" VerticalOptions="Center" FontFamily="mont" FontSize="15" TextColor="White" FontAttributes="Bold" />
                 </Grid>
 
 

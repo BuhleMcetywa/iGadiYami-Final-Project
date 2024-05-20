@@ -59,10 +59,15 @@
 	<ItemGroup>
 	  <None Remove="Platforms\Android\Assets\labels.txt" />
 	  <None Remove="Platforms\Android\Assets\model.pb" />
-	  <None Remove="Resources\Images\carrot.jpg" />
+	  <None Remove="Resources\Images\carrot1.jpg" />
+	  <None Remove="Resources\Images\carrots.jpeg" />
+	  <None Remove="Resources\Images\onion.jpg" />
 	  <None Remove="Resources\Images\onions.jpg" />
 	  <None Remove="Resources\Images\potatoes.jpg" />
+	  <None Remove="Resources\Images\potatoes1.jpeg" />
 	  <None Remove="Resources\Images\spinach.jpg" />
+	  <None Remove="Resources\Images\spinach1.jpeg" />
+	  <None Remove="Resources\Images\tomato1.jpg" />
 	  <None Remove="Resources\Images\tomatoes.jpg" />
 	</ItemGroup>
 
