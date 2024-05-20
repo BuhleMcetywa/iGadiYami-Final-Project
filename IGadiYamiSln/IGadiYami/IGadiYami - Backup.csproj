@@ -59,24 +59,24 @@
 	<ItemGroup>
 	  <None Remove="Platforms\Android\Assets\labels.txt" />
 	  <None Remove="Platforms\Android\Assets\model.pb" />
-	  <None Remove="Resources\Images\carrot1.jpg" />
-	  <None Remove="Resources\Images\carrots.jpeg" />
-	  <None Remove="Resources\Images\onion.jpg" />
+	  <None Remove="Resources\Images\carrot.jpg" />
+	  <None Remove="Resources\Images\carrots_.jpeg" />
 	  <None Remove="Resources\Images\onions.jpg" />
+	  <None Remove="Resources\Images\onion_.jpg" />
 	  <None Remove="Resources\Images\potatoes.jpg" />
-	  <None Remove="Resources\Images\potatoes1.jpeg" />
+	  <None Remove="Resources\Images\potatoes_.jpeg" />
 	  <None Remove="Resources\Images\spinach.jpg" />
-	  <None Remove="Resources\Images\spinach1.jpeg" />
-	  <None Remove="Resources\Images\tomato1.jpg" />
+	  <None Remove="Resources\Images\spinach_.jpeg" />
 	  <None Remove="Resources\Images\tomatoes.jpg" />
+	  <None Remove="Resources\Images\tomatoes_.jpg" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Camera.MAUI" Version="1.5.1" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
 		<PackageReference Include="Microsoft.Data.Sqlite.Core" Version="8.0.5" />
-		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.20" />
-		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.20" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 		<PackageReference Include="SQLite" Version="3.13.0" />
 		<PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
@@ -84,8 +84,6 @@
 		<PackageReference Include="SQLitePCLRaw.bundle_e_sqlcipher" Version="2.1.8" />
 		<PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.8" />
 		<PackageReference Include="Xam.Plugins.OnDeviceCustomVision" Version="2.2.2" />
-		<PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.15" />
-		<PackageReference Include="CommunityToolkit.Maui" Version="9.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -98,10 +96,7 @@
 	  <MauiXaml Update="Views\CameraPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\IgadiYamiAnswerPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\IgadiYamiQuestionPage.xaml">
+	  <MauiXaml Update="Views\CreateAccountPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\PlantViews\CarrotPage.xaml">

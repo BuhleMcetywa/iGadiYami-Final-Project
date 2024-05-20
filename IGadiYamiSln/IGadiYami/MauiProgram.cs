@@ -7,10 +7,8 @@ using Camera.MAUI;
 using IGadiYami.Interface;
 using CommunityToolkit.Maui;
 using IGadiYami.ViewModels.PlantPageViewModels;
-using IGadiYami.Views.Plant_Views;
-using IGadiYami.Views.PlantViews;
 using IGadiYami.ViewModels.ChatbotViewModels;
-
+using IGadiYami.ViewModels.Test;
 
 namespace IGadiYami
 {
@@ -44,6 +42,7 @@ namespace IGadiYami
         {
             mauiAppBuilder.Services.AddTransient<IAiAssistant, IgadiYamiAiAssistant>();
             mauiAppBuilder.Services.AddTransient<IPlantDatabase, PlantDatabase>();
+            mauiAppBuilder.Services.AddTransient<PlantDatabase>();
             mauiAppBuilder.Services.AddTransient<ISettings, Settings>();
             mauiAppBuilder.Services.AddTransient<IService, Service>();
             mauiAppBuilder.Services.AddTransient<IAlertDialogService, DefaultMauiAlertDialogService>();
@@ -60,11 +59,8 @@ namespace IGadiYami
             mauiAppBuilder.Services.AddSingleton<StartUpPageViewModel>();
             mauiAppBuilder.Services.AddSingleton<TomatoViewModel>();
             mauiAppBuilder.Services.AddSingleton<StartGardeningPageViewModel>();
-            mauiAppBuilder.Services.AddSingleton<OnionPageViewModel>();
-            mauiAppBuilder.Services.AddSingleton<CarrotPageViewModel>();
-            mauiAppBuilder.Services.AddSingleton<SpinachPageViewModel>();
-            mauiAppBuilder.Services.AddSingleton<TomatoPageViewModel>();
-            mauiAppBuilder.Services.AddSingleton<PotatoPageViewModel>();
+            mauiAppBuilder.Services.AddSingleton<TestAllVegetablesViewModel>();
+            mauiAppBuilder.Services.AddSingleton<TestVegetablesViewModel>();
             return mauiAppBuilder;
         }
         public static MauiAppBuilder RegisterViews(this MauiAppBuilder mauiAppBuilder)
@@ -76,11 +72,8 @@ namespace IGadiYami
             mauiAppBuilder.Services.AddSingleton<StartPage>();
             mauiAppBuilder.Services.AddSingleton<CameraPage>();
             mauiAppBuilder.Services.AddSingleton<StartGardeningPage>();
-            mauiAppBuilder.Services.AddSingleton<CarrotPage>();
-            mauiAppBuilder.Services.AddSingleton<OnionPage>();
-            mauiAppBuilder.Services.AddSingleton<TomatoPage>();
-            mauiAppBuilder.Services.AddSingleton<SpinachPage>();
-            mauiAppBuilder.Services.AddSingleton<PotatoPage>();
+            mauiAppBuilder.Services.AddSingleton<TestAllVegetablePage>();
+            mauiAppBuilder.Services.AddSingleton<TestVegetablePage>();
             return mauiAppBuilder;
         }
     }

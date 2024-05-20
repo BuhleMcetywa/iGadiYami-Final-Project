@@ -8,5 +8,10 @@ namespace IGadiYami
         {
             InitializeComponent();
         }
+        private void RegisterRoutes()
+        {
+            Routing.RegisterRoute("allvegetable", typeof(TestAllVegetablePage));
+            Routing.RegisterRoute("vegetable", typeof(TestVegetablePage));
+        }
     }
 }

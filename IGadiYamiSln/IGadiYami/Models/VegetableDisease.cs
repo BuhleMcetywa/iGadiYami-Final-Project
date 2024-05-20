@@ -1,5 +1,4 @@
-﻿using IGadiYami.Models.Diseases;
-using IGadiYami.Models.Vegetable;
+﻿using IGadiYami.Models;
 using SQLite;
 using SQLiteNetExtensions.Attributes;
 using System;
@@ -10,9 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using SQLiteNetExtensions.Attributes;
 using System;
-using IGadiYami.Models.Vegetable_Type;
 
-namespace IGadiYami.Models.Vegetable_Disease
+
+namespace IGadiYami.Models
 {
     public class VegetableDisease
     {
