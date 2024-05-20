@@ -2,15 +2,42 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="IGadiYami.Views.VegetablePage"
-             xmlns:local="clr-namespace:IGadiYami.ViewModels"
-             x:DataType="local:VegetablePageViewModel"
              Title="VegetablePage">
-    
-    <VerticalStackLayout>
-        <Label 
-            Text="{Binding Vegetable.Name}"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        
-    </VerticalStackLayout>
+    <ScrollView Orientation="Vertical">
+        <Grid >
+            <Grid.RowDefinitions >
+
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="90" />
+                <RowDefinition  Height="*" />
+
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" Grid.RowSpan="3" Source="tomatoes.jpg" Aspect="AspectFill" />
+            <Label Padding="25,25,0,0" Text="Start Gardening with us" FontSize="18" FontFamily="mont" FontAttributes="Bold" TextColor="White" Grid.Row="0"  />
+            <BoxView Grid.Row="0" HorizontalOptions="Center" Margin="20,0,60,30" BackgroundColor="White" WidthRequest="300" HeightRequest="1" />
+            <Label  Margin="25,3,0,0" Text="Tomatoes" FontAttributes="Bold" TextColor="White" FontSize="40" FontFamily="mont" Grid.Row="1" VerticalOptions="EndAndExpand"/>
+            <Label Margin="30,0,0,0" Text="Start your Gardening journey with us" FontAttributes="Bold"  TextColor="White" FontSize="11" FontFamily="mont" Grid.Row="2" />
+
+
+            <Frame Grid.Row="3" BackgroundColor="#C42D09" WidthRequest="420" HeightRequest="150" Padding="0,0,15,0" CornerRadius="49" >
+                <FlexLayout  Direction="Row" JustifyContent="SpaceEvenly" VerticalOptions="FillAndExpand"  BackgroundColor="#C42D09" Grid.Row="3" Margin="15,0,0,0"  >
+                    <Button Margin="0,10,0,0" CornerRadius="30" Text="How to plant Tomatoes" FontFamily="mont" BackgroundColor="#006838" LineBreakMode="WordWrap" FontAttributes="Bold" HorizontalOptions="Center" FontSize="8" WidthRequest="85" HeightRequest="50" />
+                    <Button Margin="0,10,0,0" CornerRadius="30" Text="Choosing the right soil" BackgroundColor="#579602" FontFamily="mont" LineBreakMode="WordWrap" FontAttributes="Bold" HorizontalOptions="Center" FontSize="8" WidthRequest="85" HeightRequest="50"  />
+                    <Button Margin="0,10,0,0" CornerRadius="30" Text="When to plant" BackgroundColor="#006838" FontFamily="mont" LineBreakMode="WordWrap" FontAttributes="Bold" HorizontalOptions="Center" FontSize="8" WidthRequest="85" HeightRequest="50"   />
+                    <Button Margin="0,10,0,0" CornerRadius="30" Text="Common diseases"  BackgroundColor="#579602" FontFamily="mont" LineBreakMode="WordWrap" FontAttributes="Bold" HorizontalOptions="Center" FontSize="8" WidthRequest="85" HeightRequest="50"  />
+                </FlexLayout>
+            </Frame>
+
+            <Label Padding="0,20,20,0" Text="When to Plant :" FontAttributes="Bold" TextColor="White" HorizontalTextAlignment="Center" Grid.Row="3" VerticalOptions="EndAndExpand" BackgroundColor="#C42D09" FontSize="25" FontFamily="mont" />
+
+            <Label Padding="20,0,20,70" Text=" In spring, plant onion sets outdoors as soon as the ground can be worked, usually in late March or April, when temperatures are no longer likely to dip below 28° (-2°C).
+Start onion seeds indoors about 6 weeks before transplanting to the ground (once the soil is at least 50°F)." FontSize="15" HorizontalTextAlignment="Center" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" TextColor="White" FontFamily="mont"  BackgroundColor="#C42D09" Grid.Row="5" />
+
+
+        </Grid>
+    </ScrollView>
+
 </ContentPage>
