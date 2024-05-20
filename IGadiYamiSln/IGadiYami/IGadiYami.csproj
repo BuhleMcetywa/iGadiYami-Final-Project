@@ -59,13 +59,21 @@
 	<ItemGroup>
 	  <None Remove="Platforms\Android\Assets\labels.txt" />
 	  <None Remove="Platforms\Android\Assets\model.pb" />
+	  <None Remove="Resources\Images\aboutusbg.png" />
+	  <None Remove="Resources\Images\bandile.png" />
+	  <None Remove="Resources\Images\buhle.png" />
 	  <None Remove="Resources\Images\carrot1.jpg" />
 	  <None Remove="Resources\Images\carrots.jpeg" />
+	  <None Remove="Resources\Images\chulu.png" />
+	  <None Remove="Resources\Images\ethan.png" />
+	  <None Remove="Resources\Images\luke.png" />
+	  <None Remove="Resources\Images\ndosi.png" />
 	  <None Remove="Resources\Images\onion.jpg" />
 	  <None Remove="Resources\Images\onions.jpg" />
 	  <None Remove="Resources\Images\potatoes.jpg" />
 	  <None Remove="Resources\Images\potatoes1.jpeg" />
 	  <None Remove="Resources\Images\sendicon.png" />
+	  <None Remove="Resources\Images\simbonile.png" />
 	  <None Remove="Resources\Images\spinach.jpg" />
 	  <None Remove="Resources\Images\spinach1.jpeg" />
 	  <None Remove="Resources\Images\tomato1.jpg" />
@@ -96,7 +104,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\AboutUs.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\CameraPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\EditProfilePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\IgadiYamiAnswerPage.xaml">
@@ -118,6 +132,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\PlantViews\TomatoPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\SettingsV2.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\StartGardeningPage.xaml">
