@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IgadiYamiDesign.Views.SettingsV2"
+             BackgroundColor="#F9FFE0">
+    
+    <StackLayout Padding="10" VerticalOptions="CenterAndExpand">
+
+        <!-- Profile Picture -->
+        <Frame CornerRadius="250" HeightRequest="250" WidthRequest="250" VerticalOptions="Center" HorizontalOptions="Center">
+            <Image Source="ndosi.png" />
+        </Frame>
+
+        <!-- Name and Location -->
+        <Label Text="Ndosi Yogurt" 
+               FontAttributes="Bold" 
+               FontSize="24" 
+               HorizontalOptions="Center" 
+               Margin="0,10,0,0"/>
+        <Label Text="Khayelitsha" 
+               FontSize="16" 
+               HorizontalOptions="Center" 
+               TextColor="Gray"/>
+
+        <!-- Description -->
+        <Label Text="I love farming and gardens and plants and trees and leafs and crops with roots from seeds and stuff"
+               FontSize="18"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               HorizontalTextAlignment="Center"
+               Padding="5"/>
+
+        <!-- Edit Profile Button -->
+        <Button Text="Edit Profile" 
+                BackgroundColor="Transparent"
+                TextColor="Blue"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"/>
+
+        <!-- Menu Options -->
+        <Frame CornerRadius="50">
+            <StackLayout HorizontalOptions="Start">
+                <Button Text="Dark Mode" TextColor="Black" FontSize="18" BackgroundColor="Transparent" HorizontalOptions="Start"/>
+                <Button Text="Premium Tab"
+                   TextColor="Black"
+                   FontSize="18" 
+                   BackgroundColor="Transparent" 
+                   HorizontalOptions="Start" Clicked="OnPremiumTabClicked"/>
+                <Button Text="FAQ (Chat bot)" 
+                   TextColor="Black"
+                   FontSize="18" 
+                   BackgroundColor="Transparent" 
+                   HorizontalOptions="Start" Clicked="OnFAQClicked"/>
+                <Button Text="Help (chat bot)" 
+                   TextColor="Black"
+                   FontSize="18"  
+                   BackgroundColor="Transparent" 
+                   HorizontalOptions="Start" Clicked="OnHelpClicked"/>
+                <Button Text="About us" 
+                   TextColor="Black"
+                   FontSize="18" 
+                   BackgroundColor="Transparent" 
+                   HorizontalOptions="Start" Clicked="OnAboutUsClicked" />
+                <Button Text="Terms and Conditions" 
+                   TextColor="Black"
+                   FontSize="18" 
+                   BackgroundColor="Transparent" 
+                   HorizontalOptions="Start" Clicked="OnTermsAndConditionsClicked"/>
+            </StackLayout>
+        </Frame>
+        
+    </StackLayout>
+</ContentPage>
