@@ -33,8 +33,8 @@ namespace IGadiYami.Services
             {
                 UserData userData = new UserData()
                 {
-                    UserName = "Test Name",
-                    UserSurname = "Test Surname",
+                    UserName = "TestName",
+                    UserSurname = "TestSurname",
                     UserEmail = "Test@gmail.com",
                     UserPassword = "userPassword",
                     // UserPhoneNumber = "1234567890"

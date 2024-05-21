@@ -31,7 +31,7 @@
                             </Grid.ColumnDefinitions>
 
                             <!-- Border-like Frame that spans all columns -->
-                            <Frame Padding="0" BackgroundColor="Transparent" Margin="3,50,0,-35"  Grid.ColumnSpan="3"  WidthRequest="200" HeightRequest="200" CornerRadius="21">
+                            <Frame Padding="0" BackgroundColor="Transparent" Margin="3,50,0,-35"  Grid.ColumnSpan="3"  WidthRequest="370" HeightRequest="250" CornerRadius="21">
                                 <Image Source="{Binding Image}" Aspect="AspectFill">
                                     <Image.GestureRecognizers>
                                         <TapGestureRecognizer Command="{Binding Source={x:Reference AllVegetablesCollectionView}, Path=BindingContext.VegetableSelectedCommand}" 

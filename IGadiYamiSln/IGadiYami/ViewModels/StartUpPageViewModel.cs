@@ -20,7 +20,14 @@ namespace IGadiYami.ViewModels
         [RelayCommand]
         public async void GetStarted()
         {
-            await App.Current.MainPage.Navigation.PushAsync(new SignupPage(new SignUpPageViewModel()));
+            //await App.Current.MainPage.Navigation.PushAsync(new SignupPage(new SignUpPageViewModel()));
+            await Shell.Current.GoToAsync("signuppage");
+        }
+        [RelayCommand]
+        public async void Login()
+        {
+            //await App.Current.MainPage.Navigation.PushAsync(new SignupPage(new SignUpPageViewModel()));
+            await Shell.Current.GoToAsync("loginpage");
         }
     }
   

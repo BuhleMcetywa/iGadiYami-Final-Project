@@ -8,6 +8,7 @@
         <Image Source="igadiimage.png" HeightRequest="200" WidthRequest="200"/>
         <Label FontFamily="mont" HorizontalOptions="Center" Text="Welcome to Igadi Yami" FontSize="Large" FontAttributes="Bold"  TextColor="#006838" />
         <Label FontFamily="mont" Text="Your personal gardening partner, here to hold your hand and walk you through your gardening" FontSize="Small" TextColor="#55833D" />
-        <Button Text="Get Started" FontFamily="mont" CornerRadius="25" BackgroundColor="#006838" TextColor="White" WidthRequest="200" HeightRequest="50" Margin="0,20,0,0" Command="{Binding GetStartedCommand}"/>
+        <Button Text="Get Started" FontFamily="mont" CornerRadius="25" BackgroundColor="#006838" TextColor="White" WidthRequest="200" HeightRequest="50" Margin="0,30,0,0" Command="{Binding GetStartedCommand}"/>
+        <Button Text="Login" FontFamily="mont" CornerRadius="25" BackgroundColor="#006838" TextColor="White" WidthRequest="200" HeightRequest="50" Margin="0,0,0,0" Command="{Binding LoginCommand}"/>
     </VerticalStackLayout>
 </ContentPage>
