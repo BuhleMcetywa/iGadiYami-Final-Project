@@ -16,7 +16,7 @@ namespace IGadiYami.Services
             _dbConnection.CreateTable<Disease>();
             _dbConnection.CreateTable<VegetableDisease>();
             _dbConnection.CreateTable<Vegetable>();
-            //_dbConnection.CreateTable<VegetableType>();
+            _dbConnection.CreateTable<VegetableType>();
             SeedDatabase();
         }
         public string GetDatabasePath()
