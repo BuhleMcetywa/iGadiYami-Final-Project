@@ -88,7 +88,7 @@ namespace IGadiYami.ViewModels
 
             if (disease != null)
             {
-                // Get the causes and disease measures
+                // Get the causes and disease control measures
                 DiseaseCauses = disease.DiseaseCauses;
             } else
             {

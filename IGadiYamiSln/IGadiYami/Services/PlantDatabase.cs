@@ -160,7 +160,6 @@ namespace IGadiYami.Services
                 {
 					DiseaseID = 1,
 					DiseaseName = "Carrot Rust Fly",
-					DiseaseDescription = "",
 					DiseaseCauses = "The larvae of the carrot rust fly tunnel into the roots, causing damage and making the carrots unmarketable",
 					DiseaseControlMeasures = "To control this pest, you can use floating row covers to prevent adult flies from laying eggs on the plants or consider using appropriate insecticides.",
 					TagDescription = "Carrot Rust Fly Disease"
@@ -171,7 +170,6 @@ namespace IGadiYami.Services
                 {
 					DiseaseID = 2,
 					DiseaseName = "Alternaria Leaf Blight",
-					DiseaseDescription = "",
 					DiseaseCauses = "This fungal disease affects the leaves and stems of carrot plants. It causes dark, sunken lesions on the leaves and can lead to defoliation if left untreated.",
 					DiseaseControlMeasures = "Crop rotation, proper sanitation, and the use of fungicides labeled for carrot diseases can help manage Alternaria leaf blight.",
 					TagDescription = "Alternaria Leaf Blight Disease"
@@ -182,7 +180,6 @@ namespace IGadiYami.Services
                 {
 					DiseaseID = 3,
 					DiseaseName = "Root Knot Nematodes",
-					DiseaseDescription = "",
 					DiseaseCauses = "These microscopic worm-like organisms can cause galls or knots to form on the roots of carrot plants. Infected plants may show stunted growth and have reduced yields.",
 					DiseaseControlMeasures = "Crop rotation, soil solarization, and the use of resistant carrot varieties are effective management strategies for root knot nematodes.",
 					TagDescription = "Root Knot Nematodes Disease"
@@ -204,7 +201,6 @@ namespace IGadiYami.Services
                 {
 					DiseaseID = 5,
 					DiseaseName = "Blackleg Disease",
-					DiseaseDescription = "",
 					DiseaseCauses = "Blackleg disease in potatoes is caused by pectolytic bacteria, specifically those in the genera Pectobacterium and Dickeya (formerly known as Erwinia)",
 					DiseaseControlMeasures = "\"To prevent blackleg disease in potatoes, start with healthy seed potatoes and rotate crops with different plants each year. Keep fields clean, avoid overwatering, and choose resistant potato varieties when possible to minimize the risk of disease.\r\n\"",
 					TagDescription = "Blackleg Disease"
@@ -215,7 +211,6 @@ namespace IGadiYami.Services
                 {
 					DiseaseID = 6,
 					DiseaseName = "Late Blight(Potato)",
-					DiseaseDescription = "",
 					DiseaseCauses = "Late blight in potatoes is caused by the airborne spores of the Phytophthora infestans fungus. This disease manifests as irregular dark lesions on the stems and leaves of potato plants and spreads quickly. Late blight is a sporadic disease and is more likely to develop in cool, wet conditions.",
 					DiseaseControlMeasures = "\"To stop late blight in potatoes, pick resistant varieties and rotate crops yearly. Keep the potato area clean, removing any infected leaves promptly. Use fungicides during humid weather and water plants early in the day at the base to keep the foliage dry.\r\n\"",
 					TagDescription = "Late Blight Disease on Potato"
@@ -226,7 +221,6 @@ namespace IGadiYami.Services
                 {
 					DiseaseID = 7,
 					DiseaseName = "Early blight (Potato)",
-					DiseaseDescription = "",
 					DiseaseCauses = "\"Alternaria solani is the primary culprit behind early blight.  Early blight doesn’t require excessive moisture it can even persist during drought periods.\r\nThe fungus tends to attack weakened plants, especially those with insect damage or reduced vitality due to other factors.\r\nShaded and older leaves are more susceptible to infection than young, vigorous ones.\"",
 					DiseaseControlMeasures = "\"To control early blight in potatoes, start by choosing potato varieties that resist the disease and rotate crops with different plants each season. Keep the potato patch clean by removing any infected leaves or debris, and water the plants at ground level to avoid splashing spores. If needed, apply natural or chemical fungicides according to instructions to further protect the plants from early blight.\r\n\"",
 					TagDescription = "Early Blight Disease"
@@ -237,7 +231,6 @@ namespace IGadiYami.Services
                 {
 					DiseaseID = 8,
 					DiseaseName = "Powdery scab disease",
-					DiseaseDescription = "",
 					DiseaseCauses = "\"The disease is caused by Spongospora subterranea and can lead to significant yield losses.\r\n\r\n\"",
 					DiseaseControlMeasures = "\"To control powdery scab in potatoes, begin with disease-free seed potatoes, rotate crops, and maintain good field hygiene. Additionally, ensure proper soil drainage, monitor for early signs of the disease, and consider using resistant potato varieties if available.\r\n\"",
 					TagDescription = "Powdery Scab Disease"
@@ -247,8 +240,7 @@ namespace IGadiYami.Services
 				disease = new Disease()
 				{
 					DiseaseID = 9,
-					DiseaseName = "Anthracnose",
-					DiseaseDescription = "",
+					DiseaseName = "Anthracnose(Spinach)",
 					DiseaseCauses = "A fungal disease that affect spinach leaves and stems, causes dark, eater soaked lesions that turn tan or gray",
 					DiseaseControlMeasures = "Avoid overcrowding, ensure good drainage in your growing area.",
 					TagDescription = "Anthracnose Disease"
@@ -260,7 +252,6 @@ namespace IGadiYami.Services
 				{
 					DiseaseID = 10,
 					DiseaseName = "Downy Mildew(Spinach)",
-					DiseaseDescription = "",
 					DiseaseCauses = "fungal diseases caused by Peronospora finosa can be identidied by yellow or pale green spots on the upper surface of the leaves and a grayish-purple growth on the undersides",
 					DiseaseControlMeasures = "avoid overhead watering of crops, provide adequate spacing between plants for good air circulation.",
 					TagDescription = "Downy Mildew Disease"
@@ -271,7 +262,6 @@ namespace IGadiYami.Services
 				{
 					DiseaseID = 11,
 					DiseaseName = "White Rust",
-					DiseaseDescription = "",
 					DiseaseCauses = "A fungal disease, cuases raised, white pustules on the undersides of leaves and can lead to severe defoliation",
 					DiseaseControlMeasures = "practice crop rotation, remove infected plants to prevent the spread of white rust.",
 					TagDescription = "White Rust Disease"
@@ -282,7 +272,6 @@ namespace IGadiYami.Services
 				{
 					DiseaseID = 12,
 					DiseaseName = "Fusarium Wilt",
-					DiseaseDescription = "",
 					DiseaseCauses = "Caused by a soil-borne fungal disease, noticeable by wilting, yellowing and stunting of plants",
 					DiseaseControlMeasures = "use disease-resistant spinach varieties, practice crop rotation.",
 					TagDescription = "Fusarium Wilt Disease"
@@ -293,7 +282,6 @@ namespace IGadiYami.Services
 				{
 					DiseaseID = 13,
 					DiseaseName = "Botrytis Blight Disease (Onion)",
-					DiseaseDescription = "",
 					DiseaseCauses = "caused by Botrytis squamosa, this pathogen favours cool, moist conditions and the infection starts with elongated white spots",
 					DiseaseControlMeasures = "destroy onion or debris cull piles to reduces sources of inoculum, optimize plant row orientation and spacing to enhance air movement, reduce leaf wetness, implent a preventative fungicide spray program to manage the disease.",
 					TagDescription = "Botrytis Blight Disease"
