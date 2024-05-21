@@ -3,7 +3,6 @@
 using IGadiYami.Models;
 
 using SQLite;
-using static Android.InputMethodServices.Keyboard;
 
 namespace IGadiYami.Services
 {
