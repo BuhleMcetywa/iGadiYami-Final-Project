@@ -9,12 +9,13 @@ using System.Windows.Input;
 using CommunityToolkit.Mvvm.Input;
 using Xam.Plugins.OnDeviceCustomVision;
 using IGadiYami.Services;
+using IGadiYami.Models;
 
 namespace IGadiYami.ViewModels
 {
     public partial class CameraPageViewModel : BaseViewModel
     {
-        private IPlantDatabase _plantDatabase;
+        private PlantDatabase _plantDatabase;
 
         private ImageSource _photo;
         public ImageSource Photo
@@ -35,6 +36,13 @@ namespace IGadiYami.ViewModels
                 OnPropertyChanged();
             }
         }
+        private string _diseasecauses;
+        public string DiseaseCauses
+        {
+            get { return _diseasecauses; }
+            set { _diseasecauses = value; OnPropertyChanged(); }
+        }
+
 
 
         CameraView _cameraView;
@@ -76,12 +84,15 @@ namespace IGadiYami.ViewModels
             var namePosition = highestProbabilityTag.Tag.IndexOf("(");
             var tagToSearch = highestProbabilityTag.Tag.Substring(0, namePosition - 1);
 
-            var disease =  _plantDatabase.GetDiseaseByTag(tagToSearch);
+            var disease =  _plantDatabase.GetDiseaseByTag(tagToSearch); // info get passed through & breaks here
 
             if (disease != null)
             {
-                // DO STUFF WITH DISEASE
                 // Get the causes and disease measures
+                DiseaseCauses = disease.DiseaseCauses;
+            } else
+            {
+                DiseaseCauses = "";
             }
 
 		}
