@@ -14,7 +14,7 @@ namespace IGadiYami.Services
     public class IgadiYamiAiAssistant : IAiAssistant
     {
         private ISettings _settings;
-        private const string AssistantBehaviorDescription = "You are a Igadi Yami AI assistant that can help you with your Igadi Yami related questions. Introduce yourself as ";
+        private const string AssistantBehaviorDescription = "You are a Igadi Yami assistant that will help users learn everything about Igadi Yami and sustain crops for providing meals for their family, have a natural response to users which are easy to understand, Do not give robotic responses";
 
         public IgadiYamiAiAssistant(ISettings settings)
         {

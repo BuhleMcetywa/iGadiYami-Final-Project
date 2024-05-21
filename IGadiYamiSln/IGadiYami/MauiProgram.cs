@@ -41,12 +41,12 @@ namespace IGadiYami
         public static MauiAppBuilder RegisterServices(this MauiAppBuilder mauiAppBuilder)
         {
             mauiAppBuilder.Services.AddTransient<IAiAssistant, IgadiYamiAiAssistant>();
-            mauiAppBuilder.Services.AddTransient<IPlantDatabase, PlantDatabase>();
+            // mauiAppBuilder.Services.AddTransient<IPlantDatabase, PlantDatabase>();
             mauiAppBuilder.Services.AddTransient<PlantDatabase>();
             mauiAppBuilder.Services.AddTransient<ISettings, Settings>();
             mauiAppBuilder.Services.AddTransient<IService, Service>();
             mauiAppBuilder.Services.AddTransient<IAlertDialogService, DefaultMauiAlertDialogService>();
-            mauiAppBuilder.Services.AddTransient<IUserDatabase, UserDatabase>();
+            mauiAppBuilder.Services.AddTransient<UserDatabase>();
             return mauiAppBuilder;
         }
         public static MauiAppBuilder RegisterViewModels(this MauiAppBuilder mauiAppBuilder)

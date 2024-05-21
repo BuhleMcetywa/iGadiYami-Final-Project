@@ -131,19 +131,19 @@ namespace IGadiYami.ViewModels
 
         // Entry Component Properties
         private string _username;
-        public string UserName
+        public string UserNameEntry
         {
             get { return _username; }
             set { _username = value; OnPropertyChanged(); }
         }
         private string _usersurname;
-        public string UserSurname
+        public string UserSurnameEntry
         {
             get { return _usersurname; }
             set { _usersurname = value; OnPropertyChanged(); }
         }
         private string _useremail;
-        public string UserEmail
+        public string UserEmailEntry
         {
             get { return _useremail; }
             set { _useremail = value; OnPropertyChanged(); }
@@ -155,7 +155,7 @@ namespace IGadiYami.ViewModels
             set { _userphonenumber = value; }
         } */
         private string _userpassword;
-        public string UserPassword
+        public string UserPasswordEntry
         {
             get { return _userpassword; }
             set { _userpassword = value; OnPropertyChanged(); }
@@ -163,15 +163,17 @@ namespace IGadiYami.ViewModels
 
 
 
-        public SignUpPageViewModel(IService Service)
+        public SignUpPageViewModel(IService Service, UserDatabase userDatabase)
         {
             _service = Service;
+            _userDatabase = userDatabase;
         }
-        public SignUpPageViewModel()
+       /*public SignUpPageViewModel()
         {
            // _service = Service;
            _userDatabase = new UserDatabase();
-        }
+        }*/
+        
 
         [RelayCommand]
         public void Save()
@@ -194,17 +196,23 @@ namespace IGadiYami.ViewModels
         public async void CreateUserAsync()
         {
             // Add User to database
-            string name = UserName;
-            string surname = UserSurname;
-            string email = UserEmail;
-            string password = UserPassword;
+            string name = UserNameEntry;
+            string surname = UserSurnameEntry;
+            string email = UserEmailEntry;
+            string password = UserPasswordEntry;
             _userDatabase.CreateUser(name, surname, email, password);
-            UserName = "";
-            UserSurname = "";
-            UserEmail = "";
-            UserPassword = "";
+            UserNameEntry = "";
+            UserSurnameEntry = "";
+            UserEmailEntry = "";
+            UserPasswordEntry = "";
             // await App.Current.MainPage.Navigation.PushAsync(new StartGardeningPage(new StartGardeningPageViewModel()));
             await Shell.Current.GoToAsync("startgardening");
+        }
+
+        [RelayCommand]
+        public async Task CreateAccountAsync()
+        {
+            await Shell.Current.GoToAsync("createaccount");
         }
 
         [RelayCommand]
@@ -214,10 +222,10 @@ namespace IGadiYami.ViewModels
             UserData user = _userDatabase.GetUserById(2);
             if (user != null)
             {              
-                UserName = user.UserName;
-                UserSurname = user.UserSurname;
-                UserEmail = user.UserEmail;
-                UserPassword = user.UserPassword;
+                UserNameEntry = user.UserName;
+                UserSurnameEntry = user.UserSurname;
+                UserEmailEntry = user.UserEmail;
+                UserPasswordEntry = user.UserPassword;
             }
         }
 
@@ -225,7 +233,7 @@ namespace IGadiYami.ViewModels
         public async void HaveAccount()
         {
             // Navigation
-            await App.Current.MainPage.Navigation.PushAsync(new LoginPage(new LoginPageViewModel()));
+            await Shell.Current.GoToAsync("loginpage");
         }
     }
 }

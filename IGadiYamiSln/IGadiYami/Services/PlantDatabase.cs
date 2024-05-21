@@ -514,13 +514,7 @@ namespace IGadiYami.Services
 					DiseaseID = 20,
 				};
 
-				_dbConnection.Insert(vegDisease);	
-
-				vegDisease = new VegetableDisease()
-				{
-					VegTypeID = 5,
-					DiseaseID = 21,
-				};
+				
 			}
 
 		}

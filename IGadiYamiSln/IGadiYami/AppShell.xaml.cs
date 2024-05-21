@@ -16,6 +16,9 @@ namespace IGadiYami
             //Routing.RegisterRoute("allvegetable", typeof(TestAllVegetablePage));
             Routing.RegisterRoute("vegetable", typeof(VegetablePage));
             Routing.RegisterRoute("startgardening", typeof(StartGardeningPage));
+            Routing.RegisterRoute("signuppage", typeof(SignupPage));
+            Routing.RegisterRoute("loginpage", typeof(LoginPage));
+            Routing.RegisterRoute("createaccount", typeof(CreateAccountPage));
         }
     }
 }

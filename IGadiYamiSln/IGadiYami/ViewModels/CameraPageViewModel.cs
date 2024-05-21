@@ -39,7 +39,7 @@ namespace IGadiYami.ViewModels
 
         CameraView _cameraView;
 
-        public CameraPageViewModel(IPlantDatabase plantDatabase)
+        public CameraPageViewModel(PlantDatabase plantDatabase)
         {
             _plantDatabase = plantDatabase;
         }

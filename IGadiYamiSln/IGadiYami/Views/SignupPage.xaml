@@ -73,7 +73,7 @@
                 <Label Text="or" Margin="0,30,0,0" HorizontalOptions="Center" FontAttributes="Bold" FontFamily="mont" TextColor="#A6A6A6" HorizontalTextAlignment="Center" FontSize="13" Grid.Row="5" />
 
 
-                <Button  CornerRadius="40" Text="Create new account" FontSize="15" Grid.Row="6" FontAttributes="Bold" FontFamily="mont" BackgroundColor="#F9FFE0" TextColor="#006838" WidthRequest="300" HeightRequest="55" Margin="0,30,0,0" />
+                <Button  CornerRadius="40" Text="Create Account" Command="{Binding CreateAccountCommand}" FontSize="15" Grid.Row="6" FontAttributes="Bold" FontFamily="mont" BackgroundColor="#F9FFE0" TextColor="#006838" WidthRequest="300" HeightRequest="55" Margin="0,30,0,0" />
 
                 <Button  Grid.Row="7" Margin="0,15"
                 Text="By signing up, you agree to the Terms of Service and Privacy Policy, including Cookie Use."
