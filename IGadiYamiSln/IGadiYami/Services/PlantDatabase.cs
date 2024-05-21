@@ -3,7 +3,7 @@
 using IGadiYami.Models;
 
 using SQLite;
-using static Android.InputMethodServices.Keyboard;
+
 
 namespace IGadiYami.Services
 {
@@ -208,7 +208,7 @@ namespace IGadiYami.Services
 				disease = new Disease()
                 {
 					DiseaseID = 6,
-					DiseaseName = "Late Blight(Tomato)",
+					DiseaseName = "Late Blight(Potato)",
 					DiseaseDescription = "",
 					DiseaseCauses = "Late blight in potatoes is caused by the airborne spores of the Phytophthora infestans fungus. This disease manifests as irregular dark lesions on the stems and leaves of potato plants and spreads quickly. Late blight is a sporadic disease and is more likely to develop in cool, wet conditions.",
 					DiseaseControlMeasures = "\"To stop late blight in potatoes, pick resistant varieties and rotate crops yearly. Keep the potato area clean, removing any infected leaves promptly. Use fungicides during humid weather and water plants early in the day at the base to keep the foliage dry.\r\n\"",
@@ -233,7 +233,7 @@ namespace IGadiYami.Services
 					DiseaseName = "Powdery scab disease",
 					DiseaseDescription = "",
 					DiseaseCauses = "\"The disease is caused by Spongospora subterranea and can lead to significant yield losses.\r\n\r\n\"",
-					DiseaseControlMeasures = "",
+					DiseaseControlMeasures = "\"To control powdery scab in potatoes, begin with disease-free seed potatoes, rotate crops, and maintain good field hygiene. Additionally, ensure proper soil drainage, monitor for early signs of the disease, and consider using resistant potato varieties if available.\r\n\"",
 
 				};
 				_dbConnection.Insert(disease);
@@ -252,7 +252,7 @@ namespace IGadiYami.Services
 				disease = new Disease()
 				{
 					DiseaseID = 10,
-					DiseaseName = "Downy Mildew",
+					DiseaseName = "Downy Mildew(Spinach)",
 					DiseaseDescription = "",
 					DiseaseCauses = "fungal diseases caused by Peronospora finosa can be identidied by yellow or pale green spots on the upper surface of the leaves and a grayish-purple growth on the undersides",
 					DiseaseControlMeasures = "avoid overhead watering of crops, provide adequate spacing between plants for good air circulation.",
@@ -305,7 +305,7 @@ namespace IGadiYami.Services
 				disease = new Disease()
 				{
 					DiseaseID = 15,
-					DiseaseName = "Downy Mildew",
+					DiseaseName = "Downy Mildew(Onion)",
 					DiseaseCauses = "Caused by the fungal disease Peronspora destructor that thrives in cool, humid conditions. Appears as pale green or yellow patches on the leaves which later turn brown",
 					DiseaseControlMeasures = "Ensure good airflow, proper spacing between crops and fungicide treatments.",
 				};
@@ -339,69 +339,188 @@ namespace IGadiYami.Services
 				};
 				_dbConnection.Insert(disease);
 
+				disease = new Disease()
+				{
+					DiseaseID = 19,
+					DiseaseName = "Anthracnose",
+					DiseaseCauses = "Caused by several species of the fungus Colletotrichum. Ripe and overripe fruit are especially susceptible but the pathogen can infect green fruit with symptoms not developing until fruit begin to ripen. ",
+					DiseaseControlMeasures = "\"To stop anthracnose in tomatoes, keep the area clean by removing infected plants and\r\nrotating crops each year. Choose resistant tomato types and water plants carefully to keep\r\nthe leaves dry. Apply mulch, consider using fungicides if needed, and regularly check for\r\n\r\nsigns of the disease.\"",
+
+				};
+				_dbConnection.Insert(disease);
+
+				disease = new Disease()
+				{
+					DiseaseID = 20,
+					DiseaseName = "Blosom End Rot",
+					DiseaseCauses = "\nLow calcium levels in the soil.\r\nSoil that is over- or underwatered.\r\nWide fluctuations in soil moisture.\r\nInconsistent watering.\r\nLow soil pH.\r\nExcessive nitrogen.\n",
+					DiseaseControlMeasures = "\"To prevent blossom end rot in tomatoes, maintain consistent watering to avoid fluctuations\r\nin soil moisture. Ensure proper calcium levels in the soil through soil amendments or\r\nfertilizers containing calcium. Mulch around tomato plants to regulate soil temperature and\r\nmoisture, and avoid excessive nitrogen fertilization, which can interfere with calcium\r\n\r\nuptake.\""
+				}; 
+				_dbConnection.Insert(disease);
+
+				disease = new Disease()
+				{
+					DiseaseID = 21,
+					DiseaseName = "Early blight ",
+					DiseaseCauses = "Early blight is caused by the fugus Alternaria linariae and occurs anytime during growing seaso, the pathogen is favoured by high humidity and temperatures above 24 degrees celsius.",
+					DiseaseControlMeasures = "\"To keep early blight away from tomatoes, use resistant varieties and rotate crops. Keep the\r\narea clean by removing infected leaves and debris, and space plants apart while mulching\r\nthe soil. Water at the base, prune for air flow, and consider using sprays if needed, while\r\n\r\nalways keeping an eye out for signs of the disease.\"",
+				};
+				_dbConnection.Insert(disease);
+
+				disease = new Disease()
+				{
+					DiseaseID = 22,
+					DiseaseName = "Late blight",
+					DiseaseCauses = "Caused by the oomycete pathogen Phytophthora infestans, the pathogen prefers wet conditions with humid temperatures that span over 3-5 days",
+					DiseaseControlMeasures = "\"If you notice any signs of late blight (brown, gray, or purplish spots on leaves or stems),\r\npromptly remove and destroy the affected leaves. Late blight becomes more resistant to\r\n\r\ntreatment as it progresses, so early intervention is crucial.\"",
+				};
+				_dbConnection.Insert(disease);
+
 			}
 			//In our UI we will have a list of diseases that are associated with the vegetable you have selected(Common diseases) so that information should comeback as a list from here
 			if (_dbConnection.Table<VegetableDisease>().Count() == 0)
 			{
-				var diseasesforCarrots = new List<int> { 1, 2, 3, 4 }; // List of DiseaseIDs
+				
 
-				foreach (var diseaseId in diseasesforCarrots)
-				{
+			
+				
 					VegetableDisease vegDisease = new VegetableDisease()
 					{
-						VegTypeID = 1, // VegTypeID
-						DiseaseID = diseaseId  // DiseaseID from the list
+						VegTypeID = 1, 
+						DiseaseID = 13,   
 					};
 					_dbConnection.Insert(vegDisease);
-				}
-
-				var diseasesforPotatoes = new List<int> { 5, 6, 7, 8 }; // List of DiseaseIDs
-
-				foreach (var diseaseId in diseasesforPotatoes)
-				{
-					VegetableDisease vegDisease = new VegetableDisease()
-					{
-						VegTypeID = 2, // VegTypeID
-						DiseaseID = diseaseId  // DiseaseID from the list
-					};
-					_dbConnection.Insert(vegDisease);
-				}
-
-				var diseasesforOnions = new List<int> { 9, 10, 11, 12 }; // List of DiseaseIDs
-
-				foreach (var diseaseId in diseasesforOnions)
-				{
-					VegetableDisease vegDisease = new VegetableDisease()
-					{
-						VegTypeID = 3, // VegTypeID
-						DiseaseID = diseaseId  // DiseaseID from the list
-					};
-					_dbConnection.Insert(vegDisease);
-				}
-
-				var diseasesforSpinach = new List<int> { 13 }; // List of DiseaseIDs
-				foreach (var diseaseId in diseasesforSpinach)
-				{
-					VegetableDisease vegDisease = new VegetableDisease()
-					{
-						VegTypeID = 4, // VegTypeID
-						DiseaseID = diseaseId  // DiseaseID from the list
-					};
-					_dbConnection.Insert(vegDisease);
-				}	
-
-				var diseasesforTomatoes = new List<int> { 1, 2, 3, 4 }; // List of DiseaseIDs
-				foreach (var diseaseId in diseasesforTomatoes)
-				{
-					VegetableDisease vegDisease = new VegetableDisease()
-					{
-						VegTypeID = 5, // VegTypeID
-						DiseaseID = diseaseId  // DiseaseID from the list
-					};
-					_dbConnection.Insert(vegDisease);
-				}
+		
 
 				
+				    vegDisease = new VegetableDisease()
+					{
+						VegTypeID = 1,
+						DiseaseID = 14,
+					};
+					_dbConnection.Insert(vegDisease);
+				
+
+				    vegDisease = new VegetableDisease()
+					{
+						VegTypeID = 1,
+						DiseaseID = 15,
+					};
+					_dbConnection.Insert(vegDisease);
+				
+
+				
+				    vegDisease = new VegetableDisease()
+					{
+						VegTypeID = 1,
+						DiseaseID = 16,
+					};
+					_dbConnection.Insert(vegDisease);
+					
+
+				    vegDisease = new VegetableDisease()
+					{
+						VegTypeID = 2,
+						DiseaseID = 4,
+					};
+					_dbConnection.Insert(vegDisease);
+
+				  vegDisease = new VegetableDisease()
+				  {
+					VegTypeID = 2,
+					DiseaseID = 5,
+				  };
+				  _dbConnection.Insert(vegDisease);
+
+				vegDisease = new VegetableDisease()
+				{
+					VegTypeID = 2,
+					DiseaseID = 6,
+				};
+				_dbConnection.Insert(vegDisease);
+
+				vegDisease = new VegetableDisease()
+				{
+					VegTypeID = 2,
+					DiseaseID = 7,
+				};
+				_dbConnection.Insert(vegDisease);
+
+				vegDisease = new VegetableDisease()
+				{
+					VegTypeID = 2,
+					DiseaseID = 8,
+				};
+				_dbConnection.Insert(vegDisease);
+
+				vegDisease = new VegetableDisease()
+				{
+					VegTypeID = 3,
+					DiseaseID = 1,
+				};
+				_dbConnection.Insert(vegDisease);
+
+				vegDisease = new VegetableDisease()
+				{
+					VegTypeID = 3,
+					DiseaseID = 2,
+				};
+				_dbConnection.Insert(vegDisease);
+
+				vegDisease = new VegetableDisease()
+				{
+					VegTypeID = 3,
+					DiseaseID = 3,
+				};
+				_dbConnection.Insert(vegDisease);
+
+				vegDisease = new VegetableDisease()
+				{
+					VegTypeID = 3,
+					DiseaseID = 4,
+				};
+				_dbConnection.Insert(vegDisease);
+
+				vegDisease = new VegetableDisease()
+				{
+					VegTypeID = 4,
+					DiseaseID = 10,
+				};
+				_dbConnection.Insert(vegDisease);
+
+				vegDisease = new VegetableDisease()
+				{
+					VegTypeID = 4,
+					DiseaseID = 11,
+				};
+				_dbConnection.Insert(vegDisease);
+
+				vegDisease = new VegetableDisease()
+				{
+					VegTypeID = 4,
+					DiseaseID = 12,
+				};
+
+				vegDisease = new VegetableDisease()
+				{
+					VegTypeID = 5,
+					DiseaseID = 19,
+				};
+				_dbConnection.Insert(vegDisease);
+
+				vegDisease = new VegetableDisease()
+				{
+					VegTypeID = 5,
+					DiseaseID = 20,
+				};
+
+				_dbConnection.Insert(vegDisease);	
+
+				vegDisease = new VegetableDisease()
+				{
+					VegTypeID = 5,
+					DiseaseID = 21,
+				};
 			}
 
 		}

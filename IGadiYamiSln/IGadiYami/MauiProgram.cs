@@ -8,6 +8,7 @@ using IGadiYami.Interface;
 using CommunityToolkit.Maui;
 using IGadiYami.ViewModels.PlantPageViewModels;
 using IGadiYami.ViewModels.ChatbotViewModels;
+using IgadiYamiDesign.Views;
 
 namespace IGadiYami
 {
@@ -73,6 +74,7 @@ namespace IGadiYami
             mauiAppBuilder.Services.AddSingleton<StartGardeningPage>();
             mauiAppBuilder.Services.AddSingleton<CreateAccountPage>();
             mauiAppBuilder.Services.AddSingleton<VegetablePage>();
+            
             return mauiAppBuilder;
         }
     }
