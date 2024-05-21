@@ -36,7 +36,7 @@ namespace IGadiYami.ViewModels
         }
 
         [RelayCommand]
-        public async Task VegetableSelected(Vegetable vegetables)
+        public static async Task VegetableSelected(Vegetable vegetables)
         {
             var navigationParameter = new Dictionary<string, object>
            {

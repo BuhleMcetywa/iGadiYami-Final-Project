@@ -12,7 +12,7 @@
             HorizontalOptions="Center" />
 
         <cv:CameraView x:Name="cameraView" WidthRequest="370" HeightRequest="450"/>
-        <Button Text="Test button" Command="{Binding TakePhotoCommand}" />
+        <Button Text="Test button" Command="{Binding DisplayResponseCommand}" />
         <!-- <Image Source="{Binding Photo}" HeightRequest="200" WidthRequest="200" /> -->
         <Label Text="{Binding DetectionResponse}" HorizontalOptions="Center"/>
 

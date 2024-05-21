@@ -59,13 +59,6 @@ namespace IGadiYami.ViewModels
             });
         }
 
-        [RelayCommand]
-        public void TakePhoto()
-        {
-            Photo = _cameraView.GetSnapShot(Camera.MAUI.ImageFormat.PNG);
-           // Photo = _cameraView.TakePhotoAsync();
-           DisplayResponse();
-        }
 
         [RelayCommand]
         public async void DisplayResponse()
@@ -88,7 +81,7 @@ namespace IGadiYami.ViewModels
             if (disease != null)
             {
                 // DO STUFF WITH DISEASE
-
+                // Get the causes and disease measures
             }
 
 		}
