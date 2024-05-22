@@ -205,7 +205,7 @@ namespace IGadiYami.ViewModels
             UserSurnameEntry = "";
             UserEmailEntry = "";
             UserPasswordEntry = "";
-            await Shell.Current.GoToAsync("startgardening");
+            await Shell.Current.GoToAsync("mainmenu");
         }
 
         [RelayCommand]

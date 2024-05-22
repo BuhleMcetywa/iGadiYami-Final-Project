@@ -40,7 +40,7 @@ namespace IGadiYami.ViewModels
 			if (_userDatabase.VerifyUserPassword(email, password))
 			{
                 // Navigation
-                await Shell.Current.GoToAsync("startgardening");
+                await Shell.Current.GoToAsync("mainmenu");
             } 
 			else
 			{
