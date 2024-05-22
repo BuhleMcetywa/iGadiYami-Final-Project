@@ -4,7 +4,11 @@ namespace IGadiYami.Views;
 
 public partial class VegetablePage : ContentPage
 {
-	public VegetablePage(VegetablePageViewModel vm)
+    public VegetablePage()
+    {
+    }
+
+    public VegetablePage(VegetablePageViewModel vm)
 	{
 		InitializeComponent();
 		BindingContext = vm;
