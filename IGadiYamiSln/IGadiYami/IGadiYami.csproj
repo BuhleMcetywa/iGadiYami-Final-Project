@@ -60,6 +60,7 @@
 	  <None Remove="Platforms\Android\Assets\labels.txt" />
 	  <None Remove="Platforms\Android\Assets\model.pb" />
 	  <None Remove="Resources\Images\aboutusbg.png" />
+	  <None Remove="Resources\Images\background.jpg" />
 	  <None Remove="Resources\Images\bandile.png" />
 	  <None Remove="Resources\Images\buhle.png" />
 	  <None Remove="Resources\Images\carrot1.jpg" />
