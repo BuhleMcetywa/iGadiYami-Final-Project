@@ -36,6 +36,15 @@ namespace IGadiYami.ViewModels
             get { return _vegetableinfo; }
             set { _vegetableinfo = value; OnPropertyChanged(); }
         }
+        private string _vegheading;
+
+        public string VegHeading
+        {
+            get { return _vegheading; }
+            set { _vegheading = value; OnPropertyChanged();  }
+        }
+
+
         public List<string> texts { get; set; }
         public VegetablePageViewModel()
         {
@@ -47,6 +56,7 @@ namespace IGadiYami.ViewModels
                 "text2",
                 "text3",
             };
+            SetVegInfoCommand = new RelayCommand<int>(SetVegInfo);
         }
 
 
@@ -54,12 +64,30 @@ namespace IGadiYami.ViewModels
         {
             _database = database;
         }
-        
 
-        [RelayCommand]
+        public ICommand SetVegInfoCommand { get; }
+        //[RelayCommand]
         public void SetVegInfo(int index)
         {
-            
+            if (index == 0)
+            {
+                VegHeading = texts[0];
+                App.Current.MainPage.DisplayAlert("alert", "command works", "ok");
+            } else if (index == 1)
+            {
+                VegHeading = texts[1];
+                App.Current.MainPage.DisplayAlert("alert", "command works", "ok");
+            }
+            else if (index == 2)
+            {
+                VegHeading = texts[2];
+                App.Current.MainPage.DisplayAlert("alert", "command works", "ok");
+            }
+            else if (index == 3)
+            {
+                VegHeading = texts[3];
+                App.Current.MainPage.DisplayAlert("alert", "command works", "ok");
+            }
         }
         
 
