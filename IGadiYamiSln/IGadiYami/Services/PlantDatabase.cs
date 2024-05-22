@@ -190,7 +190,6 @@ namespace IGadiYami.Services
                 {
 					DiseaseID = 4,
 					DiseaseName = "Bacterial soft rot",
-					DiseaseDescription = "",
 					DiseaseCauses = "\"Bacterial soft rot is caused by various types of bacteria, with Erwinia carotovora being a common culprit. These bacteria can infect potatoes both in the ground and after harvest.\r\n   - The disease typically enters through wounds, such as lenticels, growth cracks, or any other injuries on the tubers¹³.\r\n   - Factors that favor bacterial soft rot include:\r\n     - Immature Tubers:Soft rot is more likely in immature tubers.\r\n     - Adverse Temperatures: Pulp temperatures above 21°C at harvest promote soft rot.\r\n     - Mechanical Damage: Bruising or cuts from digging forks provide entry points for bacteria.\r\n     - Free Water:Water on tuber surfaces encourages bacterial growth.\r\n\"",
 					DiseaseControlMeasures = "\"To prevent bacterial soft rot in potatoes, start with disease-free seed potatoes and rotate crops with non-host plants. Keep fields clean by removing infected plants and debris, and avoid planting in areas with a history of the disease. Proper irrigation, soil drainage, and careful handling during harvest and storage are crucial, while considering chemical treatments and biological controls as additional options to manage the disease effectively.\r\n\"",
 					TagDescription = "Bacterial Soft Rot Disease"
@@ -252,7 +251,7 @@ namespace IGadiYami.Services
 				{
 					DiseaseID = 10,
 					DiseaseName = "Downy Mildew(Spinach)",
-					DiseaseCauses = "fungal diseases caused by Peronospora finosa can be identidied by yellow or pale green spots on the upper surface of the leaves and a grayish-purple growth on the undersides",
+					DiseaseCauses = "fungal diseases caused by Peronospora finosa can be identified by yellow or pale green spots on the upper surface of the leaves and a grayish-purple growth on the undersides",
 					DiseaseControlMeasures = "avoid overhead watering of crops, provide adequate spacing between plants for good air circulation.",
 					TagDescription = "Downy Mildew Disease"
                 };
@@ -262,7 +261,7 @@ namespace IGadiYami.Services
 				{
 					DiseaseID = 11,
 					DiseaseName = "White Rust",
-					DiseaseCauses = "A fungal disease, cuases raised, white pustules on the undersides of leaves and can lead to severe defoliation",
+					DiseaseCauses = "A fungal disease, causes raised, white pustules on the undersides of leaves and can lead to severe defoliation",
 					DiseaseControlMeasures = "practice crop rotation, remove infected plants to prevent the spread of white rust.",
 					TagDescription = "White Rust Disease"
 				};
@@ -338,29 +337,11 @@ namespace IGadiYami.Services
                 };
 				_dbConnection.Insert(disease);
 
+				
+
 				disease = new Disease()
 				{
 					DiseaseID = 19,
-					DiseaseName = "Anthracnose",
-					DiseaseCauses = "Caused by several species of the fungus Colletotrichum. Ripe and overripe fruit are especially susceptible but the pathogen can infect green fruit with symptoms not developing until fruit begin to ripen. ",
-					DiseaseControlMeasures = "\"To stop anthracnose in tomatoes, keep the area clean by removing infected plants and\r\nrotating crops each year. Choose resistant tomato types and water plants carefully to keep\r\nthe leaves dry. Apply mulch, consider using fungicides if needed, and regularly check for\r\n\r\nsigns of the disease.\"",
-					TagDescription = "Anthracnose Disease"
-                };
-				_dbConnection.Insert(disease);
-
-				disease = new Disease()
-				{
-					DiseaseID = 20,
-					DiseaseName = "Blosom End Rot",
-					DiseaseCauses = "\nLow calcium levels in the soil.\r\nSoil that is over- or underwatered.\r\nWide fluctuations in soil moisture.\r\nInconsistent watering.\r\nLow soil pH.\r\nExcessive nitrogen.\n",
-					DiseaseControlMeasures = "\"To prevent blossom end rot in tomatoes, maintain consistent watering to avoid fluctuations\r\nin soil moisture. Ensure proper calcium levels in the soil through soil amendments or\r\nfertilizers containing calcium. Mulch around tomato plants to regulate soil temperature and\r\nmoisture, and avoid excessive nitrogen fertilization, which can interfere with calcium\r\n\r\nuptake.\"",
-                    TagDescription = "Blossom End Rot Disease"
-                }; 
-				_dbConnection.Insert(disease);
-
-				disease = new Disease()
-				{
-					DiseaseID = 21,
 					DiseaseName = "Early blight ",
 					DiseaseCauses = "Early blight is caused by the fugus Alternaria linariae and occurs anytime during growing seaso, the pathogen is favoured by high humidity and temperatures above 24 degrees celsius.",
 					DiseaseControlMeasures = "\"To keep early blight away from tomatoes, use resistant varieties and rotate crops. Keep the\r\narea clean by removing infected leaves and debris, and space plants apart while mulching\r\nthe soil. Water at the base, prune for air flow, and consider using sprays if needed, while\r\n\r\nalways keeping an eye out for signs of the disease.\"",
@@ -370,7 +351,7 @@ namespace IGadiYami.Services
 
 				disease = new Disease()
 				{
-					DiseaseID = 22,
+					DiseaseID = 20,
 					DiseaseName = "Late blight",
 					DiseaseCauses = "Caused by the oomycete pathogen Phytophthora infestans, the pathogen prefers wet conditions with humid temperatures that span over 3-5 days",
 					DiseaseControlMeasures = "\"If you notice any signs of late blight (brown, gray, or purplish spots on leaves or stems),\r\npromptly remove and destroy the affected leaves. Late blight becomes more resistant to\r\n\r\ntreatment as it progresses, so early intervention is crucial.\"",
