@@ -190,6 +190,7 @@ namespace IGadiYami.Services
                 {
 					DiseaseID = 4,
 					DiseaseName = "Bacterial soft rot",
+					
 					DiseaseCauses = "\"Bacterial soft rot is caused by various types of bacteria, with Erwinia carotovora being a common culprit. These bacteria can infect potatoes both in the ground and after harvest.\r\n   - The disease typically enters through wounds, such as lenticels, growth cracks, or any other injuries on the tubers¹³.\r\n   - Factors that favor bacterial soft rot include:\r\n     - Immature Tubers:Soft rot is more likely in immature tubers.\r\n     - Adverse Temperatures: Pulp temperatures above 21°C at harvest promote soft rot.\r\n     - Mechanical Damage: Bruising or cuts from digging forks provide entry points for bacteria.\r\n     - Free Water:Water on tuber surfaces encourages bacterial growth.\r\n\"",
 					DiseaseControlMeasures = "\"To prevent bacterial soft rot in potatoes, start with disease-free seed potatoes and rotate crops with non-host plants. Keep fields clean by removing infected plants and debris, and avoid planting in areas with a history of the disease. Proper irrigation, soil drainage, and careful handling during harvest and storage are crucial, while considering chemical treatments and biological controls as additional options to manage the disease effectively.\r\n\"",
 					TagDescription = "Bacterial Soft Rot Disease"
