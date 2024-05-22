@@ -60,6 +60,7 @@
 	  <None Remove="Platforms\Android\Assets\labels.txt" />
 	  <None Remove="Platforms\Android\Assets\model.pb" />
 	  <None Remove="Resources\Images\aboutusbg.png" />
+	  <None Remove="Resources\Images\background.jpg" />
 	  <None Remove="Resources\Images\bandile.png" />
 	  <None Remove="Resources\Images\buhle.png" />
 	  <None Remove="Resources\Images\carrot1.jpg" />
@@ -70,6 +71,9 @@
 	  <None Remove="Resources\Images\ndosi.png" />
 	  <None Remove="Resources\Images\onion.jpg" />
 	  <None Remove="Resources\Images\onions.jpg" />
+	  <None Remove="Resources\Images\pic1.png" />
+	  <None Remove="Resources\Images\pic2.png" />
+	  <None Remove="Resources\Images\pic3.png" />
 	  <None Remove="Resources\Images\potatoes.jpg" />
 	  <None Remove="Resources\Images\potatoes1.jpeg" />
 	  <None Remove="Resources\Images\sendicon.png" />
@@ -117,6 +121,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\IgadiYamiQuestionPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\MainMenu.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\PlantViews\CarrotPage.xaml">

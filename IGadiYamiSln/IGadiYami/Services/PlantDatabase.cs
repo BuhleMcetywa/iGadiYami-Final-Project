@@ -32,14 +32,14 @@ namespace IGadiYami.Services
            {
                 Vegetable vegetables = new Vegetable()
 				{
-					Name = "Tomato",
+					Name = "Tomatoes",
 					SoilType= "Tomatoes grow best within a soil pH range of 6.0 to 6.8. This acidity level provides an optimal\r\n\r\nenvironment for their growth and productivity.Tomatoes grow best in sandy loam or loamy soil because it drains well but keeps moisture and\r\nnutrients.",
                     WaterIntake = "Water the plants thoroughly after planting to help them establish roots. Water regularly,\r\nkeeping the soil consistently moist but not waterlogged. Avoid overwatering, as it can\r\npromote the growth of fungal diseases. Water the base of the plants early in the day to\r\nallow foliage to dry before evening.",
                     SoilPrep = "Tomatoes thrive in warm weather, requiring temperatures consistently above 10°C for optimal\\r\\ngrowth. Nighttime temperatures of 13°C or higher are necessary for fruit setting. Plant tomatoes\\r\\nwhen the soil temperature reaches around 16°C, ensuring it's warm enough by checking if you can\\r\\nkeep your finger in the soil for a full minute without discomfort. Avoid planting too early to prevent\\r\\ndamage from late frosts, selecting varieties with days-to-maturity shorter than the days until the\\r\\nexpected first frost. Additionally, while tomatoes enjoy sunlight, they struggle to set fruit when\\r\\ntemperatures exceed 29°C, and maintaining a humidity level between 65% to 85% fosters optimal\\r\\n\\r\\ngrowth.\",",
                     TimeToPlant = "Tomatoes love warm weather, and in most of South Africa, are grown in summer.",
                     HowToPlant = "Choose a Sunny Spot:\r\nPick a sunny spot in your garden with well-draining soil.\r\n2. Prepare the Soil:\r\nLoosen the soil and remove any weeds. If the soil is poor, add compost or aged\r\nmanure to enrich it.\r\n3. Spacing:\r\nSpace tomato plants about 18 to 36 inches apart to allow for proper growth and airflow.\r\n4. Planting:\r\nDig a hole slightly deeper than the root ball of your tomato plant. Place the plant in the\r\nhole, gently cover the roots with soil, and pat it down lightly.\r\n5. Support:\r\nIf you're planting indeterminate varieties (which grow tall), install stakes or cages to support\r\nthe plants as they grow.\r\n6. Pruning:\r\nOptionally, you can prune suckers (small shoots that grow between the main stem and\r\n\r\nbranches) to promote airflow and fruit production.\r\n7. Harvesting:\r\nHarvest ripe tomatoes when they have developed their full color and are firm to the touch.",
-                    Image = "tomatoes.jpg",
-					DescriptionOfVeg = "Tomatoes are juicy, red fruits often mistaken for vegetables. They are rich in vitamins and antioxidants, making them a healthy addition to any meal. Tomatoes can be enjoyed fresh in salads, cooked in sauces, or used as a base for soups and stews.",
+                    Image = "tomato.jpg",
+                    DescriptionOfVeg = "Tomatoes are juicy, red fruits often mistaken for vegetables. They are rich in vitamins and antioxidants, making them a healthy addition to any meal. Tomatoes can be enjoyed fresh in salads, cooked in sauces, or used as a base for soups and stews.",
 
                 };
                 _dbConnection.Insert(vegetables);
@@ -52,7 +52,7 @@ namespace IGadiYami.Services
 					SoilPrep = "Work the soil deeply with a fork and apply a handful of recommended chemical fertiliser to every square metre of the soil surface. If using kraal manure or compost, apply about four handfuls to every square metre a few weeks before planting. Work the fertiliser, manure or compost into the soil with a fork. Rake flat and remove large clods and stones.",
 					TimeToPlant = "In South Africa, the best time to plant onions is typically during autumn or early winter, depending on your region. Aim for the period between April and March or July to October. However, with proper moisture and temperature management, you can grow onions year-round.",
 					HowToPlant = "Grow onions by direct seeding or from seedlings. Make furrows about 20cm to 30cm apart and transplant the seedlings 10cm apart in the furrows. This way, they shouldn’t need thinning. Dig a small hole for each seedling and place its roots downwards in the hole. Cover the seedlings with soil so that the tip of the neck just shows above the soil surface.",
-					Image = "onion.jpg",
+					Image = "onions.jpg",
                     DescriptionOfVeg = "Onions are versatile vegetables known for their pungent flavor and strong aroma. They come in various colors, including white, yellow, and red, each adding a unique taste to dishes. Onions can be eaten raw, cooked, or pickled, and they are a staple ingredient in many cuisines worldwide.",
 
                 };
