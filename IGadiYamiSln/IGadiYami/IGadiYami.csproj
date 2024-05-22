@@ -66,10 +66,13 @@
 	  <None Remove="Resources\Images\carrots.jpeg" />
 	  <None Remove="Resources\Images\chulu.png" />
 	  <None Remove="Resources\Images\ethan.png" />
+	  <None Remove="Resources\Images\handshake.png" />
+	  <None Remove="Resources\Images\info.png" />
 	  <None Remove="Resources\Images\luke.png" />
 	  <None Remove="Resources\Images\ndosi.png" />
 	  <None Remove="Resources\Images\onion.jpg" />
 	  <None Remove="Resources\Images\onions.jpg" />
+	  <None Remove="Resources\Images\personaldata.png" />
 	  <None Remove="Resources\Images\potatoes.jpg" />
 	  <None Remove="Resources\Images\potatoes1.jpeg" />
 	  <None Remove="Resources\Images\sendicon.png" />
