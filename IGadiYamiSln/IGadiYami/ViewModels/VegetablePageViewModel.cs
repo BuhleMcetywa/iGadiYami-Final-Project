@@ -44,49 +44,63 @@ namespace IGadiYami.ViewModels
             set { _vegheading = value; OnPropertyChanged();  }
         }
 
+        private string _timeToPlant;
 
-        public List<string> texts { get; set; }
-        public VegetablePageViewModel()
+        public string TimeToPlant
         {
-            // Code for the buttons in the vegetable page
-            texts = new List<string>
-            {
-                "text0",
-                "text1",
-                "text2",
-                "text3",
-            };
-            SetVegInfoCommand = new RelayCommand<int>(SetVegInfo);
+            get { return _timeToPlant; }
+            set { _timeToPlant = value; OnPropertyChanged(); }
+        }
+        private string _soiltype;
+        public string SoilType
+        {
+            get { return _soiltype; }
+            set { _soiltype = value; OnPropertyChanged(); }
+        }
+        private string _howtoplant;
+        public string HowToPlant
+        {
+            get { return _howtoplant; }
+            set { _howtoplant = value; OnPropertyChanged(); }
+        }
+        private string _commondiseases;
+
+        public string CommonDiseases
+        {
+            get { return _commondiseases; }
+            set { _commondiseases = value; OnPropertyChanged(); }
         }
 
+
+
+        public List<string> texts { get; set; }
 
         public VegetablePageViewModel(PlantDatabase database)
         {
             _database = database;
         }
 
-        public ICommand SetVegInfoCommand { get; }
-        //[RelayCommand]
-        public void SetVegInfo(int index)
+        [RelayCommand]
+        public void SetVegInfo(string index)
         {
-            if (index == 0)
+            if (index == "howtoplant")
             {
-                VegHeading = texts[0];
-                App.Current.MainPage.DisplayAlert("alert", "command works", "ok");
-            } else if (index == 1)
+                VegHeading = "How to Plant";
+                VegetableInfo = Vegetable.HowToPlant;
+            } else if (index == "choosingsoil")
             {
-                VegHeading = texts[1];
-                App.Current.MainPage.DisplayAlert("alert", "command works", "ok");
+                VegHeading = "Choosing Right Soil";
+                VegetableInfo = Vegetable.SoilType;
             }
-            else if (index == 2)
+            else if (index == "whentoplant")
             {
-                VegHeading = texts[2];
-                App.Current.MainPage.DisplayAlert("alert", "command works", "ok");
+                VegHeading = "When to Plant";
+                VegetableInfo = Vegetable.TimeToPlant;
             }
-            else if (index == 3)
+            else if (index == "commondisease")
             {
-                VegHeading = texts[3];
-                App.Current.MainPage.DisplayAlert("alert", "command works", "ok");
+                VegHeading = "Common Diseases";
+                VegetableInfo = Vegetable.WaterIntake;
             }
         }
         
@@ -94,6 +108,8 @@ namespace IGadiYami.ViewModels
         public override void OnAppearing()
         {
             base.OnAppearing();
+
+            SetVegInfo("whentoplant");
         }
     }
 }

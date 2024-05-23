@@ -3,8 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="IGadiYami.Views.VegetablePage"
              xmlns:local="clr-namespace:IGadiYami.ViewModels"
-             x:DataType="local:VegetablePageViewModel"
-             Title="VegetablePage">
+             x:DataType="local:VegetablePageViewModel">
     <ScrollView Orientation="Vertical">
         <Grid >
             <Grid.RowDefinitions >
@@ -26,10 +25,10 @@
 
             <Frame BackgroundColor="#C42D09" Grid.Row="3" CornerRadius="20" Grid.RowSpan="2" BorderColor="Transparent" Padding="0,10,0,0"  >
                 <FlexLayout Grid.Row="3" BackgroundColor="#C42D09" JustifyContent="SpaceEvenly" VerticalOptions="Start" HeightRequest="100" WidthRequest="400" Margin="0,0,0,0">
-                    <Button Margin="0,10,0,0" CornerRadius="30" Text="How to plant Tomatoes" FontFamily="mont" BackgroundColor="#006838" LineBreakMode="WordWrap" FontAttributes="Bold" HorizontalOptions="Center" FontSize="8" WidthRequest="85" HeightRequest="50" Command="{Binding SetVegInfoCommand}" CommandParameter="0" />
-                    <Button Margin="0,10,0,0" CornerRadius="30" Text="Choosing the right soil" BackgroundColor="#579602" FontFamily="mont" LineBreakMode="WordWrap" FontAttributes="Bold" HorizontalOptions="Center" FontSize="8" WidthRequest="85" HeightRequest="50" Command="{Binding SetVegInfoCommand}" CommandParameter="1"  />
-                    <Button Margin="0,10,0,0" CornerRadius="30" Text="When to plant" BackgroundColor="#006838" FontFamily="mont" LineBreakMode="WordWrap" FontAttributes="Bold" HorizontalOptions="Center" FontSize="8" WidthRequest="85" HeightRequest="50" Command="{Binding SetVegInfoCommand}" CommandParameter="2"   />
-                    <Button Margin="0,10,0,0" CornerRadius="30" Text="Common diseases"  BackgroundColor="#579602" FontFamily="mont" LineBreakMode="WordWrap" FontAttributes="Bold" HorizontalOptions="Center" FontSize="8" WidthRequest="85" HeightRequest="50" Command="{Binding SetVegInfoCommand}" CommandParameter="3" />
+                    <Button Margin="0,10,0,0" CornerRadius="30" Text="How to plant " FontFamily="mont" BackgroundColor="#006838" LineBreakMode="WordWrap" FontAttributes="Bold" HorizontalOptions="Center" FontSize="8" WidthRequest="85" HeightRequest="50" Command="{Binding SetVegInfoCommand}" CommandParameter="howtoplant" />
+                    <Button Margin="0,10,0,0" CornerRadius="30" Text="Choosing the right soil" BackgroundColor="#579602" FontFamily="mont" LineBreakMode="WordWrap" FontAttributes="Bold" HorizontalOptions="Center" FontSize="8" WidthRequest="85" HeightRequest="50" Command="{Binding SetVegInfoCommand}" CommandParameter="choosingsoil"  />
+                    <Button Margin="0,10,0,0" CornerRadius="30" Text="When to plant" BackgroundColor="#006838" FontFamily="mont" LineBreakMode="WordWrap" FontAttributes="Bold" HorizontalOptions="Center" FontSize="8" WidthRequest="85" HeightRequest="50" Command="{Binding SetVegInfoCommand}" CommandParameter="timetoplant"   />
+                    <Button Margin="0,10,0,0" CornerRadius="30" Text="Common diseases"  BackgroundColor="#579602" FontFamily="mont" LineBreakMode="WordWrap" FontAttributes="Bold" HorizontalOptions="Center" FontSize="8" WidthRequest="85" HeightRequest="50" Command="{Binding SetVegInfoCommand}" CommandParameter="commondisease" />
                 </FlexLayout>
             </Frame>
 
@@ -45,22 +44,18 @@
                      FontFamily="mont" />
 
                 <Label
-                    Text="{Binding Vegetable.TimeToPlant}" 
+                    Text="{Binding VegetableInfo}" 
                     FontSize="15 " 
                     WidthRequest="300"
                     HorizontalTextAlignment="Center"  
                     HorizontalOptions="CenterAndExpand" 
                     TextColor="White"
-                    
                     LineHeight="1"
                    FontFamily="mont"  
                     Grid.RowSpan="2" 
                    BackgroundColor="#C42D09" Grid.Row="4"
                    />
             </StackLayout>
-
-
         </Grid>
     </ScrollView>
-
 </ContentPage>
