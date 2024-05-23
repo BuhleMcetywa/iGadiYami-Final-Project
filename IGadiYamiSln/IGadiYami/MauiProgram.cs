@@ -62,6 +62,7 @@ namespace IGadiYami
             mauiAppBuilder.Services.AddSingleton<VegetablePageViewModel>();
             mauiAppBuilder.Services.AddSingleton<CreateAccountViewModel>();
             mauiAppBuilder.Services.AddSingleton<SettingsProfileViewModel>();
+            mauiAppBuilder.Services.AddSingleton<CommunityPageViewModel>();
             return mauiAppBuilder;
         }
         public static MauiAppBuilder RegisterViews(this MauiAppBuilder mauiAppBuilder)
@@ -76,7 +77,8 @@ namespace IGadiYami
             mauiAppBuilder.Services.AddSingleton<CreateAccountPage>();
             mauiAppBuilder.Services.AddSingleton<VegetablePage>();
             mauiAppBuilder.Services.AddSingleton<SettingsPage>();
-            
+            mauiAppBuilder.Services.AddSingleton<CommunityPage>();
+
             return mauiAppBuilder;
         }
     }
