@@ -32,7 +32,7 @@
                 </FlexLayout>
             </Frame>
 
-            <StackLayout Grid.Row="4" Spacing="5">
+            <StackLayout Grid.Row="4" Spacing="5" >
                 <Label  Text="{Binding VegHeading}" 
                      FontAttributes="Bold" 
                      TextColor="White" 
@@ -50,12 +50,16 @@
                     HorizontalTextAlignment="Center"  
                     HorizontalOptions="CenterAndExpand" 
                     TextColor="White"
+                    HeightRequest="200"
                     LineHeight="1"
                    FontFamily="mont"  
                     Grid.RowSpan="2" 
                    BackgroundColor="#C42D09" Grid.Row="4"
                    />
             </StackLayout>
+
+
         </Grid>
     </ScrollView>
+
 </ContentPage>
