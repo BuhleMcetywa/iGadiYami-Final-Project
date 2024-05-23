@@ -4,9 +4,8 @@
              x:Class="IGadiYami.Views.VegetablePage"
              xmlns:local="clr-namespace:IGadiYami.ViewModels"
              x:DataType="local:VegetablePageViewModel"
-             Title="VegetablePage">
+             Title="VegetablePage" BackgroundColor="#C42D09"> 
     
-    <ScrollView Orientation="Vertical">
         <Grid >
             <Grid.RowDefinitions >
 
@@ -14,14 +13,14 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
-                <RowDefinition  Height="*" />
-                <RowDefinition  Height="*" />
+                <RowDefinition  Height="60" />
+                <RowDefinition  Height="2*" />
 
             </Grid.RowDefinitions>
             <Image Grid.Row="0" Grid.RowSpan="4"  Source="{Binding Vegetable.Image}" Aspect="AspectFill" />
             <Label Padding="25,25,0,0" Text="Start Gardening with us" FontSize="20" FontFamily="mont" FontAttributes="Bold" TextColor="White" Grid.Row="0"  />
             <BoxView Grid.Row="0" HorizontalOptions="Center" Margin="20,0,60,0" BackgroundColor="White" WidthRequest="300" HeightRequest="1" />
-            <Label  Margin="25,30,0,0" Text="{Binding Vegetable.Name}" Grid.RowSpan="2" Padding="0,150,0,0" FontAttributes="Bold" TextColor="White" FontSize="40" FontFamily="mont" Grid.Row="1" />
+            <Label  Margin="25,25,0,0" Text="{Binding Vegetable.Name}" Grid.RowSpan="2" Padding="0,150,0,0" FontAttributes="Bold" TextColor="White" FontSize="40" FontFamily="mont" Grid.Row="1" />
             <Label Margin="30,0,0,0" Text="Start your Gardening journey with us" Padding="0,100,0,0" TextColor="White" FontSize="13" FontFamily="mont" Grid.Row="2" />
 
 
@@ -34,34 +33,33 @@
                 </FlexLayout>
             </Frame>
 
-            <StackLayout Grid.Row="4" Spacing="5">
-                <Label  Text="{Binding VegHeading}" 
+                <Label  Grid.Row="4"  Text="{Binding VegHeading}" 
                      FontAttributes="Bold" 
                      TextColor="White" 
                      HorizontalTextAlignment="Center" 
-                     Grid.Row="4"
-                     Margin="0,0,0,20"
+                     Margin="0,0,0,0"
                      BackgroundColor="#C42D09" 
                      FontSize="25" 
                      FontFamily="mont" />
 
-                <Label
+                <ScrollView Grid.Row="5" VerticalScrollBarVisibility="Always">
+                 <Label
+                     Margin="20,0,0,0"
                     Text="{Binding VegetableInfo}" 
                     FontSize="15 " 
-                    WidthRequest="300"
-                    HorizontalTextAlignment="Center"  
-                    HorizontalOptions="CenterAndExpand" 
+                    HorizontalTextAlignment="Start"  
+                    HorizontalOptions="Start" 
                     TextColor="White"
                     
                     LineHeight="1"
                    FontFamily="mont"  
-                    Grid.RowSpan="2" 
                    BackgroundColor="#C42D09" Grid.Row="4"
                    />
-            </StackLayout>
+
+                </ScrollView>
+
 
 
         </Grid>
-    </ScrollView>
-
+ 
 </ContentPage>
