@@ -100,7 +100,7 @@ namespace IGadiYami.ViewModels
             else if (index == "commondisease")
             {
                 VegHeading = "Common Diseases";
-                VegetableInfo = Vegetable.WaterIntake;
+                VegetableInfo = _database.GetDiseasesForVegetable(Vegetable.VegetableID).ToString();
             }
         }
         

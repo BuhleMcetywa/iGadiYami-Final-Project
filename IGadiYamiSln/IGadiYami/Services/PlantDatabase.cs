@@ -7,7 +7,7 @@ using SQLite;
 
 namespace IGadiYami.Services
 {
-	public class PlantDatabase : IPlantDatabase
+	public class PlantDatabase
     {
         private SQLiteConnection _dbConnection;
         public PlantDatabase()
@@ -365,7 +365,7 @@ namespace IGadiYami.Services
 			{	
 					VegetableDisease vegDisease = new VegetableDisease()
 					{
-						VegTypeID = 1, 
+                        VegetableID = 1, 
 						DiseaseID = 13,   
 					};
 					_dbConnection.Insert(vegDisease);
@@ -374,7 +374,7 @@ namespace IGadiYami.Services
 				
 				    vegDisease = new VegetableDisease()
 					{
-						VegTypeID = 1,
+                        VegetableID = 1,
 						DiseaseID = 14,
 					};
 					_dbConnection.Insert(vegDisease);
@@ -382,7 +382,7 @@ namespace IGadiYami.Services
 
 				    vegDisease = new VegetableDisease()
 					{
-						VegTypeID = 1,
+                        VegetableID = 1,
 						DiseaseID = 15,
 					};
 					_dbConnection.Insert(vegDisease);
@@ -391,7 +391,7 @@ namespace IGadiYami.Services
 				
 				    vegDisease = new VegetableDisease()
 					{
-						VegTypeID = 1,
+						VegetableID = 1,
 						DiseaseID = 16,
 					};
 					_dbConnection.Insert(vegDisease);
@@ -399,97 +399,97 @@ namespace IGadiYami.Services
 
 				    vegDisease = new VegetableDisease()
 					{
-						VegTypeID = 2,
+						VegetableID = 2,
 						DiseaseID = 4,
 					};
 					_dbConnection.Insert(vegDisease);
 
 				  vegDisease = new VegetableDisease()
 				  {
-					VegTypeID = 2,
+					VegetableID = 2,
 					DiseaseID = 5,
 				  };
 				  _dbConnection.Insert(vegDisease);
 
 				vegDisease = new VegetableDisease()
 				{
-					VegTypeID = 2,
+					VegetableID = 2,
 					DiseaseID = 6,
 				};
 				_dbConnection.Insert(vegDisease);
 
 				vegDisease = new VegetableDisease()
 				{
-					VegTypeID = 2,
+					VegetableID = 2,
 					DiseaseID = 7,
 				};
 				_dbConnection.Insert(vegDisease);
 
 				vegDisease = new VegetableDisease()
 				{
-					VegTypeID = 2,
+					VegetableID = 2,
 					DiseaseID = 8,
 				};
 				_dbConnection.Insert(vegDisease);
 
 				vegDisease = new VegetableDisease()
 				{
-					VegTypeID = 3,
+					VegetableID = 3,
 					DiseaseID = 1,
 				};
 				_dbConnection.Insert(vegDisease);
 
 				vegDisease = new VegetableDisease()
 				{
-					VegTypeID = 3,
+					VegetableID = 3,
 					DiseaseID = 2,
 				};
 				_dbConnection.Insert(vegDisease);
 
 				vegDisease = new VegetableDisease()
 				{
-					VegTypeID = 3,
+					VegetableID = 3,
 					DiseaseID = 3,
 				};
 				_dbConnection.Insert(vegDisease);
 
 				vegDisease = new VegetableDisease()
 				{
-					VegTypeID = 3,
+					VegetableID = 3,
 					DiseaseID = 4,
 				};
 				_dbConnection.Insert(vegDisease);
 
 				vegDisease = new VegetableDisease()
 				{
-					VegTypeID = 4,
+					VegetableID = 4,
 					DiseaseID = 10,
 				};
 				_dbConnection.Insert(vegDisease);
 
 				vegDisease = new VegetableDisease()
 				{
-					VegTypeID = 4,
+					VegetableID = 4,
 					DiseaseID = 11,
 				};
 				_dbConnection.Insert(vegDisease);
 
 				vegDisease = new VegetableDisease()
 				{
-					VegTypeID = 4,
+					VegetableID = 4,
 					DiseaseID = 12,
 				};
 
 				vegDisease = new VegetableDisease()
 				{
-					VegTypeID = 5,
+					VegetableID = 5,
 					DiseaseID = 19,
 				};
 				_dbConnection.Insert(vegDisease);
 
 				vegDisease = new VegetableDisease()
 				{
-					VegTypeID = 5,
+					VegetableID = 5,
 					DiseaseID = 20,
 				};
 
@@ -506,23 +506,22 @@ namespace IGadiYami.Services
 			return disease; 
 		}
 
-        public List<Disease> GetDiseasesForVegetable(int vegTypeID)
+        public List<string> GetDiseasesForVegetable(int vegID)
 		{
 			// Get all VegetableDisease instances for the specified vegetable
-			var vegDiseases = _dbConnection.Table<VegetableDisease>().Where(vd => vd.VegTypeID == vegTypeID).ToList();
+			var vegDiseases = _dbConnection.Table<VegetableDisease>().Where(vd => vd.VegetableID == vegID).ToList();
 
 			// Get all Disease instances for the diseases associated with the specified vegetable
-			var diseases = new List<Disease>();
+			var diseasesName = new List<string>();
 			foreach (var vegDisease in vegDiseases)
 			{
 				var disease = _dbConnection.Table<Disease>().FirstOrDefault(d => d.DiseaseID == vegDisease.DiseaseID);
 				if (disease != null)
 				{
-					diseases.Add(disease);
+					diseasesName.Add(disease.DiseaseName);
 				}
 			}
-
-			return diseases;
+			return diseasesName;
 		}
         public List<Vegetable> GetAllVegetables()
         {
