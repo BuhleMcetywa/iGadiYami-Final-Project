@@ -23,6 +23,6 @@
             <Label Text="{Binding DetectionResponse}" Margin="0,0,0,0" FontSize="20"  TextColor="#006838" FontAttributes="Bold" FontFamily="Canva Sans" HorizontalOptions="Center"/>
         </Frame>
         <Label Margin=" 0,0, 0, 0"  FontSize="12" WidthRequest="340" FontAttributes="Bold" HeightRequest="80" TextColor="#006838" Grid.Row="2"  Text="{Binding DiseaseCauses}" />
-        <Button Text="Detect" FontSize="20" FontAttributes="Bold" FontFamily="Poppins" TextColor="#f9ffe0" BackgroundColor="#006838" Command="{Binding DisplayResponseCommand}" WidthRequest="90" CornerRadius="140" Grid.Row="4"/>
+        <Button Text="Detect" FontSize="20" FontAttributes="Bold" FontFamily="Poppins" TextColor="#f9ffe0" BackgroundColor="#006838" Command="{Binding DisplayResponseCommand}" WidthRequest="100" CornerRadius="140" Grid.Row="4"/>
     </Grid>
 </ContentPage>

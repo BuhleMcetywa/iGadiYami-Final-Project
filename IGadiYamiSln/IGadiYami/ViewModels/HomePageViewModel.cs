@@ -1,6 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.Input;
 using IGadiYami.Models;
-using System.Windows.Input;
 
 namespace IGadiYami.ViewModels
 {

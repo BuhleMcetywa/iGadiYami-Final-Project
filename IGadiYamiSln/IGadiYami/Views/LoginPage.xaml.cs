@@ -1,4 +1,3 @@
-using Camera.MAUI;
 using IGadiYami.ViewModels;
 
 namespace IGadiYami.Views;

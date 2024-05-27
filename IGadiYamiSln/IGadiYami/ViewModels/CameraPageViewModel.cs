@@ -2,7 +2,6 @@
 using CommunityToolkit.Mvvm.Input;
 using IGadiYami.Services;
 using Xam.Plugins.OnDeviceCustomVision;
-using IGadiYami.Models;
 
 namespace IGadiYami.ViewModels
 {
