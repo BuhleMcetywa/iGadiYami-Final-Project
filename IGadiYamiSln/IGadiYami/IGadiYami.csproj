@@ -67,12 +67,15 @@
 	  <None Remove="Resources\Images\carrots.jpeg" />
 	  <None Remove="Resources\Images\chulu.png" />
 	  <None Remove="Resources\Images\ethan.png" />
+	  <None Remove="Resources\Images\igadiimage2.jpg" />
 	  <None Remove="Resources\Images\luke.png" />
+	  <None Remove="Resources\Images\menupic.jpg" />
 	  <None Remove="Resources\Images\ndosi.png" />
 	  <None Remove="Resources\Images\onion.jpg" />
 	  <None Remove="Resources\Images\onions.jpg" />
+	  <None Remove="Resources\Images\pic.png" />
 	  <None Remove="Resources\Images\pic1.png" />
-	  <None Remove="Resources\Images\pic2.png" />
+	  <None Remove="Resources\Images\pic2.jpg" />
 	  <None Remove="Resources\Images\pic3.png" />
 	  <None Remove="Resources\Images\potatoes.jpg" />
 	  <None Remove="Resources\Images\potatoes1.jpeg" />
@@ -117,6 +120,9 @@
 	  <MauiXaml Update="Views\EditProfilePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\HomePageView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\IgadiYamiAnswerPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -148,5 +154,7 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
+
+	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionIGadiYamiHideInfoBar="True" /></VisualStudio></ProjectExtensions>
 
 </Project>

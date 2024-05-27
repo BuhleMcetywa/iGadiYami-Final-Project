@@ -8,6 +8,6 @@
     Title="IGadiYami">
 
     <ShellContent
-    ContentTemplate="{DataTemplate local:MainMenu}"
-    Route="MainPage" />
+    ContentTemplate="{DataTemplate local:HomePageView}"
+    Route="MainMenu" />
 </Shell>

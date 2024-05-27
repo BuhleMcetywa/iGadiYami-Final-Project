@@ -1,0 +1,113 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IGadiYami.Views.HomePageView"
+             BackgroundColor="#f8f2cc"
+             xmlns:viewmodels="clr-namespace:IGadiYami.ViewModels">
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <!--Header where the name needs to be binded?-->
+            <HorizontalStackLayout Padding="15" BackgroundColor="#006838">
+                <Label Text="Good Morning, Lucas" TextColor="#f8f2cc" Margin="6,5,0,0" FontAttributes="Bold" FontFamily="Canva Sans" WidthRequest="200" FontSize="27"/>
+                <Image Source="igadiimage2" WidthRequest="70" Margin="80,0,0,2"/>
+            </HorizontalStackLayout>
+
+                
+            <!--menu options that need to be binded-->
+            <Label Text="Start Gardening" Margin="25,23,10,10" FontFamily="Canva Sans" FontSize="20" FontAttributes="Bold" />
+            <Frame WidthRequest="340" Margin="21,0,10,10" HeightRequest="170" CornerRadius="30" HorizontalOptions="StartAndExpand">
+                <Image Source="pic3.jpg" WidthRequest="400" HeightRequest="600" Aspect="AspectFit" Margin="0,340,0,0"/>
+            </Frame>
+
+            <Label Text="Join Our Gardening Community" Margin="25,23,10,10" FontFamily="Canva Sans" FontSize="20" FontAttributes="Bold" />
+            <Frame WidthRequest="340" Margin="21,0,10,10" HeightRequest="170" CornerRadius="30" HorizontalOptions="StartAndExpand">
+                <Image Source="gardencom" WidthRequest="400" HeightRequest="600" Aspect="AspectFit" Margin="0,30,0,0"/>
+            </Frame>
+
+
+            <Label Text="Plant Disease Detection" Margin="25,23,10,10" FontFamily="Canva Sans" FontSize="20" FontAttributes="Bold" />
+            <Frame WidthRequest="340" Margin="21,0,10,10" HeightRequest="170" CornerRadius="30" HorizontalOptions="StartAndExpand">
+                <Image Source="menupic" WidthRequest="1000" HeightRequest="700" Aspect="AspectFit" Margin="230,60,0,0"/>
+            </Frame>
+            
+            <!-- this that green line ignore it -->
+            <BoxView Color="#006838" HeightRequest="3" Margin="10,25" WidthRequest="140" HorizontalOptions="FillAndExpand" />
+
+            <Label Text="Premium Feature(Locked)" Margin="25,23,10,10" FontFamily="Canva Sans" FontSize="20" FontAttributes="Bold" />
+            <Frame WidthRequest="340" Margin="21,0,10,10" HeightRequest="170" CornerRadius="30" HorizontalOptions="StartAndExpand" >
+                <Image Source="igadiimage" WidthRequest="140" HeightRequest="160" Aspect="AspectFit" Margin="0,7,0,0" />
+            </Frame>
+
+            <BoxView Color="#006838" HeightRequest="3" Margin="10,25" WidthRequest="140" HorizontalOptions="FillAndExpand" />
+
+            <!--about us section starts here-->
+            <Label Text="About Us" Margin="22,10,0,10" FontFamily="Canva Sans" FontSize="26" FontAttributes="Bold" />
+
+            <HorizontalStackLayout>
+            <Frame CornerRadius="0" Margin="20,0,0,0" IsClippedToBounds="True" WidthRequest="160" HeightRequest="170">
+                    <Image Source="aboutusbg" WidthRequest="169" HeightRequest="190" Aspect="AspectFit"  Margin="0,0,0,0"/>
+            </Frame>
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Us" Margin="21,4,0,10" FontFamily="Canva Sans"  WidthRequest="140" HeightRequest="160" FontSize="16" />
+            </HorizontalStackLayout>
+
+            <!-- comapny goals starts here-->
+
+            <Label HorizontalOptions="EndAndExpand" Text="Company Goals" Margin="0,50,40,10" FontFamily="Canva Sans" FontSize="26" FontAttributes="Bold" />
+
+            <HorizontalStackLayout>
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Us" Margin="21,4,0,10" FontFamily="Canva Sans"  WidthRequest="140" HeightRequest="160" FontSize="16" />
+
+                <Frame CornerRadius="0" Margin="20,0,0,0" IsClippedToBounds="True" WidthRequest="160" HeightRequest="170">
+                    <Image Source="gardencom1" WidthRequest="300" HeightRequest="300" Aspect="AspectFit" Margin="60,70,-70,0"/>
+                </Frame>
+              </HorizontalStackLayout>
+
+            <BoxView Color="#006838" HeightRequest="3" Margin="10,35" WidthRequest="140" HorizontalOptions="FillAndExpand" />
+
+            <Label Text="Meet the creators Of iGadi Yami" FontAttributes="Bold" FontSize="23" TextColor="#006838" HorizontalOptions="CenterAndExpand"/>
+           
+            <ScrollView Orientation="Horizontal">
+                <HorizontalStackLayout>
+               
+                <VerticalStackLayout>
+                   <Frame Margin="15,10,0,0" WidthRequest="110" HeightRequest="110" CornerRadius="80">
+                      <Image Source="bandile" WidthRequest="110" HeightRequest="110" Aspect="AspectFit"/>
+                   </Frame>
+                   <Label Text="Bandile" Margin="43,10,0,0" />
+                  </VerticalStackLayout>
+
+                    <VerticalStackLayout>
+                        <Frame Margin="15,10,0,0" WidthRequest="110" HeightRequest="110" CornerRadius="80">
+                            <Image Source="luke" WidthRequest="110" HeightRequest="110" Aspect="AspectFit"/>
+                        </Frame>
+                        <Label Text="Luke" Margin="53,10,0,0" />
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout>
+                        <Frame Margin="15,10,0,0" WidthRequest="110" HeightRequest="110" CornerRadius="80">
+                            <Image Source="ethan" WidthRequest="110" HeightRequest="110" Aspect="AspectFit"/>
+                        </Frame>
+                        <Label Text="Ethan" Margin="56,10,0,0" />
+                    </VerticalStackLayout>
+                    
+                    
+                    <VerticalStackLayout>
+                        <Frame Margin="25,10,0,0" WidthRequest="110" HeightRequest="110" CornerRadius="80">
+                            <Image Source="ndosi" WidthRequest="110" HeightRequest="110" Aspect="AspectFit"/>
+                        </Frame>
+                        <Label Text="Chulu" Margin="63,10,0,0" />
+                    </VerticalStackLayout>
+
+
+                    <VerticalStackLayout>
+                        <Frame Margin="25,10,0,0" WidthRequest="110" HeightRequest="110" CornerRadius="80">
+                            <Image Source="ndosi" WidthRequest="110" HeightRequest="110" Aspect="AspectFit"/>
+                        </Frame>
+                        <Label Text="Buhle" Margin="63,10,0,0" />
+                    </VerticalStackLayout>
+
+                </HorizontalStackLayout>
+            </ScrollView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -35,8 +35,8 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
-                    <Frame Margin="10" BackgroundColor="Beige" Grid.Row="1"  Padding="10">
-                        <Label TextColor="Black" Text="{Binding MessageBody}" />
+                    <Frame Margin="120,10,0,10" WidthRequest="300" CornerRadius="20" BackgroundColor="#9CC237" Grid.Row="1"  Padding="10">
+                        <Label TextColor="Black" FontAttributes="Bold" Text="{Binding MessageBody}" />
                     </Frame>
                 </Grid>
             </DataTemplate>
@@ -50,7 +50,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
-                    <Frame Margin="10" BackgroundColor="MistyRose" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Padding="10"  HorizontalOptions="EndAndExpand">
+                    <Frame Margin="10" BackgroundColor="#8cc342" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Padding="10"  HorizontalOptions="EndAndExpand">
                         <Label TextColor="Black" Text="{Binding MessageBody}" HorizontalTextAlignment="End" />
                     </Frame>
                 </Grid>
