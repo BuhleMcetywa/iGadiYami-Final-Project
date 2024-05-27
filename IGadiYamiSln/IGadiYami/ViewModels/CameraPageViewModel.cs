@@ -2,12 +2,13 @@
 using CommunityToolkit.Mvvm.Input;
 using IGadiYami.Services;
 using Xam.Plugins.OnDeviceCustomVision;
+using IGadiYami.Models;
 
 namespace IGadiYami.ViewModels
 {
     public partial class CameraPageViewModel : BaseViewModel
     {
-        private IPlantDatabase _plantDatabase;
+        private PlantDatabase _plantDatabase;
 
         private ImageSource _photo;
         public ImageSource Photo
@@ -30,7 +31,12 @@ namespace IGadiYami.ViewModels
                 OnPropertyChanged();
             }
         }
-
+        private string _diseasecauses;
+        public string DiseaseCauses
+        {
+            get { return _diseasecauses; }
+            set { _diseasecauses = value; OnPropertyChanged(); }
+        }
 
         CameraView _cameraView;
 
@@ -75,10 +81,14 @@ namespace IGadiYami.ViewModels
 
             if (disease != null)
             {
-                // DO STUFF WITH DISEASE
-                // Get the causes and disease measures
+                // Get the causes and disease control measures
+                DiseaseCauses = disease.DiseaseCauses;
             }
+            else
+            {
+                DiseaseCauses = "";
 
+            }
         }
     }
 }

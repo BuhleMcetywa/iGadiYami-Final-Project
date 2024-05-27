@@ -1,14 +1,35 @@
-﻿using IGadiYami.Models;
+﻿using CommunityToolkit.Mvvm.Input;
+using IGadiYami.Models;
+using System.Windows.Input;
 
 namespace IGadiYami.ViewModels
 {
-    public class HomePageViewModel
+    public partial class HomePageViewModel : BaseViewModel
     {
         public IList<MenuOptions> Menu { get; private set; }
+        //public ICommand GoToStartGardeningPageCommand { get; }
+
 
         public HomePageViewModel()
         {
             CreateMenuCollection();
+            //GoToStartGardeningPageCommand = new Command(OnGoToStartGardeningPageAsync);
+        }
+
+        [RelayCommand]
+        private async static Task OnGoToStartGardeningPageAsync()
+        {
+            await Shell.Current.GoToAsync("startgardening");
+        }
+        [RelayCommand]
+        private async static Task OnGoToAiCameraPageAsync()
+        {
+            await Shell.Current.GoToAsync("aicamera");
+        }
+        [RelayCommand]
+        private async static Task OnGoToCommunityPageAsync()
+        {
+            await Shell.Current.GoToAsync("loginpage");
         }
 
         void CreateMenuCollection() // Changed return type to void
