@@ -1,5 +1,4 @@
-﻿using IGadiYami.ViewModels;
-using IGadiYami.Views;
+﻿using IGadiYami.Views;
 
 
 namespace IGadiYami
@@ -10,6 +9,7 @@ namespace IGadiYami
         {
             InitializeComponent();
             MainPage = new AppShell();
+       //    MainPage = new NavigationPage(new StartPage(new ViewModels.StartUpPageViewModel());
         }
     }
 }

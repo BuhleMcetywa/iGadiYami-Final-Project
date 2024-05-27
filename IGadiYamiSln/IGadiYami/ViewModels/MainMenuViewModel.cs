@@ -1,31 +1,15 @@
-﻿using CommunityToolkit.Mvvm.Input;
-using IGadiYami.Models;
-using IGadiYami.Views;
-//using Microsoft.UI.Xaml.Controls;
+﻿using IGadiYami.Models;
 using System.Collections.Generic;
-using System.Windows.Input;
 
 namespace IGadiYami.ViewModels
 {
-    public partial class MainMenuViewModel : BaseViewModel
+    public class MainMenuViewModel
     {
         public IList<MenuOptions> Menu { get; private set; }
 
         public MainMenuViewModel()
         {
             CreateMenuCollection();
-        }
-
-        [RelayCommand]
-        public static async Task Navigate(MainMenu mainMenu)
-        {
-            var navigationParameter = new Dictionary<string, object>
-           {
-                { "StartGardening", mainMenu }
-           };
-            await Shell.Current.GoToAsync($"startgardening", navigationParameter);
-
-
         }
 
         void CreateMenuCollection()

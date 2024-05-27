@@ -7,7 +7,7 @@ using SQLite;
 
 namespace IGadiYami.Services
 {
-	public class PlantDatabase
+	public class PlantDatabase : IPlantDatabase
     {
         private SQLiteConnection _dbConnection;
         public PlantDatabase()
@@ -17,7 +17,6 @@ namespace IGadiYami.Services
             _dbConnection.CreateTable<VegetableDisease>();
             _dbConnection.CreateTable<Vegetable>();
             _dbConnection.CreateTable<VegetableType>();
-            _dbConnection.CreateTable<CropTracking>();
             SeedDatabase();
         }
         public string GetDatabasePath()
@@ -28,20 +27,6 @@ namespace IGadiYami.Services
         }
         public void SeedDatabase()
         {   
-			//Crop Tracking Feature
-			if (_dbConnection.Table<CropTracking>().Count() == 0)
-			{
-				CropTracking crop = new CropTracking()
-				{
-					CropName = "Tomatoes",
-                    PlantDate = "01/01/2024",
-					WaterAmount = "2L",
-					GrowthAmount = "3 inch",
-					Notes = "Slow progress",
-				};
-				_dbConnection.Insert(crop);
-			}
-
 		   //this table you use to access the specific vegetable you want to plant
            if(_dbConnection.Table<Vegetable>().Count() == 0)
            {
@@ -175,90 +160,98 @@ namespace IGadiYami.Services
                 {
 					DiseaseID = 1,
 					DiseaseName = "Carrot Rust Fly",
+					DiseaseDescription = "",
 					DiseaseCauses = "The larvae of the carrot rust fly tunnel into the roots, causing damage and making the carrots unmarketable",
 					DiseaseControlMeasures = "To control this pest, you can use floating row covers to prevent adult flies from laying eggs on the plants or consider using appropriate insecticides.",
-					TagDescription = "Carrot Rust Fly Disease"
-                };
+					
+				};
 				_dbConnection.Insert(disease);
 
 				disease = new Disease()
                 {
 					DiseaseID = 2,
 					DiseaseName = "Alternaria Leaf Blight",
+					DiseaseDescription = "",
 					DiseaseCauses = "This fungal disease affects the leaves and stems of carrot plants. It causes dark, sunken lesions on the leaves and can lead to defoliation if left untreated.",
 					DiseaseControlMeasures = "Crop rotation, proper sanitation, and the use of fungicides labeled for carrot diseases can help manage Alternaria leaf blight.",
-					TagDescription = "Alternaria Leaf Blight Disease"
-                };
+					
+				};
 				_dbConnection.Insert(disease);
 
 				disease = new Disease()
                 {
 					DiseaseID = 3,
 					DiseaseName = "Root Knot Nematodes",
+					DiseaseDescription = "",
 					DiseaseCauses = "These microscopic worm-like organisms can cause galls or knots to form on the roots of carrot plants. Infected plants may show stunted growth and have reduced yields.",
 					DiseaseControlMeasures = "Crop rotation, soil solarization, and the use of resistant carrot varieties are effective management strategies for root knot nematodes.",
-					TagDescription = "Root Knot Nematodes Disease"
-                };
+					
+				};
 				_dbConnection.Insert(disease);
 
 				disease = new Disease()
                 {
 					DiseaseID = 4,
 					DiseaseName = "Bacterial soft rot",
+					DiseaseDescription = "",
 					DiseaseCauses = "\"Bacterial soft rot is caused by various types of bacteria, with Erwinia carotovora being a common culprit. These bacteria can infect potatoes both in the ground and after harvest.\r\n   - The disease typically enters through wounds, such as lenticels, growth cracks, or any other injuries on the tubers¹³.\r\n   - Factors that favor bacterial soft rot include:\r\n     - Immature Tubers:Soft rot is more likely in immature tubers.\r\n     - Adverse Temperatures: Pulp temperatures above 21°C at harvest promote soft rot.\r\n     - Mechanical Damage: Bruising or cuts from digging forks provide entry points for bacteria.\r\n     - Free Water:Water on tuber surfaces encourages bacterial growth.\r\n\"",
 					DiseaseControlMeasures = "\"To prevent bacterial soft rot in potatoes, start with disease-free seed potatoes and rotate crops with non-host plants. Keep fields clean by removing infected plants and debris, and avoid planting in areas with a history of the disease. Proper irrigation, soil drainage, and careful handling during harvest and storage are crucial, while considering chemical treatments and biological controls as additional options to manage the disease effectively.\r\n\"",
-					TagDescription = "Bacterial Soft Rot Disease"
-                };
+
+				};
 				_dbConnection.Insert(disease);
 
 				disease = new Disease()
                 {
 					DiseaseID = 5,
 					DiseaseName = "Blackleg Disease",
+					DiseaseDescription = "",
 					DiseaseCauses = "Blackleg disease in potatoes is caused by pectolytic bacteria, specifically those in the genera Pectobacterium and Dickeya (formerly known as Erwinia)",
 					DiseaseControlMeasures = "\"To prevent blackleg disease in potatoes, start with healthy seed potatoes and rotate crops with different plants each year. Keep fields clean, avoid overwatering, and choose resistant potato varieties when possible to minimize the risk of disease.\r\n\"",
-					TagDescription = "Blackleg Disease"
-                };
+
+				};
 				_dbConnection.Insert(disease);
 
 				disease = new Disease()
                 {
 					DiseaseID = 6,
 					DiseaseName = "Late Blight(Potato)",
+					DiseaseDescription = "",
 					DiseaseCauses = "Late blight in potatoes is caused by the airborne spores of the Phytophthora infestans fungus. This disease manifests as irregular dark lesions on the stems and leaves of potato plants and spreads quickly. Late blight is a sporadic disease and is more likely to develop in cool, wet conditions.",
 					DiseaseControlMeasures = "\"To stop late blight in potatoes, pick resistant varieties and rotate crops yearly. Keep the potato area clean, removing any infected leaves promptly. Use fungicides during humid weather and water plants early in the day at the base to keep the foliage dry.\r\n\"",
-					TagDescription = "Late Blight Disease on Potato"
-                };
+
+				};
 				_dbConnection.Insert(disease);
 
 				disease = new Disease()
                 {
 					DiseaseID = 7,
-					DiseaseName = "Early blight (Potato)",
+					DiseaseName = "Early blight(Potato)",
+					DiseaseDescription = "",
 					DiseaseCauses = "\"Alternaria solani is the primary culprit behind early blight.  Early blight doesn’t require excessive moisture it can even persist during drought periods.\r\nThe fungus tends to attack weakened plants, especially those with insect damage or reduced vitality due to other factors.\r\nShaded and older leaves are more susceptible to infection than young, vigorous ones.\"",
 					DiseaseControlMeasures = "\"To control early blight in potatoes, start by choosing potato varieties that resist the disease and rotate crops with different plants each season. Keep the potato patch clean by removing any infected leaves or debris, and water the plants at ground level to avoid splashing spores. If needed, apply natural or chemical fungicides according to instructions to further protect the plants from early blight.\r\n\"",
-					TagDescription = "Early Blight Disease"
-                };
+
+				};
 				_dbConnection.Insert(disease);
 
 				disease = new Disease()
                 {
 					DiseaseID = 8,
 					DiseaseName = "Powdery scab disease",
+					DiseaseDescription = "",
 					DiseaseCauses = "\"The disease is caused by Spongospora subterranea and can lead to significant yield losses.\r\n\r\n\"",
 					DiseaseControlMeasures = "\"To control powdery scab in potatoes, begin with disease-free seed potatoes, rotate crops, and maintain good field hygiene. Additionally, ensure proper soil drainage, monitor for early signs of the disease, and consider using resistant potato varieties if available.\r\n\"",
-					TagDescription = "Powdery Scab Disease"
-                };
+
+				};
 				_dbConnection.Insert(disease);
 
 				disease = new Disease()
 				{
 					DiseaseID = 9,
-					DiseaseName = "Anthracnose(Spinach)",
+					DiseaseName = "Anthracnose",
+					DiseaseDescription = "",
 					DiseaseCauses = "A fungal disease that affect spinach leaves and stems, causes dark, eater soaked lesions that turn tan or gray",
 					DiseaseControlMeasures = "Avoid overcrowding, ensure good drainage in your growing area.",
-					TagDescription = "Anthracnose Disease"
-                };
+				};
 
 					_dbConnection.Insert(disease);
 
@@ -266,19 +259,21 @@ namespace IGadiYami.Services
 				{
 					DiseaseID = 10,
 					DiseaseName = "Downy Mildew(Spinach)",
-					DiseaseCauses = "fungal diseases caused by Peronospora finosa can be identified by yellow or pale green spots on the upper surface of the leaves and a grayish-purple growth on the undersides",
+					DiseaseDescription = "",
+					DiseaseCauses = "fungal diseases caused by Peronospora finosa can be identidied by yellow or pale green spots on the upper surface of the leaves and a grayish-purple growth on the undersides",
 					DiseaseControlMeasures = "avoid overhead watering of crops, provide adequate spacing between plants for good air circulation.",
-					TagDescription = "Downy Mildew Disease"
-                };
+
+				};
 				_dbConnection.Insert(disease);
 
 				disease = new Disease()
 				{
 					DiseaseID = 11,
 					DiseaseName = "White Rust",
-					DiseaseCauses = "A fungal disease, causes raised, white pustules on the undersides of leaves and can lead to severe defoliation",
+					DiseaseDescription = "",
+					DiseaseCauses = "A fungal disease, cuases raised, white pustules on the undersides of leaves and can lead to severe defoliation",
 					DiseaseControlMeasures = "practice crop rotation, remove infected plants to prevent the spread of white rust.",
-					TagDescription = "White Rust Disease"
+				
 				};
 				_dbConnection.Insert(disease);
 
@@ -286,20 +281,22 @@ namespace IGadiYami.Services
 				{
 					DiseaseID = 12,
 					DiseaseName = "Fusarium Wilt",
+					DiseaseDescription = "",
 					DiseaseCauses = "Caused by a soil-borne fungal disease, noticeable by wilting, yellowing and stunting of plants",
 					DiseaseControlMeasures = "use disease-resistant spinach varieties, practice crop rotation.",
-					TagDescription = "Fusarium Wilt Disease"
-                };
+
+				};
 				_dbConnection.Insert(disease);
 
 				disease = new Disease()
 				{
 					DiseaseID = 13,
-					DiseaseName = "Botrytis Blight Disease (Onion)",
+					DiseaseName = "Botrytis Blight",
+					DiseaseDescription = "",
 					DiseaseCauses = "caused by Botrytis squamosa, this pathogen favours cool, moist conditions and the infection starts with elongated white spots",
 					DiseaseControlMeasures = "destroy onion or debris cull piles to reduces sources of inoculum, optimize plant row orientation and spacing to enhance air movement, reduce leaf wetness, implent a preventative fungicide spray program to manage the disease.",
-					TagDescription = "Botrytis Blight Disease"
-                };
+
+				};
 				_dbConnection.Insert(disease);
 
 				disease = new Disease()
@@ -308,8 +305,7 @@ namespace IGadiYami.Services
 					DiseaseName= "Botrytis neck rot",
 					DiseaseCauses = "disease is caused by prolonged exposure to wet conditions, spreads most rapidly during moderate temperatures with high humidity, rainfall or overhead irrigation. Storing uncured onions at temperatures and humidity that are too high can promote disease development and spread.",
 					DiseaseControlMeasures = "Adjust plant spacing and row orientation to obtain the best air movement through the plants, avoid injury to the onion neck and damage to the bulbs especially during harvest. Field applications of fungicides prior to harvest may reduce severity.",
-					TagDescription = "Botrytis Neck Rot Disease"
-                };
+				};
 				_dbConnection.Insert(disease);
 
 				disease = new Disease()
@@ -318,8 +314,7 @@ namespace IGadiYami.Services
 					DiseaseName = "Downy Mildew(Onion)",
 					DiseaseCauses = "Caused by the fungal disease Peronspora destructor that thrives in cool, humid conditions. Appears as pale green or yellow patches on the leaves which later turn brown",
 					DiseaseControlMeasures = "Ensure good airflow, proper spacing between crops and fungicide treatments.",
-					TagDescription = "Downy Mildew Disease"
-                };
+				};
 				_dbConnection.Insert(disease);
 
 				disease = new Disease()
@@ -327,9 +322,8 @@ namespace IGadiYami.Services
 					DiseaseID = 16,
 					DiseaseName = "Purple blotch",
 					DiseaseCauses = "Caused by the fungus Alternarria porria, pathogen thrives in warm, moist conditions.",
-					DiseaseControlMeasures = "Applying a broad spectrum protective fungicides before infection can provide good protection, crop rotation is recommended after an outbreak, try to minimize leaf wetness by using  surface irrigation instead of sprinkler irrigation, ensure good field drainage and maintain correct plant spacing.",
-					TagDescription = "Purple Blotch Disease"
-                };
+					DiseaseControlMeasures = "Applying a broad spectrum protective fungicides before infection can provide good protection, crop rotation is recommended after an outbreak, try to minimize leaf wetness by using  surface irrigation instead of sprinkler irrigation, ensure good field drainage and maintain correct plant spacing."
+				};
 				_dbConnection.Insert(disease);
 
 				disease = new Disease()
@@ -337,9 +331,8 @@ namespace IGadiYami.Services
 					DiseaseID = 17,
 					DiseaseName = "Anthracnose",
 					DiseaseCauses= "Caused by several species of the fungus Colletotrichum. Ripe and overripe fruit are especially susceptible but the pathogen can infect green fruit with symptoms not developing until fruit begin to ripen. ",
-					DiseaseControlMeasures = "\"To stop anthracnose in tomatoes, keep the area clean by removing infected plants and\r\nrotating crops each year. Choose resistant tomato types and water plants carefully to keep\r\nthe leaves dry. Apply mulch, consider using fungicides if needed, and regularly check for\r\n\r\nsigns of the disease.\"",
-					TagDescription = "Anthracnose Disease"
-                };
+					DiseaseControlMeasures = "\"To stop anthracnose in tomatoes, keep the area clean by removing infected plants and\r\nrotating crops each year. Choose resistant tomato types and water plants carefully to keep\r\nthe leaves dry. Apply mulch, consider using fungicides if needed, and regularly check for\r\n\r\nsigns of the disease.\""
+				};
 				_dbConnection.Insert(disease);
 
 				disease = new Disease()
@@ -347,30 +340,45 @@ namespace IGadiYami.Services
 					DiseaseID = 18,
 					DiseaseName = "Blosom End Rot",
 					DiseaseCauses = "\nLow calcium levels in the soil.\r\nSoil that is over- or underwatered.\r\nWide fluctuations in soil moisture.\r\nInconsistent watering.\r\nLow soil pH.\r\nExcessive nitrogen.\n",
-					DiseaseControlMeasures = "\"To prevent blossom end rot in tomatoes, maintain consistent watering to avoid fluctuations\r\nin soil moisture. Ensure proper calcium levels in the soil through soil amendments or\r\nfertilizers containing calcium. Mulch around tomato plants to regulate soil temperature and\r\nmoisture, and avoid excessive nitrogen fertilization, which can interfere with calcium\r\n\r\nuptake.\"",
-					TagDescription = "Blossom End Rot Disease"
-                };
-				_dbConnection.Insert(disease);
+					DiseaseControlMeasures = "\"To prevent blossom end rot in tomatoes, maintain consistent watering to avoid fluctuations\r\nin soil moisture. Ensure proper calcium levels in the soil through soil amendments or\r\nfertilizers containing calcium. Mulch around tomato plants to regulate soil temperature and\r\nmoisture, and avoid excessive nitrogen fertilization, which can interfere with calcium\r\n\r\nuptake.\""
 
-				
+				};
+				_dbConnection.Insert(disease);
 
 				disease = new Disease()
 				{
 					DiseaseID = 19,
-					DiseaseName = "Early blight ",
-					DiseaseCauses = "Early blight is caused by the fugus Alternaria linariae and occurs anytime during growing seaso, the pathogen is favoured by high humidity and temperatures above 24 degrees celsius.",
-					DiseaseControlMeasures = "\"To keep early blight away from tomatoes, use resistant varieties and rotate crops. Keep the\r\narea clean by removing infected leaves and debris, and space plants apart while mulching\r\nthe soil. Water at the base, prune for air flow, and consider using sprays if needed, while\r\n\r\nalways keeping an eye out for signs of the disease.\"",
-					TagDescription = "Early Blight Disease"
-                };
+					DiseaseName = "Anthracnose",
+					DiseaseCauses = "Caused by several species of the fungus Colletotrichum. Ripe and overripe fruit are especially susceptible but the pathogen can infect green fruit with symptoms not developing until fruit begin to ripen. ",
+					DiseaseControlMeasures = "\"To stop anthracnose in tomatoes, keep the area clean by removing infected plants and\r\nrotating crops each year. Choose resistant tomato types and water plants carefully to keep\r\nthe leaves dry. Apply mulch, consider using fungicides if needed, and regularly check for\r\n\r\nsigns of the disease.\"",
+
+				};
 				_dbConnection.Insert(disease);
 
 				disease = new Disease()
 				{
 					DiseaseID = 20,
+					DiseaseName = "Blosom End Rot",
+					DiseaseCauses = "\nLow calcium levels in the soil.\r\nSoil that is over- or underwatered.\r\nWide fluctuations in soil moisture.\r\nInconsistent watering.\r\nLow soil pH.\r\nExcessive nitrogen.\n",
+					DiseaseControlMeasures = "\"To prevent blossom end rot in tomatoes, maintain consistent watering to avoid fluctuations\r\nin soil moisture. Ensure proper calcium levels in the soil through soil amendments or\r\nfertilizers containing calcium. Mulch around tomato plants to regulate soil temperature and\r\nmoisture, and avoid excessive nitrogen fertilization, which can interfere with calcium\r\n\r\nuptake.\""
+				}; 
+				_dbConnection.Insert(disease);
+
+				disease = new Disease()
+				{
+					DiseaseID = 21,
+					DiseaseName = "Early blight ",
+					DiseaseCauses = "Early blight is caused by the fugus Alternaria linariae and occurs anytime during growing seaso, the pathogen is favoured by high humidity and temperatures above 24 degrees celsius.",
+					DiseaseControlMeasures = "\"To keep early blight away from tomatoes, use resistant varieties and rotate crops. Keep the\r\narea clean by removing infected leaves and debris, and space plants apart while mulching\r\nthe soil. Water at the base, prune for air flow, and consider using sprays if needed, while\r\n\r\nalways keeping an eye out for signs of the disease.\"",
+				};
+				_dbConnection.Insert(disease);
+
+				disease = new Disease()
+				{
+					DiseaseID = 22,
 					DiseaseName = "Late blight",
 					DiseaseCauses = "Caused by the oomycete pathogen Phytophthora infestans, the pathogen prefers wet conditions with humid temperatures that span over 3-5 days",
 					DiseaseControlMeasures = "\"If you notice any signs of late blight (brown, gray, or purplish spots on leaves or stems),\r\npromptly remove and destroy the affected leaves. Late blight becomes more resistant to\r\n\r\ntreatment as it progresses, so early intervention is crucial.\"",
-					TagDescription = "Late Blight Disease"
 				};
 				_dbConnection.Insert(disease);
 
@@ -380,7 +388,7 @@ namespace IGadiYami.Services
 			{	
 					VegetableDisease vegDisease = new VegetableDisease()
 					{
-                        VegetableID = 1, 
+						VegTypeID = 1, 
 						DiseaseID = 13,   
 					};
 					_dbConnection.Insert(vegDisease);
@@ -389,7 +397,7 @@ namespace IGadiYami.Services
 				
 				    vegDisease = new VegetableDisease()
 					{
-                        VegetableID = 1,
+						VegTypeID = 1,
 						DiseaseID = 14,
 					};
 					_dbConnection.Insert(vegDisease);
@@ -397,7 +405,7 @@ namespace IGadiYami.Services
 
 				    vegDisease = new VegetableDisease()
 					{
-                        VegetableID = 1,
+						VegTypeID = 1,
 						DiseaseID = 15,
 					};
 					_dbConnection.Insert(vegDisease);
@@ -406,7 +414,7 @@ namespace IGadiYami.Services
 				
 				    vegDisease = new VegetableDisease()
 					{
-						VegetableID = 1,
+						VegTypeID = 1,
 						DiseaseID = 16,
 					};
 					_dbConnection.Insert(vegDisease);
@@ -414,97 +422,97 @@ namespace IGadiYami.Services
 
 				    vegDisease = new VegetableDisease()
 					{
-						VegetableID = 2,
+						VegTypeID = 2,
 						DiseaseID = 4,
 					};
 					_dbConnection.Insert(vegDisease);
 
 				  vegDisease = new VegetableDisease()
 				  {
-					VegetableID = 2,
+					VegTypeID = 2,
 					DiseaseID = 5,
 				  };
 				  _dbConnection.Insert(vegDisease);
 
 				vegDisease = new VegetableDisease()
 				{
-					VegetableID = 2,
+					VegTypeID = 2,
 					DiseaseID = 6,
 				};
 				_dbConnection.Insert(vegDisease);
 
 				vegDisease = new VegetableDisease()
 				{
-					VegetableID = 2,
+					VegTypeID = 2,
 					DiseaseID = 7,
 				};
 				_dbConnection.Insert(vegDisease);
 
 				vegDisease = new VegetableDisease()
 				{
-					VegetableID = 2,
+					VegTypeID = 2,
 					DiseaseID = 8,
 				};
 				_dbConnection.Insert(vegDisease);
 
 				vegDisease = new VegetableDisease()
 				{
-					VegetableID = 3,
+					VegTypeID = 3,
 					DiseaseID = 1,
 				};
 				_dbConnection.Insert(vegDisease);
 
 				vegDisease = new VegetableDisease()
 				{
-					VegetableID = 3,
+					VegTypeID = 3,
 					DiseaseID = 2,
 				};
 				_dbConnection.Insert(vegDisease);
 
 				vegDisease = new VegetableDisease()
 				{
-					VegetableID = 3,
+					VegTypeID = 3,
 					DiseaseID = 3,
 				};
 				_dbConnection.Insert(vegDisease);
 
 				vegDisease = new VegetableDisease()
 				{
-					VegetableID = 3,
+					VegTypeID = 3,
 					DiseaseID = 4,
 				};
 				_dbConnection.Insert(vegDisease);
 
 				vegDisease = new VegetableDisease()
 				{
-					VegetableID = 4,
+					VegTypeID = 4,
 					DiseaseID = 10,
 				};
 				_dbConnection.Insert(vegDisease);
 
 				vegDisease = new VegetableDisease()
 				{
-					VegetableID = 4,
+					VegTypeID = 4,
 					DiseaseID = 11,
 				};
 				_dbConnection.Insert(vegDisease);
 
 				vegDisease = new VegetableDisease()
 				{
-					VegetableID = 4,
+					VegTypeID = 4,
 					DiseaseID = 12,
 				};
 
 				vegDisease = new VegetableDisease()
 				{
-					VegetableID = 5,
+					VegTypeID = 5,
 					DiseaseID = 19,
 				};
 				_dbConnection.Insert(vegDisease);
 
 				vegDisease = new VegetableDisease()
 				{
-					VegetableID = 5,
+					VegTypeID = 5,
 					DiseaseID = 20,
 				};
 
@@ -515,60 +523,34 @@ namespace IGadiYami.Services
 
 
 		// Methods to use Data(Still need to do this)
+
 		public Disease GetDiseaseByTag(string tag)
 		{
 			var disease = _dbConnection.Table<Disease>().Where(vd => vd.TagDescription == tag).FirstOrDefault();
 			return disease; 
 		}
 
-        public List<string> GetDiseasesForVegetable(int vegID)
+		public List<Disease> GetDiseasesForVegetable(int vegTypeID)
 		{
 			// Get all VegetableDisease instances for the specified vegetable
-			var vegDiseases = _dbConnection.Table<VegetableDisease>().Where(vd => vd.VegetableID == vegID).ToList();
+			var vegDiseases = _dbConnection.Table<VegetableDisease>().Where(vd => vd.VegTypeID == vegTypeID).ToList();
 
 			// Get all Disease instances for the diseases associated with the specified vegetable
-			var diseasesName = new List<string>();
+			var diseases = new List<Disease>();
 			foreach (var vegDisease in vegDiseases)
 			{
 				var disease = _dbConnection.Table<Disease>().FirstOrDefault(d => d.DiseaseID == vegDisease.DiseaseID);
 				if (disease != null)
 				{
-					diseasesName.Add(disease.DiseaseName);
+					diseases.Add(disease);
 				}
 			}
-			return diseasesName;
+
+			return diseases;
 		}
         public List<Vegetable> GetAllVegetables()
         {
             return _dbConnection.Table<Vegetable>().ToList();
-        }
-
-		// Crop Tracking Feature
-		public List<CropTracking> GetAllCrops()
-		{
-            return _dbConnection.Table<CropTracking>().ToList();
-        }
-		public CropTracking CreateCrop(string name, string date, string wateramount, string growthamount, string notes)
-		{
-			CropTracking cropTracking = new CropTracking()
-			{
-				CropName = name,
-				PlantDate = date,
-				WaterAmount = wateramount,
-				GrowthAmount = growthamount,
-				Notes = notes,
-			};
-			_dbConnection.Insert(cropTracking);
-			return cropTracking;
-		}
-		public CropTracking DeleteCrop(int cropid)
-		{
-			var crop = _dbConnection.Table<CropTracking>().FirstOrDefault(c => c.CropId == cropid);
-            if (crop != null)
-            {
-                _dbConnection.Delete(crop);
-            }
-            return crop;
         }
     }
 }

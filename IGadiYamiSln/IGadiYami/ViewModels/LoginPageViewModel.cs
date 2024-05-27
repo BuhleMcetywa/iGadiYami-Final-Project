@@ -39,9 +39,11 @@ namespace IGadiYami.ViewModels
 
 			if (_userDatabase.VerifyUserPassword(email, password))
 			{
-                // Navigation
-                await Shell.Current.GoToAsync("mainmenu");
-            } 
+				// Navigation
+				// await App.Current.MainPage.Navigation.PushAsync(new StartGardeningPage(new StartGardeningPageViewModel()));
+
+				await Shell.Current.GoToAsync("startgardening");
+			} 
 			else
 			{
 				App.Current.MainPage.DisplayAlert("Error", "User not found, create a account", "Ok");

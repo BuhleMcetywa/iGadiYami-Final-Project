@@ -4,11 +4,7 @@ namespace IGadiYami.Views;
 
 public partial class StartGardeningPage : ContentPage
 {
-    public StartGardeningPage()
-    {
-    }
-
-    public StartGardeningPage(StartGardeningPageViewModel vm)
+	public StartGardeningPage(StartGardeningPageViewModel vm)
 	{
 		InitializeComponent();
 		BindingContext = vm;

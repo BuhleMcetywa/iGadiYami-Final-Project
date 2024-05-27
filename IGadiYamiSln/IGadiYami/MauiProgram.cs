@@ -61,14 +61,8 @@ namespace IGadiYami
             mauiAppBuilder.Services.AddSingleton<StartGardeningPageViewModel>();
             mauiAppBuilder.Services.AddSingleton<VegetablePageViewModel>();
             mauiAppBuilder.Services.AddSingleton<CreateAccountViewModel>();
-<<<<<<< HEAD
             mauiAppBuilder.Services.AddSingleton<HomePageViewModel>();
 
-=======
-            mauiAppBuilder.Services.AddSingleton<SettingsProfileViewModel>();
-            mauiAppBuilder.Services.AddSingleton<CommunityPageViewModel>();
-            mauiAppBuilder.Services.AddSingleton<CropTrackingFeaturePageViewModel>();
->>>>>>> 302812390d17c19859cfb8eb6fa5e3709aa4c8cf
             return mauiAppBuilder;
         }
         public static MauiAppBuilder RegisterViews(this MauiAppBuilder mauiAppBuilder)
@@ -82,13 +76,7 @@ namespace IGadiYami
             mauiAppBuilder.Services.AddSingleton<StartGardeningPage>();
             mauiAppBuilder.Services.AddSingleton<CreateAccountPage>();
             mauiAppBuilder.Services.AddSingleton<VegetablePage>();
-<<<<<<< HEAD
             mauiAppBuilder.Services.AddSingleton<HomePageView>();
-=======
-            mauiAppBuilder.Services.AddSingleton<SettingsPage>();
-            mauiAppBuilder.Services.AddSingleton<CommunityPage>();
-            mauiAppBuilder.Services.AddSingleton<CropTrackingFeaturePage>();
->>>>>>> 302812390d17c19859cfb8eb6fa5e3709aa4c8cf
 
             return mauiAppBuilder;
         }

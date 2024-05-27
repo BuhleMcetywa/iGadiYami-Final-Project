@@ -4,16 +4,10 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:IGadiYami.Views"
-    Shell.NavBarIsVisible="False"
     Shell.FlyoutBehavior="Disabled"
     Title="IGadiYami">
 
     <ShellContent
-<<<<<<< HEAD
     ContentTemplate="{DataTemplate local:HomePageView}"
     Route="MainMenu" />
-=======
-    ContentTemplate="{DataTemplate local:CropTrackingFeaturePage}"
-    Route="MainPage" />
->>>>>>> 302812390d17c19859cfb8eb6fa5e3709aa4c8cf
 </Shell>

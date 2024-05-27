@@ -23,31 +23,21 @@
 
                             <!-- Your menu content here -->
                             <Image Grid.Row="0" Grid.Column="0"
-<<<<<<< HEAD
                                Source="{Binding ImageUrl}"
                                Aspect="AspectFill"  />
-=======
-                                Source="{Binding ImageUrl}"
-                                Aspect="AspectFill">
-                                <Image.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding BindingContext.NavigateCommand, Source={x:Reference MainPage}}"
-                                                          CommandParameter="{Binding .}" />
-                                </Image.GestureRecognizers>
-                            </Image>
->>>>>>> 302812390d17c19859cfb8eb6fa5e3709aa4c8cf
                             <StackLayout Grid.Row="0" Grid.Column="0"
-                                VerticalOptions="End" 
-                                BackgroundColor="Transparent"
-                                Padding="10">
+                     VerticalOptions="End" 
+                     BackgroundColor="Transparent"
+                     Padding="10">
                                 <Label Text="{Binding OptionName}"
-                                        HorizontalOptions="CenterAndExpand" 
-                                        FontSize="38" 
-                                        FontAttributes="Bold"
-                                        TextColor="White"
-                                        FontFamily="Canva Sans"
-                                        BackgroundColor="Transparent" />
+                   HorizontalOptions="CenterAndExpand" 
+                   FontSize="38" 
+                   FontAttributes="Bold"
+                   TextColor="White"
+                   FontFamily="Canva Sans"
+                   
+                   BackgroundColor="Transparent" />
                                 <Label Text="{Binding Description}"
-<<<<<<< HEAD
                                    HorizontalOptions="CenterAndExpand" 
                                    FontSize="18" 
                                    WidthRequest="380"
@@ -57,22 +47,17 @@
                                    FontFamily="Canva Sans"
                                    BackgroundColor="Transparent"  
                                    Padding="10"/>
-=======
-                                        HorizontalOptions="CenterAndExpand" 
-                                        FontSize="18" 
-                                        WidthRequest="380"
-                                        HorizontalTextAlignment="Center"
-                                        FontAttributes="Bold"
-                                        TextColor="White"   
-                                        FontFamily="Canva Sans"
-                                        BackgroundColor="Transparent"  
-                                        Padding="10"/>
->>>>>>> 302812390d17c19859cfb8eb6fa5e3709aa4c8cf
                             </StackLayout>
                         </Grid>
                     </DataTemplate>
+
+
+
+
                 </CarouselView.ItemTemplate>
+
             </CarouselView>
+
         </Grid>
     </Grid>
 </ContentPage>

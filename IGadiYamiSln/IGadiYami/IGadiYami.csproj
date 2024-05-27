@@ -67,24 +67,16 @@
 	  <None Remove="Resources\Images\carrots.jpeg" />
 	  <None Remove="Resources\Images\chulu.png" />
 	  <None Remove="Resources\Images\ethan.png" />
-<<<<<<< HEAD
 	  <None Remove="Resources\Images\igadiimage2.jpg" />
-=======
-	  <None Remove="Resources\Images\handshake.png" />
-	  <None Remove="Resources\Images\info.png" />
->>>>>>> 302812390d17c19859cfb8eb6fa5e3709aa4c8cf
 	  <None Remove="Resources\Images\luke.png" />
 	  <None Remove="Resources\Images\menupic.jpg" />
 	  <None Remove="Resources\Images\ndosi.png" />
 	  <None Remove="Resources\Images\onion.jpg" />
 	  <None Remove="Resources\Images\onions.jpg" />
-<<<<<<< HEAD
 	  <None Remove="Resources\Images\pic.png" />
 	  <None Remove="Resources\Images\pic1.png" />
 	  <None Remove="Resources\Images\pic2.jpg" />
 	  <None Remove="Resources\Images\pic3.png" />
-=======
->>>>>>> 302812390d17c19859cfb8eb6fa5e3709aa4c8cf
 	  <None Remove="Resources\Images\potatoes.jpg" />
 	  <None Remove="Resources\Images\potatoes1.jpeg" />
 	  <None Remove="Resources\Images\sendicon.png" />
@@ -125,12 +117,6 @@
 	  <MauiXaml Update="Views\CameraPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\CommunityPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\CropTrackingFeaturePage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="Views\EditProfilePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -159,9 +145,6 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\PlantViews\TomatoPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\SettingsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\StartGardeningPage.xaml">
