@@ -27,20 +27,14 @@ namespace IGadiYami.ViewModels
         {
             get { return _vegetableinfo; }
             set { _vegetableinfo = value; OnPropertyChanged(); }
-        }
-        public List<string> texts { get; set; }
-        public VegetablePageViewModel()
-        {
-            // Code for the buttons in the vegetable page
-            texts = new List<string>
-            {
-                "text0",
-                "text1",
-                "text2",
-                "text3",
-            };
-        }
 
+        }
+        private string _vegheading;
+        public string VegHeading
+        {
+            get { return _vegheading; }
+            set { _vegheading = value; OnPropertyChanged(); }
+        }
 
         public VegetablePageViewModel(PlantDatabase database)
         {
@@ -49,15 +43,35 @@ namespace IGadiYami.ViewModels
 
 
         [RelayCommand]
-        public void SetVegInfo(int index)
+        public void SetVegInfo(string index)
         {
-
+            if (index == "howtoplant")
+            {
+                VegHeading = "How to Plant";
+                VegetableInfo = Vegetable.HowToPlant;
+            }
+            else if (index == "choosingsoil")
+            {
+                VegHeading = "Choosing Right Soil";
+                VegetableInfo = Vegetable.SoilType;
+            }
+            else if (index == "whentoplant")
+            {
+                VegHeading = "When to Plant";
+                VegetableInfo = Vegetable.TimeToPlant;
+            }
+            else if (index == "commondisease")
+            {
+                VegHeading = "Common Diseases";
+                VegetableInfo = _database.GetDiseasesForVegetable(Vegetable.VegetableID).ToString();
+            }
         }
 
 
         public override void OnAppearing()
         {
             base.OnAppearing();
+            SetVegInfo("whentoplant");
         }
     }
 }

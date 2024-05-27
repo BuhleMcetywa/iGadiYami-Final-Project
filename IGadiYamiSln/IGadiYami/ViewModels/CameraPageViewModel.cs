@@ -77,12 +77,12 @@ namespace IGadiYami.ViewModels
             var namePosition = highestProbabilityTag.Tag.IndexOf("(");
             var tagToSearch = highestProbabilityTag.Tag.Substring(0, namePosition - 1);
 
-            var disease = _plantDatabase.GetDiseaseByTag(tagToSearch);
+            var disease = _plantDatabase.GetDiseaseByTag(tagToSearch); // info get passed through & breaks here
 
             if (disease != null)
             {
                 // Get the causes and disease control measures
-                DiseaseCauses = disease.DiseaseCauses;
+                DiseaseCauses = disease.DiseaseControlMeasures;
             }
             else
             {
