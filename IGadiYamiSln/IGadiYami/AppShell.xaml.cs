@@ -19,6 +19,8 @@ namespace IGadiYami
             Routing.RegisterRoute("signuppage", typeof(SignupPage));
             Routing.RegisterRoute("loginpage", typeof(LoginPage));
             Routing.RegisterRoute("createaccount", typeof(CreateAccountPage));
+            Routing.RegisterRoute("mainmenu", typeof(MainMenu));
+            Routing.RegisterRoute("camerapage", typeof(CameraPage));
         }
     }
 }

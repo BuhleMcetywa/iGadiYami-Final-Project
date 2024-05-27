@@ -57,11 +57,11 @@
                 <StackLayout Padding="10" Grid.Row="5" Spacing="1" >
 
                     <Frame CornerRadius="10" WidthRequest="330" HeightRequest="60" Padding="5" Margin="10" BackgroundColor="#006838">
-                        <Button FontFamily="mont" Text="Login with Email Addresss" BackgroundColor="#006838" FontSize="15" FontAttributes="Bold" />
+                        <Entry FontFamily="mont" Text="Login with Email Addresss" BackgroundColor="#006838" FontSize="15" FontAttributes="Bold" />
                     </Frame>
 
                     <Frame CornerRadius="10"  WidthRequest="330"  Padding="8" HeightRequest="60" Margin="10" BackgroundColor="#006838" >
-                        <Button FontFamily="mont" Text="Password" BackgroundColor="#006838" FontSize="15" FontAttributes="Bold" />
+                        <Entry FontFamily="mont" Text="Password" TextColor="White" BackgroundColor="#A6A6A6" FontSize="15" FontAttributes="Bold" />
                     </Frame>
 
                 </StackLayout>

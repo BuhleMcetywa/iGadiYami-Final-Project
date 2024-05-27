@@ -2,6 +2,7 @@
 using IGadiYami.Models;
 using IGadiYami.Services;
 using IGadiYami.ViewModels.PlantPageViewModels;
+using IGadiYami.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace IGadiYami.ViewModels
 {
+    [QueryProperty(nameof(MainMenu), "StartGardening")]
     public partial class StartGardeningPageViewModel : BaseViewModel
     {
 		private List<StartGardeningMenu> _startGardeningMenus;

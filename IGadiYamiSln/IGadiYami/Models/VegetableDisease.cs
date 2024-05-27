@@ -20,6 +20,9 @@ namespace IGadiYami.Models
         [SQLiteNetExtensions.Attributes.ForeignKey(typeof(VegetableType))]
         public int VegTypeID{ get; set; }
 
+        [SQLiteNetExtensions.Attributes.ForeignKey(typeof(Vegetable))]
+        public int VegetableID { get; set; }
+
         [SQLiteNetExtensions.Attributes.ForeignKey(typeof(Disease))]
         public int DiseaseID { get; set; }
 
