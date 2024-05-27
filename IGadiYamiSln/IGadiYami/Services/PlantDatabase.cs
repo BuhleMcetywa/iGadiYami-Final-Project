@@ -17,6 +17,7 @@ namespace IGadiYami.Services
             _dbConnection.CreateTable<VegetableDisease>();
             _dbConnection.CreateTable<Vegetable>();
             _dbConnection.CreateTable<VegetableType>();
+            _dbConnection.CreateTable<CropTracking>();
             SeedDatabase();
         }
         public string GetDatabasePath()
@@ -27,6 +28,19 @@ namespace IGadiYami.Services
         }
         public void SeedDatabase()
         {
+            // Crop Tracking Feature
+            if (_dbConnection.Table<CropTracking>().Count() == 0)
+            {
+                CropTracking crop = new CropTracking()
+                {
+                    CropName = "Tomatoes",
+                    PlantDate = "01/01/2024",
+                    WaterAmount = "2L",
+                    GrowthAmount = "3 inch",
+                    Notes = "testing",
+                };
+                _dbConnection.Insert(crop);
+            }
             //this table you use to access the specific vegetable you want to plant
             if (_dbConnection.Table<Vegetable>().Count() == 0)
             {
@@ -551,6 +565,35 @@ namespace IGadiYami.Services
         public List<Vegetable> GetAllVegetables()
         {
             return _dbConnection.Table<Vegetable>().ToList();
+        }
+
+
+        // Crop Tracking Feature
+        public List<CropTracking> GetAllCrops()
+        {
+            return _dbConnection.Table<CropTracking>().ToList();
+        }
+        public CropTracking CreateCrop(string name, string date, string wateramount, string growthamount, string notes)
+        {
+            CropTracking cropTracking = new CropTracking()
+            {
+                CropName = name,
+                PlantDate = date,
+                WaterAmount = wateramount,
+                GrowthAmount = growthamount,
+                Notes = notes,
+            };
+            _dbConnection.Insert(cropTracking);
+            return cropTracking;
+        }
+        public CropTracking DeleteCrop(int cropid)
+        {
+            var crop = _dbConnection.Table<CropTracking>().FirstOrDefault(c => c.CropID == cropid);
+            if (crop != null)
+            {
+                _dbConnection.Delete(crop);
+            }
+            return crop;
         }
     }
 }
