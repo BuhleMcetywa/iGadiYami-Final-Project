@@ -13,7 +13,7 @@ namespace IGadiYami.Models
         public string SoilPrep { get; set; }
         public string TimeToPlant { get; set; }
         public string HowToPlant { get; set; }
-      
+        public string CommonDiseases { get; set; }
         public string Image { get; set; }
     }
 }
