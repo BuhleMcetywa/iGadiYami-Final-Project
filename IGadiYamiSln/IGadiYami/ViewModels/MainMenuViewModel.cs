@@ -1,5 +1,4 @@
 ﻿using IGadiYami.Models;
-using System.Collections.Generic;
 
 namespace IGadiYami.ViewModels
 {

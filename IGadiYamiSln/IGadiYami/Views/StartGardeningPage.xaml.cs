@@ -4,11 +4,11 @@ namespace IGadiYami.Views;
 
 public partial class StartGardeningPage : ContentPage
 {
-	public StartGardeningPage(StartGardeningPageViewModel vm)
-	{
-		InitializeComponent();
-		BindingContext = vm;
-	}
+    public StartGardeningPage(StartGardeningPageViewModel vm)
+    {
+        InitializeComponent();
+        BindingContext = vm;
+    }
     protected override void OnAppearing()
     {
         base.OnAppearing();

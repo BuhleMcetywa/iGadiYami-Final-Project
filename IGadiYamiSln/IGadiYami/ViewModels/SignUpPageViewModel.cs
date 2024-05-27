@@ -2,12 +2,6 @@
 using IGadiYami.Interface;
 using IGadiYami.Models;
 using IGadiYami.Services;
-using IGadiYami.Views;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IGadiYami.ViewModels
 {
@@ -27,7 +21,7 @@ namespace IGadiYami.ViewModels
                 OnPropertyChanged();
             }
         }
-        
+
         private bool isNameValid;
 
         public bool IsNameValid
@@ -168,12 +162,12 @@ namespace IGadiYami.ViewModels
             _service = Service;
             _userDatabase = userDatabase;
         }
-       /*public SignUpPageViewModel()
-        {
-           // _service = Service;
-           _userDatabase = new UserDatabase();
-        }*/
-        
+        /*public SignUpPageViewModel()
+         {
+            // _service = Service;
+            _userDatabase = new UserDatabase();
+         }*/
+
 
         [RelayCommand]
         public void Save()
@@ -221,7 +215,7 @@ namespace IGadiYami.ViewModels
             // Loading user based on id
             UserData user = _userDatabase.GetUserById(2);
             if (user != null)
-            {              
+            {
                 UserNameEntry = user.UserName;
                 UserSurnameEntry = user.UserSurname;
                 UserEmailEntry = user.UserEmail;

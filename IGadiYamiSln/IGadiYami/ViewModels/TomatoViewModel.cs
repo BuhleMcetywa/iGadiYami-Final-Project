@@ -1,11 +1,8 @@
-﻿
-using IGadiYami.Services;
-
-namespace IGadiYami.ViewModels
+﻿namespace IGadiYami.ViewModels
 {
-	public class TomatoViewModel : BaseViewModel
-	{ 
-		
-	}
+    public class TomatoViewModel : BaseViewModel
+    {
+
+    }
 
 }

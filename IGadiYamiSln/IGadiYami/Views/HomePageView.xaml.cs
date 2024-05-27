@@ -1,7 +1,4 @@
-
-using IGadiYami.Models;
 using IGadiYami.ViewModels;
-using Microsoft.Maui.Controls;
 
 namespace IGadiYami.Views
 {

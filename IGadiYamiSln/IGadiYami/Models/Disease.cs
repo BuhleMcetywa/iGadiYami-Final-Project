@@ -1,9 +1,4 @@
 ﻿using SQLite;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IGadiYami.Models
 {
@@ -15,7 +10,7 @@ namespace IGadiYami.Models
         public string DiseaseDescription { get; set; }
         public string DiseaseCauses { get; set; }
         public string DiseaseControlMeasures { get; set; }
-		public string TagDescription { get; set; }
+        public string TagDescription { get; set; }
 
-	}
+    }
 }

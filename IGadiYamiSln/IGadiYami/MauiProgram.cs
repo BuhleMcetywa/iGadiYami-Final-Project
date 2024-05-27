@@ -1,14 +1,12 @@
-﻿using IGadiYami.Configuration;
-using IGadiYami.Services;
-using IGadiYami.Views;
-using IGadiYami.ViewModels;
-using Microsoft.Extensions.Logging;
-using Camera.MAUI;
-using IGadiYami.Interface;
+﻿using Camera.MAUI;
 using CommunityToolkit.Maui;
-using IGadiYami.ViewModels.PlantPageViewModels;
+using IGadiYami.Configuration;
+using IGadiYami.Interface;
+using IGadiYami.Services;
+using IGadiYami.ViewModels;
 using IGadiYami.ViewModels.ChatbotViewModels;
-using IgadiYamiDesign.Views;
+using IGadiYami.Views;
+using Microsoft.Extensions.Logging;
 
 namespace IGadiYami
 {
@@ -25,7 +23,7 @@ namespace IGadiYami
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-                }); 
+                });
 
 #if DEBUG
             builder.Logging.AddDebug();
