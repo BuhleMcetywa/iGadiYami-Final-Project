@@ -7,7 +7,7 @@ using SQLite;
 
 namespace IGadiYami.Services
 {
-    public class PlantDatabase : IPlantDatabase
+    public class PlantDatabase
     {
         private SQLiteConnection _dbConnection;
         public PlantDatabase()
@@ -189,7 +189,7 @@ namespace IGadiYami.Services
                     DiseaseDescription = "",
                     DiseaseCauses = "This fungal disease affects the leaves and stems of carrot plants. It causes dark, sunken lesions on the leaves and can lead to defoliation if left untreated.",
                     DiseaseControlMeasures = "Crop rotation, proper sanitation, and the use of fungicides labeled for carrot diseases can help manage Alternaria leaf blight.",
-                    TagDescription= "Alternaria Leaf Blight Disease"
+                    TagDescription = "Alternaria Leaf Blight Disease"
                 };
                 _dbConnection.Insert(disease);
 
@@ -233,7 +233,7 @@ namespace IGadiYami.Services
                     DiseaseDescription = "",
                     DiseaseCauses = "Late blight in potatoes is caused by the airborne spores of the Phytophthora infestans fungus. This disease manifests as irregular dark lesions on the stems and leaves of potato plants and spreads quickly. Late blight is a sporadic disease and is more likely to develop in cool, wet conditions.",
                     DiseaseControlMeasures = "\"To stop late blight in potatoes, pick resistant varieties and rotate crops yearly. Keep the potato area clean, removing any infected leaves promptly. Use fungicides during humid weather and water plants early in the day at the base to keep the foliage dry.\r\n\"",
-                    TagDescription = "Late Blight on Disease"
+                    TagDescription = "Late Blight Disease on Potato"
                 };
                 _dbConnection.Insert(disease);
 
@@ -244,7 +244,7 @@ namespace IGadiYami.Services
                     DiseaseDescription = "",
                     DiseaseCauses = "\"Alternaria solani is the primary culprit behind early blight.  Early blight doesn’t require excessive moisture it can even persist during drought periods.\r\nThe fungus tends to attack weakened plants, especially those with insect damage or reduced vitality due to other factors.\r\nShaded and older leaves are more susceptible to infection than young, vigorous ones.\"",
                     DiseaseControlMeasures = "\"To control early blight in potatoes, start by choosing potato varieties that resist the disease and rotate crops with different plants each season. Keep the potato patch clean by removing any infected leaves or debris, and water the plants at ground level to avoid splashing spores. If needed, apply natural or chemical fungicides according to instructions to further protect the plants from early blight.\r\n\"",
-                    TagDescription= "Early Blight Disease"
+                    TagDescription = "Early Blight Disease"
                 };
                 _dbConnection.Insert(disease);
 
@@ -267,7 +267,7 @@ namespace IGadiYami.Services
                     DiseaseCauses = "A fungal disease that affect spinach leaves and stems, causes dark, eater soaked lesions that turn tan or gray",
                     DiseaseControlMeasures = "Avoid overcrowding, ensure good drainage in your growing area.",
                     TagDescription = "Anthracnose Disease"
-                
+
                 };
 
                 _dbConnection.Insert(disease);
@@ -366,7 +366,7 @@ namespace IGadiYami.Services
                     DiseaseName = "Blosom End Rot",
                     DiseaseCauses = "\nLow calcium levels in the soil.\r\nSoil that is over- or underwatered.\r\nWide fluctuations in soil moisture.\r\nInconsistent watering.\r\nLow soil pH.\r\nExcessive nitrogen.\n",
                     DiseaseControlMeasures = "\"To prevent blossom end rot in tomatoes, maintain consistent watering to avoid fluctuations\r\nin soil moisture. Ensure proper calcium levels in the soil through soil amendments or\r\nfertilizers containing calcium. Mulch around tomato plants to regulate soil temperature and\r\nmoisture, and avoid excessive nitrogen fertilization, which can interfere with calcium\r\n\r\nuptake.\"",
-                    TagDescription = "Blosom End Rot Disease"
+                    TagDescription = "Blossom End Rot Disease"
 
                 };
                 _dbConnection.Insert(disease);
@@ -403,11 +403,11 @@ namespace IGadiYami.Services
 
                 disease = new Disease()
                 {
-                    DiseaseID = 22,
+                    DiseaseID = 20,
                     DiseaseName = "Late blight",
                     DiseaseCauses = "Caused by the oomycete pathogen Phytophthora infestans, the pathogen prefers wet conditions with humid temperatures that span over 3-5 days",
                     DiseaseControlMeasures = "\"If you notice any signs of late blight (brown, gray, or purplish spots on leaves or stems),\r\npromptly remove and destroy the affected leaves. Late blight becomes more resistant to\r\n\r\ntreatment as it progresses, so early intervention is crucial.\"",
-                    TagDescription= "Late Blight Disease"
+                    TagDescription = "Late Blight Disease"
                 };
                 _dbConnection.Insert(disease);
 
