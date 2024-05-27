@@ -142,12 +142,6 @@ namespace IGadiYami.ViewModels
             get { return _useremail; }
             set { _useremail = value; OnPropertyChanged(); }
         }
-        // private string _userphonenumber;
-        /* public string UserPhoneNumber
-        {
-            get { return _userphonenumber; }
-            set { _userphonenumber = value; }
-        } */
         private string _userpassword;
         public string UserPasswordEntry
         {
@@ -162,11 +156,6 @@ namespace IGadiYami.ViewModels
             _service = Service;
             _userDatabase = userDatabase;
         }
-        /*public SignUpPageViewModel()
-         {
-            // _service = Service;
-            _userDatabase = new UserDatabase();
-         }*/
 
 
         [RelayCommand]
@@ -199,8 +188,7 @@ namespace IGadiYami.ViewModels
             UserSurnameEntry = "";
             UserEmailEntry = "";
             UserPasswordEntry = "";
-            // await App.Current.MainPage.Navigation.PushAsync(new StartGardeningPage(new StartGardeningPageViewModel()));
-            await Shell.Current.GoToAsync("startgardening");
+            await Shell.Current.GoToAsync("homepage");
         }
 
         [RelayCommand]
@@ -226,7 +214,6 @@ namespace IGadiYami.ViewModels
         [RelayCommand]
         public async void HaveAccount()
         {
-            // Navigation
             await Shell.Current.GoToAsync("loginpage");
         }
     }

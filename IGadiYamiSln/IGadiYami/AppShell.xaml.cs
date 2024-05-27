@@ -20,6 +20,7 @@ namespace IGadiYami
             Routing.RegisterRoute("loginpage", typeof(LoginPage));
             Routing.RegisterRoute("createaccount", typeof(CreateAccountPage));
             Routing.RegisterRoute("aicamera", typeof(CameraPage));
+            Routing.RegisterRoute("homepage", typeof(HomePageView));
         }
     }
 }
