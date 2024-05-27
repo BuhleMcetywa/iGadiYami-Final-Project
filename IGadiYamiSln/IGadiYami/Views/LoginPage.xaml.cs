@@ -1,3 +1,4 @@
+using Camera.MAUI;
 using IGadiYami.ViewModels;
 
 namespace IGadiYami.Views;
@@ -10,5 +11,9 @@ public partial class LoginPage : ContentPage
         _viewModel = vm;
         InitializeComponent();
         BindingContext = _viewModel;
+    }
+    protected async override void OnAppearing()
+    {
+        base.OnAppearing();
     }
 }
