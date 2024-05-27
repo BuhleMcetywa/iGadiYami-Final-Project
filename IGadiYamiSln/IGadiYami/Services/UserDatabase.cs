@@ -1,12 +1,5 @@
-﻿using SQLite;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using IGadiYami.Models;
-using Microsoft.Data.Sqlite;
-using System.Security.Cryptography;
+﻿using IGadiYami.Models;
+using SQLite;
 // using Windows.System;
 
 namespace IGadiYami.Services
@@ -85,7 +78,7 @@ namespace IGadiYami.Services
         {
             return _dbConnection.Table<UserData>().FirstOrDefault(u => u.UserID == Id);
         }
-        
+
         public bool VerifyUserPassword(string userEmail, string userPassword)
         {
             var user = _dbConnection.Table<UserData>().FirstOrDefault(u => u.UserEmail == userEmail);
@@ -94,7 +87,8 @@ namespace IGadiYami.Services
             {
                 user.UserEmail = userEmail;
                 user.UserPassword = userPassword;
-            } else
+            }
+            else
             {
                 return false;
             }

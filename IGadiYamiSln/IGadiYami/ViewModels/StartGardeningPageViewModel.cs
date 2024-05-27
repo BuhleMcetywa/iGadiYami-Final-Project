@@ -1,25 +1,19 @@
 ﻿using CommunityToolkit.Mvvm.Input;
 using IGadiYami.Models;
 using IGadiYami.Services;
-using IGadiYami.ViewModels.PlantPageViewModels;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IGadiYami.ViewModels
 {
     public partial class StartGardeningPageViewModel : BaseViewModel
     {
-		private List<StartGardeningMenu> _startGardeningMenus;
+        private List<StartGardeningMenu> _startGardeningMenus;
 
-		public List<StartGardeningMenu> StartGardeningMenus
-		{
-			get { return _startGardeningMenus; }
-			set { _startGardeningMenus = value; OnPropertyChanged(); }
-		}
+        public List<StartGardeningMenu> StartGardeningMenus
+        {
+            get { return _startGardeningMenus; }
+            set { _startGardeningMenus = value; OnPropertyChanged(); }
+        }
 
 
         private PlantDatabase _plantdatabase;

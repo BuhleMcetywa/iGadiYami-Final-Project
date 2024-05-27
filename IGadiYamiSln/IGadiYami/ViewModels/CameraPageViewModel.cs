@@ -1,14 +1,7 @@
 ﻿using Camera.MAUI;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using IGadiYami.Views;
-using System.Windows.Input;
 using CommunityToolkit.Mvvm.Input;
-using Xam.Plugins.OnDeviceCustomVision;
 using IGadiYami.Services;
+using Xam.Plugins.OnDeviceCustomVision;
 
 namespace IGadiYami.ViewModels
 {
@@ -20,8 +13,8 @@ namespace IGadiYami.ViewModels
         public ImageSource Photo
         {
             get { return _photo; }
-            set 
-            { 
+            set
+            {
                 _photo = value;
                 OnPropertyChanged(nameof(Photo));
             }
@@ -30,7 +23,9 @@ namespace IGadiYami.ViewModels
         public string DetectionResponse
         {
             get { return _detectionresponse; }
-            set { _detectionresponse = value;
+            set
+            {
+                _detectionresponse = value;
 
                 OnPropertyChanged();
             }
@@ -51,11 +46,11 @@ namespace IGadiYami.ViewModels
 
         public void cameraView_CamerasLoaded(object sender, EventArgs e)
         {
-             _cameraView.Camera = _cameraView.Cameras.First();
+            _cameraView.Camera = _cameraView.Cameras.First();
             MainThread.BeginInvokeOnMainThread(async () =>
             {
-                 await _cameraView.StopCameraAsync(); 
-                 await _cameraView.StartCameraAsync(); 
+                await _cameraView.StopCameraAsync();
+                await _cameraView.StartCameraAsync();
             });
         }
 
@@ -76,7 +71,7 @@ namespace IGadiYami.ViewModels
             var namePosition = highestProbabilityTag.Tag.IndexOf("(");
             var tagToSearch = highestProbabilityTag.Tag.Substring(0, namePosition - 1);
 
-            var disease =  _plantDatabase.GetDiseaseByTag(tagToSearch);
+            var disease = _plantDatabase.GetDiseaseByTag(tagToSearch);
 
             if (disease != null)
             {
@@ -84,6 +79,6 @@ namespace IGadiYami.ViewModels
                 // Get the causes and disease measures
             }
 
-		}
+        }
     }
 }

@@ -1,14 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.Input;
 using IGadiYami.Models;
 using IGadiYami.Services;
-using IGadiYami.Views;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
 
 namespace IGadiYami.ViewModels
 {
@@ -54,14 +46,14 @@ namespace IGadiYami.ViewModels
         {
             _database = database;
         }
-        
+
 
         [RelayCommand]
         public void SetVegInfo(int index)
         {
-            
+
         }
-        
+
 
         public override void OnAppearing()
         {
