@@ -4,7 +4,7 @@
              BackgroundColor="#f8f2cc"
              xmlns:viewmodels="clr-namespace:IGadiYami.ViewModels">
 
-    <ScrollView>
+    <ScrollView x:DataType="viewmodels:HomePageViewModel">
         <VerticalStackLayout>
             <!--Header where the name needs to be binded?-->
             <HorizontalStackLayout Padding="15" BackgroundColor="#006838">
@@ -27,7 +27,7 @@
             <Frame WidthRequest="340" Margin="21,0,10,10" HeightRequest="170" CornerRadius="30" HorizontalOptions="StartAndExpand">
                 <Image Source="gardencom" WidthRequest="400" HeightRequest="600" Aspect="AspectFit" Margin="0,30,0,0">
                     <Image.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding GoToCommunityPageAsyncCommand}" />
+                        <TapGestureRecognizer Command="{Binding GoToCommunityPageCommand}" />
                     </Image.GestureRecognizers>
                 </Image>
             </Frame>

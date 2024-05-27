@@ -33,10 +33,7 @@ namespace IGadiYami.ViewModels
 
             if (_userDatabase.VerifyUserPassword(email, password))
             {
-                // Navigation
-                // await App.Current.MainPage.Navigation.PushAsync(new StartGardeningPage(new StartGardeningPageViewModel()));
-
-                await Shell.Current.GoToAsync("startgardening");
+                await Shell.Current.GoToAsync("homepage");
             }
             else
             {

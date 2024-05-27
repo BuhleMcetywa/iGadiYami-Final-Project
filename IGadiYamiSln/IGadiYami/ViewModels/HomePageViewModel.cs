@@ -7,13 +7,11 @@ namespace IGadiYami.ViewModels
     public partial class HomePageViewModel : BaseViewModel
     {
         public IList<MenuOptions> Menu { get; private set; }
-        //public ICommand GoToStartGardeningPageCommand { get; }
 
 
         public HomePageViewModel()
         {
             CreateMenuCollection();
-            //GoToStartGardeningPageCommand = new Command(OnGoToStartGardeningPageAsync);
         }
 
         [RelayCommand]
@@ -29,7 +27,7 @@ namespace IGadiYami.ViewModels
         [RelayCommand]
         private async static Task OnGoToCommunityPageAsync()
         {
-            await Shell.Current.GoToAsync("loginpage");
+            await Shell.Current.GoToAsync("createaccount");
         }
 
         void CreateMenuCollection() // Changed return type to void
