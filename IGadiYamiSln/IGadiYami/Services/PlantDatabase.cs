@@ -588,6 +588,11 @@ namespace IGadiYami.Services
 
 
         // Crop Tracking Feature
+        public CropTracking GetCropById(int cropid)
+        {
+            var crop = _dbConnection.Table<CropTracking>().Where(ct => ct.CropID == cropid).FirstOrDefault();
+            return crop;
+        }
         public List<CropTracking> GetAllCrops()
         {
             return _dbConnection.Table<CropTracking>().ToList();

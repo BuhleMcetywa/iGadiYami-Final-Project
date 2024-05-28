@@ -6,6 +6,7 @@ using IGadiYami.Services;
 using IGadiYami.ViewModels;
 using IGadiYami.ViewModels.ChatbotViewModels;
 using IGadiYami.Views;
+using IgadiYamiDesign.Views;
 using Microsoft.Extensions.Logging;
 
 namespace IGadiYami
@@ -79,7 +80,6 @@ namespace IGadiYami
             mauiAppBuilder.Services.AddSingleton<SettingsPage>();
             mauiAppBuilder.Services.AddSingleton<EditProfilePage>();
             mauiAppBuilder.Services.AddSingleton<AboutUs>();
-            
             mauiAppBuilder.Services.AddSingleton<HomePageView>();
             mauiAppBuilder.Services.AddSingleton<CropTrackingPage>();
             mauiAppBuilder.Services.AddSingleton<CropTrackingPopUpPage>();
