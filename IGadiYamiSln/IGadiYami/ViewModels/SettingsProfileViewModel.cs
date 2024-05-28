@@ -11,14 +11,31 @@ namespace IGadiYami.ViewModels
             User = new UserSettingsProfile
             {
                 Name = "Ndosi Yogurt",
-                Location = "Khayelitsha"
+                Location = "Khayelitsha",
+                Bio = "I love farming and gardens and plants and trees and leafs and crops with roots from seeds and stuff."
             };
         }
 
         [RelayCommand]
-        private void EditProfileCommand()
+        private async Task EditProfileCommand()
         {
             // Logic to edit profile
+            // Navigation
+            await Shell.Current.GoToAsync("editprofilepage");
+        }
+        
+        [RelayCommand]
+        private void UpdateInformationCommand()
+        {
+            // Logic to update information for the profile
+        }
+        
+        [RelayCommand]
+        private async void BackButtonCommand()
+        {
+            // Logic to go back to the settings page
+            // Navigation
+            await Shell.Current.GoToAsync("settingspage");
         }
 
         //[RelayCommand]
@@ -46,15 +63,19 @@ namespace IGadiYami.ViewModels
         //}
 
         [RelayCommand]
-        private void AboutUsCommand()
+        private async void AboutUsCommand()
         {
             // Logic to show about us
+            // Navigation
+            await Shell.Current.GoToAsync("aboutuspage");
         }
 
         [RelayCommand]
-        private void TermsAndConditionsCommand()
+        private async void TermsAndConditionsCommand()
         {
             // Logic to show terms and conditions
+            // Navigation
+            //await Shell.Current.GoToAsync("editprofilepage");
         }
     }
 }

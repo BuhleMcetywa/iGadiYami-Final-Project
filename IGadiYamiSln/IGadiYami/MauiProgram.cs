@@ -76,6 +76,8 @@ namespace IGadiYami
             mauiAppBuilder.Services.AddSingleton<CreateAccountPage>();
             mauiAppBuilder.Services.AddSingleton<VegetablePage>();
             mauiAppBuilder.Services.AddSingleton<SettingsPage>();
+            mauiAppBuilder.Services.AddSingleton<EditProfilePage>();
+            mauiAppBuilder.Services.AddSingleton<AboutUs>();
             
             return mauiAppBuilder;
         }

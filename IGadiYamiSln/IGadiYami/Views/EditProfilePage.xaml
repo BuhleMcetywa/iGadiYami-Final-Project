@@ -1,51 +1,52 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:IGadiYami.ViewModels"
              x:Class="IgadiYamiDesign.Views.EditProfilePage"
-             BackgroundColor="#F9FFE0">
-    
-    <StackLayout Padding="10" VerticalOptions="CenterAndExpand">
+             BackgroundColor="#006838">
 
-        <!-- Profile Picture -->
-        <Frame CornerRadius="200" HeightRequest="200" WidthRequest="200" VerticalOptions="Center" HorizontalOptions="Center">
-            <Image Source="ndosi.png" />
+    <ContentPage.BindingContext>
+        <vm:SettingsProfileViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout Spacing="10">
+        <Frame Padding="10" BackgroundColor="Transparent" CornerRadius="10" HasShadow="False" BorderColor="Transparent">
+            <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+                <!-- Edit Profile Picture -->
+                <Image Source="ndosi.png" HeightRequest="200" WidthRequest="200" />
+            </StackLayout>
         </Frame>
 
-        <!-- Name and Location -->
-        <Label Text="Ndosi Yogurt" 
-           FontAttributes="Bold" 
-           FontSize="24" 
-           HorizontalOptions="Center" 
-           Margin="0,10,0,0"/>
-        <Label Text="Khayelitsha"
-           FontSize="16" 
-           HorizontalOptions="Center" 
-           TextColor="Gray"/>
-
-        <!-- Description -->
-        <Label Text="I love farming and gardens and plants and trees and leafs and crops with roots from seeds and stuff"
-           FontSize="18"
-           HorizontalOptions="Center"
-           VerticalOptions="Center"
-           HorizontalTextAlignment="Center"
-           Padding="5"/>
-
-        <!-- Edit Profile Button -->
-        <Button Text="Edit Profile" 
-            BackgroundColor="Transparent"
-            TextColor="Blue"
-            FontAttributes="Bold"
-            HorizontalOptions="Center"/>
-
-        <!-- Menu Options -->
-        <Frame CornerRadius="50">
-            <StackLayout HorizontalOptions="Start">
-                <Button Text="Save" 
-               TextColor="Black"
-               FontSize="18" 
-               BackgroundColor="Transparent" 
-               HorizontalOptions="Center" Clicked="OnSaveClicked"/>
-            </StackLayout>
+        <!-- Edit Profile Information -->
+        <Frame CornerRadius="50" VerticalOptions="FillAndExpand">
+            <VerticalStackLayout>
+                <!--<Entry Text="enter your location" />-->
+                <Label Text="Name and Surname: " FontSize="Large" FontAttributes="Bold"/>
+                <Label Text="{Binding User.Name}" FontSize="Medium"/>
+                <Label Text=" "/>
+                <Label Text="Bio: " FontSize="Large" FontAttributes="Bold"/>
+                <Label Text="{Binding User.Bio}" FontSize="Medium"/>
+                <Label Text=" "/>
+                <Label Text="Location: " FontSize="Large" FontAttributes="Bold"/>
+                <Label Text="{Binding User.Location}" FontSize="Medium"/>
+                <Label Text=" "/>
+                <Label Text="Email Address: " FontSize="Large" FontAttributes="Bold"/>
+                <Label Text="ndosiyohurt03@gmail.com" FontSize="Medium"/>
+                <Label Text=" "/>
+                <Label Text="Password: " FontSize="Large" FontAttributes="Bold"/>
+                <Label Text="***************" FontSize="Medium"/>
+                <Label Text=" "/>
+                <HorizontalStackLayout HorizontalOptions="Center">
+                    <Button Text="Edit" FontSize="25" TextColor="White" BackgroundColor="#006838" CornerRadius="20" Command="{Binding EditCommand}" />
+                    <Label Text=" "/>
+                    <Button Text="Back" FontSize="25" TextColor="White" BackgroundColor="#006838" CornerRadius="20" Command="{Binding BackButtonCommand}" />
+                </HorizontalStackLayout>
+                
+                <!--<Entry Text="create a bio" />
+                <Entry Text="enter new email address"/>
+                <Entry Text="enter new password"/>
+                <Entry Text="confirm new password"/>-->
+            </VerticalStackLayout>
         </Frame>
     </StackLayout>
 </ContentPage>
