@@ -4,29 +4,32 @@
              x:Class="IGadiYami.Views.VegetablePage"
              xmlns:local="clr-namespace:IGadiYami.ViewModels"
              x:DataType="local:VegetablePageViewModel"
-             Title="VegetablePage">
-    
-    <ScrollView Orientation="Vertical">
+             BackgroundColor="#C42D09">
+
+    <StackLayout Orientation="Vertical">
         <Grid >
             <Grid.RowDefinitions >
 
+                <RowDefinition Height="130" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
-                <RowDefinition Height="65" />
+                <RowDefinition Height="20" />
                 <RowDefinition Height="*" />
-                <RowDefinition Height="60" />
-                <RowDefinition Height="2*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="*" />
 
             </Grid.RowDefinitions>
             <Image Grid.Row="0" Grid.RowSpan="4"  Source="{Binding Vegetable.Image}" Aspect="AspectFill" />
-            <Label Padding="25,25,0,0" Text="Start Gardening with us" FontSize="20" FontFamily="mont" FontAttributes="Bold" TextColor="White" Grid.Row="0"  />
-            <BoxView Grid.Row="0" HorizontalOptions="Center" Margin="20,0,60,0" BackgroundColor="White" WidthRequest="300" HeightRequest="1" />
-            <Label  Margin="25,25,0,0" Text="{Binding Vegetable.Name}" Grid.RowSpan="2" Padding="0,150,0,0" FontAttributes="Bold" TextColor="White" FontSize="40" FontFamily="mont" Grid.Row="1" />
-            <Label Margin="30,0,0,0" Text="Start your Gardening journey with us" Padding="0,100,0,0" TextColor="White" FontSize="13" FontFamily="mont" Grid.Row="2" />
+            <Label Padding="25,10,0,0" Text="Start Gardening with us" FontSize="20" FontFamily="mont" FontAttributes="Bold" TextColor="White" Grid.Row="0"  />
+            <BoxView Grid.Row="0" HorizontalOptions="Center" Margin="20,-40,60,0" BackgroundColor="White" WidthRequest="300" HeightRequest="1" />
+            <Label  Margin="25,8,0,0" Text="{Binding Vegetable.Name}" Grid.RowSpan="2" Padding="0,150,0,0" FontAttributes="Bold" TextColor="White" FontSize="40" FontFamily="mont" Grid.Row="1" />
+            <Label Margin="30,0,20,0" Text="Start your Gardening journey with us" Padding="0,100,0,0" TextColor="White" FontSize="13" FontFamily="mont" Grid.Row="2" />
 
 
-            <Frame BackgroundColor="#C42D09" Grid.Row="3" CornerRadius="20" Grid.RowSpan="2" BorderColor="Transparent" Padding="0,10,0,0"  >
-                <FlexLayout Grid.Row="3" BackgroundColor="#C42D09" JustifyContent="SpaceEvenly" VerticalOptions="Start" HeightRequest="100" WidthRequest="400" Margin="0,0,0,0">
+            <Frame BackgroundColor="#C42D09" Grid.Row="3" CornerRadius="20" Grid.RowSpan="2" BorderColor="Transparent" Margin="0,10,0,0"  >
+                <FlexLayout Grid.Row="5" BackgroundColor="#C42D09" JustifyContent="SpaceEvenly" VerticalOptions="Start" HeightRequest="100" WidthRequest="400" Margin="0,-20,0,0">
                     <Button Margin="0,10,0,0" CornerRadius="30" Text="How to plant Tomatoes" FontFamily="mont" BackgroundColor="#006838" LineBreakMode="WordWrap" FontAttributes="Bold" HorizontalOptions="Center" FontSize="8" WidthRequest="85" HeightRequest="50" Command="{Binding SetVegInfoCommand}" CommandParameter="howtoplant" />
                     <Button Margin="0,10,0,0" CornerRadius="30" Text="Choosing the right soil" BackgroundColor="#579602" FontFamily="mont" LineBreakMode="WordWrap" FontAttributes="Bold" HorizontalOptions="Center" FontSize="8" WidthRequest="85" HeightRequest="50" Command="{Binding SetVegInfoCommand}" CommandParameter="choosingsoil"  />
                     <Button Margin="0,10,0,0" CornerRadius="30" Text="When to plant" BackgroundColor="#006838" FontFamily="mont" LineBreakMode="WordWrap" FontAttributes="Bold" HorizontalOptions="Center" FontSize="8" WidthRequest="85" HeightRequest="50" Command="{Binding SetVegInfoCommand}" CommandParameter="whentoplant"   />
@@ -34,32 +37,29 @@
                 </FlexLayout>
             </Frame>
 
-            <Label  Grid.Row="4" Text="{Binding VegHeading}" 
+
+            <Label  Grid.Row="5"  Text="{Binding VegHeading}" 
                      FontAttributes="Bold" 
                      TextColor="White" 
                      HorizontalTextAlignment="Center" 
-                     Margin="0,0,0,0"
+                     Margin="0,-30,0,0"
                      BackgroundColor="#C42D09" 
                      FontSize="25" 
                      FontFamily="mont" />
-            
-            <ScrollView Grid.Row="5" VerticalScrollBarVisibility="Always">
-                <Label
-                     Margin="20,0,0,0"
+
+            <ScrollView Grid.Row="6" VerticalScrollBarVisibility="Always">
+                <Label 
+                     Margin="20,23,0,0"
                     Text="{Binding VegetableInfo}" 
                     FontSize="15 " 
                     HorizontalTextAlignment="Start"  
                     HorizontalOptions="Start" 
                     TextColor="White"
-                    
                     LineHeight="1"
                    FontFamily="mont"  
-                   BackgroundColor="#C42D09" Grid.Row="4"
+                   BackgroundColor="#C42D09" Grid.Row="5"
                    />
-
             </ScrollView>
-
         </Grid>
-    </ScrollView>
-
+    </StackLayout>
 </ContentPage>
