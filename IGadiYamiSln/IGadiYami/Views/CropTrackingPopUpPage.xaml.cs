@@ -5,11 +5,8 @@ namespace IGadiYami.Views;
 
 public partial class CropTrackingPopUpPage : Popup
 {
-    public CropTrackingPopUpPage()
-    {
-    }
 
-    public CropTrackingPopUpPage(CropTackingPopUpViewModel vm)
+    public CropTrackingPopUpPage(CropTrackingPageViewModel vm)
     {
         InitializeComponent();
         BindingContext = vm;

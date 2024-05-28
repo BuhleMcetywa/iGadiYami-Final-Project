@@ -17,7 +17,7 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
-                <RowDefinition Height="70" />
+                <RowDefinition Height="300" />
                 <RowDefinition Height="*" />
 
             </Grid.RowDefinitions>
@@ -57,6 +57,7 @@
                     TextColor="White"
                     LineHeight="1"
                    FontFamily="mont"  
+                    Grid.RowSpan="2"
                    BackgroundColor="#C42D09" Grid.Row="5"
                    />
             </ScrollView>
