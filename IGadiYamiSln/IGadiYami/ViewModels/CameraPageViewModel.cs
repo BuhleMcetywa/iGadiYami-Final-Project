@@ -1,15 +1,7 @@
 ﻿using Camera.MAUI;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using IGadiYami.Views;
-using System.Windows.Input;
 using CommunityToolkit.Mvvm.Input;
-using Xam.Plugins.OnDeviceCustomVision;
 using IGadiYami.Services;
-using IGadiYami.Models;
+using Xam.Plugins.OnDeviceCustomVision;
 
 namespace IGadiYami.ViewModels
 {
@@ -21,8 +13,8 @@ namespace IGadiYami.ViewModels
         public ImageSource Photo
         {
             get { return _photo; }
-            set 
-            { 
+            set
+            {
                 _photo = value;
                 OnPropertyChanged(nameof(Photo));
             }
@@ -31,7 +23,9 @@ namespace IGadiYami.ViewModels
         public string DetectionResponse
         {
             get { return _detectionresponse; }
-            set { _detectionresponse = value;
+            set
+            {
+                _detectionresponse = value;
 
                 OnPropertyChanged();
             }
@@ -42,8 +36,6 @@ namespace IGadiYami.ViewModels
             get { return _diseasecauses; }
             set { _diseasecauses = value; OnPropertyChanged(); }
         }
-
-
 
         CameraView _cameraView;
 
@@ -59,11 +51,11 @@ namespace IGadiYami.ViewModels
 
         public void cameraView_CamerasLoaded(object sender, EventArgs e)
         {
-             _cameraView.Camera = _cameraView.Cameras.First();
+            _cameraView.Camera = _cameraView.Cameras.First();
             MainThread.BeginInvokeOnMainThread(async () =>
             {
-                 await _cameraView.StopCameraAsync(); 
-                 await _cameraView.StartCameraAsync(); 
+                await _cameraView.StopCameraAsync();
+                await _cameraView.StartCameraAsync();
             });
         }
 
@@ -84,17 +76,18 @@ namespace IGadiYami.ViewModels
             var namePosition = highestProbabilityTag.Tag.IndexOf("(");
             var tagToSearch = highestProbabilityTag.Tag.Substring(0, namePosition - 1);
 
-            var disease =  _plantDatabase.GetDiseaseByTag(tagToSearch); // info get passed through & breaks here
+            var disease = _plantDatabase.GetDiseaseByTag(tagToSearch); // info get passed through & breaks here
 
             if (disease != null)
             {
                 // Get the causes and disease control measures
-                DiseaseCauses = disease.DiseaseCauses;
-            } else
+                DiseaseCauses = disease.DiseaseControlMeasures;
+            }
+            else
             {
                 DiseaseCauses = "";
-            }
 
-		}
+            }
+        }
     }
 }

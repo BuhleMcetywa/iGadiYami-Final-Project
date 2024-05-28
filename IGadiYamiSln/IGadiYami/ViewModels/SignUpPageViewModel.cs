@@ -2,12 +2,6 @@
 using IGadiYami.Interface;
 using IGadiYami.Models;
 using IGadiYami.Services;
-using IGadiYami.Views;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IGadiYami.ViewModels
 {
@@ -27,7 +21,7 @@ namespace IGadiYami.ViewModels
                 OnPropertyChanged();
             }
         }
-        
+
         private bool isNameValid;
 
         public bool IsNameValid
@@ -148,12 +142,6 @@ namespace IGadiYami.ViewModels
             get { return _useremail; }
             set { _useremail = value; OnPropertyChanged(); }
         }
-        // private string _userphonenumber;
-        /* public string UserPhoneNumber
-        {
-            get { return _userphonenumber; }
-            set { _userphonenumber = value; }
-        } */
         private string _userpassword;
         public string UserPasswordEntry
         {
@@ -168,12 +156,7 @@ namespace IGadiYami.ViewModels
             _service = Service;
             _userDatabase = userDatabase;
         }
-       /*public SignUpPageViewModel()
-        {
-           // _service = Service;
-           _userDatabase = new UserDatabase();
-        }*/
-        
+
 
         [RelayCommand]
         public void Save()
@@ -205,7 +188,7 @@ namespace IGadiYami.ViewModels
             UserSurnameEntry = "";
             UserEmailEntry = "";
             UserPasswordEntry = "";
-            await Shell.Current.GoToAsync("startgardening");
+            await Shell.Current.GoToAsync("homepage");
         }
 
         [RelayCommand]
@@ -220,7 +203,7 @@ namespace IGadiYami.ViewModels
             // Loading user based on id
             UserData user = _userDatabase.GetUserById(2);
             if (user != null)
-            {              
+            {
                 UserNameEntry = user.UserName;
                 UserSurnameEntry = user.UserSurname;
                 UserEmailEntry = user.UserEmail;
@@ -231,7 +214,6 @@ namespace IGadiYami.ViewModels
         [RelayCommand]
         public async void HaveAccount()
         {
-            // Navigation
             await Shell.Current.GoToAsync("loginpage");
         }
     }

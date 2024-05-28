@@ -5,9 +5,10 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:IGadiYami.Views"
     Shell.FlyoutBehavior="Disabled"
+    Shell.NavBarIsVisible="False"
     Title="IGadiYami">
 
     <ShellContent
-    ContentTemplate="{DataTemplate local:SettingsPage}"
-    Route="MainPage" />
+    ContentTemplate="{DataTemplate local:StartGardeningPage}"
+    Route="MainMenu" />
 </Shell>

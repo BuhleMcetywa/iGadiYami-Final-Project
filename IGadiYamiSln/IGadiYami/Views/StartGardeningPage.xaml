@@ -11,7 +11,7 @@
             <!-- Background image -->
             <Image Source="background" Aspect="AspectFill" />
 
-            <CollectionView ItemsSource="{Binding Vegetables}" Margin="10" ItemSizingStrategy="MeasureAllItems"  
+            <CollectionView ItemsSource="{Binding Vegetables}" Margin="15" ItemSizingStrategy="MeasureAllItems"  
                     SelectionMode="Single" x:Name="AllVegetablesCollectionView"
                      SelectionChangedCommand="{Binding VegetableSelectedCommand}" 
                      SelectionChangedCommandParameter="{Binding Path=SelectedItem, Source={x:Reference AllVegetablesCollectionView}}">
@@ -31,7 +31,7 @@
                             </Grid.ColumnDefinitions>
 
                             <!-- Border-like Frame that spans all columns -->
-                            <Frame Padding="0" BackgroundColor="Transparent" Margin="3,50,0,-35"  Grid.ColumnSpan="3"  WidthRequest="370" HeightRequest="250" CornerRadius="21">
+                            <Frame Padding="0" BackgroundColor="Transparent" Margin="0,20,0,-45"  Grid.ColumnSpan="3"  WidthRequest="360" HeightRequest="235" CornerRadius="21">
                                 <Image Source="{Binding Image}" Aspect="AspectFill">
                                     <Image.GestureRecognizers>
                                         <TapGestureRecognizer Command="{Binding Source={x:Reference AllVegetablesCollectionView}, Path=BindingContext.VegetableSelectedCommand}" 
@@ -39,8 +39,8 @@
                                     </Image.GestureRecognizers>
                                 </Image>
                             </Frame>
-                            <Label Margin=" 0, 10, 0, 0" Grid.Column="1" TextColor="AntiqueWhite"  FontFamily="Canva Sans" Grid.Row="0" VerticalOptions="EndAndExpand" Text="{Binding Name}" FontAttributes="Bold" FontSize="23"/>
-                            <Label Margin=" -35, 10, 0, 0" Grid.Column="1" FontSize="12" Grid.ColumnSpan="1" WidthRequest="200" HeightRequest="80" TextColor="AntiqueWhite" Grid.Row="1"  Text="{Binding DescriptionOfVeg}" />
+                            <Label Margin= "-10, 110, 0,0" Grid.Column="1" TextColor="AntiqueWhite"  FontFamily="Canva Sans" Grid.Row="0" Text="{Binding Name}" FontAttributes="Bold" FontSize="23"/>
+                            <Label Margin= " 35,0, 0, 45" Grid.Column="1" FontSize="10" Grid.ColumnSpan="1" WidthRequest="230" HeightRequest="90" TextColor="AntiqueWhite" Grid.Row="1"  Text="{Binding DescriptionOfVeg}" />
                         </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>

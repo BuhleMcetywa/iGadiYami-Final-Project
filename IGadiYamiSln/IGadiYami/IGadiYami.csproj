@@ -21,7 +21,7 @@
 		<Nullable>enable</Nullable>
 
 		<!-- Display name -->
-		<ApplicationTitle>IGadiYami</ApplicationTitle>
+		<ApplicationTitle>Igadi Yami</ApplicationTitle>
 
 		<!-- App Identifier -->
 		<ApplicationId>com.companyname.igadiyami</ApplicationId>
@@ -40,10 +40,10 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#F9FFE0" />
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#F9FFE0" BaseSize="200,200" />
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
@@ -60,16 +60,23 @@
 	  <None Remove="Platforms\Android\Assets\labels.txt" />
 	  <None Remove="Platforms\Android\Assets\model.pb" />
 	  <None Remove="Resources\Images\aboutusbg.png" />
+	  <None Remove="Resources\Images\background.jpg" />
 	  <None Remove="Resources\Images\bandile.png" />
 	  <None Remove="Resources\Images\buhle.png" />
 	  <None Remove="Resources\Images\carrot1.jpg" />
 	  <None Remove="Resources\Images\carrots.jpeg" />
 	  <None Remove="Resources\Images\chulu.png" />
 	  <None Remove="Resources\Images\ethan.png" />
+	  <None Remove="Resources\Images\igadiimage2.jpg" />
 	  <None Remove="Resources\Images\luke.png" />
+	  <None Remove="Resources\Images\menupic.jpg" />
 	  <None Remove="Resources\Images\ndosi.png" />
 	  <None Remove="Resources\Images\onion.jpg" />
 	  <None Remove="Resources\Images\onions.jpg" />
+	  <None Remove="Resources\Images\pic.png" />
+	  <None Remove="Resources\Images\pic1.png" />
+	  <None Remove="Resources\Images\pic2.jpg" />
+	  <None Remove="Resources\Images\pic3.png" />
 	  <None Remove="Resources\Images\potatoes.jpg" />
 	  <None Remove="Resources\Images\potatoes1.jpeg" />
 	  <None Remove="Resources\Images\sendicon.png" />
@@ -110,13 +117,25 @@
 	  <MauiXaml Update="Views\CameraPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\CropTrackingPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\CropTrackingPopUpPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\EditProfilePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\HomePageView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\IgadiYamiAnswerPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\IgadiYamiQuestionPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\MainMenu.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\PlantViews\CarrotPage.xaml">
@@ -134,9 +153,6 @@
 	  <MauiXaml Update="Views\PlantViews\TomatoPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\SettingsPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="Views\StartGardeningPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -144,5 +160,7 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
+
+	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionIGadiYamiHideInfoBar="True" /></VisualStudio></ProjectExtensions>
 
 </Project>

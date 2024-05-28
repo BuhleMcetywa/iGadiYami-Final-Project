@@ -1,14 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.Input;
 using IGadiYami.Models;
 using IGadiYami.Services;
-using IGadiYami.Views;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
 
 namespace IGadiYami.ViewModels
 {
@@ -35,37 +27,51 @@ namespace IGadiYami.ViewModels
         {
             get { return _vegetableinfo; }
             set { _vegetableinfo = value; OnPropertyChanged(); }
-        }
-        public List<string> texts { get; set; }
-        public VegetablePageViewModel()
-        {
-            // Code for the buttons in the vegetable page
-            texts = new List<string>
-            {
-                "text0",
-                "text1",
-                "text2",
-                "text3",
-            };
-        }
 
+        }
+        private string _vegheading;
+        public string VegHeading
+        {
+            get { return _vegheading; }
+            set { _vegheading = value; OnPropertyChanged(); }
+        }
 
         public VegetablePageViewModel(PlantDatabase database)
         {
             _database = database;
         }
-        
+
 
         [RelayCommand]
-        public void SetVegInfo(int index)
+        public void SetVegInfo(string index)
         {
-            
+            if (index == "howtoplant")
+            {
+                VegHeading = "How to Plant";
+                VegetableInfo = Vegetable.HowToPlant;
+            }
+            else if (index == "choosingsoil")
+            {
+                VegHeading = "Choosing Right Soil";
+                VegetableInfo = Vegetable.SoilType;
+            }
+            else if (index == "whentoplant")
+            {
+                VegHeading = "When to Plant";
+                VegetableInfo = Vegetable.TimeToPlant;
+            }
+            else if (index == "commondisease")
+            {
+                VegHeading = "Common Diseases";
+                VegetableInfo = Vegetable.CommonDiseases;
+            }
         }
-        
+
 
         public override void OnAppearing()
         {
             base.OnAppearing();
+            SetVegInfo("whentoplant");
         }
     }
 }

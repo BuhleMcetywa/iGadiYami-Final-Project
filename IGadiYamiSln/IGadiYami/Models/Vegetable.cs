@@ -1,11 +1,4 @@
-﻿using IGadiYami.Models;
-using SQLite;
-using SQLiteNetExtensions.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SQLite;
 
 namespace IGadiYami.Models
 {
@@ -20,6 +13,7 @@ namespace IGadiYami.Models
         public string SoilPrep { get; set; }
         public string TimeToPlant { get; set; }
         public string HowToPlant { get; set; }
+        public string CommonDiseases { get; set; }
         public string Image { get; set; }
     }
 }

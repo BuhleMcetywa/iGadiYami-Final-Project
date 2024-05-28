@@ -3,7 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="IGadiYami.Views.CreateAccountPage"
              xmlns:vm="clr-namespace:IGadiYami.ViewModels"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              Title="CreateAccountPage" BackgroundColor="#006838">
+
+    <ContentPage.Resources>
+        <Style x:Key="InvalidEntryStyle" TargetType="Entry">
+            <Setter Property="TextColor" Value="Red" />
+        </Style>
+        <Style x:Key="ValidEntryStyle" TargetType="Entry">
+            <Setter Property="TextColor" Value="Green" />
+        </Style>
+    </ContentPage.Resources>
+
     <ScrollView>
         <VerticalStackLayout  Padding="30" x:DataType="vm:SignUpPageViewModel">
             <Grid>
@@ -38,19 +49,89 @@
 
                 <StackLayout Grid.Row="2" Spacing="13" Margin="0,10,0,0">
                     <Frame Grid.Row="2" HeightRequest="60" WidthRequest="310" BackgroundColor="White" CornerRadius="10" Padding="10" Margin="0,0,0,0">
-                        <Entry Placeholder="First Name" Text="{Binding UserNameEntry}" PlaceholderColor="#A6A6A6" FontSize="15" FontFamily="mont" FontAttributes="Bold" BackgroundColor="White" TextColor="Black" />
+                        <Entry Placeholder="First Name" Text="{Binding UserNameEntry}" PlaceholderColor="#A6A6A6" FontSize="15" FontFamily="mont" FontAttributes="Bold" BackgroundColor="White"  >
+                            <Entry.Behaviors>
+                                <toolkit:TextValidationBehavior
+                                InvalidStyle="{StaticResource InvalidEntryStyle}"
+                                ValidStyle="{StaticResource ValidEntryStyle}"
+                                Flags="ValidateOnValueChanged"
+                                MinimumLength="1"
+                                MaximumLength="15"
+                                IsValid="{Binding IsNameValid}"
+                                    />
+                            </Entry.Behaviors>
+                        </Entry>
                     </Frame >
 
+                    
+
                     <Frame Grid.Row="3" WidthRequest="310" HeightRequest="60" BackgroundColor="White" CornerRadius="10" Padding="10" Margin="0,10,0,0">
-                        <Entry Placeholder="Last Name"  Text="{Binding UserSurnameEntry}" PlaceholderColor="#A6A6A6" FontSize="15" FontAttributes="Bold" BackgroundColor="White" TextColor="Black" />
+                        <Entry Placeholder="Last Name"  Text="{Binding UserSurnameEntry}" PlaceholderColor="#A6A6A6" FontSize="15" FontAttributes="Bold" BackgroundColor="White" >
+                            <Entry.Behaviors>
+                                <toolkit:TextValidationBehavior
+                                InvalidStyle="{StaticResource InvalidEntryStyle}"
+                                ValidStyle="{StaticResource ValidEntryStyle}"
+                                Flags="ValidateOnValueChanged"
+                                MinimumLength="1"
+                                MaximumLength="15"
+                                IsValid="{Binding IsSurnameValid}"
+                                />
+                            </Entry.Behaviors>
+                        </Entry>
                     </Frame >
 
                     <Frame Grid.Row="4" WidthRequest="310" HeightRequest="60" BackgroundColor="White" CornerRadius="10" Padding="10" Margin="0,10,0,0">
-                        <Entry Placeholder="Email Address/Phone Number" Text="{Binding UserEmailEntry}" PlaceholderColor="#A6A6A6" FontSize="15" FontFamily="mont" FontAttributes="Bold" BackgroundColor="White" TextColor="Black" />
+                        <Entry Placeholder="Email Address/Phone Number" Text="{Binding UserEmailEntry}" PlaceholderColor="#A6A6A6" FontSize="15" FontFamily="mont" FontAttributes="Bold" BackgroundColor="White" >
+                        <Entry.Behaviors>
+                                <toolkit:EmailValidationBehavior InvalidStyle="{StaticResource InvalidEntryStyle}"
+                                    IsValid="{Binding IsEmailValid}"                                                
+                                    ValidStyle="{StaticResource NormalEntryStyle}"                                                     
+                                    Flags="ValidateOnValueChanged" >
+                                </toolkit:EmailValidationBehavior>
+                            </Entry.Behaviors>
+                        </Entry>
                     </Frame >
 
                     <Frame Grid.Row="5" WidthRequest="310" HeightRequest="60" BackgroundColor="White" CornerRadius="10" Padding="10" Margin="0,10,0,0">
-                        <Entry Placeholder="Password" Text="{Binding UserPasswordEntry}" PlaceholderColor="#A6A6A6" FontSize="15" FontFamily="mont" FontAttributes="Bold"  BackgroundColor="White" TextColor="Black" />
+                        <Entry Placeholder="Password" Text="{Binding UserPasswordEntry}" PlaceholderColor="#A6A6A6" FontSize="15" FontFamily="mont" FontAttributes="Bold"  BackgroundColor="White"  >
+                            <Entry.Behaviors>
+                                <toolkit:MultiValidationBehavior x:Name="PasswordMultiValidation"
+                                            InvalidStyle="{StaticResource InvalidEntryStyle}"  
+                                            ValidStyle="{StaticResource ValidEntryStyle}"
+        
+                                            IsValid="{Binding IsPasswordValid}"
+                                            Flags="ValidateOnValueChanged">
+
+                                    <toolkit:CharactersValidationBehavior 
+                                            x:Name="DigitValidation" 
+                                            CharacterType="Digit" 
+                                            MinimumCharacterTypeCount="1" 
+                                            toolkit:MultiValidationBehavior.Error="1 digit" 
+                                            RegexPattern="" />
+
+                                    <toolkit:CharactersValidationBehavior 
+                                            x:Name="UpperValidation" 
+                                            CharacterType="UppercaseLetter" 
+                                            MinimumCharacterTypeCount="1" 
+                                            toolkit:MultiValidationBehavior.Error="1 upper case" 
+                                            RegexPattern="" />
+
+                                    <toolkit:CharactersValidationBehavior 
+                                            x:Name="SymbolValidation" 
+                                            CharacterType="NonAlphanumericSymbol" 
+                                            MinimumCharacterTypeCount="1" 
+                                            toolkit:MultiValidationBehavior.Error="1 symbol" 
+                                            RegexPattern=""  />
+
+                                    <toolkit:CharactersValidationBehavior 
+                                              x:Name="AnyValidation" 
+                                              CharacterType="Any" 
+                                              MinimumCharacterTypeCount="8" 
+                                              toolkit:MultiValidationBehavior.Error="8 characters" 
+                                              RegexPattern="" />
+                                </toolkit:MultiValidationBehavior>
+                            </Entry.Behaviors>
+                        </Entry>
                     </Frame >
 
                     <Frame Grid.Row="6" WidthRequest="310" HeightRequest="60" BackgroundColor="White" CornerRadius="10" Padding="10" Margin="0,10,0,0">

@@ -7,10 +7,8 @@
              Title="CameraPage" BackgroundColor="#f9ffe0">
 
     <Grid x:DataType="cameraviewmodel:CameraPageViewModel">
-
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="80"/>
             <RowDefinition Height="80"/>
             <RowDefinition Height="80"/>
             <RowDefinition Height="80"/>
@@ -25,7 +23,6 @@
             <Label Text="{Binding DetectionResponse}" Margin="0,0,0,0" FontSize="20"  TextColor="#006838" FontAttributes="Bold" FontFamily="Canva Sans" HorizontalOptions="Center"/>
         </Frame>
         <Label Margin=" 0,0, 0, 0"  FontSize="12" WidthRequest="340" FontAttributes="Bold" HeightRequest="80" TextColor="#006838" Grid.Row="2"  Text="{Binding DiseaseCauses}" />
-        <Button Text="Detect" FontSize="20" FontAttributes="Bold" FontFamily="Poppins" TextColor="#f9ffe0" BackgroundColor="#006838" Command="{Binding DisplayResponseCommand}" WidthRequest="90" CornerRadius="140" Grid.Row="4"/>
-        <Label Text="{Binding DiseaseCauses}" FontSize="10" WidthRequest="340" HeightRequest="70" TextColor="#006838" Grid.Row="6" HorizontalOptions="Center"/>
+        <Button Text="Detect" FontSize="20" FontAttributes="Bold" FontFamily="Poppins" TextColor="#f9ffe0" BackgroundColor="#006838" Command="{Binding DisplayResponseCommand}" WidthRequest="100" CornerRadius="140" Grid.Row="4"/>
     </Grid>
 </ContentPage>

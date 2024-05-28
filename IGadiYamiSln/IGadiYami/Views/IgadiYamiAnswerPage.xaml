@@ -4,7 +4,7 @@
              x:Class="IGadiYami.Views.IgadiYamiAnswerPage"
              Title="IgadiYamiAnswerPage">
     <VerticalStackLayout>
-        <Frame BackgroundColor="Beige"  Margin="10"  VerticalOptions="FillAndExpand" 
+        <Frame BackgroundColor="#8cc342"  Margin="10"  VerticalOptions="FillAndExpand" 
             HorizontalOptions="FillAndExpand">
             <Label
         Text="{Binding Response.MessageBody}"

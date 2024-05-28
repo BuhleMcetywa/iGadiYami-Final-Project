@@ -4,14 +4,14 @@ namespace IGadiYami.Views;
 
 public partial class SignupPage : ContentPage
 {
-	SignUpPageViewModel _viewModel;
-	public SignupPage(SignUpPageViewModel vm)
-	{
-		_viewModel = vm;
-		InitializeComponent();
-		BindingContext = _viewModel;
-	}
-   
+    SignUpPageViewModel _viewModel;
+    public SignupPage(SignUpPageViewModel vm)
+    {
+        _viewModel = vm;
+        InitializeComponent();
+        BindingContext = _viewModel;
+    }
+
 
     void OnGoogleGestureRecognizerTapped(object sender, TappedEventArgs args)
     {
