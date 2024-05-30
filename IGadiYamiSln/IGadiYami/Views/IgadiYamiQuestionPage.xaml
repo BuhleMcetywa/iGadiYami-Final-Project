@@ -5,7 +5,9 @@
              xmlns:selector="clr-namespace:IGadiYami.Views.Templates"
              xmlns:models="clr-namespace:IGadiYami.Models.ChatbotFolder"
              xmlns:viewmodels="clr-namespace:IGadiYami.ViewModels.ChatbotViewModels"
-             Title="IgadiYamiQuestionPage">
+             Title="IgadiYamiQuestionPage"
+             BackgroundColor="#F9FFE0"
+             BackgroundImageSource="igadiyamiback.png">
     
     
     <ContentPage.Resources>
