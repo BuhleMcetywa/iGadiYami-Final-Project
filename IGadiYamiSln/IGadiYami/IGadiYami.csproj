@@ -68,6 +68,7 @@
 	  <None Remove="Resources\Images\chulu.png" />
 	  <None Remove="Resources\Images\ethan.png" />
 	  <None Remove="Resources\Images\igadiimage2.jpg" />
+	  <None Remove="Resources\Images\igadiyamibackgroundtwo.png" />
 	  <None Remove="Resources\Images\luke.png" />
 	  <None Remove="Resources\Images\menupic.jpg" />
 	  <None Remove="Resources\Images\ndosi.png" />
