@@ -118,6 +118,9 @@
 	  <MauiXaml Update="Views\CameraPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\CommunityPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\CropTrackingPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
