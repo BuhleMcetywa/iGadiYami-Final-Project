@@ -1,13 +1,11 @@
-﻿//using Android.Content.Res;
-//using Android.Telecom;
-using IGadiYami.Models;
+﻿using IGadiYami.Models;
 
 using SQLite;
 
 
 namespace IGadiYami.Services
 {
-    public class PlantDatabase
+	public class PlantDatabase
     {
         private SQLiteConnection _dbConnection;
         public PlantDatabase()
@@ -75,8 +73,8 @@ namespace IGadiYami.Services
                     Image = "tomato.jpg",
                     DescriptionOfVeg = "Tomatoes are juicy, red fruits often mistaken for vegetables. They are rich in vitamins and antioxidants, making them a healthy addition to any meal. Tomatoes can be enjoyed fresh in salads, cooked in sauces, or used as a base for soups and stews.",
                     CommonDiseases = "Anthracnose Disease \r\nBlossom End Rot Disease\r\nEarly blight Disease\r\nLate blight Disease\r\n\r\n",
-                    BackgroundColor = Color.FromRgba("#C42D09"),
-                    ButtonColor = Color.FromRgba("#006838"),
+                    VegetableColor = "#C42D09",
+                    VegButtonColor = "#006838",
                 };
                 _dbConnection.Insert(vegetables);
 
@@ -91,6 +89,8 @@ namespace IGadiYami.Services
                     Image = "onions.jpg",
                     DescriptionOfVeg = "Onions are versatile vegetables known for their pungent flavor and strong aroma. They come in various colors, including white, yellow, and red, each adding a unique taste to dishes. Onions can be eaten raw, cooked, or pickled, and they are a staple ingredient in many cuisines worldwide.",
                     CommonDiseases = "Botrytis Blight Disease\r\nBotrytis neck rot Disease\r\nDowny mildew Disease\r\nPurple blotch Disease\r\n",
+                    VegetableColor= "#ba5c21",
+                    VegButtonColor= "#006838",
 
                 };
                 _dbConnection.Insert(vegetables);
@@ -105,7 +105,10 @@ namespace IGadiYami.Services
                     HowToPlant = "Step 1: Get Your Potatoes \r\nGet small, healthy potatoes that are not rotten or diseased. \r\nStep 2: Let Them Sprout \r\nLeave your potatoes in a cool, dry place until they grow little shoots, about 1 cm long. \r\nStep 3: Prep Your Soil  \r\nDig up your garden soil and mix in some compost or old animal manure to make it nice and rich. \r\nStep 4: Plant Your Potatoes  \r\nDig a shallow trench about as deep as your hand and place your sprouted potatoes in it, about a  hand's width apart. Cover them with soil. \r\nStep 5: Keep Mounding Soil  \r\nAs the potato plants grow, cover the base with soil to protect the sprouts. Keep doing this every few  weeks. \r\nStep 6: Water Them Regularly\r\nMake sure the soil is always moist, but not soaking wet. Water them when the soil feels dry. \r\nStep 7: Try Different Methods  \r\nIf you're short on space, you can try growing potatoes in a container or using a no-dig method. Just  make sure they have enough room to grow. \r\nStep 8: Harvest Your Potatoes \r\nAfter about 15-20 weeks (about 4 and a half months), your potatoes should be ready to harvest. Dig  them up carefully so you don't damage them. \r\n",
                     Image = "potatoes.jpeg",
                     DescriptionOfVeg = "Potatoes are versatile tubers that are a staple food in many cultures. They come in various shapes, sizes, and colors, including russet, red, and purple. Potatoes can be baked, boiled, mashed, or fried, and they provide a good source of carbohydrates, potassium, and vitamin C",
-                    CommonDiseases = "Bacterial soft rot Disease\r\nBlackleg Disease\r\nEarly blight Disease\r\nLate Blight Disease\r\nPowdery Scab Disease Disease\r\n\r\n"
+                    CommonDiseases = "Bacterial soft rot Disease\r\nBlackleg Disease\r\nEarly blight Disease\r\nLate Blight Disease\r\nPowdery Scab Disease Disease\r\n\r\n",
+                    VegetableColor = "#615335",
+                    VegButtonColor = "#006838",
+
                 };
                 _dbConnection.Insert(vegetables);
 
@@ -120,6 +123,8 @@ namespace IGadiYami.Services
                     Image = "carrots.jpeg",
                     DescriptionOfVeg = "Carrots are root vegetables known for their bright orange color and sweet, earthy flavor. They are an excellent source of beta-carotene, fiber, and various vitamins. Carrots can be eaten raw as a crunchy snack, cooked in a variety of dishes, or juiced for a ,healthy drink.",
                     CommonDiseases = "Carrot Rust Fly Disease\r\nAlternaria Leaf Blight Disease\r\nRoot Knot Nematodes Disease\r\n",
+                    VegetableColor = "#F8861D",
+                    VegButtonColor = "#006838",
                 };
 
                 _dbConnection.Insert(vegetables);
@@ -135,6 +140,8 @@ namespace IGadiYami.Services
                     Image = "spinach.jpeg",
                     DescriptionOfVeg = "Spinach is a leafy green vegetable prized for its nutritional benefits. It is packed with iron, calcium, and vitamins A and C. Spinach can be eaten raw in salads, blended into smoothies, or cooked in a variety of dishes such as soups, stews, and stir-fries",
                     CommonDiseases = "Downy Mildew Disease\r\nWhite Rust Disease\r\nAnthracnose Disease\r\nFusarium Wilt Disease\r\n",
+                    VegetableColor = "#8CC342",
+                    VegButtonColor = "#006838",
                 };
                 _dbConnection.Insert(vegetables);
 

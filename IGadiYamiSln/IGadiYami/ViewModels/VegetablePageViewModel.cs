@@ -35,19 +35,19 @@ namespace IGadiYami.ViewModels
             get { return _vegheading; }
             set { _vegheading = value; OnPropertyChanged(); }
         }
-        private Color _backgroundcolor;
+        private Color _vegetableColor;
 
-        public Color BackgroundColor
+        public Color VegetableColor
         {
-            get { return _backgroundcolor; }
-            set { _backgroundcolor = value; OnPropertyChanged(); }
+            get { return _vegetableColor; }
+            set { _vegetableColor = value; OnPropertyChanged(); }
         }
-        private Color _buttoncolor;
+        private Color _vegbuttoncolor;
 
-        public Color ButtonColor
-        {
-            get { return _buttoncolor; }
-            set { _buttoncolor = value; OnPropertyChanged(); }
+        public Color VegButtonColor
+		{
+            get { return _vegbuttoncolor;  }
+            set { _vegbuttoncolor = value; OnPropertyChanged(); }
         }
 
 
@@ -88,6 +88,9 @@ namespace IGadiYami.ViewModels
         {
             base.OnAppearing();
             SetVegInfo("whentoplant");
-        }
+			VegetableColor = Color.FromRgba(Vegetable.VegetableColor);
+			VegButtonColor = Color.FromRgba(Vegetable.VegButtonColor);
+
+		}
     }
 }

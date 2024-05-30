@@ -9,6 +9,6 @@
     Title="IGadiYami">
 
     <ShellContent
-    ContentTemplate="{DataTemplate local:CropTrackingPage}"
+    ContentTemplate="{DataTemplate local:StartGardeningPage}"
     Route="MainMenu" />
 </Shell>

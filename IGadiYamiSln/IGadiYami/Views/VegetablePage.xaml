@@ -4,7 +4,7 @@
              x:Class="IGadiYami.Views.VegetablePage"
              xmlns:local="clr-namespace:IGadiYami.ViewModels"
              x:DataType="local:VegetablePageViewModel"
-             BackgroundColor="{Binding BackgroundColor}">
+             BackgroundColor="{Binding VegetableColor}">
 
     <StackLayout Orientation="Vertical">
         <Grid >
@@ -28,12 +28,12 @@
             <Label Margin="30,0,20,0" Text="Start your Gardening journey with us" Padding="0,100,0,0" TextColor="White" FontSize="13" FontFamily="mont" Grid.Row="2" />
 
 
-            <Frame BackgroundColor="{Binding BackgroundColor}" Grid.Row="3" CornerRadius="20" Grid.RowSpan="2" BorderColor="Transparent" Margin="0,10,0,0"  >
-                <FlexLayout Grid.Row="5" BackgroundColor="{Binding BackgroundColor}" JustifyContent="SpaceEvenly" VerticalOptions="Start" HeightRequest="100" WidthRequest="400" Margin="0,-20,0,0">
-                    <Button Margin="0,10,0,0" CornerRadius="30" Text="How to plant Tomatoes" FontFamily="mont" BackgroundColor="{Binding ButtonColor}" LineBreakMode="WordWrap" FontAttributes="Bold" HorizontalOptions="Center" FontSize="8" WidthRequest="85" HeightRequest="50" Command="{Binding SetVegInfoCommand}" CommandParameter="howtoplant" />
-                    <Button Margin="0,10,0,0" CornerRadius="30" Text="Choosing the right soil" BackgroundColor="{Binding ButtonColor}" FontFamily="mont" LineBreakMode="WordWrap" FontAttributes="Bold" HorizontalOptions="Center" FontSize="8" WidthRequest="85" HeightRequest="50" Command="{Binding SetVegInfoCommand}" CommandParameter="choosingsoil"  />
-                    <Button Margin="0,10,0,0" CornerRadius="30" Text="When to plant" BackgroundColor="{Binding ButtonColor}" FontFamily="mont" LineBreakMode="WordWrap" FontAttributes="Bold" HorizontalOptions="Center" FontSize="8" WidthRequest="85" HeightRequest="50" Command="{Binding SetVegInfoCommand}" CommandParameter="whentoplant"   />
-                    <Button Margin="0,10,0,0" CornerRadius="30" Text="Common diseases"  BackgroundColor="{Binding ButtonColor}" FontFamily="mont" LineBreakMode="WordWrap" FontAttributes="Bold" HorizontalOptions="Center" FontSize="8" WidthRequest="85" HeightRequest="50" Command="{Binding SetVegInfoCommand}" CommandParameter="commondisease" />
+            <Frame BackgroundColor="{Binding VegetableColor}" Grid.Row="3" CornerRadius="20" Grid.RowSpan="2" BorderColor="Transparent" Margin="0,10,0,0"  >
+                <FlexLayout Grid.Row="5" BackgroundColor="{Binding VegetableColor}" JustifyContent="SpaceEvenly" VerticalOptions="Start" HeightRequest="100" WidthRequest="400" Margin="0,-20,0,0">
+                    <Button Margin="0,10,0,0" CornerRadius="30" Text="How to plant Tomatoes" FontFamily="mont" BackgroundColor="{Binding VegButtonColor}" LineBreakMode="WordWrap" FontAttributes="Bold" HorizontalOptions="Center" FontSize="8" WidthRequest="85" HeightRequest="50" Command="{Binding SetVegInfoCommand}" CommandParameter="howtoplant"/>
+                    <Button Margin="0,10,0,0" CornerRadius="30" Text="Choosing the right soil" BackgroundColor="{Binding VegButtonColor}" FontFamily="mont" LineBreakMode="WordWrap" FontAttributes="Bold" HorizontalOptions="Center" FontSize="8" WidthRequest="85" HeightRequest="50" Command="{Binding SetVegInfoCommand}" CommandParameter="choosingsoil"  />
+                    <Button Margin="0,10,0,0" CornerRadius="30" Text="When to plant" BackgroundColor="{Binding VegButtonColor}" FontFamily="mont" LineBreakMode="WordWrap" FontAttributes="Bold" HorizontalOptions="Center" FontSize="8" WidthRequest="85" HeightRequest="50" Command="{Binding SetVegInfoCommand}" CommandParameter="whentoplant"   />
+                    <Button Margin="0,10,0,0" CornerRadius="30" Text="Common diseases"  BackgroundColor="{Binding VegButtonColor}" FontFamily="mont" LineBreakMode="WordWrap" FontAttributes="Bold" HorizontalOptions="Center" FontSize="8" WidthRequest="85" HeightRequest="50" Command="{Binding SetVegInfoCommand}" CommandParameter="commondisease" />
                 </FlexLayout>
             </Frame>
 
@@ -43,7 +43,7 @@
                      TextColor="White" 
                      HorizontalTextAlignment="Center" 
                      Margin="0,-30,0,0"
-                     BackgroundColor="{Binding BackgroundColor}" 
+                     BackgroundColor="{Binding VegetableColor}" 
                      FontSize="25" 
                      FontFamily="mont" />
 
@@ -58,7 +58,7 @@
                     LineHeight="1"
                    FontFamily="mont"  
                     Grid.RowSpan="2"
-                   BackgroundColor="{Binding BackgroundColor}" Grid.Row="5"
+                   BackgroundColor="{Binding VegetableColor}" Grid.Row="5"
                    />
             </ScrollView>
         </Grid>
