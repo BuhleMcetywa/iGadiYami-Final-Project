@@ -8,7 +8,31 @@
     Shell.NavBarIsVisible="False"
     Title="IGadiYami">
 
+
+    <!-- <TabBar>
+        <ShellContent
+            Title="Home"
+            ContentTemplate="{DataTemplate local:HomePageView}"
+            Route="MainMenu" />
+        <ShellContent
+            Title="Guides"
+            ContentTemplate="{DataTemplate local:StartGardeningPage}"
+            Route="MainMenu" />
+        <ShellContent
+            Title="Camera"
+            ContentTemplate="{DataTemplate local:CameraPage}"
+            Route="MainMenu" />
+        <ShellContent
+            Title="Community"
+            ContentTemplate="{DataTemplate local:CommunityPage}"
+            Route="MainMenu" />
+        <ShellContent
+            Title="Settings"
+            ContentTemplate="{DataTemplate local:SettingsPage}"
+            Route="MainMenu" />
+    </TabBar> -->
+
     <ShellContent
-    ContentTemplate="{DataTemplate local:CommunityPage}"
-    Route="MainMenu" />
+        ContentTemplate="{DataTemplate local:HomePageView}"
+        Route="MainMenu" />
 </Shell>

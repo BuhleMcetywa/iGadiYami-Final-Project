@@ -189,6 +189,7 @@ namespace IGadiYami.ViewModels
             UserEmailEntry = "";
             UserPasswordEntry = "";
             await Shell.Current.GoToAsync("homepage");
+            //Application.Current.MainPage = new AppShell();
         }
 
         [RelayCommand]

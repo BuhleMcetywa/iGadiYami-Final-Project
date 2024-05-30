@@ -89,6 +89,7 @@ namespace IGadiYami
             mauiAppBuilder.Services.AddSingleton<CropTrackingPopUpPage>();
             mauiAppBuilder.Services.AddSingleton<TrackedCrop>();
             mauiAppBuilder.Services.AddSingleton<CommunityPage>();
+            //mauiAppBuilder.Services.AddSingleton<MainTabbedPage>();
 
             return mauiAppBuilder;
         }
