@@ -24,11 +24,11 @@
                             <ViewCell>
                                 <Grid>
                                     <Grid.RowDefinitions>
-                                        <RowDefinition Height="10" />
-                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="40" />
+                                        <RowDefinition Height="40" />
                                     </Grid.RowDefinitions>
                                     <Label Text="{Binding CropName}" Grid.Row="0" />
-                                    <Label Text="{Binding PlantDate}" Grid.Row="0" />
+                                    <Label Text="{Binding PlantDate}" Grid.Row="1" />
                                 </Grid>
                             </ViewCell>
                         </DataTemplate>
