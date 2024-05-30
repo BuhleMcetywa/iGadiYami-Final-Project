@@ -157,6 +157,9 @@
 	  <MauiXaml Update="Views\StartGardeningPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\TrackedCrop.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\VegetablePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

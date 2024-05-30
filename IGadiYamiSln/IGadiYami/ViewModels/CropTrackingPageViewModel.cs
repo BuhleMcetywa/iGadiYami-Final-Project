@@ -49,7 +49,12 @@ namespace IGadiYami.ViewModels
         public ObservableCollection<CropTracking> Crops
         {
             get { return _crops; }
-            set { _crops = value; OnPropertyChanged(); }
+            set 
+            { 
+                _crops = value;
+                //new ObservableCollection<CropTracking>(_plantdatabase.GetAllCrops());
+                OnPropertyChanged(); 
+            }
         }
 
 
@@ -85,6 +90,17 @@ namespace IGadiYami.ViewModels
             GrowthAmount = "";
             Notes = "";
             Crops = new ObservableCollection<CropTracking>(_plantdatabase.GetAllCrops());
+        }
+
+        [RelayCommand]
+        public static async Task CropSelected(CropTracking cropTracking)
+        {
+            var navigationParameter = new Dictionary<string, object>
+           {
+                { "TrackedCrop", cropTracking }
+           };
+            await Shell.Current.GoToAsync($"trackedcrop", navigationParameter);
+
         }
     }
 }

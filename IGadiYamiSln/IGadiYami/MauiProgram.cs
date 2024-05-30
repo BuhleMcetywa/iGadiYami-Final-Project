@@ -65,6 +65,7 @@ namespace IGadiYami
             mauiAppBuilder.Services.AddSingleton<CropTrackingPageViewModel>();
             mauiAppBuilder.Services.AddSingleton<CropTackingPopUpViewModel>();
             mauiAppBuilder.Services.AddSingleton<SettingsProfileViewModel>();
+            mauiAppBuilder.Services.AddSingleton<TrackedCropViewModel>();
 
             return mauiAppBuilder;
         }
@@ -85,6 +86,7 @@ namespace IGadiYami
             mauiAppBuilder.Services.AddSingleton<HomePageView>();
             mauiAppBuilder.Services.AddSingleton<CropTrackingPage>();
             mauiAppBuilder.Services.AddSingleton<CropTrackingPopUpPage>();
+            mauiAppBuilder.Services.AddSingleton<TrackedCrop>();
 
             return mauiAppBuilder;
         }
