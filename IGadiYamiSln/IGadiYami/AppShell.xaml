@@ -3,14 +3,11 @@
     x:Class="IGadiYami.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:IgadiYamiDesign.Views"
+    xmlns:local="clr-namespace:IGadiYami.Views"
     Shell.FlyoutBehavior="Disabled"
     Shell.NavBarIsVisible="False"
     Title="IGadiYami">
 
-    <!--<ShellContent
-    ContentTemplate="{DataTemplate local:EditProfilePage}"
-    Route="EditProfilePage" />-->
     <ShellContent
     ContentTemplate="{DataTemplate local:CropTrackingPage}"
     Route="MainMenu" />

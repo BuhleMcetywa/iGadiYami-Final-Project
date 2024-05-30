@@ -40,6 +40,26 @@ namespace IGadiYami.Services
                     Notes = "testing",
                 };
                 _dbConnection.Insert(crop);
+
+                CropTracking crop1 = new CropTracking()
+                {
+                    CropName = "Tomatoes",
+                    PlantDate = "01/01/2024",
+                    WaterAmount = "2L",
+                    GrowthAmount = "3 inch",
+                    Notes = "testing",
+                };
+                _dbConnection.Insert(crop1);
+
+                CropTracking crop2 = new CropTracking()
+                {
+                    CropName = "Tomatoes",
+                    PlantDate = "01/01/2024",
+                    WaterAmount = "2L",
+                    GrowthAmount = "3 inch",
+                    Notes = "testing",
+                };
+                _dbConnection.Insert(crop2);
             }
             //this table you use to access the specific vegetable you want to plant
             if (_dbConnection.Table<Vegetable>().Count() == 0)
@@ -548,10 +568,7 @@ namespace IGadiYami.Services
                     VegTypeID = 5,
                     DiseaseID = 20,
                 };
-
-
             }
-
         }
 
 
@@ -590,14 +607,13 @@ namespace IGadiYami.Services
         // Crop Tracking Feature
         public CropTracking GetCropById(int cropid)
         {
-            var crop = _dbConnection.Table<CropTracking>().Where(ct => ct.CropID == cropid).FirstOrDefault();
-            return crop;
+            return _dbConnection.Table<CropTracking>().FirstOrDefault(u => u.CropID == cropid);
         }
         public List<CropTracking> GetAllCrops()
         {
             return _dbConnection.Table<CropTracking>().ToList();
         }
-        public CropTracking CreateCrop(string name, string date, string wateramount, string growthamount, string notes)
+        public void CreateCrop(string name, string date, string wateramount, string growthamount, string notes)
         {
             CropTracking cropTracking = new CropTracking()
             {
@@ -608,16 +624,14 @@ namespace IGadiYami.Services
                 Notes = notes,
             };
             _dbConnection.Insert(cropTracking);
-            return cropTracking;
         }
-        public CropTracking DeleteCrop(int cropid)
+        public void DeleteCrop(int cropid)
         {
             var crop = _dbConnection.Table<CropTracking>().FirstOrDefault(c => c.CropID == cropid);
             if (crop != null)
             {
                 _dbConnection.Delete(crop);
             }
-            return crop;
         }
     }
 }

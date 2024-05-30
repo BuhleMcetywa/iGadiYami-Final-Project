@@ -2,8 +2,10 @@
 using CommunityToolkit.Maui.Core;
 using CommunityToolkit.Maui.Views;
 using CommunityToolkit.Mvvm.Input;
+using IGadiYami.Models;
 using IGadiYami.Services;
 using IGadiYami.Views;
+using System.Collections.ObjectModel;
 
 namespace IGadiYami.ViewModels
 {
@@ -43,28 +45,39 @@ namespace IGadiYami.ViewModels
             set { _notes = value; OnPropertyChanged(); }
         }
 
+        private ObservableCollection<CropTracking> _crops;
+        public ObservableCollection<CropTracking> Crops
+        {
+            get { return _crops; }
+            set { _crops = value; OnPropertyChanged(); }
+        }
+
 
         public CropTrackingPageViewModel(PlantDatabase plantDatabase) 
         { 
             _plantdatabase = plantDatabase;
+        }
+        public override void OnAppearing()
+        {
+            base.OnAppearing();
+            LoadData();
+        }
+        public void LoadData()
+        {
+            Crops = new ObservableCollection<CropTracking>(_plantdatabase.GetAllCrops());
         }
 
         [RelayCommand]
         public async Task ShowPopUpAsync()
         {
             var popup = new CropTrackingPopUpPage(this);
-            await Shell.Current.CurrentPage.ShowPopupAsync(popup); // Breakes Here
+            await Shell.Current.CurrentPage.ShowPopupAsync(popup);
         }
 
         [RelayCommand]
         public void CreateCrop()
         {
-            string nameEntry = CropName;
-            string dateEntry = PlantDate;
-            string waterEntry = WaterAmount;
-            string growthEntry = GrowthAmount;
-            string notesEntry = Notes;
-            _plantdatabase.CreateCrop(nameEntry, dateEntry, waterEntry, growthEntry, notesEntry);
+            _plantdatabase.CreateCrop(CropName, PlantDate, WaterAmount, GrowthAmount, Notes);
             CropName = "";
             PlantDate = "";
             WaterAmount = "";
@@ -75,7 +88,7 @@ namespace IGadiYami.ViewModels
         [RelayCommand]
         public void LoadCrop()
         {
-            var returedData = _plantdatabase.GetCropById(1);
+            var returedData = _plantdatabase.GetCropById(3);
             CropName = returedData.CropName;
             PlantDate = returedData.PlantDate;
             WaterAmount = returedData.WaterAmount;

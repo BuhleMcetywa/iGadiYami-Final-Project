@@ -21,7 +21,6 @@
                     <Entry Placeholder="Growth Amount..." Text="{Binding GrowthAmount}" Margin="0, 10, 0, 10"/>
                     <Entry Placeholder="Notes..." Text="{Binding Notes}"/>
                     <Button Text="Add Crop" WidthRequest="100" Command="{Binding CreateCropCommand}" HorizontalOptions="End" Margin="5, 10, 5, 10"/>
-                    <Button Text="Load Crop" WidthRequest="100" Command="{Binding LoadCropCommand}" HorizontalOptions="Start" Margin="5, 10, 5, 10"/>
                 </StackLayout>
             </Frame>
         </StackLayout>

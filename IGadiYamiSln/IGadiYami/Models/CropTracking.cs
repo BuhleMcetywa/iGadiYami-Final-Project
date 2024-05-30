@@ -1,7 +1,10 @@
-﻿namespace IGadiYami.Models
+﻿using SQLite;
+
+namespace IGadiYami.Models
 {
     public class CropTracking
     {
+        [PrimaryKey, AutoIncrement]
         public int CropID { get; set; }
         public string CropName { get; set; }
         public string PlantDate { get; set; }
