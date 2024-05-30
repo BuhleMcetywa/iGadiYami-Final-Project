@@ -5,7 +5,7 @@
              xmlns:vm="clr-namespace:IGadiYami.ViewModels"
              BackgroundColor="#F9FFE0"
              Title="CommunityChatView">
-    <Grid>
+    <Grid x:DataType="vm:CommunityPageViewModel">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
@@ -58,7 +58,7 @@
                 </StackLayout>
 
                 <!-- Message from user 2 -->
-                <StackLayout Orientation="Vertical" Margin="10,0,10,10" HorizontalOptions="End" x:Name="Test">
+                <StackLayout Orientation="Vertical" Margin="10,0,10,10" HorizontalOptions="End" x:Name="Test" IsVisible="{Binding IsMessageVisible}">
                     <Label Text="Batman" FontSize="12" TextColor="Gray" HorizontalTextAlignment="End" />
                     <Frame CornerRadius="20" BackgroundColor="#006838" HorizontalOptions="End" VerticalOptions="Start">
                         <StackLayout Orientation="Horizontal" Padding="10">
@@ -101,11 +101,11 @@
                        Margin="10,0,0,0" />
             </Frame>
             <ImageButton Grid.Column="1"
-                    Source="dm.png"
+                    Source="ethan.png"
                     HeightRequest="55"
                     WidthRequest="55"
                     CornerRadius="10"
-                    Margin="0,0,4,0" />
+                    Margin="0,0,4,0"  Command="{Binding ShowMessageCommand}"/>
         </Grid>
     </Grid>
 </ContentPage>
