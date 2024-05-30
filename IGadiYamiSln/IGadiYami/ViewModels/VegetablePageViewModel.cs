@@ -35,6 +35,22 @@ namespace IGadiYami.ViewModels
             get { return _vegheading; }
             set { _vegheading = value; OnPropertyChanged(); }
         }
+        private Color _backgroundcolor;
+
+        public Color BackgroundColor
+        {
+            get { return _backgroundcolor; }
+            set { _backgroundcolor = value; OnPropertyChanged(); }
+        }
+        private Color _buttoncolor;
+
+        public Color ButtonColor
+        {
+            get { return _buttoncolor; }
+            set { _buttoncolor = value; OnPropertyChanged(); }
+        }
+
+
 
         public VegetablePageViewModel(PlantDatabase database)
         {

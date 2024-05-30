@@ -56,16 +56,17 @@ namespace IGadiYami.ViewModels
         public CropTrackingPageViewModel(PlantDatabase plantDatabase) 
         { 
             _plantdatabase = plantDatabase;
+            Crops = new ObservableCollection<CropTracking>(_plantdatabase.GetAllCrops());
         }
-        public override void OnAppearing()
+        /*public override void OnAppearing()
         {
             base.OnAppearing();
             LoadData();
         }
         public void LoadData()
         {
-            Crops = new ObservableCollection<CropTracking>(_plantdatabase.GetAllCrops());
-        }
+            
+        }*/
 
         [RelayCommand]
         public async Task ShowPopUpAsync()
@@ -83,17 +84,7 @@ namespace IGadiYami.ViewModels
             WaterAmount = "";
             GrowthAmount = "";
             Notes = "";
-        }
-
-        [RelayCommand]
-        public void LoadCrop()
-        {
-            var returedData = _plantdatabase.GetCropById(3);
-            CropName = returedData.CropName;
-            PlantDate = returedData.PlantDate;
-            WaterAmount = returedData.WaterAmount;
-            GrowthAmount = returedData.GrowthAmount;
-            Notes = returedData.Notes;
+            Crops = new ObservableCollection<CropTracking>(_plantdatabase.GetAllCrops());
         }
     }
 }

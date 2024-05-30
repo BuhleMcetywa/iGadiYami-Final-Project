@@ -15,5 +15,9 @@ namespace IGadiYami.Models
         public string HowToPlant { get; set; }
         public string CommonDiseases { get; set; }
         public string Image { get; set; }
+
+        public Color BackgroundColor { get; set; }
+
+        public Color  ButtonColor { get; set; }
     }
 }

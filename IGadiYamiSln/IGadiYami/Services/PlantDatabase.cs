@@ -75,6 +75,8 @@ namespace IGadiYami.Services
                     Image = "tomato.jpg",
                     DescriptionOfVeg = "Tomatoes are juicy, red fruits often mistaken for vegetables. They are rich in vitamins and antioxidants, making them a healthy addition to any meal. Tomatoes can be enjoyed fresh in salads, cooked in sauces, or used as a base for soups and stews.",
                     CommonDiseases = "Anthracnose Disease \r\nBlossom End Rot Disease\r\nEarly blight Disease\r\nLate blight Disease\r\n\r\n",
+                    BackgroundColor = Color.FromRgba("#C42D09"),
+                    ButtonColor = Color.FromRgba("#006838"),
                 };
                 _dbConnection.Insert(vegetables);
 
