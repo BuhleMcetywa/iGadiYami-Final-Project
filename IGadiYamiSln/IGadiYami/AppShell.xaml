@@ -8,9 +8,6 @@
     Shell.NavBarIsVisible="False"
     Title="IGadiYami">
 
-    <!--<ShellContent
-    ContentTemplate="{DataTemplate local:EditProfilePage}"
-    Route="EditProfilePage" />-->
     <ShellContent
     ContentTemplate="{DataTemplate local:CropTrackingPage}"
     Route="MainMenu" />
