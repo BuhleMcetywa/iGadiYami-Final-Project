@@ -23,6 +23,7 @@ namespace IGadiYami
             Routing.RegisterRoute("homepage", typeof(HomePageView));
             Routing.RegisterRoute("croptracking", typeof(CropTrackingPage));
             Routing.RegisterRoute("trackedcrop", typeof(TrackedCrop));
+            Routing.RegisterRoute("communitypage", typeof(CommunityPage));
         }
     }
 }

@@ -1,11 +1,5 @@
 ﻿using IGadiYami.Models;
 using IGadiYami.Services;
-using IGadiYami.Views;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IGadiYami.ViewModels
 {
@@ -18,11 +12,12 @@ namespace IGadiYami.ViewModels
         public CropTracking CropTracking
         {
             get { return _cropTracking; }
-            set 
-            { 
+            set
+            {
                 _cropTracking = value;
                 _database.GetAllCrops();
-                OnPropertyChanged(); }
+                OnPropertyChanged();
+            }
         }
 
         public TrackedCropViewModel(PlantDatabase plantDatabase)

@@ -1,12 +1,12 @@
-﻿using IGadiYami.Models;
-using CommunityToolkit.Mvvm.Input;
+﻿using CommunityToolkit.Mvvm.Input;
+using IGadiYami.Models;
 
 namespace IGadiYami.ViewModels
 {
     public partial class SettingsProfileViewModel : BaseViewModel
     {
-        public UserSettingsProfile User {  get; set; }
-        public SettingsProfileViewModel() 
+        public UserSettingsProfile User { get; set; }
+        public SettingsProfileViewModel()
         {
             User = new UserSettingsProfile
             {
@@ -23,13 +23,13 @@ namespace IGadiYami.ViewModels
             // Navigation
             await Shell.Current.GoToAsync("editprofilepage");
         }
-        
+
         [RelayCommand]
         private void UpdateInformationCommand()
         {
             // Logic to update information for the profile
         }
-        
+
         [RelayCommand]
         private async void BackButtonCommand()
         {

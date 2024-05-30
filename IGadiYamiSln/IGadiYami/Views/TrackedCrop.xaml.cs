@@ -4,9 +4,9 @@ namespace IGadiYami.Views;
 
 public partial class TrackedCrop : ContentPage
 {
-	public TrackedCrop(TrackedCropViewModel vm)
-	{
-		InitializeComponent();
-		BindingContext = vm;
-	}
+    public TrackedCrop(TrackedCropViewModel vm)
+    {
+        InitializeComponent();
+        BindingContext = vm;
+    }
 }

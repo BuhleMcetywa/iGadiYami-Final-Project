@@ -45,8 +45,8 @@ namespace IGadiYami.ViewModels
         private Color _vegbuttoncolor;
 
         public Color VegButtonColor
-		{
-            get { return _vegbuttoncolor;  }
+        {
+            get { return _vegbuttoncolor; }
             set { _vegbuttoncolor = value; OnPropertyChanged(); }
         }
 
@@ -88,9 +88,9 @@ namespace IGadiYami.ViewModels
         {
             base.OnAppearing();
             SetVegInfo("whentoplant");
-			VegetableColor = Color.FromRgba(Vegetable.VegetableColor);
-			VegButtonColor = Color.FromRgba(Vegetable.VegButtonColor);
+            VegetableColor = Color.FromRgba(Vegetable.VegetableColor);
+            VegButtonColor = Color.FromRgba(Vegetable.VegButtonColor);
 
-		}
+        }
     }
 }

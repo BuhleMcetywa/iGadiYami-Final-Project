@@ -1,5 +1,4 @@
 ﻿using SQLite;
-using Microsoft.Maui.Graphics;
 
 
 namespace IGadiYami.Models
@@ -18,7 +17,7 @@ namespace IGadiYami.Models
         public string CommonDiseases { get; set; }
         public string Image { get; set; }
         public string VegetableColor { get; set; }
-        public string  VegButtonColor { get; set; }
+        public string VegButtonColor { get; set; }
 
     }
 }

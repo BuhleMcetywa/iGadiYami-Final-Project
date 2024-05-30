@@ -1,6 +1,4 @@
-﻿using CommunityToolkit.Maui;
-using CommunityToolkit.Maui.Core;
-using CommunityToolkit.Maui.Views;
+﻿using CommunityToolkit.Maui.Views;
 using CommunityToolkit.Mvvm.Input;
 using IGadiYami.Models;
 using IGadiYami.Services;
@@ -49,17 +47,17 @@ namespace IGadiYami.ViewModels
         public ObservableCollection<CropTracking> Crops
         {
             get { return _crops; }
-            set 
-            { 
+            set
+            {
                 _crops = value;
                 //new ObservableCollection<CropTracking>(_plantdatabase.GetAllCrops());
-                OnPropertyChanged(); 
+                OnPropertyChanged();
             }
         }
 
 
-        public CropTrackingPageViewModel(PlantDatabase plantDatabase) 
-        { 
+        public CropTrackingPageViewModel(PlantDatabase plantDatabase)
+        {
             _plantdatabase = plantDatabase;
             Crops = new ObservableCollection<CropTracking>(_plantdatabase.GetAllCrops());
         }

@@ -5,7 +5,7 @@ using SQLite;
 
 namespace IGadiYami.Services
 {
-	public class PlantDatabase
+    public class PlantDatabase
     {
         private SQLiteConnection _dbConnection;
         public PlantDatabase()
@@ -89,8 +89,8 @@ namespace IGadiYami.Services
                     Image = "onions.jpg",
                     DescriptionOfVeg = "Onions are versatile vegetables known for their pungent flavor and strong aroma. They come in various colors, including white, yellow, and red, each adding a unique taste to dishes. Onions can be eaten raw, cooked, or pickled, and they are a staple ingredient in many cuisines worldwide.",
                     CommonDiseases = "Botrytis Blight Disease\r\nBotrytis neck rot Disease\r\nDowny mildew Disease\r\nPurple blotch Disease\r\n",
-                    VegetableColor= "#ba5c21",
-                    VegButtonColor= "#006838",
+                    VegetableColor = "#ba5c21",
+                    VegButtonColor = "#006838",
 
                 };
                 _dbConnection.Insert(vegetables);

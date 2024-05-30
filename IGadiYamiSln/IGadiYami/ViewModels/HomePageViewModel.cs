@@ -26,7 +26,12 @@ namespace IGadiYami.ViewModels
         [RelayCommand]
         private async static Task OnGoToCommunityPageAsync()
         {
-            await Shell.Current.GoToAsync("createaccount");
+            await Shell.Current.GoToAsync("communitypage");
+        }
+        [RelayCommand]
+        private async static Task OnGoToPremiumFeaturePageAsync()
+        {
+            await Shell.Current.GoToAsync("croptracking");
         }
 
         void CreateMenuCollection() // Changed return type to void
