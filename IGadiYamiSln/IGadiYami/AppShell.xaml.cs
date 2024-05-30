@@ -21,6 +21,8 @@ namespace IGadiYami
             Routing.RegisterRoute("createaccount", typeof(CreateAccountPage));
             Routing.RegisterRoute("aicamera", typeof(CameraPage));
             Routing.RegisterRoute("homepage", typeof(HomePageView));
+            Routing.RegisterRoute("croptracking", typeof(CropTrackingPage));
+            Routing.RegisterRoute("trackedcrop", typeof(TrackedCrop));
         }
     }
 }

@@ -18,10 +18,11 @@
 
         <StackLayout Margin="10, 15, 10, 10">
             <Frame BorderColor="Black" HeightRequest="600">
-                <ListView ItemsSource="{Binding Crops}" HasUnevenRows="True">
-                    <ListView.ItemTemplate>
+                <CollectionView ItemsSource="{Binding Crops}" SelectionMode="Single" x:Name="AllCropsCollectionView"
+                        SelectionChangedCommand="{Binding CropSelectedCommand}" 
+                        SelectionChangedCommandParameter="{Binding Path=SelectedItem, Source={x:Reference AllCropsCollectionView}}">
+                    <CollectionView.ItemTemplate>
                         <DataTemplate x:DataType="crop:CropTracking">
-                            <ViewCell>
                                 <Grid>
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="40" />
@@ -30,10 +31,9 @@
                                     <Label Text="{Binding CropName}" Grid.Row="0" />
                                     <Label Text="{Binding PlantDate}" Grid.Row="1" />
                                 </Grid>
-                            </ViewCell>
                         </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
             </Frame>            
         </StackLayout>
         

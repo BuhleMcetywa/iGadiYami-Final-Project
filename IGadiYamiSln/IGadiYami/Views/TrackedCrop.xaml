@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IGadiYami.Views.TrackedCrop"
+             xmlns:local="clr-namespace:IGadiYami.ViewModels"
+             x:DataType="local:TrackedCropViewModel"
+             Title="TrackedCrop">
+    
+    <VerticalStackLayout>
+        <Label 
+            Text="Welcome Tracked Crop!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+            <Label Text="{Binding CropTracking.CropName}" Grid.Row="0" />
+            <Label Text="{Binding CropTracking.PlantDate}" Grid.Row="1" />
+            <Label Text="{Binding CropTracking.WaterAmount}" Grid.Row="2" />
+            <Label Text="{Binding CropTracking.GrowthAmount}" Grid.Row="3" />
+            <Label Text="{Binding CropTracking.Notes}" Grid.Row="4" />
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
