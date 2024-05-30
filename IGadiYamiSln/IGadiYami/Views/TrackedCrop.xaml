@@ -5,13 +5,8 @@
              xmlns:local="clr-namespace:IGadiYami.ViewModels"
              x:DataType="local:TrackedCropViewModel"
              Title="TrackedCrop">
-    
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome Tracked Crop!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
 
+    <VerticalStackLayout>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="20"/>
