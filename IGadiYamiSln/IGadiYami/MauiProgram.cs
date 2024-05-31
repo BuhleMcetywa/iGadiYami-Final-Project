@@ -6,7 +6,6 @@ using IGadiYami.Services;
 using IGadiYami.ViewModels;
 using IGadiYami.ViewModels.ChatbotViewModels;
 using IGadiYami.Views;
-using IgadiYamiDesign.Views;
 using Microsoft.Extensions.Logging;
 
 

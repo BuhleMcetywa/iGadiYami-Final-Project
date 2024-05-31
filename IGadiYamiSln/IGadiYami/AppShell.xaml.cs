@@ -1,5 +1,4 @@
 ﻿using IGadiYami.Views;
-using IgadiYamiDesign.Views;
 
 namespace IGadiYami
 {

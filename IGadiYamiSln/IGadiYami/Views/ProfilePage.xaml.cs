@@ -1,4 +1,4 @@
-namespace IgadiYamiDesign.Views;
+namespace IGadiYami.Views;
 
 public partial class ProfilePage : ContentPage
 {
