@@ -53,7 +53,7 @@ namespace IGadiYami
         {
             mauiAppBuilder.Services.AddSingleton<IgadiYamiQuestionViewModel>();
             mauiAppBuilder.Services.AddSingleton<IgadiYamiAnswerViewModel>();
-            mauiAppBuilder.Services.AddSingleton<CameraPageViewModel>();
+            mauiAppBuilder.Services.AddTransient<CameraPageViewModel>();
             mauiAppBuilder.Services.AddSingleton<LoginPageViewModel>();
             mauiAppBuilder.Services.AddSingleton<SignUpPageViewModel>();
             mauiAppBuilder.Services.AddSingleton<StartUpPageViewModel>();
@@ -66,7 +66,6 @@ namespace IGadiYami
             mauiAppBuilder.Services.AddSingleton<CropTackingPopUpViewModel>();
             mauiAppBuilder.Services.AddSingleton<SettingsProfileViewModel>();
             mauiAppBuilder.Services.AddSingleton<TrackedCropViewModel>();
-            mauiAppBuilder.Services.AddSingleton<CommunityPageViewModel>();
 
             return mauiAppBuilder;
         }
@@ -82,15 +81,12 @@ namespace IGadiYami
             mauiAppBuilder.Services.AddSingleton<CreateAccountPage>();
             mauiAppBuilder.Services.AddSingleton<VegetablePage>();
             mauiAppBuilder.Services.AddSingleton<SettingsPage>();
-            mauiAppBuilder.Services.AddSingleton<ProfilePage>();
             mauiAppBuilder.Services.AddSingleton<EditProfilePage>();
             mauiAppBuilder.Services.AddSingleton<AboutUs>();
             mauiAppBuilder.Services.AddSingleton<HomePageView>();
             mauiAppBuilder.Services.AddSingleton<CropTrackingPage>();
             mauiAppBuilder.Services.AddSingleton<CropTrackingPopUpPage>();
             mauiAppBuilder.Services.AddSingleton<TrackedCrop>();
-            mauiAppBuilder.Services.AddSingleton<CommunityPage>();
-            //mauiAppBuilder.Services.AddSingleton<MainTabbedPage>();
 
             return mauiAppBuilder;
         }
