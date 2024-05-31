@@ -9,7 +9,7 @@
     Title="IGadiYami">
 
 
-    <!-- <TabBar>
+     <!--<TabBar>
         <ShellContent
             Title="Home"
             ContentTemplate="{DataTemplate local:HomePageView}"
@@ -21,18 +21,23 @@
         <ShellContent
             Title="Camera"
             ContentTemplate="{DataTemplate local:CameraPage}"
+    
+    
             Route="MainMenu" />
         <ShellContent
-            Title="Community"
-            ContentTemplate="{DataTemplate local:CommunityPage}"
-            Route="MainMenu" />
+    Title="Community"
+    ContentTemplate="{DataTemplate local:CommunityPage}"
+    Route="MainMenu"/>
+
         <ShellContent
             Title="Settings"
             ContentTemplate="{DataTemplate local:SettingsPage}"
             Route="MainMenu" />
-    </TabBar> -->
+    </TabBar>-->
 
     <ShellContent
-        ContentTemplate="{DataTemplate local:SettingsPage}"
-        Route="SettingsPage" />
+        ContentTemplate="{DataTemplate local:CameraPage}"
+        Route="MainMenu" />
+
+ 
 </Shell>
