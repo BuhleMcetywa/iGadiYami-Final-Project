@@ -39,11 +39,11 @@ namespace IGadiYami.ViewModels
             await Shell.Current.GoToAsync("settingspage");
         }
 
-        //[RelayCommand]
-        //private void DarkModeCommand()
-        //{
-        //    // Logic to toggle dark mode
-        //}
+        /*[RelayCommand]
+        private void DarkModeCommand()
+        {
+            // Logic to toggle dark mode
+        }*/
 
         [RelayCommand]
         private static void PremiumTabCommand()
@@ -51,17 +51,17 @@ namespace IGadiYami.ViewModels
             // Logic for premium tab
         }
 
-        //[RelayCommand]
-        //private void FAQCommand()
-        //{
-        //    // Logic to show FAQ
-        //}
+        /*[RelayCommand]
+        private void FAQCommand()
+        {
+            // Logic to show FAQ
+        }
 
-        //[RelayCommand]
-        //private void HelpCommand()
-        //{
-        //    // Logic to show help
-        //}
+        [RelayCommand]
+        private void HelpCommand()
+        {
+            // Logic to show help
+        }*/
 
         [RelayCommand]
         private static async Task AboutUsCommand()
@@ -75,8 +75,6 @@ namespace IGadiYami.ViewModels
         private static void TermsAndConditionsCommand()
         {
             // Logic to show terms and conditions
-            // Navigation
-            //await Shell.Current.GoToAsync("editprofilepage");
         }
     }
 }

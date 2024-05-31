@@ -17,7 +17,7 @@
 
                 <!-- Name, Bio and Location -->
                 <Label Text="{Binding User.Name}" FontSize="35" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center" />
-                <!--<Label Text="{Binding User.Bio}" FontSize="18" TextColor="Black" HorizontalOptions="Center"/>-->
+                <Label Text="{Binding User.Bio}" FontSize="18" TextColor="Black" HorizontalOptions="Center"/>
                 <Label Text="{Binding User.Location}" FontSize="15" TextColor="Black" HorizontalOptions="Center"/>
             </StackLayout>
         </Frame>
@@ -26,12 +26,12 @@
         <!--<Button Text="Edit Profile                                      >" FontSize="20" TextColor="Black" BackgroundColor="White" Command="{Binding EditProfileCommand}" />-->
         <Frame CornerRadius="50" VerticalOptions="FillAndExpand">
             <VerticalStackLayout>
-                <Button Text="Edit Profile                            >"  FontSize="25" TextColor="Black" BackgroundColor="Transparent" Command="{Binding ProfileCommand}" />
-                <Button Text="Try Premium Version          >" FontSize="25" TextColor="Black" BackgroundColor="Transparent" Command="{Binding PremiumTabCommand}" />
+                <Button Text="Edit Profile                            >"  FontSize="25" TextColor="Black" BackgroundColor="Transparent" Command="{Binding ProfileCommandCommand}"/>
+                <Button Text="Try Premium Version          >" FontSize="25" TextColor="Black" BackgroundColor="Transparent" Command="{Binding PremiumTabCommandCommand}" />
                 <!--<Button Text="FAQ (Chatbot)                              >" FontSize="20" TextColor="Black" Command="{Binding FAQCommand}" />
             <Button Text="Help (Chatbot)                             >" FontSize="20" TextColor="Black" Command="{Binding HelpCommand}" />-->
-                <Button Text="About Us                               >" FontSize="25" TextColor="Black" BackgroundColor="Transparent" Command="{Binding AboutUsCommand}" />
-                <Button Text="Ts and Cs                              >" FontSize="25" TextColor="Black" BackgroundColor="Transparent" Command="{Binding TermsAndConditionsCommand}" />
+                <Button Text="About Us                               >" FontSize="25" TextColor="Black" BackgroundColor="Transparent" Command="{Binding AboutUsCommandCommand}" />
+                <Button Text="Ts and Cs                              >" FontSize="25" TextColor="Black" BackgroundColor="Transparent" Command="{Binding TermsAndConditionsCommandCommand}" />
             </VerticalStackLayout>
         </Frame>
     </StackLayout>
