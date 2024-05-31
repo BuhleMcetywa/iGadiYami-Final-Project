@@ -4,22 +4,38 @@
              x:Class="IGadiYami.Views.TrackedCrop"
              xmlns:local="clr-namespace:IGadiYami.ViewModels"
              x:DataType="local:TrackedCropViewModel"
+             BackgroundColor="#F9FFE0"
              Title="TrackedCrop">
 
     <VerticalStackLayout>
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="20"/>
-                <RowDefinition Height="20"/>
-                <RowDefinition Height="20"/>
-                <RowDefinition Height="20"/>
-                <RowDefinition Height="20"/>
+                <RowDefinition Height="320"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Label Text="{Binding CropTracking.CropName}" Grid.Row="0" />
-            <Label Text="{Binding CropTracking.PlantDate}" Grid.Row="1" />
-            <Label Text="{Binding CropTracking.WaterAmount}" Grid.Row="2" />
-            <Label Text="{Binding CropTracking.GrowthAmount}" Grid.Row="3" />
-            <Label Text="{Binding CropTracking.Notes}" Grid.Row="4" />
+            <Label Text="Tracked Crop details" VerticalOptions="Start" FontAttributes="Bold" HorizontalOptions="Center" Grid.Row="0" Padding="5" HeightRequest="40" Margin="0,20,0,0" TextColor="Black" FontSize="23"/>
+
+            <Frame WidthRequest="340" VerticalOptions="Center" Margin="0,480,0,0" HeightRequest="650" BackgroundColor="#006838">
+                <Label Text="{Binding CropTracking.CropName}" FontAttributes="Bold" VerticalOptions="Start" TextColor="#ffffff" HorizontalOptions="Center" Grid.Row="1" Padding="5" HeightRequest="40" Margin="0,0,0,0" FontSize="28"/>
+
+            </Frame>
+
+            <Label Text="Plant Added" FontSize="19" Margin="-180,0,0,0" TextColor="#ffffff" Grid.Row="2" HorizontalOptions="Center" />
+            <Label Text="{Binding CropTracking.PlantDate}"  Margin="200,0,0,0" FontSize="19" TextColor="#ffffff" Grid.Row="2"  />
+
+            <Label Text="{Binding CropTracking.WaterAmount}"  Margin="200,0,0,0"  FontSize="19" TextColor="#ffffff" Grid.Row="3" />
+            <Label Text="Water Amount"  Margin="50,0,0,0" FontSize="19" TextColor="#ffffff" Grid.Row="3"   />
+
+            <Label Text="Growth Amount" FontSize="19" Margin="50,0,0,0" TextColor="#ffffff" Grid.Row="4" />
+            <Label Text="{Binding CropTracking.GrowthAmount}" FontSize="19" Margin="200,0,0,0" TextColor="#ffffff" Grid.Row="4" />
+
+
+            <Label Text="Notes" FontSize="19" Margin="50,0,0,0" TextColor="#ffffff" Grid.Row="5" />
+            <Label Text="{Binding CropTracking.Notes}" FontSize="19" TextColor="#ffffff" Grid.Row="5" Margin="200,0,0,0" />
         </Grid>
     </VerticalStackLayout>
 </ContentPage>
