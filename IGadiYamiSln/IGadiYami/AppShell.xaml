@@ -33,6 +33,6 @@
     </TabBar> -->
 
     <ShellContent
-        ContentTemplate="{DataTemplate local:HomePageView}"
+        ContentTemplate="{DataTemplate local:SettingsPage}"
         Route="MainMenu" />
 </Shell>

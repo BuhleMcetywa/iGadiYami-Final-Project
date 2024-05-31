@@ -1,8 +1,8 @@
 namespace IgadiYamiDesign.Views;
 
-public partial class EditProfilePage : ContentPage
+public partial class ProfilePage : ContentPage
 {
-    public EditProfilePage()
+    public ProfilePage()
     {
         InitializeComponent();
     }

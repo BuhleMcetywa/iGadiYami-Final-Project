@@ -17,21 +17,22 @@ namespace IGadiYami.ViewModels
         }
 
         [RelayCommand]
-        private async Task EditProfileCommand()
+        private static async Task ProfileCommand()
         {
-            // Logic to edit profile
+            // Logic to view the user's profile
             // Navigation
-            await Shell.Current.GoToAsync("editprofilepage");
+            await Shell.Current.GoToAsync("profilepage");
         }
 
         [RelayCommand]
-        private void UpdateInformationCommand()
+        private static async Task EditButtonCommand()
         {
-            // Logic to update information for the profile
+            // Logic to edit information on the profile page
+            await Shell.Current.GoToAsync("editingprofilepage");
         }
 
         [RelayCommand]
-        private async void BackButtonCommand()
+        private static async Task BackButtonCommand()
         {
             // Logic to go back to the settings page
             // Navigation
@@ -45,7 +46,7 @@ namespace IGadiYami.ViewModels
         //}
 
         [RelayCommand]
-        private void PremiumTabCommand()
+        private static void PremiumTabCommand()
         {
             // Logic for premium tab
         }
@@ -63,7 +64,7 @@ namespace IGadiYami.ViewModels
         //}
 
         [RelayCommand]
-        private async void AboutUsCommand()
+        private static async Task AboutUsCommand()
         {
             // Logic to show about us
             // Navigation
@@ -71,7 +72,7 @@ namespace IGadiYami.ViewModels
         }
 
         [RelayCommand]
-        private async void TermsAndConditionsCommand()
+        private static void TermsAndConditionsCommand()
         {
             // Logic to show terms and conditions
             // Navigation

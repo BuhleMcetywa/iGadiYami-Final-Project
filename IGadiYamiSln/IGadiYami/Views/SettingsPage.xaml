@@ -26,7 +26,7 @@
         <!--<Button Text="Edit Profile                                      >" FontSize="20" TextColor="Black" BackgroundColor="White" Command="{Binding EditProfileCommand}" />-->
         <Frame CornerRadius="50" VerticalOptions="FillAndExpand">
             <VerticalStackLayout>
-                <Button Text="Edit Profile                            >"  FontSize="25" TextColor="Black" BackgroundColor="Transparent" Command="{Binding EditProfileCommand}" />
+                <Button Text="Edit Profile                            >"  FontSize="25" TextColor="Black" BackgroundColor="Transparent" Command="{Binding ProfileCommand}" />
                 <Button Text="Try Premium Version          >" FontSize="25" TextColor="Black" BackgroundColor="Transparent" Command="{Binding PremiumTabCommand}" />
                 <!--<Button Text="FAQ (Chatbot)                              >" FontSize="20" TextColor="Black" Command="{Binding FAQCommand}" />
                 <Button Text="Help (Chatbot)                             >" FontSize="20" TextColor="Black" Command="{Binding HelpCommand}" />-->

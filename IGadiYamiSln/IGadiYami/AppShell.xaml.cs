@@ -1,4 +1,5 @@
 ﻿using IGadiYami.Views;
+using IgadiYamiDesign.Views;
 
 namespace IGadiYami
 {
@@ -24,6 +25,10 @@ namespace IGadiYami
             Routing.RegisterRoute("croptracking", typeof(CropTrackingPage));
             Routing.RegisterRoute("trackedcrop", typeof(TrackedCrop));
             Routing.RegisterRoute("communitypage", typeof(CommunityPage));
+            Routing.RegisterRoute("settingspage", typeof(SettingsPage));
+            Routing.RegisterRoute("profilepage", typeof(ProfilePage));
+            Routing.RegisterRoute("editingprofilepage", typeof(EditProfilePage));
+            Routing.RegisterRoute("aboutuspage", typeof(AboutUs));
             //Routing.RegisterRoute("maintabbedpage", typeof(MainTabbedPage));
         }
     }
