@@ -378,7 +378,7 @@ namespace IGadiYami.Services
                     DiseaseID = 16,
                     DiseaseName = "Purple blotch",
                     DiseaseCauses = "Caused by the fungus Alternarria porria, pathogen thrives in warm, moist conditions.",
-                    DiseaseControlMeasures = "Applying a broad spectrum protective fungicides before infection can provide good protection, crop rotation is recommended after an outbreak, try to minimize leaf wetness by using  surface irrigation instead of sprinkler irrigation, ensure good field drainage and maintain correct plant spacing.",
+                    DiseaseControlMeasures = "Applying a broad spectrum protective fungicides before infection can provide good protection, crop rotation is recommended after an outbreak, try to minimize leaf wetness by using  surface irrigation instead of sprinkler irrigation, ensure good field \n drainage and maintain correct plant spacing.",
                     TagDescription = "Purple Blotch Disease"
                 };
                 _dbConnection.Insert(disease);
@@ -388,7 +388,7 @@ namespace IGadiYami.Services
                     DiseaseID = 17,
                     DiseaseName = "Anthracnose",
                     DiseaseCauses = "Caused by several species of the fungus Colletotrichum. Ripe and overripe fruit are especially susceptible but the pathogen can infect green fruit with symptoms not developing until fruit begin to ripen. ",
-                    DiseaseControlMeasures = "\"To stop anthracnose in tomatoes, keep the area clean by removing infected plants and\r\nrotating crops each year. Choose resistant tomato types and water plants carefully to keep\r\nthe leaves dry. Apply mulch, consider using fungicides if needed, and regularly check for\r\n\r\nsigns of the disease.\"",
+                    DiseaseControlMeasures = "To stop anthracnose in tomatoes, keep the area clean by removing infected plants and\r\nrotating crops each year. Choose resistant tomato types and water plants carefully to keep\r\nthe leaves dry. Apply mulch, consider using fungicides if needed, and regularly check for\r\n\r\nsigns of the disease.\"",
                     TagDescription = "Anthracnose Disease"
                 };
                 _dbConnection.Insert(disease);
@@ -396,9 +396,9 @@ namespace IGadiYami.Services
                 disease = new Disease()
                 {
                     DiseaseID = 18,
-                    DiseaseName = "Blosom End Rot",
+                    DiseaseName = "Blossom End Rot",
                     DiseaseCauses = "\nLow calcium levels in the soil.\r\nSoil that is over- or underwatered.\r\nWide fluctuations in soil moisture.\r\nInconsistent watering.\r\nLow soil pH.\r\nExcessive nitrogen.\n",
-                    DiseaseControlMeasures = "\"To prevent blossom end rot in tomatoes, maintain consistent watering to avoid fluctuations\r\nin soil moisture. Ensure proper calcium levels in the soil through soil amendments or\r\nfertilizers containing calcium. Mulch around tomato plants to regulate soil temperature and\r\nmoisture, and avoid excessive nitrogen fertilization, which can interfere with calcium\r\n\r\nuptake.\"",
+                    DiseaseControlMeasures = "To prevent blossom end rot in tomatoes, maintain consistent watering to avoid fluctuations\r\nin soil moisture. Ensure proper calcium levels in the soil through soil amendments or\r\nfertilizers containing calcium. Mulch around tomato plants to regulate soil temperature and moisture, and avoid excessive nitrogen fertilization, which can interfere with calcium uptake.",
                     TagDescription = "Blossom End Rot Disease"
 
                 };
