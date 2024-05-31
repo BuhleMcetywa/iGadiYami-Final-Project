@@ -7,20 +7,18 @@
              x:Class="IGadiYami.Views.CropTrackingPopUpPage">
     
     <VerticalStackLayout WidthRequest="300" HeightRequest="520" Padding="10" x:DataType="vm:CropTrackingPageViewModel">
-        <Label 
-            Text="Crop Tracking"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" Margin="5" FontSize="20"/>
+       
 
         <StackLayout>
-            <Frame BorderColor="Black" HeightRequest="470">
+            <Frame BackgroundColor="#006838" HeightRequest="470" >
                 <StackLayout Padding="10">
-                    <Entry Placeholder="Crop Name..." Text="{Binding CropName}" Margin="0, 10, 0, 10"/>
-                    <Entry Placeholder="PlantDate..." Text="{Binding PlantDate}" Margin="0, 10, 0, 10"/>
-                    <Entry Placeholder="Water Amount..." Text="{Binding WaterAmount}" Margin="0, 10, 0, 10"/>
-                    <Entry Placeholder="Growth Amount..." Text="{Binding GrowthAmount}" Margin="0, 10, 0, 10"/>
-                    <Entry Placeholder="Notes..." Text="{Binding Notes}"/>
-                    <Button Text="Add Crop" WidthRequest="100" Command="{Binding CreateCropCommand}" HorizontalOptions="End" Margin="5, 10, 5, 10"/>
+                    <Label  Text="Crop Tracking" FontAttributes="Bold" VerticalOptions="Center" TextColor="#ffffff" HorizontalOptions="Center" Margin="5" FontSize="24" />
+                    <Entry Placeholder="Crop Name..." Text="{Binding CropName}" Margin="0, 10, 0, 10" PlaceholderColor="#ffffff" BackgroundColor="#006838"/>
+                    <Entry Placeholder="PlantDate..." Text="{Binding PlantDate}" Margin="0, 10, 0, 10" PlaceholderColor="#ffffff" TextColor="#ffffff"/>
+                    <Entry Placeholder="Water Amount..." Text="{Binding WaterAmount}" Margin="0, 10, 0, 10" PlaceholderColor="#ffffff" TextColor="#ffffff"/>
+                    <Entry Placeholder="Growth Amount..." Text="{Binding GrowthAmount}" Margin="0, 10, 0, 10" PlaceholderColor="#ffffff" TextColor="#ffffff"/>
+                    <Entry Placeholder="Notes..." Text="{Binding Notes}" PlaceholderColor="AntiqueWhite"/>
+                    <Button Text="Add Crop" BackgroundColor="#ffffff" TextColor="#006838" WidthRequest="100" Command="{Binding CreateCropCommand}" HorizontalOptions="End" Margin="5, 10, 5, 10"/>
                 </StackLayout>
             </Frame>
         </StackLayout>

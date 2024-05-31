@@ -36,8 +36,6 @@
     </TabBar>-->
 
     <ShellContent
-        ContentTemplate="{DataTemplate local:CameraPage}"
-        Route="MainMenu" />
-
- 
+        ContentTemplate="{DataTemplate local:CropTrackingPage}"
+        Route="SettingsPage" />
 </Shell>

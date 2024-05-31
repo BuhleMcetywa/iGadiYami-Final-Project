@@ -24,44 +24,44 @@ namespace IGadiYami.ViewModels
             await Shell.Current.GoToAsync("profilepage");
         }
 
-        [RelayCommand]
+        /*[RelayCommand]
         private static async Task EditButtonCommand()
         {
-            // Logic to edit information on the profile page
+            Logic to edit information on the profile page
             await Shell.Current.GoToAsync("editingprofilepage");
         }
 
         [RelayCommand]
         private static async Task BackButtonCommand()
         {
-            // Logic to go back to the settings page
-            // Navigation
+            Logic to go back to the settings page
+             Navigation
             await Shell.Current.GoToAsync("settingspage");
         }
 
-        //[RelayCommand]
-        //private void DarkModeCommand()
-        //{
-        //    // Logic to toggle dark mode
-        //}
+        [RelayCommand]
+        private void DarkModeCommand()
+        {
+             Logic to toggle dark mode
+        }
 
         [RelayCommand]
         private static void PremiumTabCommand()
         {
-            // Logic for premium tab
+             Logic for premium tab
         }
 
-        //[RelayCommand]
-        //private void FAQCommand()
-        //{
-        //    // Logic to show FAQ
-        //}
+        [RelayCommand]
+        private void FAQCommand()
+        {
+             Logic to show FAQ
+        }
 
-        //[RelayCommand]
-        //private void HelpCommand()
-        //{
-        //    // Logic to show help
-        //}
+        [RelayCommand]
+        private void HelpCommand()
+        {
+             Logic to show help
+        }*/
 
         [RelayCommand]
         private static async Task AboutUsCommand()
@@ -71,12 +71,10 @@ namespace IGadiYami.ViewModels
             await Shell.Current.GoToAsync("aboutuspage");
         }
 
-        [RelayCommand]
+        /*[RelayCommand]
         private static void TermsAndConditionsCommand()
         {
             // Logic to show terms and conditions
-            // Navigation
-            //await Shell.Current.GoToAsync("editprofilepage");
-        }
+        }*/
     }
 }
