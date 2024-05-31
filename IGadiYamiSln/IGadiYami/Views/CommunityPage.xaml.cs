@@ -4,10 +4,14 @@ namespace IGadiYami.Views;
 
 public partial class CommunityPage : ContentPage
 {
-    public CommunityPage(CommunityPageViewModel vm)
+    public CommunityPage()
     {
         InitializeComponent();
-
-        BindingContext = vm;
+        BindingContext = new CommunityPageViewModel();
     }
+    /*public CommunityPage(CommunityPageViewModel vm)
+    {
+        InitializeComponent();
+        BindingContext = vm;
+    }*/
 }

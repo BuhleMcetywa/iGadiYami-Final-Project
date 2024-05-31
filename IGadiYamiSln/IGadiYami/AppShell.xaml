@@ -33,6 +33,6 @@
     </TabBar> -->
 
     <ShellContent
-        ContentTemplate="{DataTemplate local:CropTrackingPage}"
+        ContentTemplate="{DataTemplate local:HomePageView}"
         Route="SettingsPage" />
 </Shell>

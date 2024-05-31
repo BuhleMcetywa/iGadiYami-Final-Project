@@ -36,8 +36,8 @@ namespace IGadiYami.ViewModels
         public void GetCurrenTime()
         {
             //var signupentry = _signUpPageViewModel.Name;
-            var name = _userdatabase.GetUserByName("Ethan");
-            DisplayName = name.UserName; 
+            //var name = _userdatabase.GetUserByName("Ethan");
+            //DisplayName = name.UserName; 
 
             var currentTime = DateTime.Now;
             var timeString = currentTime.ToString("HH:mm:ss tt");

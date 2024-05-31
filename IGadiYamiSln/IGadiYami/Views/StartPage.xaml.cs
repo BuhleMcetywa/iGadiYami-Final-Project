@@ -5,11 +5,6 @@ namespace IGadiYami.Views
     public partial class StartPage : ContentPage
     {
         StartUpPageViewModel _viewModel;
-
-        public StartPage()
-        {
-        }
-
         public StartPage(StartUpPageViewModel vm)
         {
             _viewModel = vm;
