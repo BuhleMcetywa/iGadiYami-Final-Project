@@ -66,9 +66,12 @@
 	  <None Remove="Resources\Images\carrot1.jpg" />
 	  <None Remove="Resources\Images\carrots.jpeg" />
 	  <None Remove="Resources\Images\chulu.png" />
+	  <None Remove="Resources\Images\communitychatback.png" />
+	  <None Remove="Resources\Images\dm.png" />
 	  <None Remove="Resources\Images\ethan.png" />
 	  <None Remove="Resources\Images\igadiimage2.jpg" />
 	  <None Remove="Resources\Images\igadiyamibackgroundtwo.png" />
+	  <None Remove="Resources\Images\laughing.png" />
 	  <None Remove="Resources\Images\luke.png" />
 	  <None Remove="Resources\Images\menupic.jpg" />
 	  <None Remove="Resources\Images\ndosi.png" />
@@ -84,6 +87,7 @@
 	  <None Remove="Resources\Images\simbonile.png" />
 	  <None Remove="Resources\Images\spinach.jpg" />
 	  <None Remove="Resources\Images\spinach1.jpeg" />
+	  <None Remove="Resources\Images\star.png" />
 	  <None Remove="Resources\Images\tomato1.jpg" />
 	  <None Remove="Resources\Images\tomatoes.jpg" />
 	</ItemGroup>
