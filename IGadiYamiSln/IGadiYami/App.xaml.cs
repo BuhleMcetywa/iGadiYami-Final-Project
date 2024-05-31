@@ -9,7 +9,7 @@ namespace IGadiYami
             InitializeComponent();
             MainPage = new AppShell();
             //MainPage = new NavigationPage(new StartPage(new ViewModels.StartUpPageViewModel());
-            //MainPage = new NavigationPage(new StartPage());
+            //MainPage = new NavigationPage(new ProfilePage());
         }
     }
 }

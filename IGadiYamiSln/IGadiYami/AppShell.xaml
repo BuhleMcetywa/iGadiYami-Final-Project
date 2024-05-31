@@ -34,5 +34,5 @@
 
     <ShellContent
         ContentTemplate="{DataTemplate local:SettingsPage}"
-        Route="MainMenu" />
+        Route="SettingsPage" />
 </Shell>

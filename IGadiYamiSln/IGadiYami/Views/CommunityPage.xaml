@@ -4,6 +4,7 @@
              x:Class="IGadiYami.Views.CommunityPage"
              xmlns:vm="clr-namespace:IGadiYami.ViewModels"
              BackgroundColor="#F9FFE0"
+             BackgroundImageSource="communitychatback.png"
              Title="CommunityChatView">
     
     <Grid x:DataType="vm:CommunityPageViewModel">
@@ -43,7 +44,7 @@
                     <Frame CornerRadius="20" BackgroundColor="#8CC342" HorizontalOptions="Start" VerticalOptions="Start">
                         <StackLayout Orientation="Horizontal" Padding="10">
                             <Frame WidthRequest="40" HeightRequest="40" CornerRadius="20" Padding="0" Margin="0,0,10,0">
-                                <Image Source="user1_avatar.png"
+                                <Image Source="laughing.png"
                                        Aspect="AspectFill"
                                        WidthRequest="40"
                                        HeightRequest="40" />
@@ -70,7 +71,7 @@
                                    VerticalOptions="Center"
                                    LineBreakMode="WordWrap" />
                             <Frame WidthRequest="40" HeightRequest="40" CornerRadius="20" Padding="0" Margin="10,0,0,0">
-                                <Image Source="user2_avatar.png"
+                                <Image Source="star.png"
                                        Aspect="AspectFill"
                                        WidthRequest="40"
                                        HeightRequest="40" />
@@ -103,7 +104,7 @@
                        Margin="10,0,0,0" />
             </Frame>
             <ImageButton Grid.Column="1"
-                    Source="ethan.png"
+                    Source="dm.png"
                     HeightRequest="55"
                     WidthRequest="55"
                     CornerRadius="10"
