@@ -8,7 +8,7 @@
     
     <VerticalStackLayout x:DataType="vm:CropTrackingPageViewModel">
         <StackLayout HeightRequest="70">
-            <Frame BackgroundColor="#006838" WidthRequest="430" HeightRequest="75" Margin="0,-10,0,0">
+            <Border BackgroundColor="#006838" WidthRequest="430" HeightRequest="75" Margin="0,-10,0,0">
                 <Label 
                 FontAttributes="Bold"
                  FontSize="20"
@@ -16,7 +16,7 @@
                 Text="Crop Tracking"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
-            </Frame>
+            </Border>
         </StackLayout>
 
         <StackLayout Margin="10, 15, 10, 10">
@@ -34,7 +34,13 @@
                                 <RowDefinition Height="40" />
                             </Grid.RowDefinitions>
                             <Frame  Grid.Row="0" HeightRequest="50" BackgroundColor="#006838" Margin="0,15,0,0">
-
+                                <Frame.GestureRecognizers
+                                     SelectionMode="Single" x:Name="AllVegetablesCollectionView"
+              
+                                     SelectionChangedCommand="{Binding CropSelectedCommand}" 
+                       SelectionChangedCommandParameter="{Binding Path=SelectedItem, Source={x:Reference AllCropsCollectionView}}">
+                                
+                                </Frame.GestureRecognizers>
                                 <Label Text="{Binding CropName}"  TextColor="#F9FFE0" FontAttributes="Bold" FontSize="18" Grid.Row="0" Margin="0,-12,0,0" />
                             </Frame>
                         </Grid>
