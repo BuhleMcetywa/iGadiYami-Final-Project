@@ -8,7 +8,7 @@
         <VerticalStackLayout>
             <!--Header where the name needs to be binded?-->
             <HorizontalStackLayout Padding="15" BackgroundColor="#006838">
-                <Label Text="Good Morning, Lucas" TextColor="#f8f2cc" Margin="6,5,0,0" FontAttributes="Bold" FontFamily="Canva Sans" WidthRequest="200" FontSize="27"/>
+                <Label Text="{Binding DisplayCurrentTime}" TextColor="#f8f2cc" Margin="6,5,0,0" FontAttributes="Bold" FontFamily="Canva Sans" WidthRequest="200" FontSize="27"/>
                 <Image Source="igadiimage2" WidthRequest="70" Margin="80,0,0,2"/>
             </HorizontalStackLayout>
 

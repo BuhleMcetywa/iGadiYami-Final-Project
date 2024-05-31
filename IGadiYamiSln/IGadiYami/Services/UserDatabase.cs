@@ -79,6 +79,11 @@ namespace IGadiYami.Services
             return _dbConnection.Table<UserData>().FirstOrDefault(u => u.UserID == Id);
         }
 
+        public UserData GetUserByName(string name)
+        {
+            return _dbConnection.Table<UserData>().FirstOrDefault(u => u.UserName == name);
+        }
+
         public bool VerifyUserPassword(string userEmail, string userPassword)
         {
             var user = _dbConnection.Table<UserData>().FirstOrDefault(u => u.UserEmail == userEmail);
