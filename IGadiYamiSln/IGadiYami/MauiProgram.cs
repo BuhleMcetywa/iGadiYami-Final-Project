@@ -75,7 +75,7 @@ namespace IGadiYami
             mauiAppBuilder.Services.AddSingleton<LoginPage>();
             mauiAppBuilder.Services.AddSingleton<SignupPage>();
             mauiAppBuilder.Services.AddSingleton<StartPage>();
-            mauiAppBuilder.Services.AddSingleton<CameraPage>();
+            mauiAppBuilder.Services.AddTransient<CameraPage>();
             mauiAppBuilder.Services.AddSingleton<StartGardeningPage>();
             mauiAppBuilder.Services.AddSingleton<CreateAccountPage>();
             mauiAppBuilder.Services.AddSingleton<VegetablePage>();
