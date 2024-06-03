@@ -46,15 +46,15 @@ namespace IGadiYami.ViewModels
 
             if (hour < 12)
             {
-                DisplayCurrentTime = $"Good Morning! {DisplayName}.";
+                DisplayCurrentTime = $"Good Morning! {DisplayName}";
             }
             else if (hour < 18)
             {
-                DisplayCurrentTime = $"Good Afternoon! {DisplayName}.";
+                DisplayCurrentTime = $"Good Afternoon! {DisplayName}";
             }
             else
             {
-                DisplayCurrentTime = $"Good Evening! {DisplayName}.";
+                DisplayCurrentTime = $"Good Evening! {DisplayName}";
             }
         }
 
