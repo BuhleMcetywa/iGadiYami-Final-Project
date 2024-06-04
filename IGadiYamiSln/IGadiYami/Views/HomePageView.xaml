@@ -117,9 +117,16 @@
 
                     <VerticalStackLayout>
                         <Frame Margin="25,10,0,0" WidthRequest="110" HeightRequest="110" CornerRadius="80">
-                            <Image Source="ndosi" WidthRequest="110" HeightRequest="110" Aspect="AspectFit"/>
+                            <Image Source="scrummaster" WidthRequest="110" HeightRequest="110" Aspect="AspectFit"/>
                         </Frame>
                         <Label Text="Buhle" Margin="63,10,0,0" />
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout>
+                        <Frame Margin="25,10,0,0" WidthRequest="110" HeightRequest="110" CornerRadius="80">
+                            <Image Source="luke" WidthRequest="110" HeightRequest="110" Aspect="AspectFit"/>
+                        </Frame>
+                        <Label Text="Simbonile" Margin="63,10,0,0" />
                     </VerticalStackLayout>
 
                 </HorizontalStackLayout>
