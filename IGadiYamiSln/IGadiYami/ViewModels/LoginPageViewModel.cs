@@ -33,7 +33,7 @@ namespace IGadiYami.ViewModels
 
             if (_userDatabase.VerifyUserPassword(email, password))
             {
-                await Shell.Current.GoToAsync("homepage");
+                await Shell.Current.GoToAsync("//homepage");
                 //Application.Current.MainPage = new AppShell();
             }
             else

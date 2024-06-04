@@ -188,7 +188,7 @@ namespace IGadiYami.ViewModels
             UserSurnameEntry = "";
             UserEmailEntry = "";
             UserPasswordEntry = "";
-            await Shell.Current.GoToAsync("homepage");
+            await Shell.Current.GoToAsync("//homepage");
             //Application.Current.MainPage = new AppShell();
         }
 
