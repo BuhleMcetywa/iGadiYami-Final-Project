@@ -436,8 +436,8 @@ namespace IGadiYami.Services
                 {
                     DiseaseID = 21,
                     DiseaseName = "White Rust",
-                    DiseaseCauses = "",
-                    DiseaseControlMeasures = "",
+                    DiseaseCauses = "White rust disease on spinach is caused by the pathogen Albugo occidentalis.",
+                    DiseaseControlMeasures = "Prevention: Since white rust thrives in cool, damp conditions, focus on prevention. Plant spinach during optimal temperatures (between 12-22°C) and avoid overwatering. Systemic fungicides can be applied when planting new seedlings to prevent infection.\r\nObservation: Regularly inspect your spinach plants for symptoms. Look for chlorotic spots on the upper leaf surface and corresponding white blisters or bumps on the undersides. If you notice severe wilting or collapse, remove and destroy affected plants to prevent further spread.",
                     TagDescription = "White Rust Disease"
                 };
                 _dbConnection.Insert(disease);
@@ -446,8 +446,8 @@ namespace IGadiYami.Services
                 {
 					DiseaseID = 22,
 					DiseaseName = "Southern Blight ",
-					DiseaseCauses = "",
-					DiseaseControlMeasures = "",
+					DiseaseCauses = "The disease is caused by the soil-borne fungus Athelia rolfsii (formerly known as Sclerotium rolfsii).",
+					DiseaseControlMeasures = "Managing southern blight involves:\r\nCrop rotation to reduce sclerotia levels.\r\nAvoiding planting susceptible crops in infested areas.\r\nEnsuring well-drained soil and avoiding excessive moisture.\r\nFungicides may be used preventively.",
 					TagDescription = "Southern Blight Disease"
 				};
                 _dbConnection.Insert(disease);
@@ -455,12 +455,12 @@ namespace IGadiYami.Services
                 disease = new Disease()
                 {
                     DiseaseID = 23,
-                    DiseaseName = "Root Rot Disease",
-                    DiseaseCauses = "",
-                    DiseaseControlMeasures = "",
+                    DiseaseName = "Root Rot",
+                    DiseaseCauses = "Root rot is caused by a complex of soil fungi, including Fusarium oxysporum, Pythium (several species), and Rhizoctonia solani.\nClay or poorly draining soils with a history of frequent spinach production contribute to severity.",
+                    DiseaseControlMeasures = "Well-Draining Soil: Plant spinach in well-draining soils.\r\nIrrigation: Manage irrigation to prevent flooding and saturated soil conditions.\r\nTreated Seed: Use seed treated with fungicides.\r\nCrop Rotation: Avoid consecutive spinach crops and practice good crop rotation",
                     TagDescription = "Root Rot Disease"
                 };
-                _dbConnection.Insert(disease);
+
             }
             //In our UI we will have a list of diseases that are associated with the vegetable you have selected(Common diseases) so that information should comeback as a list from here
             if (_dbConnection.Table<VegetableDisease>().Count() == 0)
@@ -594,6 +594,29 @@ namespace IGadiYami.Services
                     VegTypeID = 5,
                     DiseaseID = 20,
                 };
+                _dbConnection.Insert(vegDisease);
+
+                vegDisease = new VegetableDisease()
+                {
+					VegTypeID = 4,
+					DiseaseID = 21,
+				};
+                _dbConnection.Insert(vegDisease);
+
+                vegDisease = new VegetableDisease()
+                {
+					VegTypeID = 5,
+					DiseaseID = 22,
+				};
+                _dbConnection.Insert(vegDisease);
+
+                vegDisease = new VegetableDisease()
+                {
+                    VegTypeID = 4,
+                    DiseaseID = 23,
+
+                };
+                _dbConnection.Insert(vegDisease);
             }
         }
 
