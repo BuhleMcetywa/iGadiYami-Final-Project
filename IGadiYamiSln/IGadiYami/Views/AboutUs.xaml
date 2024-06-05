@@ -2,9 +2,23 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="IGadiYami.Views.AboutUs"
+             xmlns:vm="clr-namespace:IGadiYami.ViewModels"
              BackgroundColor="#F9FFE0">
 
+    <ContentPage.BindingContext>
+        <vm:SettingsProfileViewModel />
+    </ContentPage.BindingContext>
+
+   
     <StackLayout Padding="20">
+        <!-- Back Arrow Button -->
+        <ImageButton Source="back.png"
+                     Margin="-250,0,0,10"
+                     HorizontalOptions="StartAndExpand"
+                     Command="{Binding BackArrowCommandCommand}"
+                     BackgroundColor="Transparent"
+                     HeightRequest="40"/>
+        
         <!-- Title -->
         <Label Text="Meet the creators of Igadi Yami"
                    FontSize="24"
@@ -12,7 +26,7 @@
                    FontAttributes="Bold"
                    HorizontalOptions="Center"
                    VerticalOptions="Start"
-                   Margin="0,20,0,20" />
+                   Margin="0,0,0,20" />
 
         <!-- Creators Section -->
         <ScrollView Orientation="Horizontal">
@@ -91,21 +105,8 @@
         <Frame BackgroundColor="Black"
                    CornerRadius="10"
                    Margin="0,40,0,0"
-                   Padding="20">
-            <StackLayout>
-                <Image Source="aboutusbg.png"/>
-                <Label Text="Our Vision"
-                       FontSize="22"
-                       FontAttributes="Bold"
-                       TextColor="White"
-                       HorizontalOptions="Center"
-                       Margin="0,0,0,10" />
-                <Label Text="At iGadi Yami, our vision is to empower subsistence farmers for a sustainable future by addressing hunger through agriculture. We understand the challenges of South Africa's agricultural landscape and the critical role of subsistence farming in ensuring food security. However, these farmers face barriers to sustainability and prosperity. Our mission is clear: revolutionizing subsistence farming for a hunger-free future."
-                       TextColor="White"
-                       FontSize="16" 
-                       HorizontalOptions="Center"
-                       Margin="0,0,0,10"/>
-            </StackLayout>
+                   Padding="5">
+            <Image Source="vision.png" Aspect="AspectFill"/>
         </Frame>
     </StackLayout>
 </ContentPage>
