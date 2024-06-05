@@ -10,8 +10,8 @@ namespace IGadiYami.ViewModels
         {
             User = new UserSettingsProfile
             {
-                Name = "Ndosi Yogurt",
-                Location = "Khayelitsha",
+                Name = "Buhle Mcetywa",
+                Location = "Kuils River",
                 Bio = "I love farming and gardens and plants and trees and leafs and crops with roots from seeds and stuff."
             };
         }
@@ -61,10 +61,12 @@ namespace IGadiYami.ViewModels
             await Shell.Current.GoToAsync("aboutuspage");
         }
 
-        /*[RelayCommand]
-        private static void TermsAndConditionsCommand()
+        [RelayCommand]
+        private static async Task TermsAndConditionsCommand()
         {
             // Logic to show terms and conditions
-        }*/
+            // Navigation
+            await Shell.Current.GoToAsync("termsconditions");
+        }
     }
 }

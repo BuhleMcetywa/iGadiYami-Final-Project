@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:IGadiYami.ViewModels"
+             x:Class="IGadiYami.Views.TermsAndConditions"
+             BackgroundColor="#006838">
+
+    <ContentPage.BindingContext>
+        <vm:SettingsProfileViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <StackLayout Padding="10">
+        <!-- Back Arrow Button -->
+        <ImageButton Source="back.png"
+             Margin="-250,0,0,-40"
+             HorizontalOptions="StartAndExpand"
+             Command="{Binding BackArrowCommandCommand}"
+             BackgroundColor="Transparent"
+             HeightRequest="35"/>
+        <Label Text="Terms and Conditions" HorizontalOptions="CenterAndExpand" FontSize="30" TextColor="Black" FontAttributes="Bold"/>
+            <StackLayout>
+                <Frame BorderColor="WhiteSmoke" BackgroundColor="Transparent" CornerRadius="10" Padding="10">
+                    <VerticalStackLayout>
+                        <Label Text="Welcome to IGadi Yami. By using our services, you agree to the following terms and conditions:" TextColor="White"/>
+                        <Label Text="1. Acceptance of Terms: By accessing and using this application, you agree to comply with and be bound by these terms. If you do not agree, please do not use our services." TextColor="White"/>
+                        <Label Text="2. Services Provided: This application offers tools for crop monitoring, growth tracking, and tutorials on planting various crops. The information provided is for educational purposes and should not replace professional agricultural advice." TextColor="White"/>
+                        <Label Text="3. User Responsibilities: Users must provide accurate information for monitoring and tracking purposes. Misuse of the application, including submitting false data, is prohibited." TextColor="White"/>
+                        <Label Text="4. Data Collection: We collect and store data related to crop growth and user interactions. This data is used to improve our services and provide personalized recommendations. We respect your privacy and protect your data in accordance with our Privacy Policy." TextColor="White"/>
+                        <Label Text="5. Intellectual Property: All content, including text, graphics, logos, and tutorials, is the intellectual property of the application and its licensors. Unauthorized use or reproduction of this content is prohibited." TextColor="White"/>
+                        <Label Text="6. Limitation of Liability: We are not liable for any direct, indirect, incidental, or consequential damages arising from the use of our application. Users assume full responsibility for the application of provided information." TextColor="White"/>
+                        <Label Text="7. Modifications: We reserve the right to modify these terms at any time. Continued use of the application constitutes acceptance of any changes." TextColor="White"/>
+                        <Label Text="8. Governing Law: These terms are governed by the laws of [Your Country/State]. Any disputes will be resolved in the appropriate courts of this jurisdiction." TextColor="White"/>
+                        <Label Text="By using our application, you acknowledge that you have read, understood, and agreed to these terms and conditions." TextColor="White"/>
+                    </VerticalStackLayout>
+                </Frame>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
