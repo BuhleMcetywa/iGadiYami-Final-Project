@@ -15,22 +15,27 @@
     <TabBar>
         <ShellContent
             Title="Home"
+            Icon="home.png"
             ContentTemplate="{DataTemplate local:HomePageView}"
             Route="homepage" />
         <ShellContent
             Title="Guides"
+            Icon="manual.png"
             ContentTemplate="{DataTemplate local:StartGardeningPage}"
             Route="startgardening" />
         <ShellContent
             Title="Camera"
+            Icon="camera.png"
             ContentTemplate="{DataTemplate local:CameraPage}"
             Route="aicamera" />
         <ShellContent
             Title="Community"
+            Icon="group.png"
             ContentTemplate="{DataTemplate local:CommunityPage}"
             Route="communitypage" />
         <ShellContent
             Title="Settings"
+            Icon="settings.png"
             ContentTemplate="{DataTemplate local:SettingsPage}"
             Route="settingpage" />
     </TabBar> 
