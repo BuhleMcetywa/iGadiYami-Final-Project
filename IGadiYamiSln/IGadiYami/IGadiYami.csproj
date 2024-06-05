@@ -59,7 +59,7 @@
 	<ItemGroup>
 	  <None Remove="Platforms\Android\Assets\labels.txt" />
 	  <None Remove="Platforms\Android\Assets\model.pb" />
-	  <None Remove="Resources\Images\aboutusbg.png" />
+	  <None Remove="Resources\Images\back.png" />
 	  <None Remove="Resources\Images\background.jpg" />
 	  <None Remove="Resources\Images\bandile.png" />
 	  <None Remove="Resources\Images\buhle.png" />
@@ -75,6 +75,7 @@
 	  <None Remove="Resources\Images\igadiimage2.jpg" />
 	  <None Remove="Resources\Images\igadiyamibackgroundtwo.png" />
 	  <None Remove="Resources\Images\laughing.png" />
+	  <None Remove="Resources\Images\lock.png" />
 	  <None Remove="Resources\Images\luke.png" />
 	  <None Remove="Resources\Images\manual.png" />
 	  <None Remove="Resources\Images\menupic.jpg" />
@@ -96,6 +97,7 @@
 	  <None Remove="Resources\Images\star.png" />
 	  <None Remove="Resources\Images\tomato1.jpg" />
 	  <None Remove="Resources\Images\tomatoes.jpg" />
+	  <None Remove="Resources\Images\vision.png" />
 	</ItemGroup>
 
 	<ItemGroup>

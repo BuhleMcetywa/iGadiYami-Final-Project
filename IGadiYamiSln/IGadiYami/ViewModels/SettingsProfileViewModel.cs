@@ -24,43 +24,33 @@ namespace IGadiYami.ViewModels
             await Shell.Current.GoToAsync("profilepage");
         }
 
+        [RelayCommand]
+        private static async Task BackArrowCommand()
+        {
+            //Logic to go back to the settings page from the about us page
+            //Navigation
+            await Shell.Current.GoToAsync("settingspage");
+        }
+
         /*[RelayCommand]
         private static async Task EditButtonCommand()
         {
             Logic to edit information on the profile page
             await Shell.Current.GoToAsync("editingprofilepage");
-        }
+        }*/
 
         [RelayCommand]
         private static async Task BackButtonCommand()
         {
-            Logic to go back to the settings page
-             Navigation
+            //Logic to go back to the settings page from the profile page
+            //Navigation
             await Shell.Current.GoToAsync("settingspage");
         }
 
-        [RelayCommand]
-        private void DarkModeCommand()
-        {
-             Logic to toggle dark mode
-        }
-
-        [RelayCommand]
+        /*[RelayCommand]
         private static void PremiumTabCommand()
         {
              Logic for premium tab
-        }
-
-        [RelayCommand]
-        private void FAQCommand()
-        {
-             Logic to show FAQ
-        }
-
-        [RelayCommand]
-        private void HelpCommand()
-        {
-             Logic to show help
         }*/
 
         [RelayCommand]

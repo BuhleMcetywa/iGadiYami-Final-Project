@@ -22,14 +22,14 @@
             </StackLayout>
         </Frame>
 
-        <!-- Menu Options -->
-        <!--<Button Text="Edit Profile                                      >" FontSize="20" TextColor="Black" BackgroundColor="White" Command="{Binding EditProfileCommand}" />-->
         <Frame CornerRadius="50" VerticalOptions="FillAndExpand">
             <VerticalStackLayout>
-                <Button Text="Edit Profile                            >"  FontSize="25" TextColor="Black" BackgroundColor="Transparent" Command="{Binding ProfileCommandCommand}"/>
-                <Button Text="Try Premium Version          >" FontSize="25" TextColor="Black" BackgroundColor="Transparent" Command="{Binding PremiumTabCommandCommand}" />
-                <!--<Button Text="FAQ (Chatbot)                              >" FontSize="20" TextColor="Black" Command="{Binding FAQCommand}" />
-            <Button Text="Help (Chatbot)                             >" FontSize="20" TextColor="Black" Command="{Binding HelpCommand}" />-->
+                <Button Text="Profile                                    >"  FontSize="25" TextColor="Black" BackgroundColor="Transparent" Command="{Binding ProfileCommandCommand}"/>
+                <HorizontalStackLayout>
+                    <Label Text="  "/>
+                    <Image Source="lock.png" HorizontalOptions="Start" HeightRequest="30"/>
+                    <Button Text="Premium Version           >" FontSize="25" TextColor="Black" BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" Command="{Binding PremiumTabCommandCommand}" />
+                </HorizontalStackLayout>
                 <Button Text="About Us                               >" FontSize="25" TextColor="Black" BackgroundColor="Transparent" Command="{Binding AboutUsCommandCommand}" />
                 <Button Text="Ts and Cs                              >" FontSize="25" TextColor="Black" BackgroundColor="Transparent" Command="{Binding TermsAndConditionsCommandCommand}" />
             </VerticalStackLayout>
