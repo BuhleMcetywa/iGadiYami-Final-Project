@@ -18,8 +18,8 @@
                 </Frame>
 
         <!-- Name, Bio and Location -->
-                <Label Text="Buhle Mcetywa" FontSize="30" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center" />
-                <Label Text="Kuils River" FontSize="20" TextColor="White" HorizontalOptions="Center"/>
+                <Label Text="{Binding User.Name}" FontSize="30" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center" />
+                <Label Text="{Binding User.Location}" FontSize="20" TextColor="White" HorizontalOptions="Center"/>
                 <Label Text="{Binding User.Bio}" FontSize="15" LineBreakMode="WordWrap" TextColor="White" HorizontalTextAlignment="Center" HorizontalOptions="Center"/>
             </StackLayout>
         </Frame>
