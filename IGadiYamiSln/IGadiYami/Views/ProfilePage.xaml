@@ -15,7 +15,11 @@
             <StackLayout Margin="0,20,0,0" Orientation="Vertical" HorizontalOptions="Center">
 
             <Frame  HeightRequest="150" CornerRadius="150"  WidthRequest="150" >
-                <Image Source="scrummaster" HeightRequest="150" Aspect="AspectFill" WidthRequest="150"  />
+                <Image Source="editprofile.jpg" Grid.Row="0" Margin="10,0,0,0" HeightRequest="25" WidthRequest="25" HorizontalOptions="Start" VerticalOptions="Center" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnEditProfileTapped" NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
             </Frame>
         </StackLayout>
 
@@ -77,12 +81,6 @@
                         <Button Text="Save Profile" FontSize="25" HorizontalOptions="Center" HeightRequest="50"  TextColor="White" FontFamily="Bold" BackgroundColor="Transparent" CornerRadius="20" Command="{Binding EditButtonCommandCommand}" />
                     </Frame>
 
-                </HorizontalStackLayout>
-
-                <HorizontalStackLayout Spacing="10" Grid.Row="7"  HorizontalOptions="Center">
-                    <Frame BackgroundColor="Transparent"  HeightRequest="50" WidthRequest="200" CornerRadius="50" >
-                        <Button Text="Back" FontSize="25" TextColor="White" HorizontalOptions="Center"  HeightRequest="50"  BackgroundColor="Transparent" CornerRadius="20" Command="{Binding BackButtonCommandCommand}" />
-                    </Frame>
                 </HorizontalStackLayout>
 
             </Grid>
