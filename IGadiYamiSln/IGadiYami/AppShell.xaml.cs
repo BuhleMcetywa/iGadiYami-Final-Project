@@ -26,9 +26,8 @@ namespace IGadiYami
             Routing.RegisterRoute("communitypage", typeof(CommunityPage));
             Routing.RegisterRoute("settingspage", typeof(SettingsPage));
             Routing.RegisterRoute("profilepage", typeof(ProfilePage));
-            //Routing.RegisterRoute("editingprofilepage", typeof(EditProfilePage));
             Routing.RegisterRoute("aboutuspage", typeof(AboutUs));
-
+            Routing.RegisterRoute("termsconditions", typeof(TermsAndConditions));
         }
     }
 }

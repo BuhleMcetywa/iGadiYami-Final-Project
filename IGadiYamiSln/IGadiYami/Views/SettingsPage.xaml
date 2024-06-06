@@ -9,30 +9,70 @@
         <vm:SettingsProfileViewModel />
     </ContentPage.BindingContext>
 
-    <StackLayout Spacing="10">
-        <Frame Padding="20" BackgroundColor="Transparent" CornerRadius="10" HasShadow="False" BorderColor="Transparent">
-            <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+    <StackLayout Spacing="20">
+        <Frame Padding="30" BackgroundColor="Transparent" CornerRadius="10" HasShadow="False" BorderColor="Transparent">
+            <StackLayout Spacing="10" Orientation="Vertical" HorizontalOptions="Center">
                 <!-- Profile Picture -->
-                <Image Source="ndosi.png" HeightRequest="300" WidthRequest="300" />
+                <Frame HeightRequest="150" WidthRequest="150" CornerRadius="150">
+                    <Image Source="scrummaster" HeightRequest="150" Aspect="AspectFill" WidthRequest="200" />
+                </Frame>
 
-                <!-- Name, Bio and Location -->
-                <Label Text="{Binding User.Name}" FontSize="35" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center" />
-                <Label Text="{Binding User.Bio}" FontSize="18" TextColor="Black" HorizontalOptions="Center"/>
-                <Label Text="{Binding User.Location}" FontSize="15" TextColor="Black" HorizontalOptions="Center"/>
+        <!-- Name, Bio and Location -->
+                <Label Text="{Binding User.Name}" FontSize="30" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center" />
+                <Label Text="{Binding User.Location}" FontSize="20" TextColor="White" HorizontalOptions="Center"/>
+                <Label Text="{Binding User.Bio}" FontSize="15" LineBreakMode="WordWrap" TextColor="White" HorizontalTextAlignment="Center" HorizontalOptions="Center"/>
             </StackLayout>
         </Frame>
+       
+            <Grid RowSpacing="25">
 
-        <Frame CornerRadius="50" VerticalOptions="FillAndExpand">
-            <VerticalStackLayout>
-                <Button Text="Profile                                    >"  FontSize="25" TextColor="Black" BackgroundColor="Transparent" Command="{Binding ProfileCommandCommand}"/>
-                <HorizontalStackLayout>
-                    <Label Text="  "/>
-                    <Image Source="lock.png" HorizontalOptions="Start" HeightRequest="30"/>
-                    <Button Text="Premium Version           >" FontSize="25" TextColor="Black" BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" Command="{Binding PremiumTabCommandCommand}" />
-                </HorizontalStackLayout>
-                <Button Text="About Us                               >" FontSize="25" TextColor="Black" BackgroundColor="Transparent" Command="{Binding AboutUsCommandCommand}" />
-                <Button Text="Ts and Cs                              >" FontSize="25" TextColor="Black" BackgroundColor="Transparent" Command="{Binding TermsAndConditionsCommandCommand}" />
-            </VerticalStackLayout>
-        </Frame>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                
+                
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+             <Frame  CornerRadius="30" Grid.Row="0" IsClippedToBounds="True" WidthRequest="300" HeightRequest="60" Margin="10" BackgroundColor="Transparent">
+                    <Button Text="Profile Settings"  WidthRequest="300" HeightRequest="60" BackgroundColor="Transparent"  Grid.Row="0"  HorizontalOptions="Center"  VerticalOptions="Center" FontFamily="mont" FontSize="15" TextColor="White" FontAttributes="Bold" Command="{Binding ProfileCommandCommand}"/>
+                </Frame>
+                <Label Text=">"  Grid.Row="0" Margin="0,0,70,0"  HorizontalOptions="End" VerticalOptions="Center" FontFamily="mont" FontSize="15" TextColor="White" FontAttributes="Bold" />
+            </Grid>
+
+
+            <Grid Grid.Row="1">
+                <Frame CornerRadius="30" Grid.Row="1" IsClippedToBounds="True" WidthRequest="300" HeightRequest="60" Margin="10" BackgroundColor="#006838">
+                    <Image Source="lock" Grid.Row="0" Margin="10,0,0,0" HeightRequest="25" WidthRequest="25" HorizontalOptions="Start" VerticalOptions="Center" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer 
+                              NumberOfTapsRequired="1" Command="{Binding PremiumTabCommandCommand}" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Frame>
+                <Label Text="Try Premium Version"  Grid.Row="1"  HorizontalOptions="Center" VerticalOptions="Center" FontFamily="mont" FontSize="15" TextColor="White" FontAttributes="Bold" />
+
+                <Label Text=">"  Grid.Row="0" Margin="0,0,70,0"  HorizontalOptions="End" VerticalOptions="Center" FontFamily="mont" FontSize="15" TextColor="White" FontAttributes="Bold" />
+            </Grid>
+
+
+            <Grid Grid.Row="2">
+                <Frame CornerRadius="30" Grid.Row="2" IsClippedToBounds="True" WidthRequest="300" HeightRequest="60" Margin="10" BackgroundColor="#006838">
+                    <Button Text="About Us"  Grid.Row="2"  WidthRequest="300" HeightRequest="60" BackgroundColor="Transparent" HorizontalOptions="Center"  VerticalOptions="Center" FontFamily="mont" FontSize="15" TextColor="White" FontAttributes="Bold" Command="{Binding AboutUsCommandCommand}" />
+                </Frame>
+                <Label Text=">"  Grid.Row="2" Margin="0,0,70,0"  HorizontalOptions="End" VerticalOptions="Center" FontFamily="mont" FontSize="15" TextColor="White" FontAttributes="Bold" />
+            </Grid>
+
+                <Grid Grid.Row="3">
+                    <Frame CornerRadius="30" Grid.Row="3" IsClippedToBounds="True" WidthRequest="300" HeightRequest="60" Margin="10" BackgroundColor="#006838">
+                    <Button Text="Terms and Conditions"  WidthRequest="300" HeightRequest="60" BackgroundColor="Transparent"  Grid.Row="3"  HorizontalOptions="Center"  VerticalOptions="Center" FontFamily="mont" FontSize="15" TextColor="White" FontAttributes="Bold" Command="{Binding TermsAndConditionsCommandCommand} " />
+                    </Frame>
+                    <Label Text=">"  Grid.Row="3" Margin="0,0,70,0"  HorizontalOptions="End" VerticalOptions="Center" FontFamily="mont" FontSize="15" TextColor="White" FontAttributes="Bold" />
+                </Grid>
+            </Grid>
+      
+
     </StackLayout>
 </ContentPage>
