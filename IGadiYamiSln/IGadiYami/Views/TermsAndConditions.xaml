@@ -3,11 +3,7 @@
              xmlns:vm="clr-namespace:IGadiYami.ViewModels"
              x:Class="IGadiYami.Views.TermsAndConditions"
              BackgroundColor="#006838">
-
-    <ContentPage.BindingContext>
-        <vm:SettingsProfileViewModel />
-    </ContentPage.BindingContext>
-
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40" />

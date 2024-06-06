@@ -5,10 +5,6 @@
              x:Class="IGadiYami.Views.SettingsPage"
              BackgroundColor="#006838">
     
-    <ContentPage.BindingContext>
-        <vm:SettingsProfileViewModel />
-    </ContentPage.BindingContext>
-
     <StackLayout Spacing="20">
         <Frame Padding="30" BackgroundColor="Transparent" CornerRadius="10" HasShadow="False" BorderColor="Transparent">
             <StackLayout Spacing="10" Orientation="Vertical" HorizontalOptions="Center">
