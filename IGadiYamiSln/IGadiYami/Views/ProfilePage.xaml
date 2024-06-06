@@ -3,44 +3,91 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:IGadiYami.ViewModels"
              x:Class="IGadiYami.Views.ProfilePage"
-             BackgroundColor="#006838">
+             BackgroundColor="#1C5038">
 
     <ContentPage.BindingContext>
         <vm:SettingsProfileViewModel />
     </ContentPage.BindingContext>
 
-    <StackLayout Spacing="10">
-        <Frame Padding="10" BackgroundColor="Transparent" CornerRadius="10" HasShadow="False" BorderColor="Transparent">
-            <StackLayout Orientation="Vertical" HorizontalOptions="Center">
-                <!-- Edit Profile Picture -->
-                <Image Source="ndosi.png" HeightRequest="200" WidthRequest="200" />
-            </StackLayout>
+    <StackLayout Orientation="Vertical" Spacing="5">
+
+        
+            <StackLayout Margin="0,20,0,0" Orientation="Vertical" HorizontalOptions="Center">
+
+            <Frame  HeightRequest="150" CornerRadius="150"  WidthRequest="150" >
+                <Image Source="scrummaster" HeightRequest="150" Aspect="AspectFill" WidthRequest="150"  />
+            </Frame>
+        </StackLayout>
+
+        <Frame BorderColor="Transparent" CornerRadius="300" >
+            <Frame.Background>
+                <RadialGradientBrush Center="0.5,0.0">
+                    <GradientStop Color="#000000"
+                  Offset="1.0" />
+                    <GradientStop Color="#1C5038"
+                  Offset="2.0" />
+                </RadialGradientBrush>
+            </Frame.Background>
+
+            <Grid RowSpacing="5" ColumnSpacing="5">
+
+                <Grid.RowDefinitions>
+                    
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+
+                </Grid.RowDefinitions>
+                
+
+                <StackLayout HorizontalOptions="Center" Grid.Row="0">
+                    <Editor Text="Buhle Mcetywa" VerticalTextAlignment="Center" FontSize="Large"  BackgroundColor="Transparent" HorizontalOptions="Center"  FontFamily="mont" FontAttributes="Bold" TextColor="White"   />
+                </StackLayout>
+
+                <Editor  Text="buhlemcetywa71@igadiyami.com" Grid.Row="1" FontSize="13" HorizontalOptions="Center" FontFamily="mont" TextColor="White"   />
+
+                <Frame  Grid.Row="2" HeightRequest="50"  WidthRequest="200"  BackgroundColor="Transparent" HorizontalOptions="Center" Margin="0,0,0,30">
+                    <Editor Text="{Binding User.Location}" TextColor="White" HeightRequest="50" HorizontalOptions="Center" FontAttributes="Bold" FontSize="Medium"/>
+                </Frame>
+
+                <Frame  Grid.Row="3"  HeightRequest="50"  WidthRequest="200"  BackgroundColor="Transparent" HorizontalOptions="Center" Margin="0,0,0,30">
+                    <Editor  Text="Edit password" TextColor="#B4B4B4" HorizontalOptions="Center" HeightRequest="50" FontAttributes="Bold" FontSize="Medium"/>
+                </Frame>
+
+                <Frame  Grid.Row="4" HeightRequest="100" Grid.RowSpan="2" WidthRequest="300"  BackgroundColor="Transparent" HorizontalOptions="Center" Margin="0,0,0,30" >
+                    <ScrollView HeightRequest="100" VerticalScrollBarVisibility="Always">
+                        <Editor Text="{Binding User.Bio}" BackgroundColor="Transparent" Grid.Row="2" Keyboard="Chat" HorizontalTextAlignment="Center" HeightRequest="350" AutoSize="TextChanges"  TextColor="White" HorizontalOptions="Center" Margin="0,0,0,0" FontSize="Medium"/>
+                    </ScrollView>
+                </Frame>
+
+
+                <!-- Name and Location -->
+
+
+
+
+
+                <HorizontalStackLayout Spacing="10" Grid.Row="6"  HorizontalOptions="Center">
+                    <Frame BackgroundColor="Transparent" HeightRequest="50" WidthRequest="200" CornerRadius="50" >
+                        <Button Text="Save Profile" FontSize="25" HorizontalOptions="Center" HeightRequest="50"  TextColor="White" FontFamily="Bold" BackgroundColor="Transparent" CornerRadius="20" Command="{Binding EditButtonCommandCommand}" />
+                    </Frame>
+
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="10" Grid.Row="7"  HorizontalOptions="Center">
+                    <Frame BackgroundColor="Transparent"  HeightRequest="50" WidthRequest="200" CornerRadius="50" >
+                        <Button Text="Back" FontSize="25" TextColor="White" HorizontalOptions="Center"  HeightRequest="50"  BackgroundColor="Transparent" CornerRadius="20" Command="{Binding BackButtonCommandCommand}" />
+                    </Frame>
+                </HorizontalStackLayout>
+
+            </Grid>
+               
         </Frame>
 
-        <!-- Edit Profile Information -->
-        <Frame CornerRadius="50" VerticalOptions="FillAndExpand">
-            <VerticalStackLayout>
-                <Label Text="Name and Surname: " FontSize="Large" FontAttributes="Bold"/>
-                <Label Text="{Binding User.Name}" FontSize="Medium"/>
-                <Label Text=" "/>
-                <Label Text="Bio: " FontSize="Large" FontAttributes="Bold"/>
-                <Label Text="{Binding User.Bio}" FontSize="Medium"/>
-                <Label Text=" "/>
-                <Label Text="Location: " FontSize="Large" FontAttributes="Bold"/>
-                <Label Text="{Binding User.Location}" FontSize="Medium"/>
-                <Label Text=" "/>
-                <Label Text="Email Address: " FontSize="Large" FontAttributes="Bold"/>
-                <Label Text="ndosiyohurt03@gmail.com" FontSize="Medium"/>
-                <Label Text=" "/>
-                <Label Text="Password: " FontSize="Large" FontAttributes="Bold"/>
-                <Label Text="***************" FontSize="Medium"/>
-                <Label Text=" "/>
-                <HorizontalStackLayout HorizontalOptions="Center">
-                    <Button Text="Edit" FontSize="25" TextColor="White" BackgroundColor="#006838" CornerRadius="20" Command="{Binding EditButtonCommandCommand}" />
-                    <Label Text=" "/>
-                    <Button Text="Back" FontSize="25" TextColor="White" BackgroundColor="#006838" CornerRadius="20" Command="{Binding BackButtonCommandCommand}" />
-                </HorizontalStackLayout>
-            </VerticalStackLayout>
-        </Frame>
     </StackLayout>
 </ContentPage>
