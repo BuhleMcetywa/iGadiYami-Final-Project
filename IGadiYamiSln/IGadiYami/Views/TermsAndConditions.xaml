@@ -16,8 +16,8 @@
         </Grid.ColumnDefinitions>
 
         <ImageButton Grid.Row="0"
-                     Source="back.png"
-                     Margin="-225,30,0,0"
+                     Source="back_white.png"
+                     Margin="-85,30,0,0"
                      HorizontalOptions="StartAndExpand"
                      Command="{Binding BackArrowCommandCommand}"
                      BackgroundColor="Transparent"
