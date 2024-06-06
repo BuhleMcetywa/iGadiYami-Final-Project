@@ -61,6 +61,7 @@
 	  <None Remove="Platforms\Android\Assets\model.pb" />
 	  <None Remove="Resources\Images\back.png" />
 	  <None Remove="Resources\Images\background.jpg" />
+	  <None Remove="Resources\Images\back_white.png" />
 	  <None Remove="Resources\Images\bandile.png" />
 	  <None Remove="Resources\Images\buhle.png" />
 	  <None Remove="Resources\Images\camera.png" />

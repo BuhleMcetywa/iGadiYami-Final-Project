@@ -79,13 +79,13 @@ namespace IGadiYami
             mauiAppBuilder.Services.AddSingleton<StartGardeningPage>();
             mauiAppBuilder.Services.AddSingleton<CreateAccountPage>();
             mauiAppBuilder.Services.AddSingleton<VegetablePage>();
-            mauiAppBuilder.Services.AddSingleton<SettingsPage>();
-            mauiAppBuilder.Services.AddSingleton<AboutUs>();
+            mauiAppBuilder.Services.AddTransient<SettingsPage>();
+            mauiAppBuilder.Services.AddTransient<AboutUs>();
             mauiAppBuilder.Services.AddSingleton<HomePageView>();
             mauiAppBuilder.Services.AddSingleton<CropTrackingPage>();
             mauiAppBuilder.Services.AddSingleton<CropTrackingPopUpPage>();
             mauiAppBuilder.Services.AddSingleton<TrackedCrop>();
-            mauiAppBuilder.Services.AddSingleton<TermsAndConditions>();
+            mauiAppBuilder.Services.AddTransient<TermsAndConditions>();
 
             return mauiAppBuilder;
         }

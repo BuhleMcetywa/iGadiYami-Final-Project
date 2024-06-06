@@ -29,7 +29,7 @@ namespace IGadiYami.ViewModels
         {
             //Logic to go back to the settings page from the about us page
             //Navigation
-            await Shell.Current.GoToAsync("settingspage");
+            await Shell.Current.GoToAsync("\\settingspage");
         }
 
         /*[RelayCommand]
@@ -44,7 +44,8 @@ namespace IGadiYami.ViewModels
         {
             //Logic to go back to the settings page from the profile page
             //Navigation
-            await Shell.Current.GoToAsync("settingspage");
+              await Shell.Current.GoToAsync("\\settingspage");
+
         }
 
         /*[RelayCommand]
@@ -66,7 +67,7 @@ namespace IGadiYami.ViewModels
         {
             // Logic to show terms and conditions
             // Navigation
-            await Shell.Current.GoToAsync("termsconditions");
+             await Shell.Current.GoToAsync("termsconditions");
         }
     }
 }
