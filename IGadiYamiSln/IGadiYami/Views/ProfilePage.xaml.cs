@@ -1,9 +1,11 @@
+using IGadiYami.ViewModels;
 namespace IGadiYami.Views;
 
 public partial class ProfilePage : ContentPage
 {
-    public ProfilePage()
+    public ProfilePage(SettingsProfileViewModel vm)
     {
         InitializeComponent();
+        BindingContext = vm;
     }
 }

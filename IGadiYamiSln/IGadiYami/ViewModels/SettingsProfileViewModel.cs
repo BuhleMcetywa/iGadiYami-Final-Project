@@ -32,12 +32,12 @@ namespace IGadiYami.ViewModels
             await Shell.Current.GoToAsync("\\settingspage");
         }
 
-        /*[RelayCommand]
-        private static async Task EditButtonCommand()
+        [RelayCommand]
+        private static async Task SaveButtonCommand()
         {
-            Logic to edit information on the profile page
-            await Shell.Current.GoToAsync("editingprofilepage");
-        }*/
+             // Logic to save information on the profile page
+             await Application.Current.MainPage.DisplayAlert("Save", "The information that has been entered has been saved.", "OK");
+        }
 
         [RelayCommand]
         private static async Task BackButtonCommand()
@@ -45,7 +45,6 @@ namespace IGadiYami.ViewModels
             //Logic to go back to the settings page from the profile page
             //Navigation
               await Shell.Current.GoToAsync("\\settingspage");
-
         }
 
         /*[RelayCommand]

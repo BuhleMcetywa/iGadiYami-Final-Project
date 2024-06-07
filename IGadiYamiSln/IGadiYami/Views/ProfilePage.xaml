@@ -5,10 +5,6 @@
              x:Class="IGadiYami.Views.ProfilePage"
              BackgroundColor="#1C5038">
 
-    <ContentPage.BindingContext>
-        <vm:SettingsProfileViewModel />
-    </ContentPage.BindingContext>
-
     <StackLayout Orientation="Vertical" Spacing="5">
 
         
@@ -78,7 +74,7 @@
 
                 <HorizontalStackLayout Spacing="10" Grid.Row="6"  HorizontalOptions="Center">
                     <Frame BackgroundColor="Transparent" HeightRequest="50" WidthRequest="200" CornerRadius="50" >
-                        <Button Text="Save Profile" FontSize="25" HorizontalOptions="Center" HeightRequest="50"  TextColor="White" FontFamily="Bold" BackgroundColor="Transparent" CornerRadius="20" Command="{Binding EditButtonCommandCommand}" />
+                        <Button Text="Save Profile" FontSize="25" HorizontalOptions="Center" HeightRequest="50"  TextColor="White" FontFamily="Bold" BackgroundColor="Transparent" CornerRadius="20" Command="{Binding SaveButtonCommandCommand}" />
                     </Frame>
 
                 </HorizontalStackLayout>
