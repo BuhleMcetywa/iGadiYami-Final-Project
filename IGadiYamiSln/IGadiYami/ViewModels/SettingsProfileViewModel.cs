@@ -5,6 +5,13 @@ namespace IGadiYami.ViewModels
 {
     public partial class SettingsProfileViewModel : BaseViewModel
     {
+        private ImageSource _profilephoto;
+        public ImageSource ProfilePhoto
+        {
+            get { return _profilephoto; }
+            set { _profilephoto = value; OnPropertyChanged(); }
+        }
+
         public UserSettingsProfile User { get; set; }
         public SettingsProfileViewModel()
         {
@@ -22,6 +29,21 @@ namespace IGadiYami.ViewModels
             // Logic to view the user's profile
             // Navigation
             await Shell.Current.GoToAsync("profilepage");
+        }
+
+        [RelayCommand]
+        private async Task ChangeProfilePage()
+        {
+            FileResult photo = await MediaPicker.Default.PickPhotoAsync(new MediaPickerOptions
+            {
+                Title = "Choose New Photo"
+            });
+
+            if (photo != null)
+            {
+                var stream = await photo.OpenReadAsync();
+                ProfilePhoto = ImageSource.FromStream(() => stream);
+            }
         }
 
         [RelayCommand]

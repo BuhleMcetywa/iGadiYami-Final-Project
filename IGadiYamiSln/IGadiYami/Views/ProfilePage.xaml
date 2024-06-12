@@ -5,18 +5,19 @@
              x:Class="IGadiYami.Views.ProfilePage"
              BackgroundColor="#1C5038">
 
-    <StackLayout Orientation="Vertical" Spacing="5">
+    <StackLayout Orientation="Vertical" Spacing="5" x:DataType="vm:SettingsProfileViewModel">
 
         
-            <StackLayout Margin="0,20,0,0" Orientation="Vertical" HorizontalOptions="Center">
+         <StackLayout Margin="0,20,0,0" Orientation="Vertical" HorizontalOptions="Center">
 
             <Frame  HeightRequest="150" CornerRadius="150"  WidthRequest="150" >
-                <Image Source="editprofile.jpg" Grid.Row="0" Margin="10,0,0,0" HeightRequest="25" WidthRequest="25" HorizontalOptions="Start" VerticalOptions="Center" >
-                    <Image.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnEditProfileTapped" NumberOfTapsRequired="1" />
-                    </Image.GestureRecognizers>
+                <Image Source="{Binding ProfilePhoto}" Grid.Row="0" Margin="10,0,0,0" HeightRequest="25" WidthRequest="25" HorizontalOptions="Start" VerticalOptions="Center" Aspect="AspectFill">
+                    <!--<Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ChangeProfilePageCommand}"/>
+                    </Image.GestureRecognizers>-->
                 </Image>
             </Frame>
+            <Button Text="Change Photo" WidthRequest="100" HeightRequest="100" Command="{Binding ChangeProfilePageCommand}"/>
         </StackLayout>
 
         <Frame BorderColor="Transparent" CornerRadius="300" >
