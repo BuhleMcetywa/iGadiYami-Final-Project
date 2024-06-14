@@ -78,6 +78,11 @@ namespace IGadiYami.ViewModels
         {
             await Shell.Current.GoToAsync("croptracking");
         }
+        [RelayCommand]
+        private async static Task OnGoToChatBotPageAsync()
+        {
+            await Shell.Current.GoToAsync("igadiyamiquestion");
+        }
 
 
         void CreateMenuCollection() // Changed return type to void

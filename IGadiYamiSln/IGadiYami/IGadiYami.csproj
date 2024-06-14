@@ -76,6 +76,7 @@
 	  <None Remove="Resources\Images\home.png" />
 	  <None Remove="Resources\Images\igadiimage2.jpg" />
 	  <None Remove="Resources\Images\igadiyamibackgroundtwo.png" />
+	  <None Remove="Resources\Images\igadiyamsbot.png" />
 	  <None Remove="Resources\Images\laughing.png" />
 	  <None Remove="Resources\Images\lock.png" />
 	  <None Remove="Resources\Images\luke.png" />
