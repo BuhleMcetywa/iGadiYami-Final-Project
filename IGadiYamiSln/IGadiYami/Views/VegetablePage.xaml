@@ -17,23 +17,23 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
-                <RowDefinition Height="300" />
+                <RowDefinition Height="285" />
                 <RowDefinition Height="*" />
 
             </Grid.RowDefinitions>
             <Image Grid.Row="0" Grid.RowSpan="4"  Source="{Binding Vegetable.Image}" Aspect="AspectFill" />
             <Label Padding="25,10,0,0" Text="Start Gardening with us" FontSize="20" FontFamily="mont" FontAttributes="Bold" TextColor="White" Grid.Row="0"  />
-            <BoxView Grid.Row="0" HorizontalOptions="Center" Margin="20,-40,60,0" BackgroundColor="White" WidthRequest="300" HeightRequest="1" />
+            <BoxView Grid.Row="0" HorizontalOptions="Center" Margin="0,-40,60,0" BackgroundColor="White" WidthRequest="300" HeightRequest="1" />
             <Label  Margin="25,8,0,0" Text="{Binding Vegetable.Name}" Grid.RowSpan="2" Padding="0,150,0,0" FontAttributes="Bold" TextColor="White" FontSize="40" FontFamily="mont" Grid.Row="1" />
             <Label Margin="30,0,20,0" Text="Start your Gardening journey with us" Padding="0,100,0,0" TextColor="White" FontSize="13" FontFamily="mont" Grid.Row="2" />
 
 
             <Frame BackgroundColor="{Binding VegetableColor}" Grid.Row="3" CornerRadius="20" Grid.RowSpan="2" BorderColor="Transparent" Margin="0,10,0,0"  >
                 <FlexLayout Grid.Row="5" BackgroundColor="{Binding VegetableColor}" JustifyContent="SpaceEvenly" VerticalOptions="Start" HeightRequest="100" WidthRequest="400" Margin="0,-20,0,0">
-                    <Button Margin="0,10,0,0" CornerRadius="30" Text="How to plant Tomatoes" FontFamily="mont" BackgroundColor="{Binding VegButtonColor}" LineBreakMode="WordWrap" FontAttributes="Bold" HorizontalOptions="Center" FontSize="8" WidthRequest="85" HeightRequest="50" Command="{Binding SetVegInfoCommand}" CommandParameter="howtoplant"/>
-                    <Button Margin="0,10,0,0" CornerRadius="30" Text="Choosing the right soil" BackgroundColor="{Binding VegButtonColor}" FontFamily="mont" LineBreakMode="WordWrap" FontAttributes="Bold" HorizontalOptions="Center" FontSize="8" WidthRequest="85" HeightRequest="50" Command="{Binding SetVegInfoCommand}" CommandParameter="choosingsoil"  />
-                    <Button Margin="0,10,0,0" CornerRadius="30" Text="When to plant" BackgroundColor="{Binding VegButtonColor}" FontFamily="mont" LineBreakMode="WordWrap" FontAttributes="Bold" HorizontalOptions="Center" FontSize="8" WidthRequest="85" HeightRequest="50" Command="{Binding SetVegInfoCommand}" CommandParameter="whentoplant"   />
-                    <Button Margin="0,10,0,0" CornerRadius="30" Text="Common diseases"  BackgroundColor="{Binding VegButtonColor}" FontFamily="mont" LineBreakMode="WordWrap" FontAttributes="Bold" HorizontalOptions="Center" FontSize="8" WidthRequest="85" HeightRequest="50" Command="{Binding SetVegInfoCommand}" CommandParameter="commondisease" />
+                    <Button Margin="0,10,0,0" CornerRadius="30" TextColor="White" Text="How to plant " FontFamily="mont" BackgroundColor="{Binding VegButtonColor}" LineBreakMode="WordWrap" FontAttributes="Bold" HorizontalOptions="Center" FontSize="15" WidthRequest="85" HeightRequest="60" Command="{Binding SetVegInfoCommand}" CommandParameter="howtoplant"/>
+                    <Button Margin="0,10,0,0" CornerRadius="30" TextColor="White" Text="Choosing soil" BackgroundColor="{Binding VegButtonColor}" FontFamily="mont" LineBreakMode="WordWrap" FontAttributes="Bold" HorizontalOptions="Center" FontSize="15" WidthRequest="85" HeightRequest="60" Command="{Binding SetVegInfoCommand}" CommandParameter="choosingsoil"  />
+                    <Button Margin="0,10,0,0" CornerRadius="30" TextColor="White" Text="When to plant" BackgroundColor="{Binding VegButtonColor}" FontFamily="mont" LineBreakMode="WordWrap" FontAttributes="Bold" HorizontalOptions="Center" FontSize="15" WidthRequest="85" HeightRequest="60" Command="{Binding SetVegInfoCommand}" CommandParameter="whentoplant"   />
+                    <Button Margin="0,10,0,0" CornerRadius="30" TextColor="White" Text="Common diseases"  BackgroundColor="{Binding VegButtonColor}" FontFamily="mont" LineBreakMode="WordWrap" FontAttributes="Bold" HorizontalOptions="Center" FontSize="15" WidthRequest="85" HeightRequest="60" Command="{Binding SetVegInfoCommand}" CommandParameter="commondisease" />
                 </FlexLayout>
             </Frame>
 
@@ -49,7 +49,7 @@
 
             <ScrollView Grid.Row="7" VerticalScrollBarVisibility="Always">
                 <Label 
-                     Margin="20,23,0,0"
+                     Margin="10,0,0,0"
                     Text="{Binding VegetableInfo}" 
                     FontSize="15 " 
                     HorizontalTextAlignment="Start"  

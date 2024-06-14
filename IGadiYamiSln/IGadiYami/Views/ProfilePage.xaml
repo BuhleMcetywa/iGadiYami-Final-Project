@@ -11,13 +11,13 @@
          <StackLayout Margin="0,20,0,0" Orientation="Vertical" HorizontalOptions="Center">
 
             <Frame  HeightRequest="150" CornerRadius="150"  WidthRequest="150" >
-                <Image Source="{Binding ProfilePhoto}" Grid.Row="0" Margin="10,0,0,0" HeightRequest="25" WidthRequest="25" HorizontalOptions="Start" VerticalOptions="Center" Aspect="AspectFill">
+                <Image Source="{Binding ProfilePhoto}" Grid.Row="0" Margin="0,0,0,0" HeightRequest="150" WidthRequest="150" VerticalOptions="Center" Aspect="AspectFill">
                     <!--<Image.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding ChangeProfilePageCommand}"/>
                     </Image.GestureRecognizers>-->
                 </Image>
             </Frame>
-            <Button Text="Change Photo" WidthRequest="100" HeightRequest="100" Command="{Binding ChangeProfilePageCommand}"/>
+            <Button Text="Edit Profile" BackgroundColor="Transparent" TextColor="White"  WidthRequest="100" HeightRequest="50" Command="{Binding ChangeProfilePageCommand}"/>
         </StackLayout>
 
         <Frame BorderColor="Transparent" CornerRadius="300" >

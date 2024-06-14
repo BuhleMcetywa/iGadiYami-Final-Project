@@ -1,7 +1,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="IGadiYami.Views.HomePageView"
-             BackgroundColor="#f8f2cc"
+             BackgroundColor="#050404"
              xmlns:viewmodels="clr-namespace:IGadiYami.ViewModels">
 
     <ScrollView x:DataType="viewmodels:HomePageViewModel">
@@ -80,51 +80,51 @@
 
             <BoxView Color="#006838" HeightRequest="3" Margin="10,35" WidthRequest="140" HorizontalOptions="FillAndExpand" />
 
-            <Label Text="Meet the creators Of iGadi Yami" FontAttributes="Bold" FontSize="23" TextColor="#006838" HorizontalOptions="CenterAndExpand"/>
+            <Label Text="Meet the creators Of iGadi Yami" TextColor="White" FontAttributes="Bold" FontSize="23" HorizontalOptions="CenterAndExpand"/>
            
             <ScrollView Orientation="Horizontal">
                 <HorizontalStackLayout>
                
                 <VerticalStackLayout>
-                   <Frame Margin="15,10,0,0" WidthRequest="110" HeightRequest="110" CornerRadius="80">
-                      <Image Source="bandile" WidthRequest="110" HeightRequest="110" Aspect="AspectFit"/>
+                   <Frame Margin="15,10,0,0" WidthRequest="100" HeightRequest="100" CornerRadius="100">
+                      <Image Source="bandile" WidthRequest="100" HeightRequest="100" Aspect="AspectFit"/>
                    </Frame>
                    <Label Text="Bandile" Margin="43,10,0,0" />
                   </VerticalStackLayout>
 
                     <VerticalStackLayout>
-                        <Frame Margin="15,10,0,0" WidthRequest="110" HeightRequest="110" CornerRadius="80">
-                            <Image Source="luke" WidthRequest="110" HeightRequest="110" Aspect="AspectFit"/>
+                        <Frame Margin="15,10,0,0" WidthRequest="100" HeightRequest="100" CornerRadius="100">
+                            <Image Source="luke" WidthRequest="100" HeightRequest="100" Aspect="AspectFit"/>
                         </Frame>
                         <Label Text="Luke" Margin="53,10,0,0" />
                     </VerticalStackLayout>
 
                     <VerticalStackLayout>
-                        <Frame Margin="15,10,0,0" WidthRequest="110" HeightRequest="110" CornerRadius="80">
-                            <Image Source="ethan" WidthRequest="110" HeightRequest="110" Aspect="AspectFit"/>
+                        <Frame Margin="15,10,0,0" WidthRequest="100" HeightRequest="100" CornerRadius="100">
+                            <Image Source="ethan" WidthRequest="100" HeightRequest="100" Aspect="AspectFit"/>
                         </Frame>
                         <Label Text="Ethan" Margin="56,10,0,0" />
                     </VerticalStackLayout>
                     
                     
                     <VerticalStackLayout>
-                        <Frame Margin="25,10,0,0" WidthRequest="110" HeightRequest="110" CornerRadius="80">
-                            <Image Source="ndosi" WidthRequest="110" HeightRequest="110" Aspect="AspectFit"/>
+                        <Frame Margin="25,10,0,0" WidthRequest="100" HeightRequest="100" CornerRadius="100">
+                            <Image Source="ndosi" WidthRequest="100" HeightRequest="100" Aspect="AspectFit"/>
                         </Frame>
                         <Label Text="Chulu" Margin="63,10,0,0" />
                     </VerticalStackLayout>
 
 
                     <VerticalStackLayout>
-                        <Frame Margin="25,10,0,0" WidthRequest="110" HeightRequest="110" CornerRadius="80">
-                            <Image Source="scrummaster" WidthRequest="110" HeightRequest="110" Aspect="AspectFit"/>
+                        <Frame Margin="25,10,0,0" WidthRequest="100" HeightRequest="100" CornerRadius="100">
+                            <Image Source="scrummaster" WidthRequest="100" Aspect="AspectFill" HeightRequest="100" />
                         </Frame>
                         <Label Text="Buhle" Margin="63,10,0,0" />
                     </VerticalStackLayout>
 
                     <VerticalStackLayout>
-                        <Frame Margin="25,10,0,0" WidthRequest="110" HeightRequest="110" CornerRadius="80">
-                            <Image Source="luke" WidthRequest="110" HeightRequest="110" Aspect="AspectFit"/>
+                        <Frame Margin="25,10,0,0" WidthRequest="100" HeightRequest="100" CornerRadius="100">
+                            <Image Source="luke" WidthRequest="100" HeightRequest="100" Aspect="AspectFit"/>
                         </Frame>
                         <Label Text="Simbonile" Margin="63,10,0,0" />
                     </VerticalStackLayout>

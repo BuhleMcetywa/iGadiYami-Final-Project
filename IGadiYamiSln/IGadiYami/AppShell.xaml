@@ -9,7 +9,7 @@
     Title="IGadiYami">
 
     <ShellContent
-        ContentTemplate="{DataTemplate local:ProfilePage}"
+        ContentTemplate="{DataTemplate local:StartPage}"
         Route="SettingsPage" />
 
     <TabBar>
