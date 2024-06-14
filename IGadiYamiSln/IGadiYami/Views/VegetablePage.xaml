@@ -49,9 +49,10 @@
 
             <ScrollView Grid.Row="7" VerticalScrollBarVisibility="Always">
                 <Label 
-                     Margin="10,0,0,0"
+                    WidthRequest="400"
+                     Margin="15,0,0,0"
                     Text="{Binding VegetableInfo}" 
-                    FontSize="15 " 
+                    FontSize="15" 
                     HorizontalTextAlignment="Start"  
                     HorizontalOptions="Start" 
                     TextColor="White"
